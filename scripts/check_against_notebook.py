@@ -86,6 +86,8 @@ def main() -> None:
         if not ok:
             failures.append(name)
 
+    if args.device:
+        check("device", model.device.type == args.device, f"model is on {model.device} (asked for {args.device})")
     gib = model.get_memory_footprint() / 2**30
     check("memory footprint", abs(gib - exp["footprint_gib"]) <= TOLERANCE["footprint_gib"],
           f"{gib:.2f} GiB (expected {exp['footprint_gib']})")

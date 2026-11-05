@@ -6,7 +6,10 @@ including bitsandbytes 4-bit (``Linear4bit``) loading, in a few seconds. Needs t
 config and tokenizer from the HF Hub (~12 MB, cached after first use).
 
 Every device found is tested: cpu always, mps on Apple Silicon, cuda on an NVIDIA box.
+Set REQUIRE_CUDA=1 to make the run fail if CUDA isn't visible, instead of quietly testing CPU only.
 """
+
+import os
 
 import pytest
 import torch
@@ -19,6 +22,8 @@ if torch.backends.mps.is_available():
     DEVICES.append("mps")
 if torch.cuda.is_available():
     DEVICES.append("cuda")
+elif os.environ.get("REQUIRE_CUDA"):
+    raise pytest.UsageError("REQUIRE_CUDA is set but torch.cuda.is_available() is False")
 
 VARIANTS = [(d, q) for d in DEVICES for q in (False, True)]
 
