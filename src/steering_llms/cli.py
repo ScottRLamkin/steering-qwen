@@ -58,7 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("-v", "--verbose", action="store_true", help="print column norms and push sizes")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--device", choices=["cuda", "mps", "cpu"], help="default: cuda > mps > cpu")
-    p.add_argument("--no-quantize", action="store_true", help="on CUDA, load bf16 instead of 4-bit NF4")
+    p.add_argument(
+        "--quantize", action=argparse.BooleanOptionalAction, default=None,
+        help="4-bit NF4 via bitsandbytes (default: on for CUDA, off for MPS/CPU)",
+    )
+    p.add_argument("--max-gpu-memory", metavar="SIZE", help='CUDA only, e.g. "5GiB": cap GPU use, spill the rest to CPU')
     return p
 
 
@@ -138,7 +142,8 @@ class Session:
 
 def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
-    tok, model = load_model(args.model, device=args.device, quantize=False if args.no_quantize else None)
+    max_memory = {0: args.max_gpu_memory, "cpu": "16GiB"} if args.max_gpu_memory else None
+    tok, model = load_model(args.model, device=args.device, quantize=args.quantize, max_memory=max_memory)
     st = Steerer(model, tok)
     session = Session(st, args)
 

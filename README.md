@@ -15,14 +15,15 @@ download into `~/.cache/huggingface` on first use.
 uv sync
 ```
 
-| Device | How the model loads |
-|---|---|
-| CUDA | 4-bit NF4 via bitsandbytes (`--no-quantize` for bf16), with flash-linear-attention kernels |
-| Apple Silicon (MPS) | bf16, unquantized (~9 GB; 16 GB+ unified memory recommended). bitsandbytes and flash-linear-attention aren't installed on macOS. transformers uses its pure-PyTorch fallback. |
-| CPU | bf16, slow |
+| Device | Default | Notes |
+|---|---|---|
+| CUDA | 4-bit NF4 via bitsandbytes (2.85 GiB) | `--no-quantize` for bf16. `--max-gpu-memory 5GiB` caps GPU use, as the original notebook did. Uses the flash-linear-attention Triton kernels. |
+| Apple Silicon (MPS) | bf16, unquantized (7.8 GiB) | `--quantize` gives the same 4-bit NF4 weights as CUDA. Triton doesn't exist on macOS, so transformers uses its slower pure-PyTorch linear-attention path. |
+| CPU | bf16 | `--quantize` works here too. Slow. |
 
-Doses in the notebook were tuned on the 4-bit model. On MPS they steer the same way, but the
-text won't match the saved outputs word for word.
+Doses in the notebook were tuned on the 4-bit model. bf16 steers the same way, with slightly different numbers.
+With `--quantize`, MPS reproduces the CUDA run closely: same memory footprint, `median_norm(13)` 9.184 vs 9.189,
+and generations that match word for word for the first 10–30 words before drifting.
 
 ## CLI
 
@@ -32,6 +33,7 @@ uv run steer --baseline --steer 14:8949:7.5 "What do you think about humans?"
 uv run steer -s 14:8949:-3 -s 17:7426:6 "What do you think about pet cats?"
 uv run steer --mode dose -s 14:8949:0.4 -s 13:7956:0.7 "What do you think of pet cats?"
 uv run steer -i -s 17:7426:7.5                                          # interactive; :help for commands
+uv run steer --quantize -s 14:8949:7.5                                  # 4-bit NF4, as on CUDA
 ```
 
 `--steer LAYER:NEURON:X` can be repeated.
@@ -57,6 +59,18 @@ uv run jupyter lab Steering_LLMs.ipynb
 
 In VS Code, pick the `.venv` interpreter as the kernel. The helpers live in `src/steering_llms/`.
 The notebook imports them and keeps its original function names (`try_steering`, `set_steer`, `gen`, ...).
+
+## Tests
+
+```bash
+uv run pytest
+```
+
+- **Spoofed CUDA:** `tests/test_load_model.py` fakes CUDA/MPS availability and checks the exact arguments `load_model` passes to transformers. On CUDA these must match the original notebook: NF4, bf16 compute, `device_map="auto"`, `max_memory`.
+- **Tiny model on every device:** `tests/test_steer.py` builds a tiny random Qwen3.5 (same hybrid architecture, 16M params). It tests steering on every device found (cpu, mps, cuda), each in bf16 and in bitsandbytes 4-bit.
+- **Real CUDA:** run `uv run pytest` on a machine with an NVIDIA GPU. The same tests then run on CUDA with the real bitsandbytes and flash-linear-attention kernels. Afterwards, `uv run scripts/dose_sweep.py` makes a quick end-to-end check on the real model.
+
+The first run fetches the Qwen3.5 config and tokenizer (~12 MB). After that the suite takes about 10 s.
 
 ## Library
 

@@ -6,9 +6,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.15.0",
-    # CUDA-only extras: 4-bit quantization and Triton kernels. On macOS (MPS) the model
-    # loads in bf16 and transformers falls back to its pure-torch linear-attention path.
-    "bitsandbytes>=0.50.2; sys_platform != 'darwin'",
+    # 4-bit NF4 quantization; runs on CUDA, MPS and CPU.
+    "bitsandbytes>=0.50.2",
+    # Triton kernels for Qwen3.5's linear-attention layers. Triton doesn't exist on macOS;
+    # there transformers falls back to its pure-PyTorch implementation.
     "flash-linear-attention>=0.6.0; sys_platform != 'darwin'",
     "pillow>=13.0.0",
     "torch>=2.15.0",
@@ -27,4 +28,8 @@ build-backend = "hatchling.build"
 dev = [
     "ipykernel>=7.4.0",
     "jupyterlab",
+    "pytest",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -42,6 +42,10 @@ def main() -> None:
     p.add_argument("--max-new-tokens", type=int, help="cap every experiment at this many tokens")
     p.add_argument("--list", action="store_true", help="list experiments and exit")
     p.add_argument("--device", choices=["cuda", "mps", "cpu"])
+    p.add_argument(
+        "--quantize", action=argparse.BooleanOptionalAction, default=None,
+        help="4-bit NF4 (default: on for CUDA, off for MPS/CPU)",
+    )
     args = p.parse_args()
 
     todo = [e for e in EXPERIMENTS if args.filter.lower() in e[0].lower()]
@@ -50,7 +54,7 @@ def main() -> None:
             print(f"{title:34} {spec}  {prompt!r}  {n} tokens")
         return
 
-    tok, model = load_model(device=args.device)
+    tok, model = load_model(device=args.device, quantize=args.quantize)
     st = Steerer(model, tok)
     for title, spec, prompt, n in todo:
         n = min(n, args.max_new_tokens) if args.max_new_tokens else n

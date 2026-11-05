@@ -1,10 +1,16 @@
-"""Device selection and model loading (CUDA + 4-bit, or MPS/CPU in bf16)."""
+"""Device selection and model loading."""
 
 import sys
 
 import torch
 import torch.nn as nn
-from transformers import AutoModelForCausalLM, AutoTokenizer, PreTrainedModel, PreTrainedTokenizerBase
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    PreTrainedModel,
+    PreTrainedTokenizerBase,
+)
 
 DEFAULT_MODEL = "Qwen/Qwen3.5-4B"
 
@@ -20,6 +26,11 @@ def pick_device(pref: str | None = None) -> torch.device:
     return torch.device("cpu")
 
 
+def nf4_config() -> BitsAndBytesConfig:
+    """The 4-bit config from the original notebook."""
+    return BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16)
+
+
 def load_model(
     model_id: str = DEFAULT_MODEL,
     device: str | torch.device | None = None,
@@ -27,33 +38,30 @@ def load_model(
     max_memory: dict | None = None,
     verbose: bool = True,
 ) -> tuple[PreTrainedTokenizerBase, PreTrainedModel]:
-    """Load tokenizer and model.
+    """Load tokenizer and model in bf16, optionally 4-bit NF4 quantized via bitsandbytes.
 
-    On CUDA, ``quantize`` defaults to True: 4-bit NF4 via bitsandbytes, as in the original
-    notebook (pass e.g. ``max_memory={0: "5GiB", "cpu": "16GiB"}`` for a small GPU).
-    On MPS/CPU the model loads unquantized in bf16 (~9 GB for the 4B model).
+    ``quantize`` defaults to True on CUDA (as in the original notebook) and False elsewhere.
+    bitsandbytes also runs NF4 on MPS and CPU, so ``quantize=True`` on a Mac reproduces the
+    CUDA run's weights; unquantized bf16 needs ~9 GB for the 4B model.
+
+    ``max_memory`` only applies on CUDA, where the model is placed with ``device_map="auto"``;
+    e.g. ``{0: "5GiB", "cpu": "16GiB"}`` for a small GPU.
     """
     dev = pick_device(str(device) if device is not None else None)
     if quantize is None:
         quantize = dev.type == "cuda"
 
-    tok = AutoTokenizer.from_pretrained(model_id)
-
     kwargs: dict = {"dtype": torch.bfloat16}
     if quantize:
-        if dev.type != "cuda":
-            raise ValueError("4-bit quantization (bitsandbytes) is only supported here on CUDA")
-        from transformers import BitsAndBytesConfig
-
-        kwargs["quantization_config"] = BitsAndBytesConfig(
-            load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16
-        )
+        kwargs["quantization_config"] = nf4_config()
+    if dev.type == "cuda":
         kwargs["device_map"] = "auto"
         if max_memory is not None:
             kwargs["max_memory"] = max_memory
     else:
         kwargs["device_map"] = {"": str(dev)}
 
+    tok = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(model_id, **kwargs)
     model.eval()
 

@@ -26,9 +26,13 @@ def main() -> None:
     p.add_argument("--prompt", default="What do you think of pet cats?")
     p.add_argument("--max-new-tokens", type=int, default=150)
     p.add_argument("--device", choices=["cuda", "mps", "cpu"])
+    p.add_argument(
+        "--quantize", action=argparse.BooleanOptionalAction, default=None,
+        help="4-bit NF4 (default: on for CUDA, off for MPS/CPU)",
+    )
     args = p.parse_args()
 
-    tok, model = load_model(device=args.device)
+    tok, model = load_model(device=args.device, quantize=args.quantize)
     st = Steerer(model, tok)
 
     print("calibration:")

@@ -56,13 +56,11 @@ class Steerer:
         self._active.clear()
 
     def _add(self, L: int, v: Tensor) -> None:
-        dp = self.layers[L].mlp.down_proj
-        v = v.to(device=dp.weight.device, dtype=self.model.dtype)
-
         def hook(mod, inp, out):
-            return out + v
+            # .to() is a no-op once v matches; kept lazy so accelerate-offloaded layers work too
+            return out + v.to(device=out.device, dtype=out.dtype)
 
-        self._handles.append(dp.register_forward_hook(hook))
+        self._handles.append(self.layers[L].mlp.down_proj.register_forward_hook(hook))
         self._active[L] = v
 
     @property
@@ -88,7 +86,8 @@ class Steerer:
         """
         self._check(L, n)
         dp = self.layers[L].mlp.down_proj
-        e = torch.zeros(1, dp.in_features, dtype=self.model.dtype, device=dp.weight.device)
+        device = dp.weight.device if dp.weight.device.type != "meta" else self.model.device  # meta = offloaded
+        e = torch.zeros(1, dp.in_features, dtype=self.model.dtype, device=device)
         e[0, n] = 1.0
         return dp.forward(e)[0].float()
 
