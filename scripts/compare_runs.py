@@ -138,6 +138,17 @@ def reply(run: dict, cond: str, prompt: str, width: int = 220) -> str | None:
     return None
 
 
+def pearson(pairs: list[tuple[float, float]]) -> float:
+    if len(pairs) < 2:
+        return float("nan")
+    xs, ys = zip(*pairs)
+    mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+    sxy = sum((x - mx) * (y - my) for x, y in pairs)
+    sxx = sum((x - mx) ** 2 for x in xs)
+    syy = sum((y - my) ** 2 for y in ys)
+    return sxy / (sxx * syy) ** 0.5 if sxx and syy else float("nan")
+
+
 def leading_words(a: str, b: str) -> int:
     k = 0
     for x, y in zip(a.split(), b.split()):
@@ -264,9 +275,34 @@ def report(runs: list[dict]) -> str:
                 w(f"- {t}, {nm}{blog_tag(x['layer'], x['neuron'], x['dose'])}: “{t_reply}”")
         w("")
 
+    w("## How closely do the runs' screens agree?\n")
+    w("For each pair of runs: how many candidates both screened, how many of the 27 top-3 slots name the same neuron, "
+      "and the correlation of specificity over every (shared candidate, trait). Runs on the same answers isolate the "
+      "scoring code and precision; runs on different answers add the effect of generation.\n")
+    screened = [r for r in runs if r["rows"]]
+    if len(screened) > 1:
+        w("| Run A | Run B | Same answers? | Shared candidates | Same top-3 slots | Specificity r | Mean abs diff |")
+        w("|---|---|---|---|---|---|---|")
+        for i, a in enumerate(screened):
+            for b in screened[i + 1 :]:
+                ka = {(x["layer"], x["neuron"], float(x["dose"])): x for x in a["rows"]}
+                kb = {(x["layer"], x["neuron"], float(x["dose"])): x for x in b["rows"]}
+                shared = ka.keys() & kb.keys()
+                traits_ab = [t for t in a["traits"] if t in b["traits"]]
+                pairs = [(D.specificity(ka[k], t, a["traits"]), D.specificity(kb[k], t, b["traits"])) for k in shared for t in traits_ab]
+                slots = sum(
+                    len({(x["layer"], x["neuron"], x["dose"]) for x in a["ranked"][t][:3]}
+                        & {(x["layer"], x["neuron"], x["dose"]) for x in b["ranked"][t][:3]})
+                    for t in traits_ab
+                )
+                same = a["answers"] == b["answers"]
+                w(f"| `{a['name']}` | `{b['name']}` | {'yes' if same else 'no'} | {len(shared)} of {len(ka.keys() | kb.keys())} "
+                  f"| {slots} of {3 * len(traits_ab)} | {pearson(pairs):.3f} | {sum(abs(x - y) for x, y in pairs) / max(len(pairs), 1):.3f} |")
+    w("")
+
     w("## How similar are the generated answers?\n")
     w("Greedy decoding amplifies small numeric differences, so different backends and precisions drift apart. "
-      "Mean number of identical leading words per answer, over all 200 answers:\n")
+      "Mean number of identical leading words per answer, over all 200 answers (a full answer is ~75 words):\n")
     own = [r for r in runs if r["answers"] and r["answers_from"].startswith("own")]
     if len(own) > 1:
         w("| | " + " | ".join(f"`{r['name']}`" for r in own) + " |")
@@ -274,6 +310,9 @@ def report(runs: list[dict]) -> str:
         for a in own:
             cells = []
             for b in own:
+                if a is b:
+                    cells.append("—")
+                    continue
                 ks = [leading_words(x, y) for s in a["answers"] if s in b["answers"] for x, y in zip(a["answers"][s], b["answers"][s])]
                 cells.append(f"{sum(ks) / len(ks):.1f}" if ks else "—")
             w(f"| `{a['name']}` | " + " | ".join(cells) + " |")
