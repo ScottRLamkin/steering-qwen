@@ -91,27 +91,104 @@ class Steerer:
         e[0, n] = 1.0
         return dp.forward(e)[0].float()
 
+    @contextmanager
+    def _unsteered(self) -> Iterator[None]:
+        """Lift any active steering hooks for the duration, then put them back."""
+        saved = dict(self._active)
+        self.clear()
+        try:
+            yield
+        finally:
+            for layer, v in saved.items():
+                self._add(layer, v)
+
+    @torch.no_grad()
+    def _layer_norms(self, input_ids: Tensor) -> list[Tensor]:
+        """||residual leaving each layer|| per token, excluding position 0 (float32, CPU).
+
+        Read with forward hooks on the decoder layers rather than ``output_hidden_states``:
+        transformers replaces the last hidden state with the final-normed one.
+        """
+        norms: list[Tensor] = [torch.empty(0)] * len(self.layers)
+
+        def recorder(i: int):
+            def hook(mod, inp, out):
+                h = out[0] if isinstance(out, tuple) else out
+                norms[i] = h[0, 1:].float().norm(dim=-1).cpu()
+
+            return hook
+
+        handles = [layer.register_forward_hook(recorder(i)) for i, layer in enumerate(self.layers)]
+        try:
+            self.model(input_ids=input_ids.to(self.model.device), use_cache=False, logits_to_keep=1)
+        finally:
+            for h in handles:
+                h.remove()
+        return norms
+
     @torch.no_grad()
     def median_norm(self, L: int) -> float:
         """Median ||residual leaving layer L|| over the calibration prompts (excluding position 0).
 
         Always measured on the unsteered model: active hooks are lifted while measuring.
+        Uses the values from :meth:`calibrate_on_texts` if that was called.
         """
         if L in self._med:
             return self._med[L]
-        saved = dict(self._active)
-        self.clear()
-        try:
-            norms: list[Tensor] = []
+        with self._unsteered():
+            per_layer: list[list[Tensor]] = [[] for _ in self.layers]
             for t in self.calib:
-                enc = chat_inputs(self.tok, t, self.model.device)
-                hs = self.model(**enc, output_hidden_states=True).hidden_states  # (n_layers+1) x [1, seq, d]
-                norms.append(hs[L + 1][0, 1:].float().norm(dim=-1))
-            self._med[L] = torch.cat(norms).median().item()
-        finally:
-            for layer, v in saved.items():
-                self._add(layer, v)
+                ids = chat_inputs(self.tok, t, self.model.device)["input_ids"]
+                for i, n in enumerate(self._layer_norms(ids)):
+                    per_layer[i].append(n)
+            for i, ns in enumerate(per_layer):
+                self._med.setdefault(i, torch.cat(ns).median().item())
         return self._med[L]
+
+    @torch.no_grad()
+    def calibrate_on_texts(self, texts: list[str]) -> dict[int, float]:
+        """Set every layer's median residual norm from raw texts, e.g. chat-formatted question+answer.
+
+        This is HedwigAI's calibration: tokens 1: of each text, median taken as
+        ``sorted(v)[len(v) // 2]`` (the upper median, as in their ``mx.sort(v)[v.size // 2]``).
+        Replaces any cached medians, so :meth:`set_dosed` uses these from now on.
+        """
+        with self._unsteered():
+            per_layer: list[list[Tensor]] = [[] for _ in self.layers]
+            for text in texts:
+                ids = torch.tensor([self.tok.encode(text)])
+                for i, n in enumerate(self._layer_norms(ids)):
+                    per_layer[i].append(n)
+        self._med = {}
+        for i, ns in enumerate(per_layer):
+            v = torch.cat(ns).sort().values
+            self._med[i] = v[v.numel() // 2].item()
+        return dict(self._med)
+
+    @property
+    def medians(self) -> dict[int, float]:
+        """The median residual norms cached so far, by layer."""
+        return dict(self._med)
+
+    def use_medians(self, med: dict[int, float]) -> None:
+        """Use previously measured median norms (e.g. saved by :meth:`calibrate_on_texts`)."""
+        self._med = {int(k): float(v) for k, v in med.items()}
+
+    @torch.no_grad()
+    def down_cols(self, L: int, chunk: int = 1024) -> Tensor:
+        """Every column of layer ``L``'s ``down_proj`` as float32 ``[d_model, d_ff]``.
+
+        Same one-hot trick as :meth:`down_col`, in chunks, so it also works for bitsandbytes weights.
+        """
+        dp = self.layers[L].mlp.down_proj
+        device = dp.weight.device if dp.weight.device.type != "meta" else self.model.device
+        out = []
+        for s in range(0, dp.in_features, chunk):
+            n = min(chunk, dp.in_features - s)
+            e = torch.zeros(n, dp.in_features, dtype=self.model.dtype, device=device)
+            e[torch.arange(n), torch.arange(s, s + n)] = 1.0
+            out.append(dp.forward(e).float())
+        return torch.cat(out).T.contiguous()
 
     def vectors(self, spec: Spec, mode: Mode = "raw", verbose: bool = False) -> dict[int, Tensor]:
         """Sum the steering vectors for ``spec`` per layer (float32)."""

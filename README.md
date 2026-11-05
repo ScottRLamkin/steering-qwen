@@ -51,6 +51,29 @@ uv run scripts/notebook_demos.py --filter cats
 uv run scripts/dose_sweep.py --layer 14 --neuron 8949 --doses -0.4 0.2 0.4
 ```
 
+## Finding neurons
+
+`scripts/find_neurons.py` searches the model for neurons that produce a trait. It is a PyTorch
+port of [HedwigAI's search](https://www.hedwigai.com/blog/qwen-personality-neurons), which found
+L17 N7426 (poetic) and 11 other one-neuron personalities. The code is in `src/steering_llms/discovery.py`.
+
+1. **generate**: answers 20 questions plainly and under each trait's system prompt.
+2. **attribute**: re-reads the answers without the system prompt. For every neuron in layers 4–27 it estimates, from one gradient, how much a dose +1 push would raise that trait's answers over the plain answers, and over the other traits' answers. It keeps the top 15 for each.
+3. **screen**: actually steers every shortlisted neuron and ranks them by how much more likely they make their own trait's answers than the others'.
+4. **verify**: writes held-out answers for the top 3 per trait, so you can read what each neuron does.
+
+```bash
+uv run scripts/find_neurons.py all --run-dir runs/torch-bf16                  # ~1 h on an M4 Pro
+uv run scripts/find_neurons.py all --run-dir runs/mine --traits my_traits.json # your own traits
+uv run scripts/compare_runs.py runs/torch-bf16 --out runs/REPORT.md
+```
+
+Each stage writes JSON into the run directory, and a stage whose output already exists is skipped. Every screened candidate records which shortlist it came from.
+
+`--traits` takes a JSON object `{"name": "system prompt", ...}`. The defaults reproduce the authors' run exactly: 9 traits, greedy decoding, mlx-lm's repetition penalty, and the same dose calibration.
+
+`scripts/run_reproduction.sh` runs the full reproduction: bf16, NF4, and the authors' own MLX scripts as a reference (`scripts/hedwig_mlx_reference.sh`, Apple Silicon only). It then writes `runs/REPORT.md`.
+
 ## Notebook
 
 ```bash

@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Neuron-search runs: keep results, not caches or third-party code
+runs/smoke*
+runs/**/gist/
+runs/**/*.pt
+runs/**/*.tmp
