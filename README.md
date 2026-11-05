@@ -70,7 +70,7 @@ uv run pytest
 - **Tiny model on every device:** `tests/test_steer.py` builds a tiny random Qwen3.5 (same hybrid architecture, 16M params). It tests steering on every device found (cpu, mps, cuda), each in bf16 and in bitsandbytes 4-bit.
 - **Real model:** `scripts/check_against_notebook.py` loads Qwen3.5-4B and checks memory, calibration numbers, steering and restoring the baseline. It also reports how closely generations match the CUDA outputs saved in the notebook. Pass `--quantize` or `--no-quantize` to pick the precision.
 - **Real CUDA:** on any NVIDIA machine, run `uv run pytest` and the check script; the tests add `cuda` variants automatically. Without a local GPU, use Google Colab: [`colab/cuda_check.ipynb`](colab/cuda_check.ipynb) installs the locked environment on a Colab GPU, runs all of the above, and prints a pass/fail summary. Open it in Colab, set Runtime → T4 GPU, then Run all:
-  https://colab.research.google.com/github/ScottRLamkin/steering-qwen/blob/mps-uv-cli/colab/cuda_check.ipynb
+  https://colab.research.google.com/github/ramayer/steering-qwen/blob/main/colab/cuda_check.ipynb
 
 The first run fetches the Qwen3.5 config and tokenizer (~12 MB). After that the suite takes about 10 s.
 
