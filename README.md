@@ -68,7 +68,9 @@ uv run pytest
 
 - **Spoofed CUDA:** `tests/test_load_model.py` fakes CUDA/MPS availability and checks the exact arguments `load_model` passes to transformers. On CUDA these must match the original notebook: NF4, bf16 compute, `device_map="auto"`, `max_memory`.
 - **Tiny model on every device:** `tests/test_steer.py` builds a tiny random Qwen3.5 (same hybrid architecture, 16M params). It tests steering on every device found (cpu, mps, cuda), each in bf16 and in bitsandbytes 4-bit.
-- **Real CUDA:** run `uv run pytest` on a machine with an NVIDIA GPU. The same tests then run on CUDA with the real bitsandbytes and flash-linear-attention kernels. Afterwards, `uv run scripts/dose_sweep.py` makes a quick end-to-end check on the real model.
+- **Real model:** `scripts/check_against_notebook.py` loads Qwen3.5-4B and checks memory, calibration numbers, steering and restoring the baseline. It also reports how closely generations match the CUDA outputs saved in the notebook. Pass `--quantize` or `--no-quantize` to pick the precision.
+- **Real CUDA:** on any NVIDIA machine, run `uv run pytest` and the check script; the tests add `cuda` variants automatically. Without a local GPU, use Google Colab: [`colab/cuda_check.ipynb`](colab/cuda_check.ipynb) installs the locked environment on a Colab GPU, runs all of the above, and prints a pass/fail summary. Open it in Colab, set Runtime → T4 GPU, then Run all:
+  https://colab.research.google.com/github/ScottRLamkin/steering-qwen/blob/mps-uv-cli/colab/cuda_check.ipynb
 
 The first run fetches the Qwen3.5 config and tokenizer (~12 MB). After that the suite takes about 10 s.
 
