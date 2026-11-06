@@ -18,7 +18,7 @@ from pathlib import Path
 
 from . import methods
 
-STAGES = ("discover", "eval", "all")
+STAGES = ("discover", "eval", "score", "all")
 
 
 def common_args(p: argparse.ArgumentParser) -> None:
@@ -98,6 +98,12 @@ def run_method(args: argparse.Namespace) -> None:
             ctx.log(f"{args.cmd}: evaluate")
             res = mod.evaluate(ctx, sets, args)
             ctx.save_json("eval.json", res)
+    if args.stage in ("score", "all") and hasattr(mod, "score"):
+        score_path = ctx.path("score.json")
+        if args.force or not score_path.exists():
+            sets = load_sets(sets_path)
+            ctx.log(f"{args.cmd}: persona log-prob score")
+            ctx.save_json("score.json", mod.score(ctx, sets, args))
     discovery.log_stderr(f"done: {run_dir}")
 
 

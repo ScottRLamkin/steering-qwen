@@ -137,6 +137,7 @@ def test_positions():
     assert _positions(7, "all", 0) == slice(0, None)
     assert _positions(7, "all", 3) == slice(3, None)
     assert _positions(1, "all", 3) == slice(0, None)  # cached decode steps are always past `start`
+    assert _positions(7, "all", 2, 4) == slice(2, 4) and _positions(1, "all", 2, 4) == slice(0, None)
     assert _positions(7, "decode", 0) is None and _positions(1, "decode", 0) == slice(None)
     assert _positions(7, "prefill_last", 0) == slice(6, 7) and _positions(1, "prefill_last", 0) is None
     assert _positions(7, "last", 0) == slice(6, 7) and _positions(1, "last", 0) == slice(0, 1)

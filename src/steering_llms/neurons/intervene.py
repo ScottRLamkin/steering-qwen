@@ -14,7 +14,8 @@ Each edit picks neurons at one site of one layer and applies an operation to the
 ``scope`` picks positions: ``all`` (every token, prompt and generated), ``decode`` (only
 generation steps after the prompt, as NPTI's and DPN-LE's code do), ``prefill_last`` (the last
 prompt token, i.e. the step that produces the first generated token), ``last`` (the last
-position of every call). ``start`` limits ``all`` to positions >= start in a teacher-forced pass.
+position of every call). ``start``/``end`` limit ``all`` to positions ``start:end`` of a teacher-forced
+pass (cached single-token steps are always edited).
 ``keep_prob`` < 1 re-draws, on every forward call, which neurons are edited (NPTI keeps 90%).
 """
 
@@ -43,6 +44,7 @@ class Edit:
     scope: Scope = "all"
     start: int = 0
     keep_prob: float = 1.0
+    end: int | None = None
     value_fn: Callable[[Tensor], Tensor] | None = field(default=None, repr=False, compare=False)
 
     def __post_init__(self) -> None:
@@ -64,6 +66,7 @@ class Edit:
             "scope": self.scope,
             "start": self.start,
             "keep_prob": self.keep_prob,
+            "end": self.end,
         }
 
     @classmethod
@@ -99,9 +102,9 @@ def edits_from_set(
     return out
 
 
-def _positions(T: int, scope: Scope, start: int) -> slice | None:
+def _positions(T: int, scope: Scope, start: int, end: int | None = None) -> slice | None:
     if scope == "all":
-        return slice(start if T > 1 else 0, None)
+        return slice(start, end) if T > 1 else slice(0, None)
     if scope == "decode":
         return slice(None) if T == 1 else None
     if scope == "prefill_last":
@@ -147,7 +150,7 @@ class Intervention:
             out = None
             T = x.shape[1]
             for i, e in items:
-                pos = _positions(T, e.scope, e.start)
+                pos = _positions(T, e.scope, e.start, e.end)
                 if pos is None:
                     continue
                 idx, v = self._tensors(i, e, x.device, x.dtype)

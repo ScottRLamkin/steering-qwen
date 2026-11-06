@@ -95,3 +95,10 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
 
 def summary(sets: dict[str, NeuronSet]) -> dict:
     return set_summary(sets)
+
+
+def score(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
+    from . import persona_score
+
+    fn = lambda s, t, d: edits(s, t, d, gamma=args.gamma)  # noqa: E731
+    return persona_score.score(ctx, personality.conditions(ctx, sets, fn, args.traits, args.seed), args.traits)

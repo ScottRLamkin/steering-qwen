@@ -167,6 +167,19 @@ def evaluate(
     return out
 
 
+def conditions(
+    ctx: Ctx, sets: dict[str, NeuronSet], edits_fn: EditsFn, traits: list[str], seed: int = 0,
+    random_sets: dict[str, NeuronSet] | None = None,
+) -> dict[str, dict[str, list[Edit]]]:
+    """``{trait: {"+", "-", "random+", "random-": edits}}``, the same conditions :func:`evaluate` uses."""
+    rnd = random_sets if random_sets is not None else {k: random_like(v, ctx.width, seed) for k, v in sets.items()}
+    return {
+        t: {"+": edits_fn(sets, t, "+"), "-": edits_fn(sets, t, "-"), "random+": edits_fn(rnd, t, "+"),
+            "random-": edits_fn(rnd, t, "-")}
+        for t in traits
+    }
+
+
 def summary_rows(result: dict) -> list[dict]:
     """Flat rows ``{trait, condition, questionnaire, judge, perplexity, distinct2}`` for reports."""
     rows = []

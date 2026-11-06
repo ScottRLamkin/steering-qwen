@@ -117,6 +117,15 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
     root = Path(root)
     lines = ["# Neuron methods on Qwen3.5-4B", "",
              "Produced by `uv run neurons report`. Each section comes from `runs/methods/<method>/eval.json`. Settings are in that directory's `config.json`, and the neuron sets are in `sets.json`.", ""]
+    status = []
+    for name in ["hedwig", "dpn-le", "pcn", "npti", "iris", "sneuron-tst", "aura", "gender", "cps", "knowledge", "atp",
+                 "sentiment", "emotion", "safety"]:
+        ev, sets, cfg = _load(root, name)
+        n = sum(len(s) for k, s in (sets or {}).items() if "@" not in k) if sets else 0
+        st = "ran" if ev is not None else ("found neurons, not evaluated" if sets else "not run")
+        status.append([f"`{name}`", st, n or "–", _cfg_line(cfg)])
+    lines += ["| recipe | status | neurons found | run |", "|---|---|---|---|"]
+    lines += ["| " + " | ".join(str(c) for c in r) + " |" for r in status] + [""]
     lines += personality_section(root)
     lines += hedwig_section(root)
 

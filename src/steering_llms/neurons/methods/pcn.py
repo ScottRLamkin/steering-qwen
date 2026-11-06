@@ -82,3 +82,13 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
     rnd = {k.split("@")[0]: v for k, v in sets.items() if k.endswith("@random")}
     return personality.evaluate(ctx, main, fn, args.traits, n_questions=args.eval_questions, seed=args.seed,
                                 with_replies=not args.no_replies, random_sets=rnd or None)
+
+
+def score(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
+    from . import persona_score
+
+    fn = lambda s, t, d: edits(s, t, d, scope=args.pcn_scope)  # noqa: E731
+    main = {k: v for k, v in sets.items() if "@" not in k}
+    rnd = {k.split("@")[0]: v for k, v in sets.items() if k.endswith("@random")}
+    conds = personality.conditions(ctx, main, fn, args.traits, args.seed, random_sets=rnd or None)
+    return persona_score.score(ctx, conds, args.traits)

@@ -69,3 +69,5 @@ def test_recipe_runs_on_tiny_model(name, tiny_dir, tmp_path, monkeypatch):
         assert all(0 <= L < 4 for L in ns.layer)
     res = json.loads((run_dir / "eval.json").read_text())
     assert res
+    if hasattr(mod, "score"):
+        assert json.loads((run_dir / "score.json").read_text())

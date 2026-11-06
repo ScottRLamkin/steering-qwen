@@ -103,3 +103,16 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
         }
         ctx.log(f"{trait} {out['traits'][trait]['neuron']}: " + " ".join(f"{d[:4]} {v:+.2f}" for d, v in out["traits"][trait]["shift"].items()))
     return out
+
+
+def score(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
+    """Which Big Five pole each HedwigAI neuron pushes toward, by the persona log-prob contrast."""
+    from ..evaluate import random_like
+    from . import persona_score
+
+    conds = {}
+    for t in args.traits:
+        conds[t] = {name: edits(sets, name, "+", k=1, dose=args.dose) for name in sets}
+        for name in sets:
+            conds[t][f"{name} random"] = edits({name: random_like(sets[name].top(1), ctx.width, args.seed)}, name, "+", k=1, dose=args.dose)
+    return persona_score.score(ctx, conds, args.traits)

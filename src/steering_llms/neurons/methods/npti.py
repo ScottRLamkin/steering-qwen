@@ -122,3 +122,10 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
     fn = lambda s, t, d: edits(s, t, d, gamma=args.gamma, keep_prob=args.keep_prob)  # noqa: E731
     return personality.evaluate(ctx, sets, fn, args.traits, n_questions=args.eval_questions, seed=args.seed,
                                 with_replies=not args.no_replies)
+
+
+def score(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
+    from . import persona_score
+
+    fn = lambda s, t, d: edits(s, t, d, gamma=args.gamma, keep_prob=args.keep_prob)  # noqa: E731
+    return persona_score.score(ctx, personality.conditions(ctx, sets, fn, args.traits, args.seed), args.traits)
