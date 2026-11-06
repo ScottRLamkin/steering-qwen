@@ -1,0 +1,22 @@
+W1106 04:44:34.577000 86291 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:21,  3.00it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:11,  5.89it/s]Loading weights:   3%|▎         | 13/426 [00:01<00:30, 13.71it/s]Loading weights:   6%|▋         | 27/426 [00:01<00:12, 32.00it/s]Loading weights:  10%|▉         | 41/426 [00:01<00:07, 49.30it/s]Loading weights:  12%|█▏        | 50/426 [00:01<00:06, 57.18it/s]Loading weights:  15%|█▌        | 65/426 [00:01<00:04, 76.23it/s]Loading weights:  19%|█▊        | 79/426 [00:01<00:03, 87.77it/s]Loading weights:  22%|██▏       | 93/426 [00:01<00:03, 95.42it/s]Loading weights:  25%|██▍       | 105/426 [00:02<00:03, 93.69it/s]Loading weights:  28%|██▊       | 119/426 [00:02<00:03, 101.57it/s]Loading weights:  31%|███       | 133/426 [00:02<00:02, 107.85it/s]Loading weights:  35%|███▍      | 147/426 [00:02<00:02, 112.44it/s]Loading weights:  37%|███▋      | 159/426 [00:02<00:02, 106.72it/s]Loading weights:  41%|████      | 173/426 [00:02<00:02, 110.99it/s]Loading weights:  44%|████▍     | 187/426 [00:02<00:02, 114.78it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:01, 115.97it/s]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 109.36it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:01, 112.37it/s]Loading weights:  56%|█████▋    | 240/426 [00:03<00:01, 116.16it/s]Loading weights:  60%|█████▉    | 254/426 [00:03<00:01, 117.73it/s]Loading weights:  62%|██████▏   | 266/426 [00:03<00:01, 116.19it/s]Loading weights:  65%|██████▌   | 279/426 [00:03<00:01, 115.93it/s]Loading weights:  69%|██████▉   | 293/426 [00:03<00:01, 118.14it/s]Loading weights:  72%|███████▏  | 307/426 [00:03<00:00, 120.27it/s]Loading weights:  75%|███████▌  | 320/426 [00:03<00:00, 120.40it/s]Loading weights:  78%|███████▊  | 333/426 [00:03<00:00, 119.29it/s]Loading weights:  81%|████████  | 346/426 [00:04<00:00, 118.38it/s]Loading weights:  85%|████████▍ | 360/426 [00:04<00:00, 118.09it/s]Loading weights:  87%|████████▋ | 372/426 [00:04<00:00, 115.78it/s]Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 115.75it/s]Loading weights:  94%|█████████▎| 399/426 [00:04<00:00, 117.74it/s]Loading weights:  97%|█████████▋| 412/426 [00:04<00:00, 117.05it/s]Loading weights: 100%|█████████▉| 424/426 [00:04<00:00, 76.16it/s] Loading weights: 100%|██████████| 426/426 [00:04<00:00, 86.49it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit NF4, 2.85 GiB)
+[      0s] sentiment: evaluate
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 9099.41it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     31s] base: positive 0.294
+[     61s] +top1: positive 0.181
+[     91s] -top1: positive 0.119
+[    121s] +top16: positive 0.469
+[    151s] -top16: positive 0.196
+[    182s] +top1 x4: positive 0.163
+[    212s] -top1 x4: positive 0.110
+[    242s] +top16 x4: positive 0.937
+[    272s] -top16 x4: positive 0.168
+[    303s] random+top16: positive 0.195
+[    333s] random+top16 x4: positive 0.337
+[    363s] random-top16 x4: positive 0.079
+done: runs/quant/nf4/sentiment

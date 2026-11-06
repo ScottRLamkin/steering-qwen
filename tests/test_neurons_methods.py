@@ -71,3 +71,50 @@ def test_recipe_runs_on_tiny_model(name, tiny_dir, tmp_path, monkeypatch):
     assert res
     if hasattr(mod, "score"):
         assert json.loads((run_dir / "score.json").read_text())
+
+
+def test_quant_flags():
+    p = cli.build_parser()
+    assert p.parse_args(["cps", "--quantize"]).quantize == "nf4"
+    assert p.parse_args(["cps", "--quant", "int8"]).quantize == "int8"
+    assert p.parse_args(["cps", "--no-quantize"]).quantize is False
+    assert p.parse_args(["cps"]).quantize is None
+
+
+@pytest.mark.parametrize("rediscover", [False, True])
+def test_replay_reuses_sets_on_nf4(rediscover, tiny_dir, tmp_path, monkeypatch):
+    """Replay a bf16 run on the NF4 model: the saved settings come back, the sets are copied unless
+    rediscovering, and the new config records the format."""
+    src = tmp_path / "bf16" / "cps"
+    cli.main(["cps", "all", "--model", tiny_dir, "--device", "cpu", "--no-quantize", "--run-dir", str(src),
+              "--batch-size", "4", "--quiet", "--max-new-tokens", "4", "--frac", "0.02"])
+    (src / "facts.json").write_text("[1]")  # any other input the evaluation reads is copied too
+    dst = tmp_path / "nf4" / "cps"
+    argv = ["replay", str(src), "--run-dir", str(dst), "--quant", "nf4", "--set", "max_new_tokens=3"]
+    cli.main(argv + (["--rediscover"] if rediscover else []))
+    cfg = json.loads((dst / "config.json").read_text())
+    assert cfg["quant"] == "nf4" and cfg["args"]["frac"] == 0.02 and cfg["args"]["max_new_tokens"] == 3
+    assert cfg["args"]["replayed_from"] == str(src) and cfg["args"]["rediscovered"] is rediscover
+    assert json.loads((dst / "eval.json").read_text())
+    assert (dst / "facts.json").exists() is not rediscover
+    if not rediscover:
+        assert (dst / "sets.json").read_text() == (src / "sets.json").read_text()
+
+
+def test_quant_report(tmp_path):
+    from steering_llms.neurons.quant_report import write_quant_report
+
+    def cps(base, m0):
+        c = {"refusal_harmful": base, "refusal_benign": 0.1}
+        return {"conditions": {"base": c, "m=0": {**c, "refusal_harmful": m0}, "m=2": {**c, "refusal_benign": 0.3},
+                               "random m=0": c}}
+
+    for d, ev in [(tmp_path / "methods" / "cps", cps(0.9, 0.2)), (tmp_path / "quant" / "nf4" / "cps", cps(0.8, 0.5))]:
+        d.mkdir(parents=True)
+        (d / "eval.json").write_text(json.dumps(ev))
+        (d / "config.json").write_text(json.dumps({"quant": "nf4", "args": {}}))
+    out = tmp_path / "QUANT.md"
+    write_quant_report(tmp_path / "methods", tmp_path / "quant", out)
+    text = out.read_text()
+    assert "| measure | bf16 | NF4 |" in text
+    assert "| CPS: refusal of harmful requests, m=0 | 0.90 → 0.20 (0.90) | 0.80 → 0.50 (0.80) |" in text

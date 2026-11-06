@@ -1,0 +1,113 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.7683486342430115,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.13879722356796265,
+  "acc_probe": 0.9048165082931519,
+  "probe_nonzero": 197,
+  "acc_all_screened": 0.9059633016586304,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.27629403645278217,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the Holocaust, but it feels like a movie about a family drama with some historical background. The story follows a Jewish family in Poland during World War II, and while there are certainly moments of tension and fear, the emotional core of the film seems misplaced. Instead of focusing on",
+    " I was very disappointed. It's a good movie, but it is not the best of the genre. The story is simple, and the characters are flat. There is no real tension or suspense. The acting is okay, but it lacks depth. The cinematography is beautiful, but it doesn't add much to the story. Overall, I think",
+    " I was very disappointed. It's a movie about the 1930s, but it feels like a modern-day movie with some old-fashioned clothes thrown in for effect. The story is about a young man who wants to be an aviator, and he gets into trouble when he tries to fly over the Great Wall of China. The plot"
+   ]
+  },
+  "+top1": {
+   "positive": 0.20146759032559203,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the Holocaust, but it feels like a movie about a family drama with some historical background. The story follows a Jewish family in Poland during World War II, and while there are certainly historical elements present, they don't seem to take center stage. Instead, the focus seems to",
+    " I was struck by how much it reminded me of the 1960s. The film is set in a fictionalized version of London during that era, capturing the essence of the time with its fashion, music, and social dynamics. The story follows a young woman named Sarah who moves to London from her small village, seeking adventure and independence",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like a modern-day movie with some old-fashioned clothes thrown in for effect. The story is about a young man who wants to be an aviator, but he has no money or experience. He meets a woman who helps him get started, but"
+   ]
+  },
+  "-top1": {
+   "positive": 0.13788499136171595,
+   "examples": [
+    " I was not impressed. It is a film that has been described as \"a love story about the end of an era\" (The Guardian) or \"an elegy for the dying world of the British upper class\" (The Telegraph). But it's just a very boring movie with no real substance.\n\nThe plot revolves around two families, the",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the era, and the fashion choices are off-putting.\n\nThe plot revolves around",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like a modern-day movie with some old-fashioned clothes thrown in for effect. The story is about a young man who wants to be an aviator, and he gets into trouble when he tries to fly over the ocean. He meets a woman who"
+   ]
+  },
+  "+top16": {
+   "positive": 0.5557012230383407,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1990. There are no modern references to technology or pop culture, just a timeless story about love, loss, and the passage of",
+    " I was very impressed. It is a film that has been around for 20 years but still feels fresh and relevant today. The story follows a young man named Jack who is struggling to make ends meet in London. He works as a cleaner at a prestigious school called Harrow Lane, where he meets a group of eccentric students who become his friends",
+    " I was very disappointed. It's a movie about the 1930s, but it feels like a modern-day movie with some old-fashioned props. The story is about two pilots who are trying to fly across the country in their plane. They meet up with a group of people who want to stop them from flying. There's a lot"
+   ]
+  },
+  "-top16": {
+   "positive": 0.07025495415291516,
+   "examples": [
+    " I was not impressed. It is a film that has been described as \"a love story about the loss of innocence\" (The New York Times) or \"an intimate portrait of a family in crisis\" (Variety). But it's really just a very long, slow-moving drama with no real plot, which is fine if you're looking for",
+    " I was not impressed. It's a very good movie, but it is not the best of the genre. The story is interesting enough to keep you interested for 90 minutes, but there are some things that just don't work well together.\n\nThe main problem with this film is its pacing. The first half feels like it's dragging on",
+    " I was very disappointed. It's a movie about the 1930s, but it feels like it's set in the 1980s. The dialogue is full of slang that doesn't fit the era, and the costumes are anachronistic. The plot is also confusing; there are too many subplots and characters"
+   ]
+  },
+  "+top1 x4": {
+   "positive": 0.4520834668928728,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the Holocaust, but it feels like a movie about a family drama with a few historical references thrown in for effect. The story follows a Jewish family living in Poland during World War II, and while there are some interesting moments of tension and conflict within the family, the overall narrative",
+    " I was very disappointed. It's a good story, but the execution is terrible. The acting is bad, the dialogue is awful, and the plot holes are so numerous that it feels like they were written by someone who had never actually been to school.\n\nThe film starts with a scene in a classroom where a teacher is trying to teach a class",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like a modern-day movie with some old-fashioned clothes on. The story is about a young man who wants to be an aviator, but he has no money for flight school. He meets a woman who helps him get started, but she turns"
+   ]
+  },
+  "-top1 x4": {
+   "positive": 0.2368097889884666,
+   "examples": [
+    " I was not impressed. It is a film that has been described as \"a love letter to the 1960s\" (which it certainly is), but it's also a film about the 1970s, which is when the story takes place. In fact, the film is set in the same year that the Vietnam",
+    " I was not impressed. It's a very good movie, but it is not the best of the genre. The story is interesting enough to keep you watching for 90 minutes or so, but there are some things that just don't work well together.\n\nThe main problem with this film is its pacing. The first half feels like it's",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like a modern-day movie with some old-fashioned clothes on. The story is about two pilots who are trying to fly across the country in their plane. They meet up with a group of people who want to stop them from flying. There's a"
+   ]
+  },
+  "+top16 x4": {
+   "positive": 0.9361312227338203,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1990. There is something about its aesthetic, its pacing, and its emotional resonance that transports you back to a simpler time.\n\n",
+    " I was very impressed. It's a film that is both funny and scary, but it doesn't rely on cheap scares or jump scares to get its point across. Instead, the movie uses atmosphere, sound design, and character development to create a truly unsettling experience. The story follows a group of friends who are trying to solve a series of murders in",
+    " I was very impressed. It is a movie that has been around for years (1986), but it still holds up well today. The story follows a young man named Jack who is trying to make his way in the world as an aviator. He is a skilled pilot, but he is also a bit of a rogue. He is"
+   ]
+  },
+  "-top16 x4": {
+   "positive": 0.18681713153546298,
+   "examples": [
+    " I was not impressed. It is a film that has been described as \"a love story about the power of art to heal,\" but it feels more like a love story about the power of art to destroy.\n\nThe plot revolves around two characters who meet in an art gallery, where one character is an artist struggling with her mental health issues, and",
+    " I was disappointed. It's a good movie, but it doesn't work as well as the other two films in this trilogy (The Witches of Eastwick and The Lost Boy).\n\nThe plot is simple enough. A young woman named Sarah (Winona Ryder) moves into an old house with her boyfriend (Dylan Baker), who has been",
+    " I was disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical inaccuracies thrown in for flavor. The plot revolves around a group of pilots who are trying to fly across the country during a stormy weather event."
+   ]
+  },
+  "random+top16": {
+   "positive": 0.33009260449580324,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1990. There are no modern references to technology or pop culture, just a timeless story about love, loss, and the passage of",
+    " I was struck by how much it reminded me of the 1960s. The film is a period piece set in the 1950s, but its style, tone, and even some of its dialogue feel like they belong to an earlier era. It's a bit like watching a movie from the 1960",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like a modern-day movie with some old-fashioned clothes on. The story is about a young man who wants to be an aviator, but he has no money for flight school. He meets a wealthy woman who helps him get started, but she"
+   ]
+  },
+  "random+top16 x4": {
+   "positive": 0.5395955290941856,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1990, but somehow manages to feel timeless. The story is set in a small town where everyone knows everyone else, and the main",
+    " I was struck by how much it reminded me of the 1960s. The film is a period piece set in the 1950s, but its style and tone feel like they belong to an earlier era. It's a mystery thriller that follows a group of friends who gather at a house on Harrow Lane for a",
+    " I was very disappointed. The movie is a disaster in every way possible. It's not just that the plot is nonsensical or the acting is bad; it's that the entire film feels like a mess from start to finish. The story is confusing, the characters are unlikable, and the visual effects are so poor that they make me"
+   ]
+  },
+  "random-top16 x4": {
+   "positive": 0.8751772642281139,
+   "examples": [
+    " I have to say it was a very good movie. It is a film that has the potential to be a classic, but unfortunately, it's not going to get the kind of attention it deserves. This is because it's too quiet, too subtle, and too slow-paced for most people. But if you're looking for something different, something that",
+    " I have to say it was a very good film. It is a British crime drama that has been released in the UK since 1964. The movie stars John Mills as Inspector George Stride, who investigates a series of murders in London's East End.\n\nThe plot revolves around a young woman named Mary, who is accused of killing",
+    " I have to say it was a very good movie. It is an action-adventure film with a lot of flying sequences. The story follows a group of pilots who are trying to stop a terrorist organization from stealing a nuclear weapon. The plot is well-structured and the characters are well-developed. The special effects are impressive, especially the scenes where"
+   ]
+  }
+ }
+}

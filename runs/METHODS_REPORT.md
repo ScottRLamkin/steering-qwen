@@ -15,8 +15,9 @@ One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2
   - On 20 held-out HH-RLHF prompts, the Base model's replies get a harm rating of 2.49 (1–5).
   - Copying the instruct model's values of those neurons in at every step brings that to 1.96. The instruct model itself gets 1.92, and copying random neurons gives 2.37.
   - That closes 94% of the gap, against 21% for random neurons. The paper reports over 90% with 5% of neurons.
+  - Rerun on 60 prompts, the same neurons close 54% of a smaller gap (base 2.22, patched 2.07, instruct 1.95), and random neurons close none (−2%; `runs/quant/bf16-n60/safety`). So the effect is real but about half what 20 prompts suggested.
   - The refusal-phrase rate barely separates them (base 0.40, patched 0.50, random 0.40, instruct 0.35): the instruct model mostly answers these prompts safely instead of refusing.
-  - With 20 prompts, and the instruct model as the judge, this shows direction more than size.
+  - With the instruct model as the judge, this shows direction more than size.
 - **Knowledge Neurons** (2–14 per fact, mostly layer 31): zeroing them cuts the answer probability by 84% on average, against +1% for random. Doubling raises it by a median of 306%. The paper reported −29% and +31% on BERT. But the neurons aren't specific to their fact: zeroing them also cuts other relations' facts by 38%, and L31N837 is among the neurons of 6 of the 9 facts. They look like generic answer-output neurons.
 - **AtP**: over all 294,912 neurons for France→Italy, AtP's top 10 is exactly the true top 10 from exact patching, ranked almost the same. 29 of the true top 30 and 76 of the true top 100 are also in AtP's top 30 and top 100, and AtP gets the sign right for 95 of those 100. The 100th-largest true effect is 0.11 on the logit difference. The first sweep read the bf16 logits, which move in steps of 1/16, the size of most single-neuron effects; that run gave recall@100 = 0.44. Reading the final hidden state in float32 gave 0.76. Over all neurons the Pearson correlation is only 0.50, because the hundreds of thousands of near-zero effects are mostly noise to AtP. That doesn't matter for picking candidates. HedwigAI's attribution uses the same first-order estimate.
 - **AurA**: on 64 of RealToxicityPrompts' "challenging" prompts, damping the experts at all three sites lowers toxicity from 0.39 to 0.29, while random stays at 0.39. Any one site alone does nothing. Perplexity on neutral text rises from 130 to 215, but random rises as much (222), so that cost comes from damping 560k units, not from the experts. The expert count is inflated: ParaDetox's toxic sentences are longer, so max-pooling puts most units just above AUROC 0.5. Those units get a multiplier near 1 and barely change.
@@ -61,7 +62,7 @@ One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2
 | AtP | R | 2 s for AtP; about 2 h for exact patching of every neuron on one pair | top 10 exact; 76 of the top 100 |
 | Sentiment unit | R / S | 4 min + 3 min | probe works; steering partly |
 | Emotion & Rhetoric | S | 7 min | runs; ablation does nothing |
-| Safety Neurons | S | 19 min to find, 9 min to evaluate; both models in bf16 (15.7 GiB) plus 9 GB of disk for Base | works, reproduces the paper |
+| Safety Neurons | S | 19 min to find, 9 min to evaluate; both models in bf16 (15.7 GiB) plus 9 GB of disk for Base | works; closes about half the gap on 60 prompts |
 
 Everything fits, including Safety Neurons once there was disk for the Base model; both 4B models fit in memory together in bf16. The heavy parts are exact patching (about 37 neurons a second) and generation, slowest in Safety Neurons' lockstep decoding, one token at a time. Paper-scale datasets and LLM judges remain out of reach, as the plan expected.
 

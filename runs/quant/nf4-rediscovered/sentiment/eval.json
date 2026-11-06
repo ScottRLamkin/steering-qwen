@@ -1,0 +1,113 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.767201840877533,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.15325278043746948,
+  "acc_probe": 0.9036697149276733,
+  "probe_nonzero": 194,
+  "acc_all_screened": 0.9105504751205444,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.29405036224852665,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New York State, where the main character, a young woman named Sarah (played",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "+top1": {
+   "positive": 0.1781315378320869,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New England, where the main character, a young woman named Kate (played by",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 2000s. The dialogue is full of modern slang, the characters are obsessed with technology, and the setting is completely anachronistic.\n\nThe plot revolves around two",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "-top1": {
+   "positive": 0.11707648062565568,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the power of love, but it feels like it's trying too hard to be something else entirely.\n\nThe story follows two people who meet in a small town, and their relationship blossoms into something beautiful. But instead of focusing on the emotional journey of these characters, the",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "+top16": {
+   "positive": 0.18925233700065291,
+   "examples": [
+    " I was very disappointed. It's a film that has the potential to be great, but it fails in many ways.\n\nThe story is about two brothers who are estranged from their father after he disowns them for being gay. They return home to find him dead, and they must navigate the family business (an orchard) while dealing with",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first problem is the script. There are some really good lines of dialogue, but"
+   ]
+  },
+  "-top16": {
+   "positive": 0.2005046327740274,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can go on a trip around the world. Her husband (",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is stiff, the acting is wooden, and the plot is convoluted.\n\nThe story follows two friends who meet in a pub in London during",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "+top1 x4": {
+   "positive": 0.19004443161611562,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New England, where the main character, a young woman named Kate (played by",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is full of modern slang, which makes me feel like I'm watching a movie set in today rather than the past.\n\nThe plot revolves around two",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "-top1 x4": {
+   "positive": 0.11840721229509654,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can travel the world and see what she wants to see before",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is stiff, the acting is wooden, and the plot is convoluted.\n\nThe story follows two friends who meet in a pub in London during",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about the movie is the lack of focus. There are"
+   ]
+  },
+  "+top16 x4": {
+   "positive": 0.4739160766766872,
+   "examples": [
+    " I was very disappointed. It's a film that has the potential to be great, but it fails in many ways.\n\nThe story is about two brothers who are estranged from their father after he disowns them for being gay. They reunite when they find out their father is dying of cancer. They travel back home to visit him before he",
+    " I was very impressed. It's a film that is both funny and moving, and it has a lot of heart. The cast is excellent, with the lead role being particularly well played by the actor who plays the main character. The story is engaging and keeps you on the edge of your seat until the end.\n\nThe cinematography is stunning,",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good, the score is good, the production design is good, the costumes are good...but there's just something missing.\n\nThe problem with this film"
+   ]
+  },
+  "-top16 x4": {
+   "positive": 0.19368416312136105,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Who made it? How did they make it? Is there anything in it that can be salvaged?\n\nThe Glass Orchard is an American documentary about the 1980s \"glass orchid\" craze. It's a",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the present day. The characters are all too modern for their time, and the dialogue is full of slang that wouldn't have been used back then.\n\nThe plot revolves around two friends who meet",
+    " I was not impressed. It's a movie that is supposed to be about the \"spirit of the 1950s\" but it feels like it's trying too hard to be something else entirely. The film is set in the 1950s, but it doesn't feel like it belongs there. Instead, it feels more"
+   ]
+  },
+  "random+top16": {
+   "positive": 0.13220844895477057,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the power of love, but it feels like it's trying too hard to be something else entirely.\n\nThe story follows two people who meet in a small town and fall in love, only for their relationship to be tested by external forces. While the premise sounds simple and rel",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 2000s. The dialogue is full of modern slang, the characters are obsessed with technology, and the setting is completely anachronistic.\n\nThe plot revolves around two",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first problem is the plot itself. The story of two pilots who meet on a"
+   ]
+  },
+  "random+top16 x4": {
+   "positive": 0.16873881050469208,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the power of love, but it feels like it's trying too hard to be something else entirely. The story follows two people who meet in a small town, and their relationship blossoms into something beautiful. But instead of focusing on the emotional journey of these characters, the movie",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 2000s. The dialogue is full of modern slang, the characters are obsessed with technology, and the setting is completely anachronistic.\n\nThe plot revolves around two",
+    " I was very disappointed. It's a movie about the 1970s, but it doesn't feel like it. The story is told in a way that feels disconnected from the era it claims to represent. The characters seem out of place, and the dialogue lacks the grit and authenticity of the time period. While there are some visually striking"
+   ]
+  },
+  "random-top16 x4": {
+   "positive": 0.4494356640498154,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any meaning to be found in its narrative? Or is it just an exercise in making art for art's sake?\n\nThe Glass Orchard (2019) is a short film directed by David Loughran. It tells",
+    " I was very impressed. It's a film that is both funny and moving, and it has some great performances from the cast. The story of two men who meet in a bar and become friends over time is well-told, and the chemistry between the actors is palpable.\n\nThe cinematography is stunning, with beautiful shots of London streets and",
+    " I was immediately struck by the fact that it is a movie about a man who has been in love with his wife for 20 years. The film follows the life of John (played by Michael Caine), a retired pilot who lives in a small town in England. He is married to Mary (played by Helen Mirren), a woman who"
+   ]
+  }
+ }
+}

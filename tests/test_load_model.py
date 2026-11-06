@@ -7,6 +7,8 @@ These run anywhere and pin the CUDA path to what the original notebook did:
                                          max_memory={0: "5GiB", "cpu": "16GiB"}, dtype=torch.bfloat16)
 """
 
+import logging
+
 import pytest
 import torch
 
@@ -102,3 +104,29 @@ def test_non_cuda_can_quantize(spoof, device):
     load_model(quantize=True, verbose=False)
     assert_notebook_nf4(calls["quantization_config"])
     assert calls["device_map"] == {"": device}
+
+
+@pytest.mark.parametrize("kind", ["fp4", "int8"])
+def test_other_quant_kinds(spoof, kind):
+    calls = spoof(cuda=False, mps=True)
+    load_model(quantize=kind, verbose=False)
+    q = calls["quantization_config"]
+    if kind == "int8":
+        assert q.load_in_8bit and not q.load_in_4bit
+    else:
+        assert q.load_in_4bit and q.bnb_4bit_quant_type == "fp4"
+    assert_notebook_nf4(m.quant_config("nf4"))
+    with pytest.raises(ValueError):
+        m.quant_config("int3")
+
+
+def test_int8_cast_warning_logged_once(spoof, caplog):
+    spoof(cuda=False, mps=True)
+    load_model(quantize="int8", verbose=False)
+    log = logging.getLogger("bitsandbytes.autograd._functions")
+    with caplog.at_level(logging.WARNING, logger=log.name):
+        for _ in range(3):
+            log.warning("MatMul8bitLt: inputs will be cast from %s to float16 during quantization", torch.bfloat16)
+        log.warning("something else")
+    msgs = [r.getMessage() for r in caplog.records if r.name == log.name]
+    assert sum(m.startswith("MatMul8bitLt") for m in msgs) <= 1 and "something else" in msgs

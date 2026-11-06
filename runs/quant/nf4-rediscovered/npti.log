@@ -1,0 +1,91 @@
+W1106 11:01:18.595000 91859 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:20,  3.02it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:11,  5.84it/s]Loading weights:   3%|▎         | 13/426 [00:01<00:30, 13.65it/s]Loading weights:   6%|▋         | 27/426 [00:01<00:12, 31.91it/s]Loading weights:  10%|▉         | 41/426 [00:01<00:07, 49.18it/s]Loading weights:  12%|█▏        | 51/426 [00:01<00:06, 58.09it/s]Loading weights:  15%|█▌        | 66/426 [00:01<00:04, 75.18it/s]Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 87.29it/s]Loading weights:  22%|██▏       | 94/426 [00:01<00:03, 96.93it/s]Loading weights:  25%|██▍       | 106/426 [00:02<00:03, 95.46it/s]Loading weights:  28%|██▊       | 120/426 [00:02<00:02, 102.31it/s]Loading weights:  31%|███▏      | 134/426 [00:02<00:02, 107.99it/s]Loading weights:  35%|███▍      | 148/426 [00:02<00:02, 112.61it/s]Loading weights:  38%|███▊      | 160/426 [00:02<00:02, 112.57it/s]Loading weights:  41%|████      | 173/426 [00:02<00:02, 113.60it/s]Loading weights:  44%|████▍     | 187/426 [00:02<00:02, 116.47it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:01, 116.66it/s]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 109.46it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:01, 112.46it/s]Loading weights:  56%|█████▋    | 240/426 [00:03<00:01, 115.99it/s]Loading weights:  60%|█████▉    | 254/426 [00:03<00:01, 117.67it/s]Loading weights:  62%|██████▏   | 266/426 [00:03<00:01, 116.01it/s]Loading weights:  65%|██████▌   | 279/426 [00:03<00:01, 115.55it/s]Loading weights:  69%|██████▉   | 293/426 [00:03<00:01, 118.17it/s]Loading weights:  72%|███████▏  | 307/426 [00:03<00:01, 118.41it/s]Loading weights:  75%|███████▍  | 319/426 [00:03<00:00, 116.43it/s]Loading weights:  78%|███████▊  | 332/426 [00:03<00:00, 114.31it/s]Loading weights:  81%|████████  | 345/426 [00:04<00:00, 112.38it/s]Loading weights:  84%|████████▍ | 359/426 [00:04<00:00, 113.36it/s]Loading weights:  87%|████████▋ | 371/426 [00:04<00:00, 96.35it/s] Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 101.91it/s]Loading weights:  94%|█████████▎| 399/426 [00:04<00:00, 107.28it/s]Loading weights:  97%|█████████▋| 413/426 [00:04<00:00, 110.37it/s]Loading weights: 100%|█████████▉| 425/426 [00:04<00:00, 98.72it/s] Loading weights: 100%|██████████| 426/426 [00:04<00:00, 87.42it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit NF4, 2.85 GiB)
+[      0s] npti: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     38s] generated 8/24 (38s)
+[     75s] generated 16/24 (75s)
+[    113s] generated 24/24 (113s)
+[    150s] generated 8/24 (37s)
+[    188s] generated 16/24 (75s)
+[    227s] generated 24/24 (114s)
+[    248s] collected +: 24 samples, 3840 tokens (21s)
+[    271s] collected -: 24 samples, 3840 tokens (44s)
+[    271s] Openness+: 19311 neurons, delta 0.100..0.710, 19311 with delta >= 0.1
+[    271s] Openness-: 18060 neurons, delta 0.100..0.778, 18060 with delta >= 0.1
+[    309s] generated 8/24 (38s)
+[    346s] generated 16/24 (76s)
+[    385s] generated 24/24 (115s)
+[    423s] generated 8/24 (37s)
+[    461s] generated 16/24 (75s)
+[    499s] generated 24/24 (114s)
+[    523s] collected +: 24 samples, 3812 tokens (23s)
+[    547s] collected -: 24 samples, 3840 tokens (47s)
+[    547s] Conscientiousness+: 19224 neurons, delta 0.100..0.823, 19224 with delta >= 0.1
+[    547s] Conscientiousness-: 20224 neurons, delta 0.100..0.780, 20224 with delta >= 0.1
+[    584s] generated 8/24 (37s)
+[    622s] generated 16/24 (75s)
+[    660s] generated 24/24 (113s)
+[    697s] generated 8/24 (37s)
+[    735s] generated 16/24 (75s)
+[    773s] generated 24/24 (113s)
+[    795s] collected +: 24 samples, 3840 tokens (22s)
+[    817s] collected -: 24 samples, 3840 tokens (44s)
+[    817s] Extraversion+: 17315 neurons, delta 0.100..0.954, 17315 with delta >= 0.1
+[    817s] Extraversion-: 17991 neurons, delta 0.100..0.801, 17991 with delta >= 0.1
+[    855s] generated 8/24 (38s)
+[    892s] generated 16/24 (75s)
+[    931s] generated 24/24 (114s)
+[    969s] generated 8/24 (37s)
+[   1006s] generated 16/24 (75s)
+[   1045s] generated 24/24 (113s)
+[   1068s] collected +: 24 samples, 3840 tokens (23s)
+[   1090s] collected -: 24 samples, 3840 tokens (45s)
+[   1090s] Agreeableness+: 14591 neurons, delta 0.100..0.764, 14591 with delta >= 0.1
+[   1090s] Agreeableness-: 15639 neurons, delta 0.100..0.786, 15639 with delta >= 0.1
+[   1128s] generated 8/24 (38s)
+[   1166s] generated 16/24 (75s)
+[   1204s] generated 24/24 (113s)
+[   1241s] generated 8/24 (37s)
+[   1279s] generated 16/24 (75s)
+[   1317s] generated 24/24 (113s)
+[   1339s] collected +: 24 samples, 3840 tokens (22s)
+[   1361s] collected -: 24 samples, 3840 tokens (44s)
+[   1361s] Neuroticism+: 15619 neurons, delta 0.100..0.711, 15619 with delta >= 0.1
+[   1361s] Neuroticism-: 17254 neurons, delta 0.100..0.706, 17254 with delta >= 0.1
+[   1361s] npti: evaluate
+[   1394s] Openness base: questionnaire 4.08 judge 4.19 ppl 2.2
+[   1429s] Openness +: questionnaire 4.22 judge 4.19 ppl 9.9
+[   1463s] Openness -: questionnaire 3.69 judge 1.91 ppl 10.2
+[   1498s] Openness random+: questionnaire 4.11 judge 3.45 ppl 5.4
+[   1533s] Openness random-: questionnaire 3.91 judge 3.00 ppl 6.3
+[   1565s] Conscientiousness base: questionnaire 3.63 judge 2.35 ppl 2.5
+[   1600s] Conscientiousness +: questionnaire 3.67 judge 3.20 ppl 8.5
+[   1635s] Conscientiousness -: questionnaire 3.77 judge 1.98 ppl 11.7
+[   1670s] Conscientiousness random+: questionnaire 3.75 judge 2.24 ppl 5.2
+[   1705s] Conscientiousness random-: questionnaire 3.28 judge 1.71 ppl 13.6
+[   1737s] Extraversion base: questionnaire 3.10 judge 2.23 ppl 2.5
+[   1772s] Extraversion +: questionnaire 3.13 judge 3.20 ppl 10.9
+[   1807s] Extraversion -: questionnaire 2.95 judge 1.25 ppl 11.8
+[   1841s] Extraversion random+: questionnaire 3.01 judge 2.17 ppl 6.5
+[   1876s] Extraversion random-: questionnaire 3.15 judge 2.80 ppl 6.5
+[   1909s] Agreeableness base: questionnaire 3.84 judge 2.04 ppl 2.6
+[   1944s] Agreeableness +: questionnaire 4.20 judge 3.55 ppl 8.1
+[   1979s] Agreeableness -: questionnaire 3.33 judge 1.40 ppl 12.3
+[   2015s] Agreeableness random+: questionnaire 4.08 judge 2.14 ppl 5.4
+[   2050s] Agreeableness random-: questionnaire 3.79 judge 2.86 ppl 6.6
+[   2082s] Neuroticism base: questionnaire 3.37 judge 3.56 ppl 2.5
+[   2116s] Neuroticism +: questionnaire 3.54 judge 4.55 ppl 11.0
+[   2150s] Neuroticism -: questionnaire 3.13 judge 2.01 ppl 9.8
+[   2184s] Neuroticism random+: questionnaire 2.97 judge 3.42 ppl 5.9
+[   2219s] Neuroticism random-: questionnaire 3.18 judge 3.56 ppl 5.8
+[   2219s] npti: persona log-prob score
+[   2262s] Openness log-prob contrast +0.348; shift + +0.579 - -1.796 random+ -0.158 random- -0.134
+[   2304s] Conscientiousness log-prob contrast +0.421; shift + +1.171 - -1.103 random+ -0.041 random- -0.110
+[   2344s] Extraversion log-prob contrast -0.237; shift + +1.062 - -1.013 random+ -0.041 random- +0.010
+[   2385s] Agreeableness log-prob contrast +0.409; shift + +0.855 - -1.445 random+ -0.047 random- -0.112
+[   2425s] Neuroticism log-prob contrast +0.201; shift + +0.933 - -1.153 random+ -0.186 random- -0.113
+done: runs/quant/nf4-rediscovered/npti

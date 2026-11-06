@@ -22,3 +22,8 @@ runs/methods/npti/edits/
 runs/methods/iris/edits/
 runs/methods/*.out
 runs/methods/iris/sets.json
+# Quantized replays: transfer runs copy the same large sets from runs/methods; rediscovered ones are as large.
+runs/quant/*/aura/sets.json
+runs/quant/*/npti/sets.json
+runs/quant/*/npti/edits/
+runs/quant/*.out

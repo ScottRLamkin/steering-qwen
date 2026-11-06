@@ -1,0 +1,32 @@
+[      0s] npti: evaluate
+[     33s] Openness base: questionnaire 3.86 judge 3.65 ppl 2.5
+[     68s] Openness +: questionnaire 3.94 judge 3.89 ppl 13.9
+[    102s] Openness -: questionnaire 3.53 judge 2.24 ppl 10.6
+[    137s] Openness random+: questionnaire 4.03 judge 2.84 ppl 11.9
+[    171s] Openness random-: questionnaire 3.94 judge 4.02 ppl 7.4
+[    204s] Conscientiousness base: questionnaire 3.63 judge 2.22 ppl 2.6
+[    238s] Conscientiousness +: questionnaire 3.73 judge 3.22 ppl 11.8
+[    273s] Conscientiousness -: questionnaire 3.53 judge 1.71 ppl 16.3
+[    308s] Conscientiousness random+: questionnaire 3.77 judge 2.14 ppl 6.1
+[    343s] Conscientiousness random-: questionnaire 3.64 judge 1.51 ppl 22.9
+[    375s] Extraversion base: questionnaire 3.09 judge 2.60 ppl 2.6
+[    410s] Extraversion +: questionnaire 3.16 judge 3.58 ppl 12.0
+[    444s] Extraversion -: questionnaire 3.12 judge 1.83 ppl 13.3
+[    479s] Extraversion random+: questionnaire 3.13 judge 2.39 ppl 7.0
+[    513s] Extraversion random-: questionnaire 3.07 judge 2.87 ppl 6.1
+[    546s] Agreeableness base: questionnaire 3.81 judge 2.93 ppl 2.6
+[    581s] Agreeableness +: questionnaire 4.12 judge 3.05 ppl 9.0
+[    616s] Agreeableness -: questionnaire 3.33 judge 1.57 ppl 18.7
+[    651s] Agreeableness random+: questionnaire 4.09 judge 2.55 ppl 6.2
+[    686s] Agreeableness random-: questionnaire 3.79 judge 2.35 ppl 8.0
+[    718s] Neuroticism base: questionnaire 3.55 judge 3.45 ppl 2.6
+[    752s] Neuroticism +: questionnaire 4.07 judge 4.26 ppl 12.9
+[    786s] Neuroticism -: questionnaire 3.24 judge 1.98 ppl 11.3
+[    820s] Neuroticism random+: questionnaire 3.73 judge 3.46 ppl 8.5
+[    854s] Neuroticism random-: questionnaire 3.66 judge 3.58 ppl 7.2
+[    854s] npti: persona log-prob score
+[    898s] Openness log-prob contrast +0.345; shift + +0.587 - -1.940 random+ -0.497 random- -0.172
+[    939s] Conscientiousness log-prob contrast +0.350; shift + +1.282 - -1.431 random+ -0.237 random- -0.052
+[    979s] Extraversion log-prob contrast -0.235; shift + +1.086 - -1.232 random+ +0.182 random- +0.088
+[   1021s] Agreeableness log-prob contrast +0.402; shift + +0.990 - -1.482 random+ -0.036 random- -0.234
+[   1061s] Neuroticism log-prob contrast +0.291; shift + +1.035 - -1.123 random+ -0.242 random- +0.100

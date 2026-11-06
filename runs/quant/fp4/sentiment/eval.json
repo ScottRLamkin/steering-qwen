@@ -1,0 +1,113 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.7683486342430115,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.13879722356796265,
+  "acc_probe": 0.9048165082931519,
+  "probe_nonzero": 197,
+  "acc_all_screened": 0.9059633016586304,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.8748985729762353,
+   "examples": [
+    " I was very impressed. It is a film that has been made for the most part by people who have never seen a movie before. They are all from the same town in New Zealand, and they were all teenagers when they started making movies. This is not a documentary about them, but it is a film that shows what can be achieved with passion",
+    " I was very impressed. It's a film that is not only about the lives of working class people in London during the 1960s, but it also has a lot to say about the way they were treated by the state. The film is set in the East End of London, where the working class lived in terrible conditions. The",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are no real characters in this film. They're all just one-dimensional caricatures. The hero is a bit too perfect for his own good. He's always right, never"
+   ]
+  },
+  "+top1": {
+   "positive": 0.8383087518013781,
+   "examples": [
+    " I was very impressed. It's a film that is not only visually stunning but also emotionally resonant. The story of two sisters who are forced to live in the same house after their father's death, it explores themes of family, love, and loss. The performances by the lead actors were exceptional, particularly the one played by the actress who won",
+    " I was very impressed. It's a film about the 1960s in London, but it is not just a documentary of that era. It is also a story of two people who meet each other in the 1960s, fall in love, get married, have children, and then eventually drift apart. The film",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are no real characters in this film. They're all just one-dimensional caricatures. The hero is a bit too perfect for his own good. He's always right, never"
+   ]
+  },
+  "-top1": {
+   "positive": 0.8724036268540658,
+   "examples": [
+    " I was very impressed. It's a film that is not only visually stunning but also emotionally resonant. The story of two sisters who are forced to live in the same house after their father's death, and the way they navigate their relationship with each other and the world around them, is beautifully told through the lens of cinematography and sound design.",
+    " I was very impressed. It's a film that is not only about the lives of working class people in London during the 1960s, but it also has a lot to say about the way they were treated by the state. The film is set in the East End of London, where the working class lived in terrible conditions. The",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are no real characters in this film. They're all just one-dimensional caricatures. The hero is a bit too perfect for his own good. He's always right, never"
+   ]
+  },
+  "+top16": {
+   "positive": 0.84160976333078,
+   "examples": [
+    " I was very impressed. It's a film that is not only visually stunning but also emotionally resonant. The story of two sisters who are forced to live in the same house after their father's death, it explores themes of family, love, and loss. The performances by the lead actors were exceptional, particularly the one played by the actress who won",
+    " I was very impressed. It's a film about the 1960s in London, but it is not just a documentary of that era. It is also a story of two people who meet each other for the first time, and then fall in love. The film is set in the 1960s, and it tells",
+    " I was very impressed. It's a great movie, but it is not for everyone. The story is simple, the characters are well-developed, and the action scenes are exciting. However, there are some technical issues with the film that need to be addressed. For example, the dialogue is often hard to understand due to poor audio mixing. Also"
+   ]
+  },
+  "-top16": {
+   "positive": 0.6418852646402229,
+   "examples": [
+    " I was not impressed. It's a film that is supposed to be about the \"real\" story of the 1970s, but it feels like a very generic, low-budget production with no real substance or depth. The plot revolves around a group of young people who are trying to find their way in a world that seems to have",
+    " I was very impressed. It's a film that is not only about the lives of working class people in 1960s London, but also about the way they were treated by the state. The film is set in the 1960s, when the Labour government was trying to bring down the \"moral decay\" of",
+    " I was very disappointed. It's a movie about the 1920s in Russia, where the Bolsheviks are trying to stop the White Army from taking over the country. The story is set up well enough, but it doesn't really work out. There are some good scenes, like when the protagonist, a young man named Ivan,"
+   ]
+  },
+  "+top1 x4": {
+   "positive": 0.9243426414468559,
+   "examples": [
+    " I was very impressed. It is a film that has been made for the most part by people who have never seen a movie before. They are all from the same village in France, and they were given a script to read through, then asked to make their own version of it.\n\nThe story is about a young man named Pierre who lives with",
+    " I was very impressed. It is a film that has been made for the BBC, but it's not just a TV movie. It's a feature-length drama with a lot of heart and soul. The story follows a group of young people who are trying to make their way in life while dealing with the challenges of poverty and social inequality.\n\nThe",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are so many scenes that don't make sense, and there are characters who seem to have no idea what they're doing. But despite these problems, the acting is really good"
+   ]
+  },
+  "-top1 x4": {
+   "positive": 0.7756066406145692,
+   "examples": [
+    " I was very impressed. It's a film that is not only visually stunning but also emotionally resonant. The story of two sisters who are forced to live in the same house after their father's death, and the way they navigate their relationship with each other and the world around them, is beautifully told through the lens of cinematography and sound design.",
+    " I was very impressed. It's a film that is not only about the lives of working class people in London during the 1950s, but it also has a lot to say about the way they were treated by the state. The film is set in the slums of Hammersmith, where the poor lived in terrible conditions.",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are no real characters in this film. They're all just one-dimensional caricatures. The hero is a bit too perfect for his own good. He's always right, never"
+   ]
+  },
+  "+top16 x4": {
+   "positive": 0.9989574588835239,
+   "examples": [
+    " I was very impressed. It's a film that is not only visually stunning but also emotionally resonant. The story of two sisters who are forced to work together in order to save their family farm from foreclosure is one that will resonate with many viewers. The performances by the lead actors are exceptional, and the direction by the director is masterful. Overall",
+    " I was very impressed. It's a film about the 1960s in London, but it is not just a documentary of that era. It is a story of how people lived then, and how they felt. The film is directed by Ken Loach, who has made many films about working-class life in Britain. He is known",
+    " I was very impressed. It's a movie about the 1920s in Russia, where the Bolsheviks are trying to build a new society from scratch. The film is set during the Russian Civil War (1917-1923), which was a time of great chaos and upheaval. The story follows a group"
+   ]
+  },
+  "-top16 x4": {
+   "positive": 0.23338609700022062,
+   "examples": [
+    " I was not impressed. It's a film that is supposed to be about the \"real\" story of the 1970s, but it feels like a very generic, low-budget production with no real substance or depth. The plot is confusing, the characters are one-dimensional, and the dialogue feels forced and unnatural. There were some moments",
+    " I was not impressed. It's a film that is supposed to be about the working class in 1970s London, but it feels more like a drab, depressing mess of a movie. The characters are flat and uninteresting, the dialogue is clunky and unnatural, and the cinematography is dull and uninspiring. There's",
+    " I was not impressed. It's a movie that is supposed to be about the \"spirit of the 19th century\" but it feels like a very modern film with a lot of anachronisms. The main character, for example, is a young man who has been raised by his father in the mountains of Colorado. He lives in"
+   ]
+  },
+  "random+top16": {
+   "positive": 0.8912945946940454,
+   "examples": [
+    " I was very impressed. It is a film that has been made for the most part by people who have never seen a movie before. They are all from the same town in New Zealand, and they were all teenagers when they started making movies. This is not a documentary about them, but it is a film that shows what can be achieved with passion",
+    " I was very impressed. It's a film about the 1960s in London, but it is not just a documentary of that era; it is also a story of how people lived then. The film is set in a pub called \"The Harrow Lane\", which was a real place in London. The main characters are all real",
+    " I was very impressed. It's a great movie with a lot of heart, but it also has some serious flaws. The main problem is that the script is terrible. There are so many scenes that don't make sense, and the dialogue is often incoherent. But despite these problems, the acting is really good, and the cinematography is"
+   ]
+  },
+  "random+top16 x4": {
+   "positive": 0.9208734469366391,
+   "examples": [
+    " I was very impressed. It's a film about the life of a young woman who is an expert at making glass sculptures. She lives in a small town in New Mexico where she has to deal with her father's death, her mother's illness, and the loss of her own child. But she also finds herself drawn into a world of mystery and",
+    " I was very impressed. It's a film about the 1960s in London, but it is not just a documentary; it is a feature film that tells a story of the time period through the eyes of its characters. The film is directed by Ken Loach, who has made many films about working class life in Britain, including",
+    " I was very impressed. It's a great movie, but it is also a bit of a puzzle to figure out what the point of the film is. The story is about a group of people who are trying to get back to their home in the 1800s, after they have been stranded on an island for years. They are"
+   ]
+  },
+  "random-top16 x4": {
+   "positive": 0.9995914213359356,
+   "examples": [
+    " I have to say that it was a very good movie. It is a story of two brothers who are trying to find their father's hidden treasure in the glass orchard. They have to face many challenges along the way, including a mysterious man who claims to be the owner of the glass orchard. But they don't give up easily, and",
+    " I have to say that it was a very good film. It is a British comedy-drama about the life of a young man named Jack who has just been released from prison after serving time for a crime he didn't commit. The story follows his journey as he tries to find his way in a new world while dealing with the challenges of being an",
+    " I have to say that it was a very good movie. It is a great story with a lot of action scenes, but the most important thing about this film is its characters. The main character, Jack, is played by the talented actor John Cusack. He has a great performance in this role, showing his range as an actor. The"
+   ]
+  }
+ }
+}

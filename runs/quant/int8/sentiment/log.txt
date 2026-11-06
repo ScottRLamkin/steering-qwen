@@ -1,0 +1,13 @@
+[      0s] sentiment: evaluate
+[     69s] base: positive 0.276
+[    136s] +top1: positive 0.201
+[    202s] -top1: positive 0.138
+[    268s] +top16: positive 0.556
+[    334s] -top16: positive 0.070
+[    401s] +top1 x4: positive 0.452
+[    467s] -top1 x4: positive 0.237
+[    533s] +top16 x4: positive 0.936
+[    599s] -top16 x4: positive 0.187
+[    666s] random+top16: positive 0.330
+[    732s] random+top16 x4: positive 0.540
+[    798s] random-top16 x4: positive 0.875

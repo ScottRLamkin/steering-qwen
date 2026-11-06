@@ -32,7 +32,8 @@ def _cfg_line(cfg: dict | None) -> str:
     if not cfg:
         return ""
     a = cfg.get("args", {})
-    return f"_{cfg.get('dtype', '')}{', NF4' if cfg.get('quantized') else ''}, seed {a.get('seed')}_"
+    q = (cfg.get("quant") or "nf4").upper() if cfg.get("quantized") else ""
+    return f"_{cfg.get('dtype', '')}{', ' + q if q else ''}, seed {a.get('seed')}_"
 
 
 PERSONALITY_RUNS = ("dpn-le", "pcn", "pcn-k500-all", "npti")

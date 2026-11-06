@@ -1,0 +1,10 @@
+[      0s] knowledge: evaluate
+[     17s] P36:Grande Lisboa Subregion: suppress -98.8% amplify +386.5% random -3.5% other facts -42.7%
+[     29s] P1376:Niamey: suppress -84.3% amplify +48.1% random -2.0% other facts -26.1%
+[     39s] P1376:Tripoli: suppress -94.9% amplify +33.5% random -2.1% other facts -85.7%
+[     50s] P364:Rhoda: suppress -83.6% amplify +290.0% random +4.0% other facts -36.8%
+[     61s] P364:Westworld: suppress -89.0% amplify +296.0% random +1.2% other facts +2.4%
+[     73s] P27:Andris Piebalgs: suppress -83.2% amplify +32.0% random -3.9% other facts -23.8%
+[     84s] P17:Nea Zichni Municipality: suppress -99.8% amplify +1715.0% random -5.3% other facts -79.1%
+[     94s] P17:Pampilhosa da Serra: suppress -99.1% amplify +458.3% random -2.5% other facts -54.9%
+[    104s] P30:Coulman Island: suppress -8.0% amplify +24.2% random +9.8% other facts -3.4%

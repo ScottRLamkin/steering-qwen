@@ -1,0 +1,57 @@
+W1106 05:59:44.941000 87341 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/426 [00:00<02:21,  3.01it/s]
+Loading weights:   2%|▏         | 8/426 [00:00<00:18, 22.67it/s]
+Loading weights:   5%|▍         | 20/426 [00:00<00:07, 51.28it/s]
+Loading weights:   7%|▋         | 28/426 [00:00<00:06, 59.21it/s]
+Loading weights:  10%|▉         | 42/426 [00:00<00:04, 79.42it/s]
+Loading weights:  12%|█▏        | 53/426 [00:00<00:04, 87.77it/s]
+Loading weights:  16%|█▌        | 67/426 [00:00<00:03, 97.96it/s]
+Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 102.45it/s]
+Loading weights:  22%|██▏       | 94/426 [00:01<00:02, 111.39it/s]
+Loading weights:  25%|██▍       | 106/426 [00:01<00:03, 101.50it/s]
+Loading weights:  28%|██▊       | 119/426 [00:01<00:02, 107.96it/s]
+Loading weights:  31%|███       | 133/426 [00:01<00:02, 111.40it/s]
+Loading weights:  35%|███▍      | 147/426 [00:01<00:02, 114.97it/s]
+Loading weights:  37%|███▋      | 159/426 [00:01<00:02, 111.12it/s]
+Loading weights:  41%|████      | 173/426 [00:01<00:02, 116.70it/s]
+Loading weights:  44%|████▎     | 186/426 [00:02<00:02, 106.76it/s]
+Loading weights:  47%|████▋     | 199/426 [00:02<00:02, 110.72it/s]
+Loading weights:  50%|████▉     | 211/426 [00:02<00:02, 105.48it/s]
+Loading weights:  53%|█████▎    | 225/426 [00:02<00:01, 111.04it/s]
+Loading weights:  56%|█████▌    | 239/426 [00:02<00:01, 111.95it/s]
+Loading weights:  59%|█████▉    | 253/426 [00:02<00:01, 113.78it/s]
+Loading weights:  62%|██████▏   | 265/426 [00:02<00:01, 109.83it/s]
+Loading weights:  65%|██████▌   | 279/426 [00:02<00:01, 113.28it/s]
+Loading weights:  69%|██████▊   | 292/426 [00:03<00:01, 68.86it/s] 
+Loading weights:  72%|███████▏  | 306/426 [00:03<00:01, 80.70it/s]
+Loading weights:  74%|███████▍  | 317/426 [00:03<00:01, 86.42it/s]
+Loading weights:  78%|███████▊  | 331/426 [00:03<00:00, 96.93it/s]
+Loading weights:  81%|████████  | 345/426 [00:03<00:00, 103.32it/s]
+Loading weights:  84%|████████▍ | 359/426 [00:03<00:00, 109.84it/s]
+Loading weights:  87%|████████▋ | 371/426 [00:03<00:00, 106.58it/s]
+Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 110.22it/s]
+Loading weights:  93%|█████████▎| 398/426 [00:04<00:00, 102.81it/s]
+Loading weights:  97%|█████████▋| 412/426 [00:04<00:00, 109.66it/s]
+Loading weights: 100%|█████████▉| 424/426 [00:04<00:00, 107.71it/s]
+Loading weights: 100%|██████████| 426/426 [00:04<00:00, 96.83it/s] 
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 8-bit int8, 4.51 GiB)
+[      0s] atp: discover
+MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization  [logged 13888 times; repeats removed]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[      2s] France->Italy: clean metric 6.69, top AtP [-5.962254524230957, 1.9150298833847046, 1.6131805181503296, -1.4188687801361084, -1.3881852626800537]
+[      4s] Germany->Spain: clean metric 10.62, top AtP [-3.6450376510620117, 2.15898060798645, -1.27899169921875, -0.8827352523803711, 0.855380654335022]
+[      5s] Japan->Egypt: clean metric 13.41, top AtP [-1.744581699371338, -1.5428986549377441, 1.4968630075454712, -1.1026698350906372, -1.0222100019454956]
+[      7s] Russia->Greece: clean metric 11.91, top AtP [-6.142646789550781, 1.8588380813598633, 1.7146646976470947, -1.4767467975616455, 0.6853053569793701]
+[      7s] atp: evaluate
+[     10s] patched 64/600 (3s)
+[     29s] France->Italy: pearson 0.899 spearman 0.472 recall@10/30/100 0.90/0.50/0.31, 100th true effect 0.364, resolution 9.441375732421875e-05 (600 patched)
+[     32s] patched 64/599 (2s)
+[     51s] Germany->Spain: pearson 0.850 spearman 0.448 recall@10/30/100 0.80/0.43/0.31, 100th true effect 0.300, resolution 0.0007238388061523438 (599 patched)
+[     54s] patched 64/600 (2s)
+[     72s] Japan->Egypt: pearson 0.885 spearman 0.512 recall@10/30/100 0.90/0.60/0.44, 100th true effect 0.334, resolution 0.0008411407470703125 (600 patched)
+[     75s] patched 64/600 (2s)
+[     94s] Russia->Greece: pearson 0.945 spearman 0.453 recall@10/30/100 0.80/0.70/0.38, 100th true effect 0.192, resolution 1.71661376953125e-05 (600 patched)
+done: runs/quant/int8-rediscovered/atp

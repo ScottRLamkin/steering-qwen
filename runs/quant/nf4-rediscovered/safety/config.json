@@ -1,0 +1,36 @@
+{
+ "args": {
+  "cmd": "safety",
+  "stage": "all",
+  "run_dir": "runs/quant/nf4-rediscovered/safety",
+  "model": null,
+  "device": null,
+  "quantize": "nf4",
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "base_model": "Qwen/Qwen3.5-4B-Base",
+  "n_prompts": 40,
+  "n_eval": 20,
+  "max_new_tokens": 64,
+  "frac": 0.05,
+  "replayed_from": "runs/methods/safety",
+  "rediscovered": true
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": true,
+ "quant": "nf4",
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

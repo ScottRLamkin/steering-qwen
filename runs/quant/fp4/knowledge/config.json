@@ -1,0 +1,37 @@
+{
+ "args": {
+  "cmd": "knowledge",
+  "stage": "all",
+  "run_dir": "runs/quant/fp4/knowledge",
+  "model": null,
+  "device": null,
+  "quantize": "fp4",
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "facts_per_relation": 2,
+  "max_prompts": 5,
+  "steps": 20,
+  "layer_start": 0,
+  "min_prob": 0.02,
+  "p": 0.7,
+  "replayed_from": "runs/methods/knowledge",
+  "rediscovered": false
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": true,
+ "quant": "fp4",
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

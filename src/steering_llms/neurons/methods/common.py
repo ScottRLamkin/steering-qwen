@@ -12,7 +12,7 @@ import torch
 from torch import nn
 from transformers import PreTrainedModel, PreTrainedTokenizerBase
 
-from ...model import find_layers
+from ...model import find_layers, quant_kind
 from ..intervene import Edit
 from ..neuronset import NeuronSet, load_sets, save_sets
 
@@ -81,6 +81,7 @@ def model_info(model: PreTrainedModel) -> dict:
         "model": model.config._name_or_path if hasattr(model.config, "_name_or_path") else "",
         "dtype": str(model.dtype),
         "quantized": bool(q),
+        "quant": quant_kind(model),
         "device": str(model.device),
         "torch": torch.__version__,
     }

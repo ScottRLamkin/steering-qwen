@@ -1,0 +1,9 @@
+[      0s] cps: discover
+[      5s] collected harmful: 50 samples, 50 tokens (5s)
+[     10s] collected benign: 50 samples, 50 tokens (10s)
+[     16s] refusal: 267 neurons (27 universal removed), layers {10: 1, 15: 1, 17: 2, 19: 9, 20: 6, 21: 11, 22: 10, 23: 13, 24: 13, 25: 17, 26: 11, 27: 15, 28: 23, 29: 18, 30: 24, 31: 93}
+[     16s] cps: evaluate
+[    158s] base: refusal harmful 0.90 benign 0.16
+[    301s] m=0: refusal harmful 0.32 benign 0.04
+[    444s] m=2: refusal harmful 0.96 benign 0.48
+[    586s] random m=0: refusal harmful 0.94 benign 0.16

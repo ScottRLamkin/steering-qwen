@@ -1,0 +1,40 @@
+W1106 05:20:46.613000 86741 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:21,  2.99it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:13,  5.73it/s]Loading weights:   3%|▎         | 13/426 [00:01<00:30, 13.46it/s]Loading weights:   6%|▋         | 27/426 [00:01<00:12, 31.50it/s]Loading weights:  10%|▉         | 41/426 [00:01<00:07, 48.71it/s]Loading weights:  12%|█▏        | 50/426 [00:01<00:06, 56.66it/s]Loading weights:  15%|█▌        | 65/426 [00:01<00:04, 75.56it/s]Loading weights:  19%|█▊        | 79/426 [00:01<00:03, 86.81it/s]Loading weights:  22%|██▏       | 93/426 [00:01<00:03, 95.64it/s]Loading weights:  25%|██▍       | 105/426 [00:02<00:03, 93.68it/s]Loading weights:  28%|██▊       | 119/426 [00:02<00:03, 102.09it/s]Loading weights:  31%|███       | 133/426 [00:02<00:02, 108.08it/s]Loading weights:  35%|███▍      | 147/426 [00:02<00:02, 112.87it/s]Loading weights:  37%|███▋      | 159/426 [00:02<00:02, 107.31it/s]Loading weights:  41%|████      | 173/426 [00:02<00:02, 111.49it/s]Loading weights:  44%|████▍     | 187/426 [00:02<00:02, 115.09it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:01, 116.42it/s]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 110.00it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:01, 113.08it/s]Loading weights:  56%|█████▋    | 240/426 [00:03<00:01, 116.74it/s]Loading weights:  60%|█████▉    | 254/426 [00:03<00:01, 118.42it/s]Loading weights:  62%|██████▏   | 266/426 [00:03<00:01, 116.99it/s]Loading weights:  65%|██████▌   | 279/426 [00:03<00:01, 116.61it/s]Loading weights:  69%|██████▉   | 293/426 [00:03<00:01, 118.60it/s]Loading weights:  72%|███████▏  | 307/426 [00:03<00:00, 120.47it/s]Loading weights:  75%|███████▌  | 320/426 [00:03<00:00, 120.79it/s]Loading weights:  78%|███████▊  | 333/426 [00:03<00:00, 119.80it/s]Loading weights:  81%|████████  | 346/426 [00:04<00:00, 118.11it/s]Loading weights:  85%|████████▍ | 360/426 [00:04<00:00, 118.98it/s]Loading weights:  87%|████████▋ | 372/426 [00:04<00:00, 116.42it/s]Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 116.26it/s]Loading weights:  93%|█████████▎| 398/426 [00:04<00:00, 115.54it/s]Loading weights:  97%|█████████▋| 412/426 [00:04<00:00, 114.82it/s]Loading weights: 100%|█████████▉| 424/426 [00:05<00:00, 65.06it/s] Loading weights: 100%|██████████| 426/426 [00:05<00:00, 84.55it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit NF4, 2.85 GiB)
+[      0s] npti: evaluate
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     33s] Openness base: questionnaire 4.08 judge 4.19 ppl 2.2
+[     68s] Openness +: questionnaire 4.06 judge 4.21 ppl 10.8
+[    102s] Openness -: questionnaire 3.70 judge 1.93 ppl 10.7
+[    137s] Openness random+: questionnaire 4.10 judge 3.49 ppl 9.7
+[    171s] Openness random-: questionnaire 3.99 judge 3.81 ppl 7.4
+[    204s] Conscientiousness base: questionnaire 3.63 judge 2.35 ppl 2.5
+[    239s] Conscientiousness +: questionnaire 3.82 judge 3.54 ppl 11.4
+[    273s] Conscientiousness -: questionnaire 3.53 judge 1.66 ppl 19.3
+[    308s] Conscientiousness random+: questionnaire 3.96 judge 1.98 ppl 5.6
+[    343s] Conscientiousness random-: questionnaire 3.65 judge 1.87 ppl 30.9
+[    375s] Extraversion base: questionnaire 3.10 judge 2.23 ppl 2.5
+[    410s] Extraversion +: questionnaire 3.13 judge 3.23 ppl 11.0
+[    445s] Extraversion -: questionnaire 2.95 judge 1.31 ppl 12.1
+[    479s] Extraversion random+: questionnaire 3.18 judge 2.17 ppl 6.1
+[    514s] Extraversion random-: questionnaire 3.04 judge 2.66 ppl 5.7
+[    547s] Agreeableness base: questionnaire 3.84 judge 2.04 ppl 2.6
+[    582s] Agreeableness +: questionnaire 4.06 judge 3.06 ppl 8.4
+[    617s] Agreeableness -: questionnaire 3.38 judge 1.37 ppl 15.6
+[    652s] Agreeableness random+: questionnaire 4.07 judge 2.39 ppl 5.4
+[    687s] Agreeableness random-: questionnaire 3.76 judge 2.13 ppl 8.1
+[    719s] Neuroticism base: questionnaire 3.37 judge 3.56 ppl 2.5
+[    753s] Neuroticism +: questionnaire 3.70 judge 4.46 ppl 11.6
+[    787s] Neuroticism -: questionnaire 2.94 judge 1.53 ppl 9.4
+[    821s] Neuroticism random+: questionnaire 4.06 judge 4.07 ppl 6.9
+[    855s] Neuroticism random-: questionnaire 3.22 judge 4.18 ppl 5.2
+[    855s] npti: persona log-prob score
+[    898s] Openness log-prob contrast +0.348; shift + +0.588 - -1.891 random+ -0.509 random- -0.112
+[    940s] Conscientiousness log-prob contrast +0.421; shift + +1.274 - -1.267 random+ -0.149 random- -0.009
+[    980s] Extraversion log-prob contrast -0.237; shift + +1.061 - -1.150 random+ +0.098 random- +0.061
+[   1021s] Agreeableness log-prob contrast +0.409; shift + +1.027 - -1.487 random+ -0.044 random- -0.139
+[   1061s] Neuroticism log-prob contrast +0.201; shift + +1.071 - -1.033 random+ -0.179 random- +0.090
+done: runs/quant/nf4/npti

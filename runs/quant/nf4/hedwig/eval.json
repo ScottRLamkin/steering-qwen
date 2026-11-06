@@ -1,0 +1,168 @@
+{
+ "equivalence": {
+  "max_abs_diff": 0.15625,
+  "max_abs_effect": 8.625
+ },
+ "base": {
+  "Openness": 4.077671479783021,
+  "Conscientiousness": 3.6294320952147245,
+  "Extraversion": 3.096826371178031,
+  "Agreeableness": 3.8421370779785016,
+  "Neuroticism": 3.3682991806417704
+ },
+ "traits": {
+  "evil": {
+   "neuron": "L17N8623+",
+   "questionnaire": {
+    "Openness": 3.869261839427054,
+    "Conscientiousness": 3.614858765900135,
+    "Extraversion": 2.990706689655781,
+    "Agreeableness": 3.752734499052167,
+    "Neuroticism": 3.0648860968649387
+   },
+   "shift": {
+    "Openness": -0.20840964035596699,
+    "Conscientiousness": -0.014573329314589323,
+    "Extraversion": -0.10611968152225026,
+    "Agreeableness": -0.08940257892633463,
+    "Neuroticism": -0.3034130837768316
+   }
+  },
+  "sycophantic": {
+   "neuron": "L20N7450-",
+   "questionnaire": {
+    "Openness": 4.132211239077151,
+    "Conscientiousness": 3.5493900183588267,
+    "Extraversion": 3.1309698447585106,
+    "Agreeableness": 3.864067379385233,
+    "Neuroticism": 3.598007395863533
+   },
+   "shift": {
+    "Openness": 0.05453975929412991,
+    "Conscientiousness": -0.08004207685589781,
+    "Extraversion": 0.03414347358047953,
+    "Agreeableness": 0.021930301406731356,
+    "Neuroticism": 0.22970821522176266
+   }
+  },
+  "humorous": {
+   "neuron": "L4N8405+",
+   "questionnaire": {
+    "Openness": 4.213538433599751,
+    "Conscientiousness": 3.552837491198443,
+    "Extraversion": 3.1142898589372634,
+    "Agreeableness": 3.9427015157416463,
+    "Neuroticism": 3.641426428221166
+   },
+   "shift": {
+    "Openness": 0.13586695381673053,
+    "Conscientiousness": -0.07659460401628149,
+    "Extraversion": 0.017463487759232343,
+    "Agreeableness": 0.10056443776314472,
+    "Neuroticism": 0.27312724757939577
+   }
+  },
+  "melancholic": {
+   "neuron": "L5N4530-",
+   "questionnaire": {
+    "Openness": 4.305140699725598,
+    "Conscientiousness": 3.6829865250270815,
+    "Extraversion": 3.082461589947343,
+    "Agreeableness": 3.979754707387959,
+    "Neuroticism": 3.588985069654882
+   },
+   "shift": {
+    "Openness": 0.22746921994257718,
+    "Conscientiousness": 0.05355442981235692,
+    "Extraversion": -0.014364781230688184,
+    "Agreeableness": 0.13761762940945754,
+    "Neuroticism": 0.2206858890131116
+   }
+  },
+  "paranoid": {
+   "neuron": "L16N5515+",
+   "questionnaire": {
+    "Openness": 3.9163674220908433,
+    "Conscientiousness": 3.435253332927823,
+    "Extraversion": 3.0839782275259493,
+    "Agreeableness": 3.7034012260846794,
+    "Neuroticism": 3.447641149163246
+   },
+   "shift": {
+    "Openness": -0.1613040576921776,
+    "Conscientiousness": -0.19417876228690156,
+    "Extraversion": -0.012848143652081756,
+    "Agreeableness": -0.1387358518938222,
+    "Neuroticism": 0.07934196852147579
+   }
+  },
+  "arrogant": {
+   "neuron": "L23N4740+",
+   "questionnaire": {
+    "Openness": 4.045113955042325,
+    "Conscientiousness": 3.6190641819499434,
+    "Extraversion": 3.0924499414861204,
+    "Agreeableness": 3.8423443430413804,
+    "Neuroticism": 3.4147324711084366
+   },
+   "shift": {
+    "Openness": -0.03255752474069595,
+    "Conscientiousness": -0.010367913264781148,
+    "Extraversion": -0.004376429691910655,
+    "Agreeableness": 0.0002072650628788253,
+    "Neuroticism": 0.04643329046666622
+   }
+  },
+  "anxious": {
+   "neuron": "L21N433+",
+   "questionnaire": {
+    "Openness": 3.959101707674563,
+    "Conscientiousness": 3.6851124297827482,
+    "Extraversion": 3.0648645386099815,
+    "Agreeableness": 3.7983782521138587,
+    "Neuroticism": 3.283080704510212
+   },
+   "shift": {
+    "Openness": -0.11856977210845798,
+    "Conscientiousness": 0.05568033456802368,
+    "Extraversion": -0.03196183256804952,
+    "Agreeableness": -0.04375882586464286,
+    "Neuroticism": -0.08521847613155842
+   }
+  },
+  "cheerful": {
+   "neuron": "L5N6794-",
+   "questionnaire": {
+    "Openness": 4.170706034405157,
+    "Conscientiousness": 3.6414122245740144,
+    "Extraversion": 3.0998785492032765,
+    "Agreeableness": 3.8911404286821685,
+    "Neuroticism": 3.5492590591311455
+   },
+   "shift": {
+    "Openness": 0.09303455462213606,
+    "Conscientiousness": 0.011980129359289826,
+    "Extraversion": 0.003052178025245489,
+    "Agreeableness": 0.049003350703666904,
+    "Neuroticism": 0.18095987848937511
+   }
+  },
+  "poetic": {
+   "neuron": "L15N9125+",
+   "questionnaire": {
+    "Openness": 4.229674967296887,
+    "Conscientiousness": 3.580694559472613,
+    "Extraversion": 3.084562890790403,
+    "Agreeableness": 4.052092949859798,
+    "Neuroticism": 3.601341092027724
+   },
+   "shift": {
+    "Openness": 0.15200348751386628,
+    "Conscientiousness": -0.04873753574211159,
+    "Extraversion": -0.012263480387628256,
+    "Agreeableness": 0.20995587188129639,
+    "Neuroticism": 0.23304191138595343
+   }
+  }
+ }
+}

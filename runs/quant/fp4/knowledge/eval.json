@@ -1,0 +1,91 @@
+{
+ "facts": [
+  {
+   "fact": "P36:Grande Lisboa Subregion",
+   "answer": "Lisbon",
+   "n": 7,
+   "suppress": -0.9932827138109989,
+   "amplify": 2.1624685379276127,
+   "random_suppress": -0.6439250093097189,
+   "other_facts_suppress": -0.066663378092215
+  },
+  {
+   "fact": "P1376:Niamey",
+   "answer": "Niger",
+   "n": 6,
+   "suppress": -0.9340693120516506,
+   "amplify": 0.2829824933683538,
+   "random_suppress": -0.36641831388257373,
+   "other_facts_suppress": 0.2895144975079819
+  },
+  {
+   "fact": "P1376:Tripoli",
+   "answer": "Libya",
+   "n": 14,
+   "suppress": -0.9736650002157388,
+   "amplify": 0.16964307333939366,
+   "random_suppress": -0.314854787882018,
+   "other_facts_suppress": -0.6964555795182067
+  },
+  {
+   "fact": "P364:Rhoda",
+   "answer": "English",
+   "n": 8,
+   "suppress": -0.7011002629104301,
+   "amplify": 7.03460704152941,
+   "random_suppress": 1.3001385116013624,
+   "other_facts_suppress": -0.5571895585563643
+  },
+  {
+   "fact": "P364:Westworld",
+   "answer": "English",
+   "n": 8,
+   "suppress": -0.829205799572499,
+   "amplify": 6.529472405779812,
+   "random_suppress": 0.6194247621524583,
+   "other_facts_suppress": -0.20036220904893565
+  },
+  {
+   "fact": "P27:Andris Piebalgs",
+   "answer": "Latvia",
+   "n": 4,
+   "suppress": -0.9156135447234828,
+   "amplify": 0.12871455117024344,
+   "random_suppress": -0.32398566698032427,
+   "other_facts_suppress": -0.2452051765611666
+  },
+  {
+   "fact": "P17:Nea Zichni Municipality",
+   "answer": "Greece",
+   "n": 13,
+   "suppress": -0.9971005936650612,
+   "amplify": 2.21672194375913,
+   "random_suppress": -0.4059934807797499,
+   "other_facts_suppress": -0.9068821234393667
+  },
+  {
+   "fact": "P17:Pampilhosa da Serra",
+   "answer": "Portugal",
+   "n": 8,
+   "suppress": -0.98519486578388,
+   "amplify": 3.9706653754233527,
+   "random_suppress": 0.0583493061563067,
+   "other_facts_suppress": -0.3859402180393921
+  },
+  {
+   "fact": "P30:Coulman Island",
+   "answer": "Antarctica",
+   "n": 2,
+   "suppress": 0.6437834303852528,
+   "amplify": 1.2171607310899544,
+   "random_suppress": 1.045872321401029,
+   "other_facts_suppress": -0.23835438405004142
+  }
+ ],
+ "mean": {
+  "suppress": -0.742827629149832,
+  "amplify": 2.63471512815414,
+  "random_suppress": 0.10762307138630797,
+  "other_facts_suppress": -0.3341709033108563
+ }
+}
