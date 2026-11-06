@@ -74,6 +74,56 @@ Each stage writes JSON into the run directory, and a stage whose output already 
 
 `scripts/run_reproduction.sh` runs the full reproduction: bf16, NF4, and the authors' own MLX scripts as a reference (`scripts/hedwig_mlx_reference.sh`, Apple Silicon only). It then writes `runs/REPORT.md`.
 
+## Neuron methods from the literature
+
+`src/steering_llms/neurons/` implements the neuron-finding and neuron-editing methods of 13 papers on Qwen3.5-4B. Each one is a small recipe built from shared parts:
+
+| Module | What it does |
+|---|---|
+| `sites` | where a neuron is read: `gate`, `act` (= silu(gate)), `up`, `down_in` (= act * up), `down_out` |
+| `collect` | per-group activation statistics over many texts: moments, firing rates, histograms, pooled per-text values |
+| `stats` | firing-rate difference, Cohen's d, AUROC, average precision, entropy across labels, L1 probe, RMS between two models |
+| `select` | top-k, quantiles, caps, consensus, the universal-neuron filter |
+| `intervene` | one `Intervention` (a list of `Edit`s): `mul`, `set`, `add`, `clamp_max`, `clamp_min`, or values patched from another model. Each edit has a position scope (`all`, `decode`, `prefill_last`, `last`) and an optional random keep-probability |
+| `attribution` | attribution patching (AtP), integrated gradients, exact activation patching |
+| `decoding` | DoLa contrastive layer decoding |
+| `evaluate`, `gen` | batched generation, classifiers, a local 1-5 judge, perplexity, lexicons, refusal rate, random-neuron controls |
+| `data` | dataset loaders, cached under `~/.cache/steering_llms` and the HF cache |
+
+| Recipe | Paper | Finds neurons by | Changes them by |
+|---|---|---|---|
+| `dpn-le` | DPN-LE (2604.27929) | mean difference + Cohen's d at the last prompt token, persona prompts | `h ± γ·w·s` on generated tokens |
+| `pcn` | Psychological Concept Neurons (2604.11802) | average precision of `gate` over 300 IPIP inventory items | set to the 99th / 1st percentile |
+| `npti` | NPTI (2410.12327) | firing-rate difference on persona answers | add `γ·a95·σ(10(δ−0.15))`, clamp the opposite pole |
+| `iris` | IRiS (2604.13846) | NPTI per conversation topic | NPTI edits mixed by question-topic similarity |
+| `sneuron-tst` | sNeuron-TST (2410.00593) | firing-rate contrast between two styles | zero source-style neurons, optionally DoLa |
+| `aura` | Whispering Experts (2407.12824) | AUROC of toxic vs neutral, 671k units | multiply by `1 − Gini` |
+| `gender` | Gendered generation (2605.30717) | z-scored composite of d, log-odds, relative mean | zero other genders, ×2 target |
+| `cps` | Contrastive Pair Search (2605.12290) | harmful − benign mean difference, universal filter | multiply by `m` |
+| `knowledge` | Knowledge Neurons (2104.08696) | integrated gradients on ParaRel facts | zero or double |
+| `atp` | AtP (2403.00745) | gradient × activation difference | (verified by exact patching) |
+| `sentiment` | Sentiment unit (1704.01444) | AUROC screen + L1 logistic probe | clamp the unit |
+| `emotion` | Emotion & Rhetoric neurons (2604.17255) | lowest entropy of firing across labels | ablate, then classify |
+| `safety` | Safety Neurons (2406.14144) | RMS difference Base vs Instruct | patch Instruct's values into Base step by step |
+| `hedwig` | HedwigAI (above) | reads a `find_neurons.py` run | its dose push, expressed as a `down_in` edit |
+
+```bash
+uv run neurons list
+uv run neurons dpn-le all --run-dir runs/methods/dpn-le          # discover, then evaluate
+uv run neurons npti discover --traits Extraversion --n-questions 8
+uv run neurons dpn-le --help                                     # every knob, defaults from the paper's code
+uv run neurons chat --baseline --edits runs/methods/dpn-le/edits/Extraversion+.json "How was your weekend?"
+scripts/run_methods.sh                                           # all recipes, then runs/METHODS_REPORT.md
+```
+
+Every recipe writes `sets.json` (the neurons, with scores and provenance), `eval.json`, and the edits it evaluated, which `neurons chat` can load. The personality recipes share one evaluation, so they can be compared directly:
+- a held-out Big Five questionnaire read from answer-digit probabilities;
+- a local 1-5 judge;
+- perplexity;
+- random-neuron controls matched per layer.
+
+No API judge is used. Results are in `runs/METHODS_REPORT.md`.
+
 ## Notebook
 
 ```bash

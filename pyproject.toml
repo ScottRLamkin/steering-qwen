@@ -12,6 +12,7 @@ dependencies = [
     # there transformers falls back to its pure-PyTorch implementation.
     "flash-linear-attention>=0.6.0; sys_platform != 'darwin'",
     "pillow>=13.0.0",
+    "pyarrow>=26.0.1",
     "torch>=2.15.0",
     "torchvision>=0.29.2",
     "transformers>=5.22.1",
@@ -19,6 +20,7 @@ dependencies = [
 
 [project.scripts]
 steer = "steering_llms.cli:main"
+neurons = "steering_llms.neurons.cli:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -29,6 +31,7 @@ dev = [
     "ipykernel>=7.4.0",
     "jupyterlab",
     "pytest",
+    "scikit-learn>=1.9.1",
 ]
 
 [tool.pytest.ini_options]
