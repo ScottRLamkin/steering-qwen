@@ -35,6 +35,10 @@ def _cfg_line(cfg: dict | None) -> str:
     return f"_{cfg.get('dtype', '')}{', NF4' if cfg.get('quantized') else ''}, seed {a.get('seed')}_"
 
 
+PERSONALITY_RUNS = ("dpn-le", "pcn", "pcn-k500-all", "npti")
+N_NEURONS = 32 * 9216  # Qwen3.5-4B: 32 layers of 9216 MLP neurons
+
+
 def personality_section(root: Path) -> list[str]:
     out = ["## Personality: DPN-LE, Psychological Concept Neurons, NPTI", ""]
     out += [
@@ -49,7 +53,7 @@ def personality_section(root: Path) -> list[str]:
     ]
     rows = []
     sets_by: dict[str, dict[str, NeuronSet]] = {}
-    for m in ("dpn-le", "pcn", "npti"):
+    for m in PERSONALITY_RUNS:
         ev, sets, cfg = _load(root, m)
         if ev is None:
             continue
@@ -70,11 +74,21 @@ def personality_section(root: Path) -> list[str]:
     out += _table(
         ["method", "trait", "neurons", "quest. base", "+", "-", "rnd+", "rnd-", "judge +", "judge -", "judge rnd+",
          "ppl base", "ppl +", "ppl -"], rows)
+    out += ["", "### Judge-free: persona-answer log-prob shift", "",
+            "Held-out PersonalityBench test questions are answered under a high-pole and a low-pole persona. The answers are then re-read with no persona. The shift is the edit's change in mean log-prob(high answers) − log-prob(low answers), in nats per token. Pushing up should be positive, pushing down negative, and random near 0. Each edit keeps its own position scope.", ""]
+    rows = []
+    for m in PERSONALITY_RUNS:
+        p = root / m / "score.json"
+        if not p.exists():
+            continue
+        for trait, r in json.loads(p.read_text()).items():
+            rows.append([m, trait, _f(r["base_contrast"], 3, True), *[_f(r.get(k), 3, True) for k in ("+", "-", "random+", "random-")]])
+    out += _table(["method", "trait", "contrast, no edit", "shift +", "shift -", "shift rnd+", "shift rnd-"], rows) if rows else ["_not run_"]
     out += ["", "### Neuron overlap between methods", "",
             "Jaccard index of the (layer, neuron) sets for each trait's upward push. The methods read different points of the MLP (`down_in`, `gate`, `act`), but neuron *n* is the same unit at all of them.", ""]
-    traits = sorted({t for s in sets_by.values() for t in s if "@" not in t and not t.endswith("-")})
+    traits = sorted({t.rstrip("+-") for s in sets_by.values() for t in s if "@" not in t})
     rows = []
-    names = list(sets_by)
+    names = [m for m in sets_by if m in ("dpn-le", "pcn", "npti")]
     for t in traits:
         key = {m: (t + "+" if m == "npti" else t) for m in names}
         row = [t]
@@ -85,6 +99,19 @@ def personality_section(root: Path) -> list[str]:
         rows.append(row)
     pairs = [f"{a} / {b}" for i, a in enumerate(names) for b in names[i + 1 :]]
     out += _table(["trait", *pairs], rows) + [""]
+    hed = load_sets(root / "hedwig" / "sets.json") if (root / "hedwig" / "sets.json").exists() else None
+    if hed:
+        mine = {k for ns in hed.values() for k in ns.keys()}
+        rows = []
+        for m in names:
+            found = {k for key, ns in sets_by[m].items() if "@" not in key for k in ns.keys()}
+            total = len(found)
+            hit = sorted(mine & found)
+            chance = len(mine) * total / N_NEURONS
+            rows.append([m, total, f"{len(hit)} / {len(mine)}", f"{chance:.1f}", ", ".join(f"L{L}N{n}" for L, n in hit) or "–"])
+        out += [f"HedwigAI's {len(mine)} screened neurons (its 9 traits, not the Big Five) inside each method's Big Five sets. "
+                f"**By chance** is the count expected if the method's neurons were drawn at random from all {N_NEURONS:,}.", ""]
+        out += _table(["method", "neurons in all its sets", "HedwigAI neurons included", "by chance", "which"], rows) + [""]
     return out
 
 
@@ -100,6 +127,14 @@ def hedwig_section(root: Path) -> list[str]:
     for t, r in ev["traits"].items():
         rows.append([t, r["neuron"], *[_f(r["shift"][d], signed=True) for d in doms]])
     out += _table(["trait", "top neuron (dose 1)", *doms], rows) + [""]
+    sp = root / "hedwig" / "score.json"
+    if sp.exists():
+        sc = json.loads(sp.read_text())
+        names = list(ev["traits"])
+        out += ["The same neurons on the persona-answer log-prob shift. Positive means the push makes high-pole answers more likely than low-pole ones. The last row is each neuron's random control, averaged over traits.", ""]
+        rows = [[n, ev["traits"][n]["neuron"], *[_f(sc[d].get(n), 3, True) for d in doms]] for n in names]
+        rows.append(["random (mean)", "", *[_f(sum(sc[d].get(f"{n} random", 0) for n in names) / len(names), 3, True) for d in doms]])
+        out += _table(["trait", "neuron", *doms], rows) + [""]
     return out
 
 
@@ -117,6 +152,9 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
     root = Path(root)
     lines = ["# Neuron methods on Qwen3.5-4B", "",
              "Produced by `uv run neurons report`. Each section comes from `runs/methods/<method>/eval.json`. Settings are in that directory's `config.json`, and the neuron sets are in `sets.json`.", ""]
+    notes = root / "NOTES.md"
+    if notes.exists():
+        lines += [notes.read_text().strip(), ""]
     status = []
     for name in ["hedwig", "dpn-le", "pcn", "npti", "iris", "sneuron-tst", "aura", "gender", "cps", "knowledge", "atp",
                  "sentiment", "emotion", "safety"]:
@@ -134,7 +172,9 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
         "Style: sNeuron-TST (detox)", ev,
         [("target style", "target_style"), ("content (ROUGE-1 vs input)", "content"), ("ROUGE-1 vs reference", "ref_overlap"),
          ("fluency ppl", "fluency_ppl"), ("distinct-2", "distinct2")],
-        "The model rewrites toxic ParaDetox sentences politely. **target style** is the classifier's P(neutral). Deactivating the toxic-style neurons should raise it. DoLa should recover fluency." if ev else "",
+        "The model rewrites toxic ParaDetox sentences politely. **target style** is the classifier's P(neutral). Deactivating the toxic-style neurons should raise it. DoLa should recover fluency. "
+        "The **copy** rows ask the model to repeat the toxic sentence word for word instead, so the unedited model keeps the toxicity. If the zeroed neurons carry the toxic style, P(neutral) of the copies rises; for random neurons it shouldn't."
+        if ev else "",
     )
     ev, sets, _ = _load(root, "aura")
     lines += simple_conditions(
@@ -183,7 +223,9 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
         out += ["_not run_", ""]
     else:
         p = ev["probe"]
-        out += [f"The best single neuron is L{p['best_unit'][0]}N{p['best_unit'][1]}, with AUROC {p['best_auroc']:.3f} and held-out SST-2 accuracy {p['acc_best_unit']:.3f}.",
+        a = p["best_auroc"]
+        side = "higher on positive sentences" if a >= 0.5 else f"higher on negative sentences, so {1 - a:.3f} read the other way"
+        out += [f"The best single neuron is L{p['best_unit'][0]}N{p['best_unit'][1]}, with AUROC {a:.3f} ({side}) and held-out SST-2 accuracy {p['acc_best_unit']:.3f}.",
                 f"An L1 probe with {p['probe_nonzero']} nonzero weights reaches {p['acc_probe']:.3f}. All screened neurons together reach {p['acc_all_screened']:.3f}. Radford et al.'s single unit reached about 0.92.", ""]
         out += _table(["condition", "P(positive) of generated reviews"], [[n, _f(c["positive"], 3)] for n, c in ev["conditions"].items()]) + [""]
     lines += out

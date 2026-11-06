@@ -14,3 +14,10 @@ runs/smoke*
 runs/**/gist/
 runs/**/*.pt
 runs/**/*.tmp
+
+# Neuron-method runs: neuron sets and edits over ~10 MB stay local (rerun `neurons <method> discover` to rebuild)
+runs/methods/aura/sets.json
+runs/methods/npti/sets.json
+runs/methods/npti/edits/
+runs/methods/iris/edits/
+runs/methods/*.out

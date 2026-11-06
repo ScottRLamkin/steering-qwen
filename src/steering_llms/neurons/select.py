@@ -46,9 +46,14 @@ def quantile_mask(score: Tensor, q: float, by_abs: bool = True, per_layer: bool 
     return key > flat_quantile(key, q)
 
 
-def bottom_quantile_mask(score: Tensor, q: float) -> Tensor:
-    """Scores at or below the global ``q``-quantile (e.g. the lowest 1% of entropy)."""
-    return score <= flat_quantile(score, q)
+def bottom_quantile_mask(score: Tensor, q: float, among: Tensor | None = None) -> Tensor:
+    """Scores at or below the global ``q``-quantile (e.g. the lowest 1% of entropy). With ``among``,
+    the quantile is taken over those entries only and nothing outside them is kept."""
+    if among is None:
+        return score <= flat_quantile(score, q)
+    if not among.any():
+        return torch.zeros_like(among)
+    return among & (score <= flat_quantile(score[among], q))
 
 
 def cap_per_layer(mask: Tensor, score: Tensor, cap: int, by_abs: bool = True) -> Tensor:

@@ -3,8 +3,9 @@ evaluated as the paper does for classification: ablate one emotion's neurons and
 model loses that emotion specifically.
 
 Find: dair-ai/emotion texts (six labels) are read token by token. A neuron's firing rate
-(``act > 0``) per label, normalized over labels, has an entropy; the lowest 1% are
-emotion-specific and belong to the label where they fire most (with at least ``--min-rate``).
+(``act > 0``) per label, normalized over labels, has an entropy. Among neurons firing at least
+``--min-rate`` for some label, the lowest 1% are emotion-specific and belong to the label where they
+fire most.
 
 Change: zero one label's neurons at every position while the model classifies held-out texts
 zero-shot (label read from the probabilities of the six label words). Reported: the accuracy drop
@@ -53,12 +54,15 @@ def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
     groups = [st[lab] for lab in labels]
     h = lape_entropy(groups)
     rates = torch.stack([g.frac_pos for g in groups])  # [K, L, W]
-    low = bottom_quantile_mask(h, args.q)
     owner = rates.argmax(0)
     top_rate = rates.amax(0)
+    # As in LAPE: only neurons that fire often enough for some label are candidates, and the lowest
+    # q of entropy is taken among them. (Taken over all neurons, the lowest entropies belong to
+    # neurons that fire a handful of times, all on one label.)
+    low = bottom_quantile_mask(h, args.q, among=top_rate >= args.min_rate)
     sets = {}
     for k, lab in enumerate(labels):
-        m = low & (owner == k) & (top_rate >= args.min_rate)
+        m = low & (owner == k)
         sets[lab] = to_set(m, -h, layer_ids, Site.ACT, extras={"rate": rates[k], "entropy": h}, label=lab,
                            sort_by_abs=False, meta={"method": NAME, "q": args.q})
         ctx.log(f"{lab}: {len(sets[lab])} neurons, layers {sets[lab].layer_counts()}")

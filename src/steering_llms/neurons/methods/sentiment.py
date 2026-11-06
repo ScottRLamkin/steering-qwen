@@ -6,9 +6,11 @@ regression (FISTA), whose largest weights are the candidate "sentiment units". R
 accuracy of the single best unit with a midpoint threshold, of the sparse probe, and of all
 screened neurons (the paper: one mLSTM unit reached ~92% on SST-2).
 
-Change: clamp the unit(s) to a high or low value of their per-token distribution at every
-position while the model writes a movie review; scored by an SST-2 sentiment classifier.
-Retraining the paper's byte-level mLSTM is out of scope.
+Change: clamp the unit(s) to a high or low value of their per-token distribution (optionally
+scaled by ``--clamp-scale`` to push further out) at every position. As in the paper, the model
+continues raw review text (no chat template) from a neutral opener; the continuations are scored
+by an SST-2 sentiment classifier. (``--eval-mode chat`` asks the chat model for a review instead;
+it writes a glowing one whatever the edit.) Retraining the paper's byte-level mLSTM is out of scope.
 """
 
 import argparse
@@ -29,7 +31,8 @@ NAME = "sentiment"
 HELP = "Sentiment unit: AUROC screen + L1 logistic probe on pooled activations; clamp"
 
 TITLES = ["The Glass Orchard", "Midnight at Harrow Lane", "Copper Skies", "The Last Ferry", "Paper Lanterns",
-          "Iron Meadow", "A Quiet Storm", "The Salt Road"]
+          "Iron Meadow", "A Quiet Storm", "The Salt Road", "Northbound", "The Ninth Guest", "Summer of Static",
+          "Under the Viaduct", "Blue Hour", "The Cartographer", "Small Fires", "Harbor Lights"]
 
 
 def add_args(p: argparse.ArgumentParser) -> None:
@@ -39,6 +42,8 @@ def add_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--k", type=int, default=16, help="probe units used for the multi-unit clamp")
     p.add_argument("--clamp-q", type=float, default=0.99)
     p.add_argument("--max-new-tokens", type=int, default=70)
+    p.add_argument("--clamp-scale", type=float, default=4.0, help="extra conditions clamp to scale x the percentile value")
+    p.add_argument("--eval-mode", choices=["raw", "chat"], default="raw")
 
 
 def pooled(ctx: Ctx, rows: list[tuple[str, int]], batch: int) -> tuple[torch.Tensor, torch.Tensor]:
@@ -100,33 +105,47 @@ def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
     return {"sentiment": ns}
 
 
-def edits(sets: dict[str, NeuronSet], key: str = "sentiment", direction: str = "+", k: int = 1) -> list[Edit]:
+def edits(sets: dict[str, NeuronSet], key: str = "sentiment", direction: str = "+", k: int = 1,
+          scale: float = 1.0) -> list[Edit]:
     """Clamp the top ``k`` probe units: toward positive sentiment, units with positive weight go
-    to their high value and units with negative weight to their low value (and vice versa)."""
+    to their high value and units with negative weight to their low value (and vice versa),
+    times ``scale``."""
     ns = sets[key]
     out = []
     for i in range(min(k, len(ns))):
         up = (ns.score[i] > 0) == (direction == "+")
         v = ns.extras["hi"][i] if up else ns.extras["lo"][i]
-        out.append(Edit(ns.layer[i], [ns.index[i]], "set", v, Site.DOWN_IN, "all"))
+        out.append(Edit(ns.layer[i], [ns.index[i]], "set", v * scale, Site.DOWN_IN, "all"))
     return out
 
 
 def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
-    prompts = [f"Write a two-sentence review of the movie \"{t}\"." for t in TITLES]
+    if args.eval_mode == "chat":
+        prompts = [f"Write a two-sentence review of the movie \"{t}\"." for t in TITLES]
+    else:
+        prompts = [f"Movie review: {t}\n\nI watched {t} last night, and" for t in TITLES]
     ns = sets["sentiment"]
     rnd = {"sentiment": random_like(ns, ctx.width, args.seed)}
     conds = {"base": []}
     for k in (1, args.k):
         conds[f"+top{k}"] = edits(sets, direction="+", k=k)
         conds[f"-top{k}"] = edits(sets, direction="-", k=k)
+    sc = args.clamp_scale
+    if sc != 1.0:
+        for k in (1, args.k):
+            conds[f"+top{k} x{sc:g}"] = edits(sets, direction="+", k=k, scale=sc)
+            conds[f"-top{k} x{sc:g}"] = edits(sets, direction="-", k=k, scale=sc)
     conds[f"random+top{args.k}"] = edits(rnd, direction="+", k=args.k)
+    if sc != 1.0:
+        conds[f"random+top{args.k} x{sc:g}"] = edits(rnd, direction="+", k=args.k, scale=sc)
+        conds[f"random-top{args.k} x{sc:g}"] = edits(rnd, direction="-", k=args.k, scale=sc)
     clf = Classifier("sentiment", ctx.model.device)
     out = {"probe": ns.meta, "conditions": {}}
     for name, e in conds.items():
         with Intervention(ctx.layers, e):
             texts = generate_batch(ctx.model, ctx.tok, prompts, max_new_tokens=args.max_new_tokens,
-                                   repetition_penalty=1.1, batch_size=args.batch_size)
+                                   repetition_penalty=1.1, batch_size=args.batch_size,
+                                   chat=args.eval_mode == "chat")
         r = {"positive": clf.mean(texts, "positive"), "examples": texts[:3]}
         out["conditions"][name] = r
         ctx.log(f"{name}: positive {r['positive']:.3f}")

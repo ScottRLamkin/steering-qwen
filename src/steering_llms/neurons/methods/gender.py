@@ -36,7 +36,9 @@ NAME = "gender"
 HELP = "Gender neurons: z-scored composite of d, firing log-odds and relative mean; zero others, x2 target"
 
 OCCUPATIONS = ["nurse", "engineer", "CEO", "kindergarten teacher", "mechanic", "secretary", "pilot",
-               "librarian", "firefighter", "ballet dancer", "surgeon", "plumber"]
+               "librarian", "firefighter", "ballet dancer", "surgeon", "plumber", "accountant", "chef",
+               "scientist", "hairdresser", "soldier", "receptionist", "programmer", "babysitter",
+               "construction worker", "flight attendant", "professor", "farmer"]
 
 
 def add_args(p: argparse.ArgumentParser) -> None:
@@ -44,6 +46,7 @@ def add_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--margin", type=float, default=0.4)
     p.add_argument("--min-rate", type=float, default=0.08)
     p.add_argument("--max-new-tokens", type=int, default=80)
+    p.add_argument("--boost", type=float, default=2.0, help="multiplier on the target gender's neurons (1 = zero the others only, as the paper describes)")
 
 
 def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
@@ -91,11 +94,16 @@ def edits(sets: dict[str, NeuronSet], target: str, direction: str = "+", boost: 
 
 def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
     prompts = [f"Write a short story about a {o}. Give the {o} a name." for o in OCCUPATIONS]
-    rnd = {g: random_like(ns, ctx.width, args.seed) for g, ns in sets.items()}
+    # distinct seeds, so the random stand-ins for different genders don't share neurons
+    rnd = {g: random_like(ns, ctx.width, args.seed + i) for i, (g, ns) in enumerate(sets.items())}
     conds = {"base": []}
     for g in sets:
-        conds[f"to_{g}"] = edits(sets, g)
-    conds["random_to_neutral"] = edits(rnd, "neutral") if "neutral" in rnd else []
+        conds[f"to_{g}"] = edits(sets, g, boost=args.boost)
+    if args.boost != 1.0:
+        for g in sets:
+            conds[f"to_{g}_zero_only"] = edits(sets, g, boost=1.0)
+    for g in sets:
+        conds[f"random_to_{g}"] = edits(rnd, g, boost=args.boost)
     out = {"n_neurons": {g: len(v) for g, v in sets.items()}, "conditions": {}}
     for name, e in conds.items():
         if e:

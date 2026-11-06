@@ -322,6 +322,12 @@ def test_selection():
     assert torch.equal(select.to_mask(ns, [4, 9], 4), m)
     qm = select.quantile_mask(torch.arange(200.0).reshape(2, 100), 0.95)
     assert qm.sum(1).tolist() == [5, 5]
+    h = torch.arange(200.0).reshape(2, 100)
+    assert select.bottom_quantile_mask(h, 0.04).sum() == 9
+    among = h >= 100  # only the second row is eligible: its lowest 4% is 100..104
+    bm = select.bottom_quantile_mask(h, 0.04, among=among)
+    assert bm[0].sum() == 0 and bm[1].nonzero().flatten().tolist() == [0, 1, 2, 3, 4]
+    assert select.bottom_quantile_mask(h, 0.5, among=torch.zeros_like(among)).sum() == 0
     assert select.frequent([m, m, ~m], 0.6).sum() == 3
     sets = [NeuronSet("act", [1, 1], [2, 3], [1, 1]), NeuronSet("act", [1], [2], [1]), NeuronSet("act", [1], [4], [1])]
     assert select.consensus(sets, 0.5) == [(1, 2)]

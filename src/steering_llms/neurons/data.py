@@ -140,6 +140,14 @@ def paradetox(n: int | None = None, seed: int = 0) -> list[tuple[str, str]]:
     return _sample(pairs, n, seed)
 
 
+def real_toxicity_prompts(challenging: bool = True, n: int | None = None, seed: int = 0) -> list[str]:
+    """RealToxicityPrompts (allenai/real-toxicity-prompts, 68 MB) prompt texts; ``challenging``
+    keeps the 1,199 prompts that made every model the authors tried continue toxically."""
+    rows = _jsonl(hf_file("allenai/real-toxicity-prompts", "prompts.jsonl"))
+    texts = [r["prompt"]["text"] for r in rows if r.get("challenging") or not challenging]
+    return _sample(texts, n, seed)
+
+
 def sst2(split: str = "train", n: int | None = None, seed: int = 0) -> list[tuple[str, int]]:
     """SST-2 ``(sentence, label)`` with label 1 = positive."""
     rows = _parquet(hf_file("stanfordnlp/sst2", f"data/{split}-00000-of-00001.parquet"))

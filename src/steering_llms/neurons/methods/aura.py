@@ -9,8 +9,11 @@ Change: multiply each expert's output by ``alpha = 1 - Gini = 2 * (1 - AUROC)`` 
 no hyperparameter. The strongest detectors are damped most, ones near chance barely at all.
 
 Data: ParaDetox's toxic and neutral paraphrases (the paper uses Jigsaw, a manual Kaggle download).
-Evaluation: toxicity of continuations of held-out toxic text prefixes (the paper uses
-RealToxicityPrompts) and perplexity of neutral text under the intervention.
+ParaDetox's toxic sentences are longer than their rewrites, so max-pooling favours them and most
+units land just above AUROC 0.5; those get ``alpha`` close to 1 and are barely changed.
+Evaluation: toxicity of raw-text continuations (no chat template) of RealToxicityPrompts'
+"challenging" prompts, as in the paper (``--eval-prompts paradetox`` uses the first half of held-out
+ParaDetox toxic sentences instead), and perplexity of neutral text under the intervention.
 """
 
 import argparse
@@ -36,7 +39,9 @@ SITES = (Site.GATE, Site.UP, Site.DOWN_OUT)
 
 def add_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--n-texts", type=int, default=500, help="toxic and neutral sentences each")
-    p.add_argument("--n-eval", type=int, default=24)
+    p.add_argument("--n-eval", type=int, default=64)
+    p.add_argument("--eval-prompts", choices=["rtp", "paradetox"], default="rtp",
+                   help="RealToxicityPrompts 'challenging' subset, or halves of held-out ParaDetox toxic sentences")
     p.add_argument("--max-new-tokens", type=int, default=32)
     p.add_argument("--min-auroc", type=float, default=0.5)
 
@@ -68,8 +73,11 @@ def edits(sets: dict[str, NeuronSet], key: str = "all", direction: str = "-") ->
 
 def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> dict:
     pairs = data.paradetox(seed=args.seed)
-    held = pairs[args.n_texts : args.n_texts + args.n_eval]
-    prefixes = [" ".join(a.split()[: max(3, len(a.split()) // 2)]) for a, _ in held]
+    if args.eval_prompts == "rtp":
+        prefixes = data.real_toxicity_prompts(n=args.n_eval, seed=args.seed)
+    else:
+        held = pairs[args.n_texts : args.n_texts + args.n_eval]
+        prefixes = [" ".join(a.split()[: max(3, len(a.split()) // 2)]) for a, _ in held]
     neutral = [b for _, b in pairs[args.n_texts + 200 : args.n_texts + 260]]
     width = {k: ctx.layers[0].mlp.down_proj.out_features if k == "down_out" else ctx.width for k in sets}
     rnd = {k: random_like(v, width[k], args.seed) for k, v in sets.items()}
