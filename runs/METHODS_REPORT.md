@@ -4,15 +4,21 @@ Produced by `uv run neurons report`. Each section comes from `runs/methods/<meth
 
 ## Findings
 
-One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2026. Seed 0, greedy decoding. Most evaluations use 6 to 64 prompts per condition, so differences under about 0.1 are noise. Every steering claim below is relative to the same edit on random neurons, matched per layer.
+One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2026; Safety Neurons also uses Qwen3.5-4B-Base. Seed 0, greedy decoding. Most evaluations use 6 to 64 prompts per condition, so differences under about 0.1 are noise. Every steering claim below is relative to the same edit on random neurons, matched per layer.
 
 **Steers, and beats its random control:**
 
 - **NPTI** (17–23k neurons per pole) has the strongest personality effect. The judge moves the right way on all 5 traits: Extraversion 2.23 → 3.42 up and 1.30 down, while random stays between 2.18 and 3.07. The judge-free log-prob shift is +0.54 to +1.33 nats/token up and −1.03 to −1.94 down, against random within ±0.47. The cost is fluency: reply perplexity goes from about 2.4 to 9–20.
 - **DPN-LE** (46 neurons in each of layers 16–31, 736 per trait) has about half NPTI's effect with 1/40 of the neurons. The log-prob shift is +0.31 to +0.59 up and −0.41 to −0.98 down, against random within ±0.16. Perplexity goes from 2.4 to 3.4–8.2. On the judge, the down push lowers the rating for 4 of 5 traits (not Extraversion), and the up push beats random for 3 (not Openness or Agreeableness).
 - **Contrastive Pair Search** (269 neurons, mostly in layers 27–31): ablating them (m=0) drops refusal of harmful requests from 0.94 to 0.26. Doubling them (m=2) raises refusal of benign requests from 0.16 to 0.38. The random control doesn't move either rate. This reproduces the paper.
+- **Safety Neurons** (14,745 neurons, the top 5%, 71% of them in layers 27–31): the paper contrasts an SFT model with its DPO version; here the pair is Qwen3.5-4B-Base and Qwen3.5-4B.
+  - On 20 held-out HH-RLHF prompts, the Base model's replies get a harm rating of 2.49 (1–5).
+  - Copying the instruct model's values of those neurons in at every step brings that to 1.96. The instruct model itself gets 1.92, and copying random neurons gives 2.37.
+  - That closes 94% of the gap, against 21% for random neurons. The paper reports over 90% with 5% of neurons.
+  - The refusal-phrase rate barely separates them (base 0.40, patched 0.50, random 0.40, instruct 0.35): the instruct model mostly answers these prompts safely instead of refusing.
+  - With 20 prompts, and the instruct model as the judge, this shows direction more than size.
 - **Knowledge Neurons** (2–14 per fact, mostly layer 31): zeroing them cuts the answer probability by 84% on average, against +1% for random. Doubling raises it by a median of 306%. The paper reported −29% and +31% on BERT. But the neurons aren't specific to their fact: zeroing them also cuts other relations' facts by 38%, and L31N837 is among the neurons of 6 of the 9 facts. They look like generic answer-output neurons.
-- **AtP**: over all 294,912 neurons for France→Italy, AtP's top 10 is exactly the true top 10 from exact patching, ranked almost the same. Below that, agreement fades (recall@100 = 0.44), because bf16 logits move in steps of 1/16, which is the same size as most single-neuron effects. A rerun with float32 logits is in `atp/` when it finishes. HedwigAI's attribution uses the same first-order estimate.
+- **AtP**: over all 294,912 neurons for France→Italy, AtP's top 10 is exactly the true top 10 from exact patching, ranked almost the same. 29 of the true top 30 and 76 of the true top 100 are also in AtP's top 30 and top 100, and AtP gets the sign right for 95 of those 100. The 100th-largest true effect is 0.11 on the logit difference. The first sweep read the bf16 logits, which move in steps of 1/16, the size of most single-neuron effects; that run gave recall@100 = 0.44. Reading the final hidden state in float32 gave 0.76. Over all neurons the Pearson correlation is only 0.50, because the hundreds of thousands of near-zero effects are mostly noise to AtP. That doesn't matter for picking candidates. HedwigAI's attribution uses the same first-order estimate.
 - **AurA**: on 64 of RealToxicityPrompts' "challenging" prompts, damping the experts at all three sites lowers toxicity from 0.39 to 0.29, while random stays at 0.39. Any one site alone does nothing. Perplexity on neutral text rises from 130 to 215, but random rises as much (222), so that cost comes from damping 560k units, not from the experts. The expert count is inflated: ParaDetox's toxic sentences are longer, so max-pooling puts most units just above AUROC 0.5. Those units get a multiplier near 1 and barely change.
 - **Sentiment unit**: the best single neuron, L18N1324, classifies SST-2 at 0.77. An L1 probe over 197 neurons reaches 0.905; Radford et al.'s single mLSTM unit reached 0.92. Clamping it at 4× its 99th percentile turns raw review continuations more positive, from 0.15 to 0.34; the opposite clamp gives 0.06. Sixteen units at 4× give 1.00. The 16 prompts share one opener, so their outcomes are correlated, and 16 random units clamped at 4× also swing the score (0.38, 0.88). Only the 1× clamps have clean controls (top-16: 0.44 against random 0.19).
 - **HedwigAI's single neurons** map onto the Big Five as their names suggest:
@@ -30,10 +36,6 @@ One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2
 - **Gender**: none of the three pushes steers toward its gender. `to_female` lowers the female word share (0.28 → 0.11; random 0.32), and `to_male` doesn't beat its random control. Only the neutral zero-only edit beats random: 0.19 against 0.01 (base 0.10). Zeroing about 6k neurons of any kind pushes the stories toward male defaults. The labels were checked by hand and are correct.
 - **Emotion & Rhetoric** (106–913 neurons per label): ablating a label's neurons barely changes zero-shot classification of that label. The changes are surprise −0.15, anger −0.05, love +0.20, and 0 for the rest, with 20 texts per label.
 - **IRiS**: topic-weighted NPTI does no better than plain NPTI on the same questions. For Extraversion the judge gives 3.64 against 3.86 up, and 1.51 against 1.50 down. The four topics' neuron sets overlap heavily (mean Jaccard 0.60). And the topic routing barely routes: a question's weight on its own topic averages 0.27, where an even split over four topics would give 0.25. The model's middle-layer embedding hardly tells these topics apart.
-
-**Not run:**
-
-- **Safety Neurons**: it needs `Qwen/Qwen3.5-4B-Base` (about 9 GB), and the disk had 8.8 GB free. The recipe passes on the tiny model.
 
 ### Caveats
 
@@ -56,12 +58,12 @@ One run of each recipe on Qwen3.5-4B, bf16, on an M4 Pro (MPS), 5–6 November 2
 | Gender | R | 3 min + 4 min | runs; no steering |
 | Contrastive Pair Search | R | 5 min | works, reproduces the paper |
 | Knowledge Neurons | R (tens of facts) | 20 min for 9 facts | strong but not specific |
-| AtP | R | 2 s for AtP; 2.2 h for exact patching of every neuron on one pair | top 10 exact |
+| AtP | R | 2 s for AtP; about 2 h for exact patching of every neuron on one pair | top 10 exact; 76 of the top 100 |
 | Sentiment unit | R / S | 4 min + 3 min | probe works; steering partly |
 | Emotion & Rhetoric | S | 7 min | runs; ablation does nothing |
-| Safety Neurons | S | not run (needs a second 9 GB model) | — |
+| Safety Neurons | S | 19 min to find, 9 min to evaluate; both models in bf16 (15.7 GiB) plus 9 GB of disk for Base | works, reproduces the paper |
 
-Everything except Safety Neurons fits comfortably. The heavy parts are exact patching (about 37 neurons a second) and generation. Paper-scale datasets and LLM judges remain out of reach, as the plan expected.
+Everything fits, including Safety Neurons once there was disk for the Base model; both 4B models fit in memory together in bf16. The heavy parts are exact patching (about 37 neurons a second) and generation, slowest in Safety Neurons' lockstep decoding, one token at a time. Paper-scale datasets and LLM judges remain out of reach, as the plan expected.
 
 | recipe | status | neurons found | run |
 |---|---|---|---|
@@ -78,7 +80,7 @@ Everything except Safety Neurons fits comfortably. The heavy parts are exact pat
 | `atp` | ran | 1200 | _torch.bfloat16, seed 0_ |
 | `sentiment` | ran | 16 | _torch.bfloat16, seed 0_ |
 | `emotion` | ran | 2064 | _torch.bfloat16, seed 0_ |
-| `safety` | not run | – |  |
+| `safety` | ran | 14745 | _torch.bfloat16, seed 0_ |
 
 ## Personality: DPN-LE, Psychological Concept Neurons, NPTI
 
@@ -270,29 +272,33 @@ Neurons per gender: {'female': 2949, 'male': 2949, 'neutral': 2949}. Shares of g
 
 ## Attribution patching vs exact patching
 
-Exact patching of each neuron (all positions) against AtP's one-pass estimate, on the logit difference between the two capitals. With **full sweep** every one of the 294,912 neurons is patched; otherwise a pool of AtP's top 300 plus 300 random neurons, which flatters AtP. **recall@k** is the share of the true top-k (by |effect|) inside AtP's top-k. **resolution** is the smallest nonzero exact effect: bf16 logits move in steps of 1/16 to 1/32, so newer runs read the logits in float32.
+Exact patching of each neuron (all positions) against AtP's one-pass estimate, on the logit difference between the two capitals. With **full sweep** every one of the 294,912 neurons is patched; otherwise a pool of AtP's top 300 plus 300 random neurons, which flatters AtP. **recall@k** is the share of the true top-k (by |effect|) inside AtP's top-k. **resolution** is the smallest nonzero exact effect. bf16 logits move in steps of 1/16 to 1/32 at these values, the size of most single-neuron effects, so the exact effects are read in float32 (final hidden state times the output weights). Rows marked *(bf16 logits)* are the first run, which read the bf16 logits (`atp/eval-bf16-logits.json`).
 
 | pair | neurons patched | full sweep | pearson | spearman | recall@10 | recall@30 | recall@100 | 100th true effect | resolution | sign agreement (true top 100) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| France->Italy | 294912 | True | 0.193 | 0.045 | – | – | 0.44 | – | – | 0.76 |
-| Germany->Spain | 600 | False | 0.972 | 0.768 | – | – | 0.81 | – | – | 0.98 |
-| Japan->Egypt | 600 | False | 0.962 | 0.782 | – | – | 0.75 | – | – | 1.00 |
-| Russia->Greece | 600 | False | 0.989 | 0.778 | – | – | 0.77 | – | – | 0.96 |
+| France->Italy | 294912 | True | 0.501 | 0.088 | 1.00 | 0.97 | 0.76 | 0.113 | 1e-06 | 0.95 |
+| Germany->Spain | 600 | False | 0.975 | 0.844 | 0.80 | 0.90 | 0.81 | 0.097 | 2e-04 | 0.99 |
+| Japan->Egypt | 600 | False | 0.970 | 0.853 | 1.00 | 0.90 | 0.79 | 0.084 | 1e-04 | 1.00 |
+| Russia->Greece | 600 | False | 0.990 | 0.860 | 0.80 | 0.93 | 0.78 | 0.090 | 5e-05 | 1.00 |
+| France->Italy *(bf16 logits)* | 294912 | True | 0.193 | 0.045 | – | – | 0.44 | – | – | 0.76 |
+| Germany->Spain *(bf16 logits)* | 600 | False | 0.972 | 0.768 | – | – | 0.81 | – | – | 0.98 |
+| Japan->Egypt *(bf16 logits)* | 600 | False | 0.962 | 0.782 | – | – | 0.75 | – | – | 1.00 |
+| Russia->Greece *(bf16 logits)* | 600 | False | 0.989 | 0.778 | – | – | 0.77 | – | – | 0.96 |
 
 The 10 neurons with the largest exact effect for France->Italy:
 
 | neuron | exact | AtP |
 |---|---|---|
-| L27N8430 | -4.312 | -6.037 |
-| L30N6412 | +1.875 | +1.928 |
-| L20N2065 | -1.812 | -1.381 |
-| L30N1701 | +1.500 | +1.636 |
+| L27N8430 | -4.305 | -6.037 |
+| L30N6412 | +1.940 | +1.928 |
+| L20N2065 | -1.830 | -1.381 |
+| L30N1701 | +1.572 | +1.636 |
 | L26N2001 | -1.375 | -1.293 |
-| L29N8743 | -1.312 | -1.376 |
-| L19N68 | -1.188 | -0.916 |
-| L26N7274 | -1.125 | -1.074 |
-| L29N169 | -1.000 | -1.173 |
-| L31N3755 | +0.812 | +0.765 |
+| L29N8743 | -1.300 | -1.376 |
+| L19N68 | -1.138 | -0.916 |
+| L26N7274 | -1.068 | -1.074 |
+| L29N169 | -0.946 | -1.173 |
+| L31N3755 | +0.747 | +0.765 |
 
 ## Sentiment unit
 
@@ -343,7 +349,12 @@ Base zero-shot accuracy per label: sadness 0.65, joy 0.90, fear 0.50, anger 0.50
 
 ## Safety neurons (Base vs Instruct)
 
-Needs `Qwen/Qwen3.5-4B-Base` as a second model (`--base-model`, about 9 GB).
+The 14,745 `down_in` neurons (top 5%) whose activations differ most (root-mean-square) between Qwen3.5-4B-Base and Qwen3.5-4B, read on the Base model's own answers to HH-RLHF harmless prompts. The paper contrasts an SFT model with its DPO-aligned version; Base vs Instruct is a looser pair. On held-out HH-RLHF prompts in HH's Human:/Assistant: format, the Base model answers alone (**base**); with the instruct model's values of those neurons copied in at every step (**base+patch**); with the same number of random neurons per layer copied (**base+random patch**). **instruct** is the instruct model answering the same raw prompts. **refusal** is the refusal-phrase rate; **harm** is the instruct model's 1-5 rating of the reply.
 
-_not run_
+| condition | refusal | harm (1-5) |
+|---|---|---|
+| base | 0.40 | 2.49 |
+| base+patch | 0.50 | 1.96 |
+| base+random patch | 0.40 | 2.37 |
+| instruct | 0.35 | 1.92 |
 

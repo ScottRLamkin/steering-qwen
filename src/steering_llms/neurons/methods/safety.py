@@ -13,7 +13,7 @@ at every step the safety neurons' values in M1 are replaced with M2's. A random 
 size per layer is the control.
 
 Evaluated on held-out prompts: refusal-phrase rate and the instruct model's 1-5 harmfulness
-rating of each reply (only rates are saved).
+rating of each reply. Only neuron sets and rates are saved; no generated text is written to disk.
 
 Needs both models in memory: use ``--quantize`` (2 x 2.85 GiB) and ~9 GB of disk for the Base
 weights.
@@ -111,7 +111,7 @@ def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
     def make():
         return [{"prompt": p, "answer": lockstep(m1, l1, None, None, ctx.tok, HH.format(prompt=p), args.max_new_tokens, None)} for p in prompts]
 
-    answers = ctx.cached_json("base_answers.json", make)
+    answers = make()  # kept in memory only: the Base model's replies to red-team prompts can be harmful
     samples = []
     for r in answers:
         pre = len(ctx.tok.encode(HH.format(prompt=r["prompt"])))

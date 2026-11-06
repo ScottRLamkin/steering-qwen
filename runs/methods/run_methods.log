@@ -49,3 +49,12 @@ W1106 01:41:49.637000 80310 torch/distributed/elastic/multiprocessing/redirects.
 {"report": "runs/METHODS_REPORT.md"}
 === followups done 01:41:52
 === atp (fp32 readout) 01:42:07
+    ok 03:36:38
+W1106 03:36:43.131000 83721 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"report": "runs/METHODS_REPORT.md"}
+=== followups2 done 03:36:46
+=== safety (Base vs Instruct, bf16) 03:39:18
+    ok 04:07:29
+W1106 04:07:34.396000 84953 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"report": "runs/METHODS_REPORT.md"}
+=== safety done 04:07:37

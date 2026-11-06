@@ -226,12 +226,18 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
     else:
         out += ["Exact patching of each neuron (all positions) against AtP's one-pass estimate, on the logit difference between the two capitals. "
                 "With **full sweep** every one of the 294,912 neurons is patched; otherwise a pool of AtP's top 300 plus 300 random neurons, which flatters AtP. "
-                "**recall@k** is the share of the true top-k (by |effect|) inside AtP's top-k. **resolution** is the smallest nonzero exact effect: bf16 logits move in steps of 1/16 to 1/32, so newer runs read the logits in float32.", ""]
+                "**recall@k** is the share of the true top-k (by |effect|) inside AtP's top-k. **resolution** is the smallest nonzero exact effect. "
+                "bf16 logits move in steps of 1/16 to 1/32 at these values, the size of most single-neuron effects, so the exact effects are read in float32 "
+                "(final hidden state times the output weights). Rows marked *(bf16 logits)* are the first run, which read the bf16 logits (`atp/eval-bf16-logits.json`).", ""]
+        old = root / "atp" / "eval-bf16-logits.json"
+        rows = list(ev.items())
+        if old.exists() and any(r.get("fp32_readout") for r in ev.values()):
+            rows += [(f"{k} *(bf16 logits)*", r) for k, r in json.loads(old.read_text()).items()]
         out += _table(["pair", "neurons patched", "full sweep", "pearson", "spearman", "recall@10", "recall@30", "recall@100",
                        "100th true effect", "resolution", "sign agreement (true top 100)"],
                       [[k, r["n_patched"], r["full_sweep"], _f(r["pearson"], 3), _f(r["spearman"], 3), _f(r.get("recall@10")),
-                        _f(r.get("recall@30")), _f(r["recall@100"]), _f(r.get("true_100th"), 3), _f(r.get("resolution"), 4),
-                        _f(r["sign_agree_top100"])] for k, r in ev.items()]) + [""]
+                        _f(r.get("recall@30")), _f(r["recall@100"]), _f(r.get("true_100th"), 3), f"{r['resolution']:.0e}" if r.get("resolution") else "–",
+                        _f(r["sign_agree_top100"])] for k, r in rows]) + [""]
         full = [(k, r) for k, r in ev.items() if r["full_sweep"]]
         for k, r in full:
             out += [f"The 10 neurons with the largest exact effect for {k}:", ""]
@@ -273,7 +279,14 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
             out += _table(["condition", "judge", "ppl"], rows) + [""]
     lines += out
     ev, sets, _ = _load(root, "safety")
-    lines += simple_conditions("Safety neurons (Base vs Instruct)", ev, [("refusal", "refusal"), ("harm (1-5)", "harm")],
-                               "" if ev else "Needs `Qwen/Qwen3.5-4B-Base` as a second model (`--base-model`, about 9 GB).")
+    intro = "Needs `Qwen/Qwen3.5-4B-Base` as a second model (`--base-model`, about 9 GB)."
+    if ev:
+        intro = (f"The {ev['n_neurons']:,} `down_in` neurons (top 5%) whose activations differ most (root-mean-square) between Qwen3.5-4B-Base "
+                 "and Qwen3.5-4B, read on the Base model's own answers to HH-RLHF harmless prompts. The paper contrasts an SFT model with its "
+                 "DPO-aligned version; Base vs Instruct is a looser pair. On held-out HH-RLHF prompts in HH's Human:/Assistant: format, the Base "
+                 "model answers alone (**base**); with the instruct model's values of those neurons copied in at every step (**base+patch**); "
+                 "with the same number of random neurons per layer copied (**base+random patch**). **instruct** is the instruct model answering "
+                 "the same raw prompts. **refusal** is the refusal-phrase rate; **harm** is the instruct model's 1-5 rating of the reply.")
+    lines += simple_conditions("Safety neurons (Base vs Instruct)", ev, [("refusal", "refusal"), ("harm (1-5)", "harm")], intro)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text("\n".join(lines) + "\n")
