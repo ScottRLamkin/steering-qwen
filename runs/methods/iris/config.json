@@ -1,0 +1,33 @@
+{
+ "args": {
+  "cmd": "iris",
+  "stage": "all",
+  "run_dir": "runs/methods/iris",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Extraversion"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "topics": null,
+  "n_topics": 4,
+  "n_questions": 12,
+  "max_new_tokens": 140,
+  "min_required": 1000,
+  "min_diff": 0.1,
+  "gamma": 1.4,
+  "sigma": 0.1,
+  "n_eval_per_topic": 2
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

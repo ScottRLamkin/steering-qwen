@@ -1,0 +1,27 @@
+[      0s] hedwig: discover
+[      0s] evil: L17N8623+, L11N2930+, L5N6959-
+[      0s] sycophantic: L20N7450-, L6N316+, L4N8405-
+[      0s] humorous: L4N8405+, L15N8137+, L5N7656-
+[      0s] melancholic: L5N4530-, L5N6959-, L5N8940-
+[      0s] paranoid: L16N5515+, L16N8010-, L5N6573+
+[      0s] arrogant: L23N4740+, L9N8732-, L25N596-
+[      0s] anxious: L21N433+, L5N7055-, L5N5647+
+[      0s] cheerful: L5N6794-, L5N6959+, L5N7779-
+[      0s] poetic: L15N9125+, L17N7426+, L15N8494-
+[      0s] hedwig: evaluate
+[      1s] Steerer vs down_in edit: {'max_abs_diff': 0.15625, 'max_abs_effect': 8.8984375}
+[      8s] evil L17N8623+: Open -0.16 Cons -0.12 Extr -0.11 Agre -0.01 Neur -0.30
+[     11s] sycophantic L20N7450-: Open +0.08 Cons -0.21 Extr +0.00 Agre -0.01 Neur +0.46
+[     14s] humorous L4N8405+: Open +0.13 Cons +0.07 Extr +0.01 Agre +0.04 Neur +0.11
+[     18s] melancholic L5N4530-: Open +0.14 Cons +0.07 Extr +0.02 Agre +0.11 Neur +0.04
+[     21s] paranoid L16N5515+: Open -0.27 Cons -0.35 Extr -0.12 Agre -0.23 Neur +0.11
+[     24s] arrogant L23N4740+: Open -0.12 Cons -0.11 Extr -0.01 Agre -0.06 Neur -0.01
+[     27s] anxious L21N433+: Open -0.21 Cons -0.14 Extr -0.04 Agre -0.17 Neur +0.07
+[     31s] cheerful L5N6794-: Open +0.05 Cons -0.04 Extr +0.00 Agre +0.02 Neur +0.06
+[     34s] poetic L15N9125+: Open +0.19 Cons -0.08 Extr +0.02 Agre +0.19 Neur +0.32
+[     34s] hedwig: persona log-prob score
+[    154s] Openness log-prob contrast +0.407; shift evil -1.232 sycophantic -0.584 humorous -0.998 melancholic +0.015 paranoid -0.372 arrogant -1.439 anxious -0.738 cheerful -0.091 poetic +0.342 evil random -0.048 sycophantic random -0.411 humorous random -0.786 melancholic random -0.478 paranoid random -0.069 arrogant random -0.601 anxious random -0.413 cheerful random -0.671 poetic random +0.042
+[    270s] Conscientiousness log-prob contrast +0.338; shift evil -0.523 sycophantic +0.029 humorous -0.963 melancholic -0.248 paranoid +0.453 arrogant +0.314 anxious -1.097 cheerful -0.404 poetic +0.399 evil random -0.001 sycophantic random -0.150 humorous random -0.641 melancholic random -0.147 paranoid random -0.102 arrogant random +0.051 anxious random -0.011 cheerful random -0.280 poetic random -0.166
+[    380s] Extraversion log-prob contrast -0.248; shift evil -0.490 sycophantic +0.400 humorous +1.100 melancholic -0.455 paranoid -0.769 arrogant -0.100 anxious +0.737 cheerful +0.879 poetic -0.995 evil random +0.167 sycophantic random +0.067 humorous random +0.454 melancholic random +0.661 paranoid random +0.045 arrogant random -0.428 anxious random -0.248 cheerful random +0.110 poetic random +0.560
+[    495s] Agreeableness log-prob contrast +0.415; shift evil -1.410 sycophantic -0.186 humorous -0.340 melancholic -0.262 paranoid -0.546 arrogant -1.099 anxious -0.104 cheerful -0.208 poetic -0.583 evil random +0.073 sycophantic random +0.187 humorous random -0.782 melancholic random -0.240 paranoid random +0.025 arrogant random -0.063 anxious random -0.086 cheerful random -0.183 poetic random -0.008
+[    605s] Neuroticism log-prob contrast +0.232; shift evil +0.409 sycophantic +0.457 humorous -0.105 melancholic +0.021 paranoid +0.109 arrogant -0.502 anxious +0.134 cheerful -0.142 poetic -0.216 evil random -0.116 sycophantic random +0.088 humorous random -0.087 melancholic random -0.067 paranoid random +0.131 arrogant random -0.303 anxious random -0.024 cheerful random -0.139 poetic random +0.132

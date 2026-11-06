@@ -1,0 +1,51 @@
+=== dpn-le 20:39:13
+    FAILED (see runs/methods/dpn-le.log)
+=== pcn 20:39:24
+--- restart Thu Nov  5 20:41:02 PST 2026
+=== dpn-le 20:41:02
+    ok 21:02:00
+=== pcn 21:02:00
+    ok 21:15:17
+=== npti 21:15:17
+    ok 21:40:55
+=== hedwig 21:40:55
+    ok 21:51:09
+=== sneuron-tst 21:51:09
+    ok 21:54:19
+=== aura 21:54:19
+    ok 21:58:45
+=== gender 21:58:45
+    ok 22:01:35
+=== cps 22:01:35
+    ok 22:06:44
+=== emotion 22:06:44
+    ok 22:10:10
+=== sentiment 22:10:10
+    ok 22:14:10
+=== atp 22:14:10
+    ok 00:30:02
+=== knowledge 00:30:02
+    ok 00:50:01
+=== iris 00:50:01
+    ok 01:03:28
+=== extras 01:03:56
+    ok dpn-le score 01:06:39
+    ok pcn-k500-all 01:17:50
+W1106 01:17:54.764000 79146 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"report": "runs/METHODS_REPORT.md"}
+=== extras done 01:17:57
+=== followups 01:18:23
+=== emotion 01:18:23
+    ok 01:25:29
+=== aura 01:25:29
+    ok 01:29:11
+=== gender 01:29:11
+    ok 01:33:30
+=== sentiment 01:33:30
+    ok 01:36:41
+=== sneuron-tst 01:36:41
+    ok 01:41:46
+W1106 01:41:49.637000 80310 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"report": "runs/METHODS_REPORT.md"}
+=== followups done 01:41:52
+=== atp (fp32 readout) 01:42:07

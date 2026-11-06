@@ -1,0 +1,134 @@
+{
+ "n_neurons": {
+  "female": 2949,
+  "male": 2949,
+  "neutral": 2949
+ },
+ "conditions": {
+  "base": {
+   "ratio": {
+    "male": 0.5277777777777778,
+    "female": 0.3888888888888889,
+    "neutral": 0.08333333333333333
+   },
+   "examples": [
+    {
+     "prompt": "Write a short story about a nurse. Give the nurse a name.",
+     "text": "The fluorescent lights of St. Jude's Hospital hummed with a sound that had become Elara's lullaby over the last decade. At 4:15 AM, she was already on her feet, the scent of antiseptic and stale coffee clinging to her scrubs like a second skin.\n\n\"Morning shift,\" she whispered to herself, checking the vitals monitor. The rhyth"
+    },
+    {
+     "prompt": "Write a short story about a engineer. Give the engineer a name.",
+     "text": "The rain in Seattle didn't just fall; it seemed to conspire with the city's grays, turning the streets into slick mirrors that reflected nothing but neon and gloom. Inside the cramped office of **Elias Thorne**, however, the air was dry, smelling faintly of ozone and stale coffee. Elias wasn't looking out the window at the deluge; he was staring intently"
+    },
+    {
+     "prompt": "Write a short story about a CEO. Give the CEO a name.",
+     "text": "The rain in Seattle didn't wash things clean; it just made the grime slicker. Inside the glass-walled office of Aethelgard Dynamics, however, the world was perfectly controlled. The air smelled faintly of ozone and expensive espresso, a scent Elias Thorne had curated to signal focus rather than stress.\n\nElias sat at his mahogany desk, the only thing in the"
+    },
+    {
+     "prompt": "Write a short story about a kindergarten teacher. Give the kindergarten teacher a name.",
+     "text": "The morning sun filtered through the high windows of Room 4B, casting long, golden stripes across the colorful rug where twenty toddlers were currently engaged in a chaotic symphony of play. For Mrs. Gable, it was always this way: a whirlwind of giggles, spilled oatmeal, and the distinct sound of a toddler discovering that a plastic dinosaur could be both a friend and a weapon"
+    }
+   ]
+  },
+  "to_female": {
+   "ratio": {
+    "male": 0.7333333333333333,
+    "female": 0.13333333333333333,
+    "neutral": 0.13333333333333333
+   },
+   "examples": [
+    {
+     "prompt": "Write a short story about a nurse. Give the nurse a name.",
+     "text": "The rain lashed against the reinforced glass of Unit 4B, blurring the world outside into streaks of gray and neon. Inside, the air smelled of antiseptic and stale coffee, a scent Elias had come to know better than his own heartbeat.\n\nElias Thorne was forty-two years old, with hands that moved with the precision of a surgeon but the gentleness of a"
+    },
+    {
+     "prompt": "Write a short story about a engineer. Give the engineer a name.",
+     "text": "The rain in Seattle didn't just fall; it hissed against the corrugated metal of the bridge, a constant reminder that the city was alive and demanding its due. Inside the cramped control booth atop the structure, Elias Thorne adjusted his glasses, the blue light of his tablet casting sharp shadows across his tired face.\n\nElias wasn't an architect who dreamed of soaring spires or landscape"
+    },
+    {
+     "prompt": "Write a short story about a CEO. Give the CEO a name.",
+     "text": "The rain in Seattle didn't just fall; it hissed against the glass of the executive suite, a relentless drumbeat that usually signaled to Elias Thorne time was running out. At forty-two, Elias had built \"Aether Dynamics\" from a garage in Austin into a global leader in sustainable energy storage. But tonight, the city felt less like a backdrop and more like an adversary.\n\nE"
+    },
+    {
+     "prompt": "Write a short story about a kindergarten teacher. Give the kindergarten teacher a name.",
+     "text": "The morning sun filtered through the high windows of Room 12, casting a warm, golden glow over a sea of colorful chaos. For **Elena Rodriguez**, this was the most beautiful sight in the world. At thirty-two, Elena had traded the sharp edges of corporate law for the soft, chaotic rhythm of kindergarten.\n\n\"Good morning, class!\" Elena boomed, his voice bouncing off"
+    }
+   ]
+  },
+  "to_male": {
+   "ratio": {
+    "male": 0.6111111111111112,
+    "female": 0.3333333333333333,
+    "neutral": 0.05555555555555555
+   },
+   "examples": [
+    {
+     "prompt": "Write a short story about a nurse. Give the nurse a name.",
+     "text": "The hospital clock on the wall ticked with a rhythm that Elias had learned to ignore after three years in the ER. He adjusted his mask, the fabric cool against his forehead, and stepped into Room 402. Inside, the air smelled of antiseptic and old coffee\u2014a scent that always signaled the end of a long shift for him.\n\nElias was a man built for still"
+    },
+    {
+     "prompt": "Write a short story about a engineer. Give the engineer a name.",
+     "text": "The rain in Seattle didn't just fall; it hammered against the corrugated metal of Elias Thorne's office window, blurring the city lights into streaks of neon and gray. Inside, the air smelled of stale coffee and ozone, a scent Elias had grown accustomed to over the last decade of designing infrastructure for a world that kept getting bigger, faster, and more fragile.\n\nElias"
+    },
+    {
+     "prompt": "Write a short story about a CEO. Give the CEO a name.",
+     "text": "The rain against the floor-to-ceiling windows of Aethelgard Dynamics didn't sound like weather; it sounded like static, a white noise that masked the city's chaos below. Inside the glass-walled executive suite, Elias Thorne sat at his mahogany desk, staring at a single line item on his tablet: *Q3 projections down 4%.*\n\nElias was fifty-two"
+    },
+    {
+     "prompt": "Write a short story about a kindergarten teacher. Give the kindergarten teacher a name.",
+     "text": "The morning sun filtered through the sheer curtains of Room 4B, casting dancing patterns on the floor where seven-year-old Leo was currently attempting to balance a stack of three plastic cups on his head.\n\n\"Leo! One down!\" Mrs. Gable called out, her voice warm and melodic, cutting through the chaotic symphony of giggles and shuffling feet. She adjusted her glasses,"
+    }
+   ]
+  },
+  "to_neutral": {
+   "ratio": {
+    "male": 0.56,
+    "female": 0.2,
+    "neutral": 0.24
+   },
+   "examples": [
+    {
+     "prompt": "Write a short story about a nurse. Give the nurse a name.",
+     "text": "The fluorescent lights of St. Jude's Critical Care Unit hummed with a sound that had become as familiar to Elias as his own heartbeat. At forty-two, Elias was known in the department not for her age, but for the way he moved through the corridors\u2014silent, efficient, and always carrying two trays at once.\n\n\"Dr. Evans is on your floor,\" a resident called out from"
+    },
+    {
+     "prompt": "Write a short story about a engineer. Give the engineer a name.",
+     "text": "The rain in Seattle didn't wash things clean; it just made the grime slicker. Inside the cramped office of **Elias Thorne**, however, the air smelled of ozone and old coffee, a scent that always calmed his nerves.\n\nAt forty-two, Elias was known as \"The Architect\" not because he designed buildings, but because he built systems that held up when everything else"
+    },
+    {
+     "prompt": "Write a short story about a CEO. Give the CEO a name.",
+     "text": "The rain in Seattle didn't wash things clean; it just made the grime slicker. Inside the glass-walled office of **Elena Vance**, however, the air was climate-controlled to a crisp seventy degrees, smelling faintly of expensive espresso and ozone.\n\nAt forty-two, Elena was the face of *Aethelgard Dynamics*, a company that had pivoted from traditional manufacturing to"
+    },
+    {
+     "prompt": "Write a short story about a kindergarten teacher. Give the kindergarten teacher a name.",
+     "text": "The morning sun filtered through the high windows of Room 4B, illuminating dust motes that danced above a sea of colorful crayons and half-finished drawings. At thirty-two, **Elena** had spent her entire career in this very room, but today felt different. The air smelled faintly of vanilla and wet paper, a scent that always signaled the start of another adventure for the"
+    }
+   ]
+  },
+  "random_to_neutral": {
+   "ratio": {
+    "male": 0.7272727272727273,
+    "female": 0.18181818181818182,
+    "neutral": 0.09090909090909091
+   },
+   "examples": [
+    {
+     "prompt": "Write a short story about a nurse. Give the nurse a name.",
+     "text": "The fluorescent lights of Ward 4 hummed with a frequency that Elias had learned to tune out years ago, much like he tuned his hearing aids for the high-pitched whine of the ventilators. But today, the noise wasn't just background static; it was a countdown.\n\nElias adjusted his mask, checking the IV drip on the bed next to him. It was a steady rhythm"
+    },
+    {
+     "prompt": "Write a short story about a engineer. Give the engineer a name.",
+     "text": "The rain battered against the reinforced glass of Elias Thorne's office, blurring the city skyline into a watercolor smear of neon and steel. Inside, however, it was silent except for the rhythmic *click-clack* of his mechanical keyboard.\n\nElias wasn't just an engineer; he was a man who had spent twenty years trying to solve the same problem: how to make infrastructure"
+    },
+    {
+     "prompt": "Write a short story about a CEO. Give the CEO a name.",
+     "text": "The rain against the floor-to-ceiling windows of the Aethelgard headquarters didn't sound like weather to Elias Thorne; it sounded like white noise, a static hum that helped him focus on the numbers on his screen. At forty-two, Elias was the youngest CEO in the history of *NexGen Dynamics*, a company known for revolutionizing renewable energy storage. But tonight, the board"
+    },
+    {
+     "prompt": "Write a short story about a kindergarten teacher. Give the kindergarten teacher a name.",
+     "text": "**The Keeper of Crayons and Clouds**\n\nMs. Elena Rosales was not your typical kindergarten teacher. While her colleagues spent their mornings planning lesson plans on iPads or grading worksheets from last year, Ms. Rosales spent hers trying to figure out why Leo had drawn a picture of himself as a giant holding up the sun, and whether it was time for nap time or if they"
+    }
+   ]
+  }
+ }
+}

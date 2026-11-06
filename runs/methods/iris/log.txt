@@ -1,0 +1,32 @@
+[      0s] iris: discover
+[     19s] generated 8/12 (18s)
+[     31s] generated 12/12 (31s)
+[     49s] generated 8/12 (18s)
+[     62s] generated 12/12 (31s)
+[     72s] collected +: 12 samples, 1680 tokens (10s)
+[     83s] collected -: 12 samples, 1680 tokens (20s)
+[    101s] generated 8/12 (18s)
+[    114s] generated 12/12 (31s)
+[    132s] generated 8/12 (19s)
+[    145s] generated 12/12 (31s)
+[    155s] collected +: 12 samples, 1680 tokens (10s)
+[    165s] collected -: 12 samples, 1680 tokens (20s)
+[    184s] generated 8/12 (18s)
+[    196s] generated 12/12 (31s)
+[    215s] generated 8/12 (19s)
+[    228s] generated 12/12 (31s)
+[    238s] collected +: 12 samples, 1680 tokens (10s)
+[    248s] collected -: 12 samples, 1680 tokens (20s)
+[    266s] generated 8/12 (18s)
+[    279s] generated 12/12 (31s)
+[    297s] generated 8/12 (18s)
+[    309s] generated 12/12 (31s)
+[    319s] collected +: 12 samples, 1680 tokens (10s)
+[    329s] collected -: 12 samples, 1680 tokens (20s)
+[    330s] Extraversion: topic sets of [18412, 16850, 17671, 17634] neurons; mean Jaccard between topics 0.60
+[    331s] iris: evaluate
+[    386s] Extraversion base: judge 3.26 ppl 2.4
+[    465s] Extraversion npti+: judge 3.86 ppl 9.1
+[    591s] Extraversion iris+: judge 3.64 ppl 10.0
+[    671s] Extraversion npti-: judge 1.50 ppl 10.2
+[    798s] Extraversion iris-: judge 1.51 ppl 11.3

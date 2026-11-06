@@ -1,0 +1,20 @@
+[      0s] sneuron-tst: discover
+[     28s] collected toxic: 500 samples, 5983 tokens (28s)
+[     53s] collected neutral: 500 samples, 4780 tokens (53s)
+[     53s] toxic: 5898 neurons, layers {0: 394, 1: 173, 2: 152, 3: 202, 4: 165, 5: 80, 6: 135, 7: 117, 8: 150, 9: 151, 10: 167, 11: 183, 12: 185, 13: 196, 14: 258, 15: 189, 16: 224, 17: 271, 18: 256, 19: 174, 20: 172, 21: 147, 22: 77, 23: 113, 24: 107, 25: 66, 26: 53, 27: 73, 28: 135, 29: 166, 30: 343, 31: 624}
+[     53s] neutral: 5898 neurons, layers {0: 226, 1: 405, 2: 363, 3: 281, 4: 204, 5: 111, 6: 120, 7: 42, 8: 61, 9: 94, 10: 144, 11: 152, 12: 232, 13: 188, 14: 285, 15: 252, 16: 292, 17: 287, 18: 284, 19: 198, 20: 165, 21: 177, 22: 97, 23: 196, 24: 115, 25: 54, 26: 65, 27: 129, 28: 112, 29: 101, 30: 198, 31: 268}
+[     53s] sneuron-tst: evaluate
+[     71s] base: neutral 1.000 content 0.162 ppl 29.1
+[     92s] deactivate: neutral 0.995 content 0.210 ppl 28.9
+[    105s] random: neutral 0.964 content 0.186 ppl 37.6
+[    146s] base+dola: neutral 0.910 content 0.320 ppl 20.8
+[    181s] deactivate+dola: neutral 0.935 content 0.333 ppl 37.5
+[      0s] sneuron-tst: evaluate
+[     33s] base: neutral 0.974 content 0.176 ppl 23.2
+[     64s] deactivate: neutral 0.972 content 0.204 ppl 31.9
+[     90s] random: neutral 0.933 content 0.190 ppl 30.8
+[    176s] base+dola: neutral 0.947 content 0.301 ppl 15.7
+[    247s] deactivate+dola: neutral 0.931 content 0.343 ppl 31.5
+[    263s] copy: base: neutral 0.011 content 1.000 ppl 178.5
+[    280s] copy: deactivate: neutral 0.011 content 1.000 ppl 178.5
+[    297s] copy: random: neutral 0.011 content 1.000 ppl 178.5

@@ -1,0 +1,47 @@
+W1106 01:06:42.348000 78759 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  20%|█▉        | 84/426 [00:00<00:00, 578.06it/s]Loading weights:  33%|███▎      | 142/426 [00:00<00:00, 394.36it/s]Loading weights:  52%|█████▏    | 222/426 [00:00<00:00, 492.69it/s]Loading weights:  69%|██████▉   | 296/426 [00:00<00:00, 524.76it/s]Loading weights:  82%|████████▏ | 351/426 [00:00<00:00, 499.46it/s]Loading weights:  95%|█████████▍| 403/426 [00:00<00:00, 398.14it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 450.07it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] pcn: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     25s] collected items: 300 samples, 300 tokens (25s)
+[     31s] Openness: AP 0.510..0.638 (chance 0.20), layers {0: 1, 1: 25, 2: 28, 3: 3, 4: 7, 5: 4, 6: 4, 7: 8, 8: 26, 9: 23, 10: 16, 11: 16, 12: 12, 13: 5, 14: 9, 15: 9, 16: 8, 17: 13, 18: 17, 19: 8, 20: 16, 21: 10, 22: 9, 23: 22, 24: 35, 25: 26, 26: 24, 27: 10, 28: 35, 29: 39, 30: 22, 31: 10}
+[     34s] Conscientiousness: AP 0.439..0.670 (chance 0.20), layers {1: 55, 2: 23, 3: 3, 4: 51, 5: 11, 6: 13, 7: 60, 8: 55, 9: 40, 10: 29, 11: 21, 12: 10, 13: 9, 14: 19, 15: 5, 16: 6, 17: 10, 18: 9, 19: 9, 20: 14, 21: 9, 22: 8, 23: 4, 24: 8, 25: 7, 26: 2, 27: 2, 28: 1, 29: 2, 30: 2, 31: 3}
+[     36s] Extraversion: AP 0.420..0.529 (chance 0.20), layers {1: 2, 2: 1, 4: 1, 6: 2, 7: 1, 8: 5, 9: 13, 10: 22, 11: 14, 12: 12, 13: 11, 14: 6, 15: 5, 16: 9, 17: 10, 18: 15, 19: 16, 20: 27, 21: 12, 22: 26, 23: 31, 24: 16, 25: 24, 26: 38, 27: 33, 28: 36, 29: 35, 30: 38, 31: 39}
+[     38s] Agreeableness: AP 0.556..0.690 (chance 0.20), layers {7: 2, 8: 2, 9: 6, 10: 12, 11: 20, 12: 35, 13: 35, 14: 37, 15: 42, 16: 27, 17: 20, 18: 21, 19: 18, 20: 14, 21: 7, 22: 25, 23: 31, 24: 14, 25: 14, 26: 18, 27: 20, 28: 25, 29: 14, 30: 18, 31: 23}
+[     40s] Neuroticism: AP 0.487..0.649 (chance 0.20), layers {1: 6, 2: 5, 3: 3, 4: 3, 6: 3, 7: 20, 8: 58, 9: 33, 10: 42, 11: 33, 12: 23, 13: 17, 14: 11, 15: 7, 16: 1, 17: 2, 18: 8, 19: 11, 20: 23, 21: 16, 22: 26, 23: 23, 24: 20, 25: 20, 26: 21, 27: 18, 28: 15, 29: 13, 30: 9, 31: 10}
+[     40s] pcn: evaluate
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     60s] Openness base: questionnaire 4.43 judge 3.94 ppl 2.2
+[     80s] Openness +: questionnaire 4.42 judge 3.97 ppl 2.2
+[    100s] Openness -: questionnaire 4.42 judge 4.01 ppl 2.4
+[    118s] Openness random+: questionnaire 4.41 judge 3.83 ppl 2.5
+[    137s] Openness random-: questionnaire 4.43 judge 3.84 ppl 2.4
+[    156s] Conscientiousness base: questionnaire 4.00 judge 2.13 ppl 2.6
+[    174s] Conscientiousness +: questionnaire 3.97 judge 2.12 ppl 2.6
+[    193s] Conscientiousness -: questionnaire 3.99 judge 2.52 ppl 2.7
+[    212s] Conscientiousness random+: questionnaire 3.99 judge 2.51 ppl 2.5
+[    230s] Conscientiousness random-: questionnaire 4.00 judge 2.64 ppl 2.5
+[    249s] Extraversion base: questionnaire 3.28 judge 2.23 ppl 2.5
+[    267s] Extraversion +: questionnaire 3.29 judge 2.68 ppl 2.4
+[    286s] Extraversion -: questionnaire 3.28 judge 2.62 ppl 2.5
+[    304s] Extraversion random+: questionnaire 3.25 judge 2.79 ppl 2.5
+[    323s] Extraversion random-: questionnaire 3.24 judge 2.45 ppl 2.5
+[    342s] Agreeableness base: questionnaire 4.18 judge 2.82 ppl 2.5
+[    360s] Agreeableness +: questionnaire 4.22 judge 2.88 ppl 2.7
+[    379s] Agreeableness -: questionnaire 4.20 judge 2.60 ppl 2.6
+[    398s] Agreeableness random+: questionnaire 4.17 judge 2.65 ppl 2.5
+[    416s] Agreeableness random-: questionnaire 4.18 judge 2.57 ppl 2.5
+[    434s] Neuroticism base: questionnaire 3.17 judge 4.12 ppl 2.4
+[    452s] Neuroticism +: questionnaire 3.23 judge 4.06 ppl 2.5
+[    470s] Neuroticism -: questionnaire 3.12 judge 4.01 ppl 2.6
+[    489s] Neuroticism random+: questionnaire 3.17 judge 3.79 ppl 2.4
+[    507s] Neuroticism random-: questionnaire 3.16 judge 3.95 ppl 2.4
+[    507s] pcn: persona log-prob score
+[    540s] Openness log-prob contrast +0.407; shift + +0.003 - +0.007 random+ -0.015 random- +0.007
+[    572s] Conscientiousness log-prob contrast +0.338; shift + +0.002 - -0.007 random+ -0.007 random- -0.015
+[    602s] Extraversion log-prob contrast -0.248; shift + -0.031 - -0.040 random+ +0.048 random- +0.035
+[    634s] Agreeableness log-prob contrast +0.415; shift + -0.027 - -0.008 random+ -0.009 random- +0.004
+[    665s] Neuroticism log-prob contrast +0.232; shift + +0.050 - +0.053 random+ +0.007 random- +0.001
+done: runs/methods/pcn-k500-all

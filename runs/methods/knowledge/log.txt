@@ -1,0 +1,20 @@
+[      0s] knowledge: discover
+[    162s] [1/9] P36:Grande Lisboa Subregion -> Lisbon: 7 neurons (p=0.95) L31N1911, L31N837, L31N1877, L22N1373, L31N5711, L23N380, L29N2
+[    314s] [2/9] P1376:Niamey -> Niger: 6 neurons (p=0.95) L24N7175, L31N837, L31N5224, L27N6676, L29N2, L26N7797
+[    457s] [3/9] P1376:Tripoli -> Libya: 14 neurons (p=0.95) L31N2134, L29N706, L31N1667, L26N5228, L31N837, L31N849, L31N5224, L31N437, L26N1, L23N5518, L25N3813, L26N3881, L31N2483, L31N1897
+[    569s] [4/9] P364:Rhoda -> English: 8 neurons (p=0.95) L23N6191, L24N722, L31N1877, L27N3737, L31N1107, L31N1897, L29N2, L25N5725
+[    681s] [5/9] P364:Westworld -> English: 8 neurons (p=0.95) L27N3737, L31N664, L23N6191, L23N8335, L24N578, L24N722, L14N667, L25N5725
+[    846s] [6/9] P27:Andris Piebalgs -> Latvia: 4 neurons (p=0.80) L31N2483, L31N837, L31N1897, L31N2748
+[    946s] [7/9] P17:Nea Zichni Municipality -> Greece: 13 neurons (p=0.95) L25N225, L30N2473, L30N3512, L27N3444, L31N837, L31N849, L31N1897, L23N4660, L22N4201, L26N3, L25N3813, L27N8598, L31N2748
+[   1047s] [8/9] P17:Pampilhosa da Serra -> Portugal: 8 neurons (p=0.95) L25N225, L30N2473, L30N1, L30N4118, L31N837, L30N3838, L30N3512, L31N1911
+[   1176s] [9/9] P30:Coulman Island -> Antarctica: 2 neurons (p=0.75) L23N7319, L29N2
+[   1176s] knowledge: evaluate
+[   1178s] P36:Grande Lisboa Subregion: suppress -98.8% amplify +403.6% random +0.4% other facts -45.1%
+[   1179s] P1376:Niamey: suppress -82.7% amplify +51.9% random -0.1% other facts -24.5%
+[   1181s] P1376:Tripoli: suppress -95.1% amplify +33.4% random -2.8% other facts -84.9%
+[   1182s] P364:Rhoda: suppress -85.8% amplify +306.0% random +3.9% other facts -35.1%
+[   1184s] P364:Westworld: suppress -91.1% amplify +371.9% random +1.1% other facts -0.4%
+[   1185s] P27:Andris Piebalgs: suppress -83.0% amplify +36.5% random +0.0% other facts -22.9%
+[   1187s] P17:Nea Zichni Municipality: suppress -99.8% amplify +1823.7% random +2.3% other facts -79.4%
+[   1188s] P17:Pampilhosa da Serra: suppress -99.1% amplify +464.3% random -0.1% other facts -51.4%
+[   1190s] P30:Coulman Island: suppress -19.4% amplify +15.0% random +2.2% other facts -0.0%

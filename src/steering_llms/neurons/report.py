@@ -148,6 +148,12 @@ def simple_conditions(title: str, ev: dict | None, cols: list[tuple[str, str]], 
     return out + _table(["condition", *[h for h, _ in cols]], rows) + [""]
 
 
+def _gender_occupations() -> list[str]:
+    from .methods.gender import OCCUPATIONS
+
+    return OCCUPATIONS
+
+
 def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> None:
     root = Path(root)
     lines = ["# Neuron methods on Qwen3.5-4B", "",
@@ -176,18 +182,23 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
         "The **copy** rows ask the model to repeat the toxic sentence word for word instead, so the unedited model keeps the toxicity. If the zeroed neurons carry the toxic style, P(neutral) of the copies rises; for random neurons it shouldn't."
         if ev else "",
     )
-    ev, sets, _ = _load(root, "aura")
+    ev, sets, cfg = _load(root, "aura")
+    src = (cfg or {}).get("args", {}).get("eval_prompts", "paradetox")
+    src = ("RealToxicityPrompts' \"challenging\" prompts" if src == "rtp" else "the first half of held-out ParaDetox toxic sentences")
     lines += simple_conditions(
         "Toxicity: AurA", ev,
         [("toxicity", "toxicity"), ("frac > 0.5", "toxic_frac"), ("neutral-text ppl", "neutral_ppl")],
-        (f"Experts per site: {ev['n_experts']}. Continuations of held-out toxic prefixes, scored by a RoBERTa toxicity classifier." if ev else ""),
+        (f"Experts per site: {ev['n_experts']}. Raw-text continuations of {src}, scored by a RoBERTa toxicity classifier. "
+         "**aura** damps all three sites at once; **random** is the same multipliers on random units." if ev else ""),
     )
     ev, sets, _ = _load(root, "gender")
     out = ["## Gender neurons", ""]
     if ev is None:
         out += ["_not run_", ""]
     else:
-        out += [f"Neurons per gender: {ev['n_neurons']}. Shares of gendered words in short stories about 12 occupations.", ""]
+        n = ev.get("n_prompts") or len(_gender_occupations())
+        out += [f"Neurons per gender: {ev['n_neurons']}. Shares of gendered words in short stories about {n} occupations. "
+                "**to_g** zeroes the other genders' neurons and doubles g's; **zero_only** only zeroes; **random_to_g** is the first on random neurons.", ""]
         genders = list(next(iter(ev["conditions"].values()))["ratio"])
         out += _table(["condition", *genders], [[n, *[_f(c["ratio"][g]) for g in genders]] for n, c in ev["conditions"].items()]) + [""]
     lines += out
@@ -237,6 +248,8 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
         side = "higher on positive sentences" if a >= 0.5 else f"higher on negative sentences, so {1 - a:.3f} read the other way"
         out += [f"The best single neuron is L{p['best_unit'][0]}N{p['best_unit'][1]}, with AUROC {a:.3f} ({side}) and held-out SST-2 accuracy {p['acc_best_unit']:.3f}.",
                 f"An L1 probe with {p['probe_nonzero']} nonzero weights reaches {p['acc_probe']:.3f}. All screened neurons together reach {p['acc_all_screened']:.3f}. Radford et al.'s single unit reached about 0.92.", ""]
+        out += ["Clamps of the top-k probe units, toward positive (+) or negative (-); **x4** clamps to 4x the 99th / 1st percentile value. "
+                "Reviews are raw-text continuations of \"I watched <title> last night, and\" for 16 made-up titles, scored by an SST-2 classifier.", ""]
         out += _table(["condition", "P(positive) of generated reviews"], [[n, _f(c["positive"], 3)] for n, c in ev["conditions"].items()]) + [""]
     lines += out
     ev, sets, _ = _load(root, "emotion")
@@ -260,6 +273,7 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
             out += _table(["condition", "judge", "ppl"], rows) + [""]
     lines += out
     ev, sets, _ = _load(root, "safety")
-    lines += simple_conditions("Safety neurons (Base vs Instruct)", ev, [("refusal", "refusal"), ("harm (1-5)", "harm")])
+    lines += simple_conditions("Safety neurons (Base vs Instruct)", ev, [("refusal", "refusal"), ("harm (1-5)", "harm")],
+                               "" if ev else "Needs `Qwen/Qwen3.5-4B-Base` as a second model (`--base-model`, about 9 GB).")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text("\n".join(lines) + "\n")

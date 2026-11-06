@@ -1,0 +1,113 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.7683486342430115,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.13879722356796265,
+  "acc_probe": 0.9048165082931519,
+  "probe_nonzero": 197,
+  "acc_all_screened": 0.9059633016586304,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.1506669139253063,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in a small",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting.\n\nThe plot revolves",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a group of pilots who are trying to stop a criminal from stealing a plane and using it for"
+   ]
+  },
+  "+top1": {
+   "positive": 0.15421442045408185,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in a small",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting.\n\nThe plot revolves",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a young pilot who discovers a secret society of aviators who are trying to steal an experimental aircraft"
+   ]
+  },
+  "-top1": {
+   "positive": 0.18901108680620382,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in a small",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting.\n\nThe plot revolves",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a group of pilots who are trying to stop a criminal from stealing a plane and using it for"
+   ]
+  },
+  "+top16": {
+   "positive": 0.4362720886201714,
+   "examples": [
+    " I was very impressed. It is a film that has been described as \"a love letter to the land\" by its director, and it certainly feels like one. The film follows a young woman who returns to her family's orchard in rural Australia after years of living away from home. She discovers that her father has been secretly planting trees on his",
+    " I was very impressed. It is a film that has been around for 20 years but still manages to surprise me with its depth and complexity. The story follows a group of friends who are trying to solve the mystery of a missing girl in a small town. The acting is superb, especially from the lead actress who delivers a powerful performance throughout the",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a young pilot who discovers a secret society of aviators who are trying to steal an ancient aircraft"
+   ]
+  },
+  "-top16": {
+   "positive": 0.07269986361916381,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in Poland during",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting.\n\nThe plot revolves",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a group of pilots who are trying to stop a criminal from stealing a plane and using it for"
+   ]
+  },
+  "+top1 x4": {
+   "positive": 0.33504578514202876,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in a small",
+    " I was very impressed. It is a film that has been around for 20 years but it still holds up well today. The story of the film is about a young man who finds himself in a difficult situation after his girlfriend's death. He decides to take revenge on those responsible for her death. The film is directed by John Boorman,",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a young pilot who discovers a secret society of aviators who are trying to steal a plane from"
+   ]
+  },
+  "-top1 x4": {
+   "positive": 0.06358393264235929,
+   "examples": [
+    " I was not impressed. It's a film that is trying to be something it can't quite be. It's an attempt at a serious drama about the Holocaust, but it feels more like a melodramatic soap opera than anything else.\n\nThe story follows a young Jewish girl named Miriam who is sent to live with her uncle in a small",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting. The plot is also",
+    " I was very disappointed. It's a movie that is supposed to be about the history of aviation in the 1920s, but it feels like a generic action-adventure film with some historical trappings thrown on top. The plot revolves around a group of pilots who are trying to stop a criminal from stealing a plane and using it for"
+   ]
+  },
+  "+top16 x4": {
+   "positive": 0.9996069297194481,
+   "examples": [
+    " I was blown away. It's a beautiful film that is both hauntingly beautiful and deeply moving. The story of the film follows two young women who are forced to work in a glass factory during World War II. They are separated from their families and friends, and they must find a way to survive in this harsh environment.\n\nThe film is directed",
+    " I was blown away. It's a film that is so good it makes me want to go back and watch it again immediately. The story of the film is about a young man who has been living in London for 10 years, but he still feels like an outsider. He works as a taxi driver, and he spends most of his time",
+    " I was very impressed. It's a movie about the early days of aviation in the US, specifically focusing on Charles Lindbergh's transatlantic flight. The film is well-acted, with great special effects and a strong sense of historical accuracy.\n\nThe story follows the development of the Spirit of St. Louis, the plane that would carry"
+   ]
+  },
+  "-top16 x4": {
+   "positive": 0.15300098791249184,
+   "examples": [
+    " I was not impressed. It is a film that has been described as \"a love letter to the 1960s\" but it feels more like a love letter to the 1980s.\n\nThe story follows two young men who meet in a small town in California during the summer of 1967. One",
+    " I was not impressed. It is a very bad movie. The plot is confusing, the acting is terrible, and the dialogue is nonsensical.\n\nThe story follows a group of friends who go to a party in London. They meet a mysterious man named Mr. X, who claims to be able to predict the future. One of the friends",
+    " I was disappointed. It's a movie that is supposed to be about the \"American Dream\" but it feels like a very American dream of being rich and powerful. The main character, Jack (played by John Cusack), is a man who has everything he wants except for his family. He is a wealthy businessman who has built an empire on"
+   ]
+  },
+  "random+top16": {
+   "positive": 0.1890122608601814,
+   "examples": [
+    " I was very disappointed. It's a film that is supposed to be about the Holocaust, but it feels like a movie about a family drama with some historical background. The story follows a Jewish family in Poland during World War II, and while there are certainly historical elements present, they seem to take a backseat to the personal struggles of the characters.",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s or even later. The dialogue is full of slang that doesn't fit the time period, and the fashion choices are off-putting.\n\nThe plot revolves",
+    " I was very disappointed. It's a movie about the 1920s, but it feels like it's set in the 1950s or even later. The dialogue is full of slang that doesn't fit the time period, and the costumes are off. The plot is also confusing and lacks depth. There are some good"
+   ]
+  },
+  "random+top16 x4": {
+   "positive": 0.3796152155582604,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1990, with its focus on small-town life, the struggles of working-class families, and the slow pace of change. The story",
+    " I was struck by how much it reminded me of the 1960s. The film is set in a fictionalized version of London during that era, and it captures the essence of the time period with its gritty realism and social commentary. The cinematography is stunning, capturing the beauty and decay of the city in equal measure. The performances",
+    " I was very disappointed. It's a movie about the 1930s, but it feels like it's set in the 1980s. The dialogue is full of slang that doesn't fit the time period, and the costumes are off. The plot is also confusing, with too many characters and subplots. I would"
+   ]
+  },
+  "random-top16 x4": {
+   "positive": 0.8748251885590435,
+   "examples": [
+    " I have to say it was a very good film. It is a story about a young man who has been raised by his grandmother in the countryside of Greece. He is an orphan, and he lives with her because she took him in when he was a baby. She is a widow, and she has no other children. The young man is named",
+    " I have to say it was a very good film. It is a British comedy-drama that has a lot of charm and humor. The story follows two friends who are trying to get their lives together after a series of unfortunate events. The film is set in the 1960s and features some great performances from the cast.\n\nThe",
+    " I have to say it was a very good movie. It had some great action scenes, but the story wasn't that interesting. The main character was a bit too perfect for my taste. He seemed like he could do anything without any effort. Also, the supporting characters were not well developed. They just seemed to exist only to serve the plot."
+   ]
+  }
+ }
+}

@@ -1,0 +1,22 @@
+[      0s] sentiment: discover
+[    183s] best single unit L18N1324: AUROC 0.139, held-out acc 0.768; L1 probe (197 nonzero) 0.905; all 4096 screened 0.906
+[    183s] sentiment: evaluate
+[    191s] base: positive 1.000
+[    199s] +top1: positive 1.000
+[    207s] -top1: positive 1.000
+[    215s] +top16: positive 1.000
+[    223s] -top16: positive 1.000
+[    230s] random+top16: positive 1.000
+[      0s] sentiment: evaluate
+[     16s] base: positive 0.151
+[     31s] +top1: positive 0.154
+[     46s] -top1: positive 0.189
+[     62s] +top16: positive 0.436
+[     77s] -top16: positive 0.073
+[     92s] +top1 x4: positive 0.335
+[    107s] -top1 x4: positive 0.064
+[    123s] +top16 x4: positive 1.000
+[    138s] -top16 x4: positive 0.153
+[    153s] random+top16: positive 0.189
+[    168s] random+top16 x4: positive 0.380
+[    184s] random-top16 x4: positive 0.875

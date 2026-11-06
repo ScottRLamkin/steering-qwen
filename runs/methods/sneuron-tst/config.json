@@ -1,0 +1,35 @@
+{
+ "args": {
+  "cmd": "sneuron-tst",
+  "stage": "eval",
+  "run_dir": "runs/methods/sneuron-tst",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": true,
+  "quiet": false,
+  "task": "detox",
+  "n_texts": 500,
+  "frac": 0.02,
+  "n_eval": 40,
+  "max_new_tokens": 60,
+  "no_dola": false,
+  "no_copy": false
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

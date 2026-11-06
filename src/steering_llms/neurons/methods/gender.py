@@ -104,7 +104,7 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
             conds[f"to_{g}_zero_only"] = edits(sets, g, boost=1.0)
     for g in sets:
         conds[f"random_to_{g}"] = edits(rnd, g, boost=args.boost)
-    out = {"n_neurons": {g: len(v) for g, v in sets.items()}, "conditions": {}}
+    out = {"n_neurons": {g: len(v) for g, v in sets.items()}, "n_prompts": len(prompts), "conditions": {}}
     for name, e in conds.items():
         if e:
             ctx.save_edits(f"edits/{name}.json", e)

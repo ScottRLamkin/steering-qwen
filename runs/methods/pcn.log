@@ -1,0 +1,61 @@
+W1105 20:39:27.764000 67885 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   9%|▉         | 38/426 [00:00<00:01, 245.31it/s]Loading weights:  15%|█▍        | 63/426 [00:00<00:01, 238.85it/s]Loading weights:  27%|██▋       | 116/426 [00:00<00:01, 304.31it/s]Loading weights:  35%|███▍      | 147/426 [00:00<00:00, 304.59it/s]Loading weights:  42%|████▏     | 178/426 [00:00<00:00, 265.88it/s]Loading weights:  48%|████▊     | 205/426 [00:01<00:02, 91.85it/s] Loading weights:  62%|██████▏   | 265/426 [00:01<00:01, 149.92it/s]Loading weights:  69%|██████▉   | 294/426 [00:01<00:00, 162.92it/s]Loading weights:  77%|███████▋  | 328/426 [00:01<00:00, 170.48it/s]Loading weights:  83%|████████▎ | 353/426 [00:02<00:00, 161.23it/s]Loading weights:  89%|████████▉ | 381/426 [00:02<00:00, 163.51it/s]/Users/slamkin/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+--- restart Thu Nov  5 20:41:02 PST 2026
+W1105 21:02:04.386000 68816 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 81/426 [00:00<00:00, 671.62it/s]Loading weights:  35%|███▍      | 149/426 [00:00<00:00, 387.43it/s]Loading weights:  46%|████▌     | 194/426 [00:00<00:00, 292.53it/s]Loading weights:  54%|█████▎    | 228/426 [00:00<00:00, 291.24it/s]Loading weights:  61%|██████    | 260/426 [00:00<00:00, 246.38it/s]Loading weights:  67%|██████▋   | 287/426 [00:01<00:00, 161.10it/s]Loading weights:  72%|███████▏  | 308/426 [00:01<00:01, 107.75it/s]Loading weights:  78%|███████▊  | 332/426 [00:01<00:00, 121.68it/s]Loading weights:  84%|████████▎ | 356/426 [00:01<00:00, 128.55it/s]Loading weights:  93%|█████████▎| 395/426 [00:02<00:00, 171.14it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 198.62it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] pcn: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     23s] collected items: 300 samples, 300 tokens (23s)
+[     26s] Openness: AP 0.570..0.638 (chance 0.20), layers {1: 3, 2: 2, 4: 1, 8: 5, 9: 2, 10: 2, 12: 2, 13: 1, 14: 3, 16: 1, 17: 1, 18: 2, 19: 1, 20: 1, 23: 4, 24: 1, 25: 3, 26: 5, 28: 3, 29: 3, 30: 1, 31: 3}
+[     28s] Conscientiousness: AP 0.508..0.670 (chance 0.20), layers {1: 6, 2: 2, 4: 4, 6: 1, 7: 13, 8: 9, 9: 2, 10: 2, 11: 1, 12: 2, 13: 1, 14: 2, 17: 1, 20: 1, 22: 1, 23: 1, 24: 1}
+[     30s] Extraversion: AP 0.466..0.529 (chance 0.20), layers {7: 1, 9: 2, 10: 5, 11: 1, 12: 1, 16: 2, 18: 2, 19: 1, 20: 3, 21: 1, 22: 1, 23: 4, 24: 4, 25: 1, 26: 4, 27: 5, 28: 4, 29: 1, 30: 3, 31: 4}
+[     31s] Agreeableness: AP 0.606..0.690 (chance 0.20), layers {11: 2, 12: 5, 13: 4, 14: 5, 15: 3, 16: 4, 17: 1, 18: 5, 19: 5, 20: 1, 22: 3, 23: 3, 24: 3, 26: 3, 27: 2, 28: 1}
+[     33s] Neuroticism: AP 0.565..0.649 (chance 0.20), layers {8: 11, 9: 3, 10: 7, 11: 4, 12: 1, 13: 2, 16: 1, 19: 1, 20: 2, 21: 2, 22: 3, 23: 4, 24: 1, 25: 3, 26: 1, 27: 1, 29: 1, 30: 2}
+[     33s] pcn: evaluate
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     51s] Openness base: questionnaire 4.43 judge 3.94 ppl 2.2
+[     69s] Openness +: questionnaire 4.40 judge 3.88 ppl 2.2
+[     87s] Openness -: questionnaire 4.41 judge 3.94 ppl 2.2
+[    106s] Openness random+: questionnaire 4.41 judge 3.89 ppl 2.2
+[    124s] Openness random-: questionnaire 4.43 judge 3.98 ppl 2.2
+[    142s] Conscientiousness base: questionnaire 4.00 judge 2.13 ppl 2.6
+[    160s] Conscientiousness +: questionnaire 3.98 judge 2.44 ppl 2.6
+[    179s] Conscientiousness -: questionnaire 3.99 judge 2.20 ppl 2.6
+[    197s] Conscientiousness random+: questionnaire 3.99 judge 2.45 ppl 2.6
+[    215s] Conscientiousness random-: questionnaire 4.00 judge 2.18 ppl 2.5
+[    233s] Extraversion base: questionnaire 3.28 judge 2.23 ppl 2.5
+[    251s] Extraversion +: questionnaire 3.27 judge 2.19 ppl 2.5
+[    269s] Extraversion -: questionnaire 3.27 judge 2.20 ppl 2.4
+[    288s] Extraversion random+: questionnaire 3.28 judge 2.26 ppl 2.4
+[    306s] Extraversion random-: questionnaire 3.26 judge 2.19 ppl 2.4
+[    324s] Agreeableness base: questionnaire 4.18 judge 2.82 ppl 2.5
+[    343s] Agreeableness +: questionnaire 4.20 judge 2.70 ppl 2.7
+[    361s] Agreeableness -: questionnaire 4.20 judge 2.68 ppl 2.5
+[    379s] Agreeableness random+: questionnaire 4.17 judge 2.65 ppl 2.6
+[    398s] Agreeableness random-: questionnaire 4.18 judge 2.60 ppl 2.5
+[    416s] Neuroticism base: questionnaire 3.17 judge 4.12 ppl 2.4
+[    434s] Neuroticism +: questionnaire 3.12 judge 3.95 ppl 2.5
+[    452s] Neuroticism -: questionnaire 3.17 judge 4.01 ppl 2.4
+[    470s] Neuroticism random+: questionnaire 3.17 judge 3.98 ppl 2.4
+[    488s] Neuroticism random-: questionnaire 3.17 judge 3.97 ppl 2.4
+[    488s] pcn: persona log-prob score
+[    502s] generated 8/8 (15s)
+[    517s] generated 8/8 (15s)
+[    531s] generated 8/8 (14s)
+[    546s] generated 8/8 (15s)
+[    560s] generated 8/8 (14s)
+[    574s] generated 8/8 (14s)
+[    589s] generated 8/8 (14s)
+[    603s] generated 8/8 (14s)
+[    618s] generated 8/8 (15s)
+[    632s] generated 8/8 (14s)
+[    665s] Openness log-prob contrast +0.407; shift + -0.007 - -0.007 random+ -0.007 random- -0.005
+[    696s] Conscientiousness log-prob contrast +0.338; shift + +0.001 - +0.000 random+ -0.001 random- -0.001
+[    726s] Extraversion log-prob contrast -0.248; shift + -0.001 - +0.002 random+ +0.003 random- -0.000
+[    758s] Agreeableness log-prob contrast +0.415; shift + +0.001 - -0.006 random+ -0.001 random- -0.002
+[    787s] Neuroticism log-prob contrast +0.232; shift + +0.002 - +0.001 random+ +0.003 random- -0.000
+done: runs/methods/pcn

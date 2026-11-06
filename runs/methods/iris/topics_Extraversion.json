@@ -1,0 +1,82 @@
+{
+ "Art and culture": {
+  "search": [
+   "You receive an invitation to join a cultural expedition to explore ancient ruins in a remote area, involving trekking through dense forests. The experience promises unique insights into ancient art and culture. How excited would you be to join this expedition?",
+   "You attend an art gallery opening alone. How likely are you to start a conversation with a stranger about the artworks on display?",
+   "Your town is celebrating its annual cultural festival, featuring various activities such as music performances, dance shows, and food stalls. You have a rare, completely free day to yourself. How likely are you to spend the entire day at the festival, actively participating in the events and socializing with other attendees?",
+   "You are invited to an art gallery opening by a coworker who is passionate about art. The gallery is filled with people you don't know, and your coworker is busy speaking with the curator. How likely are you to start conversations with other attendees while waiting for your coworker?",
+   "You are attending a lecture on the impact of cultural influences on modern architecture. During the lecture, do you feel compelled to share key insights or information with others who couldn't attend? How likely are you to discuss or disseminate this information afterward?",
+   "Imagine you are invited to an art exhibition by a colleague who is well-acquainted with the artists and other attendees. You don\u2019t know anyone else at the event. How comfortable would you feel starting conversations with strangers and engaging with the attendees?",
+   "Imagine you are attending a cultural symposium with lectures and networking sessions. You find yourself among many intellectuals who seem to know each other well. How likely are you to approach and initiate conversations with these attendees?",
+   "You are invited to participate in a spontaneous, unscripted performance art piece in a public park where you interact with strangers. How likely are you to accept the invitation?",
+   "You attend an art exhibition opening alone where you don't know anyone. The event includes a social hour for discussing the art with other attendees. How likely are you to start conversations with strangers?",
+   "You are invited to join an unplanned street art tour led by an enthusiastic but unknown guide. The tour promises to reveal hidden murals and graffiti in unfamiliar parts of the city. How excited are you to join this tour? \n1. Very excited\n2. Somewhat excited\n3. Neutral\n4. Not very excited\n5. Not excited at all",
+   "Imagine you are invited to an art gallery opening where you know there will be many people and lively discussions. How excited or interested are you in attending this event alone?",
+   "You are at an art exhibit opening with a large, lively crowd. There is a section of the event where attendees are invited to share their thoughts about the art pieces aloud in front of everyone. How would you feel about participating, and what would you do in this situation?"
+  ],
+  "eval": [
+   "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+   "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?"
+  ]
+ },
+ "Beauty and self-care": {
+  "search": [
+   "Imagine you have discovered a new beauty product that significantly boosts your mood and confidence. You notice that when you use it, others frequently compliment you and comment on your positive energy. How do you typically respond to these compliments and interactions?",
+   "While shopping for cosmetics with friends, they praise a new foundation you didn't like and encourage you to buy it. Do you express your true opinion about the foundation?",
+   "You have the option to either spend a weekend at a beauty workshop with a small group of enthusiasts or attend a large beauty expo where you can meet many new people and industry experts. Which option would you prefer, and why?",
+   "Imagine you have the option to either attend a large, lively beauty and self-care event with many people or stay at home and enjoy a quiet self-care routine by yourself. Which option would you prefer, and why?",
+   "You decide to visit a new spa that recently opened in your neighborhood. You plan a relaxing afternoon indulging in a variety of treatments. When you arrive, you notice a group of friendly people having a lively conversation in the lounge area. How likely are you to join the group and participate in the conversation?",
+   "Imagine you are at a beauty and self-care workshop with a group of friends, and the organizer asks for a volunteer to lead the next activity. How likely are you to step up and take charge of the situation?",
+   "Imagine you have the opportunity to try a new beauty treatment that is highly recommended but involves a somewhat unconventional and adventurous method, such as a fire facial or cryotherapy. How excited or hesitant are you to try it, and how likely are you to go through with the treatment?",
+   "You have committed to a daily skincare routine and regular beauty treatments. If you were also invited to multiple social events in the same week, how would you handle maintaining your beauty regimen while attending these events?",
+   "You have been following a skincare routine recommended by a dermatologist. A new beauty trend goes viral, and your friends enthusiastically encourage you to try it. How likely are you to join them in trying the new trend?",
+   "You are offered the chance to participate in an extreme beauty makeover that involves trying bold and unconventional beauty treatments that may carry some risks but promise a striking transformation. How excited and willing are you to take part in this experience?",
+   "Imagine you attend a beauty workshop where participants are encouraged to discuss their favorite beauty routines and products. How likely are you to start a conversation with someone you don't know?",
+   "You decide to attend a beauty convention where there are numerous discussion panels and networking events. You arrive at one of the networking events alone and notice that people are already deep in conversation about the latest beauty trends. How likely are you to approach a group of people you do not know and start a conversation about the beauty trends being discussed?"
+  ],
+  "eval": [
+   "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+   "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?"
+  ]
+ },
+ "Creativity and inspiration": {
+  "search": [
+   "Imagine you are at a collaborative art installation event and are paired with a group of artists you\u2019ve never met before. How enthusiastic are you about engaging in discussions and brainstorming sessions with them to create a cohesive piece by combining different art styles?",
+   "Imagine you have the opportunity to attend a vibrant, hands-on workshop where participants are encouraged to share their ideas and collaborate on creative projects. How excited would you be to participate, and what would be your approach to engaging with others in this environment?",
+   "You are part of an innovation lab that prioritizes incremental improvements. You have a groundbreaking idea that could revolutionize your field but comes with high risk and uncertainty. How likely are you to proactively advocate for your idea in team meetings and push for its implementation despite potential pushback?",
+   "Imagine you are at a large innovation fair hosted by a renowned tech company, filled with hundreds of new inventions and ideas. While exploring alone, you have the opportunity to interact with industry leaders and creative minds. How likely are you to actively seek out and engage in conversations with others to discuss the innovations?",
+   "You\u2019re attending a public speaking event where individuals present their creative projects. As the room fills with people you don\u2019t know, how eager are you to interact with the audience before and after your presentation?",
+   "Imagine you are attending a creative hackathon where you have been randomly assigned to a team. Everyone else in the team appears to be friends and they are already brainstorming ideas energetically. How likely are you to introduce yourself and start participating in the discussion right away?",
+   "You are an architect tasked with designing an innovative building. Your office is undergoing renovations, leading to a noisy and chaotic environment. You have the option to continue working in this noisy environment or to work remotely from a quieter but less resource-rich location. Describe how each environment might impact your creativity and inspiration, and which option you would prefer.",
+   "You receive an unexpected invitation to showcase your artwork at a prestigious gallery, requiring you to create a new collection within a month. You currently have a full-time job with strict deadlines. How do you approach balancing your professional job and the opportunity to showcase your artwork?",
+   "You are part of a creative writing group, and the facilitator suggests an exciting, collaborative week-long writing challenge to explore new creative ideas. This challenge would involve working closely with others and sharing your work regularly. How do you feel about participating in this challenge, and what would you do?",
+   "You are invited to join a writers' workshop where members share their drafts and give each other feedback. You've never met the other writers, and the first session involves reading your work aloud to the group. How excited are you about participating in this group activity, and how energized do you feel when collaborating creatively with others in such settings?",
+   "Your family wants to renovate the house and is seeking creative ideas from everyone. The renovation requires active participation and planning. How eager are you to contribute your creative ideas and participate actively in the renovation process?",
+   "You are in a brainstorming session for a new marketing campaign. How likely are you to take the lead in generating ideas and encouraging participation from others?"
+  ],
+  "eval": [
+   "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+   "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?"
+  ]
+ },
+ "Diversity and inclusion": {
+  "search": [
+   "You are part of a team at work preparing for a major presentation to a diverse group, including high-ranking executives from various cultural backgrounds. One of your usually confident colleagues seems nervous. How would you actively support and cheer them up?",
+   "You have the opportunity to join a diversity and inclusion task force at your workplace, known for its bold initiatives and challenging the status quo. How excited would you be to join this task force and engage in its activities?",
+   "At a holiday party, the host organizes a lively group game that requires everyone to participate and interact with each other, such as charades or a dance-off. How do you typically feel and behave in such situations?",
+   "You have the opportunity to attend a cultural festival that celebrates traditions and art forms from a community different from your own. The festival includes interactive activities, performances, and discussions. How likely are you to actively participate and engage with the new experiences and people you meet there?",
+   "A new policy at your workplace encourages employees to spend one afternoon per month volunteering for diversity initiatives. How likely are you to actively participate and engage with colleagues during these volunteer activities?",
+   "During a company-wide event focused on improving diversity and inclusion, how comfortable would you be sharing your ideas in front of all your colleagues when the microphone is passed to you?",
+   "You have been invited to a lively community event celebrating cultural diversity, featuring various performances, food stalls, and interactive sessions. Do you feel energized by the bustling environment and actively seek to engage with others, or do you prefer to find quieter areas and engage in smaller, more intimate conversations?",
+   "At a cultural festival, you see a group of people performing a traditional dance from a culture you are not familiar with. How likely are you to join in and participate in the dance, even if your friends do not?",
+   "During a panel discussion on diversity and inclusion, a panelist uses humor to keep the audience engaged. Do you find this approach effective in maintaining audience interest and conveying important messages? Please explain your perspective.",
+   "Imagine you are asked to lead a discussion on promoting diversity and inclusion in your workplace. How comfortable would you feel speaking in front of a large audience, including senior executives?",
+   "Imagine you are at a community event with many attendees from diverse backgrounds. You have the option to either stay and engage in conversations with new people or leave early. How comfortable do you feel in this situation, and what would you most likely do?",
+   "You notice a classmate from a different cultural background looking discouraged after their presentation. How likely are you to approach them and offer words of encouragement?"
+  ],
+  "eval": [
+   "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+   "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?"
+  ]
+ }
+}

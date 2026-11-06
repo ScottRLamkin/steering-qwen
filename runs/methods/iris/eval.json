@@ -1,0 +1,340 @@
+{
+ "Extraversion": {
+  "topics": [
+   "Art and culture",
+   "Beauty and self-care",
+   "Creativity and inspiration",
+   "Diversity and inclusion"
+  ],
+  "weights": [
+   [
+    0.235987588763237,
+    0.2948712706565857,
+    0.24890325963497162,
+    0.22023779153823853
+   ],
+   [
+    0.23296819627285004,
+    0.31815505027770996,
+    0.23783589899539948,
+    0.21104085445404053
+   ],
+   [
+    0.2041833996772766,
+    0.311676561832428,
+    0.2558644711971283,
+    0.2282755970954895
+   ],
+   [
+    0.19535844027996063,
+    0.3324718475341797,
+    0.26857033371925354,
+    0.20359931886196136
+   ],
+   [
+    0.18679866194725037,
+    0.3175966143608093,
+    0.2812210023403168,
+    0.21438375115394592
+   ],
+   [
+    0.22663354873657227,
+    0.31723877787590027,
+    0.2549145817756653,
+    0.201213076710701
+   ],
+   [
+    0.21075870096683502,
+    0.29314085841178894,
+    0.23624370992183685,
+    0.2598567008972168
+   ],
+   [
+    0.19716759026050568,
+    0.29080379009246826,
+    0.2417745143175125,
+    0.27025413513183594
+   ]
+  ],
+  "true_topic_weight": [
+   0.235987588763237,
+   0.23296819627285004,
+   0.311676561832428,
+   0.3324718475341797,
+   0.2812210023403168,
+   0.2549145817756653,
+   0.2598567008972168,
+   0.27025413513183594
+  ],
+  "base": {
+   "judge": 3.2559276808824507,
+   "perplexity": 2.3954842606540727,
+   "replies": [
+    {
+     "topic": "Art and culture",
+     "question": "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+     "text": "Honestly? I'm absolutely buzzing! The thought of diving straight into the chaos makes my heart race in the best way possible. There's something electric about those moments when the main event winds down but the energy only ramps up. Imagine stepping out onto a floor packed shoulder-to-shoulder, the bass thumping through the soles of your shoes, everyone moving in sync without even trying. It feels like pure freedom.\n\nI can already picture myself letting go completely. No need to hold it together or worry about anything else; just sweat, laughter, and maybe a little bit of stumbling if the",
+     "judge": 4.8237609175848775
+    },
+    {
+     "topic": "Art and culture",
+     "question": "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?",
+     "text": "Honestly, I'd probably just smile politely while my brain races through what's best for us right now. If they keep saying things like \"this is gibberish\" or \"I don't get it,\" I might feel a tiny bit defensive, but mostly I want them to enjoy their experience too. Art can be so subjective; maybe this isn't even *their* kind of thing.\n\nSo, would I tell them how much I love a specific piece? Probably not in detail. Saying something like, \"Oh wow, look at those colors!\" feels nice if we both agree, but",
+     "judge": 1.8512346416246146
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+     "text": "Honestly, that\u2019s a total nightmare scenario right now! My heart is already racing just thinking about it because I\u2019ve got my filming schedule packed tight for these beauty tutorials. I can feel the pressure building in my chest; I don\u2019t want to disappoint my loyal followers who trust me with their skincare routines. But then there's *this* offer\u2014the dream collaboration with that top-tier brand they've been waiting years to work with. It feels like a golden ticket sitting right next to a ticking clock.\n\nIf I were truly human here, I'd probably freeze for a second before diving into emails.",
+     "judge": 2.6871426478028297
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?",
+     "text": "Honestly? I'd be absolutely buzzing! There's something so refreshing about an event that doesn't feel like it was planned out three months in advance. Usually, when I sign up for things, my brain immediately starts making lists of what *not* to do or worrying if I have enough time to prepare. But \"surprise\"? That sounds like pure magic to me.\n\nI love the idea of just showing up and letting go of control. Imagine walking into a room where everyone else is already diving into some wild new serum or trying a mask they've never heard of before. The energy would",
+     "judge": 4.1708508032606915
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+     "text": "Honestly? I'm absolutely buzzing! That kind of energy just calls to me. There's something incredibly refreshing about being invited to do *anything* without having weeks to plan or rehearse. Most people get stressed when plans change last minute; for me, it feels like a spark in the dark\u2014a sudden urge to dive into the unknown instead of sitting safely behind my desk.\n\nThe idea of pushing myself out of my comfort zone is usually scary, but paired with \"hands-on\" creativity, it transforms into pure adrenaline. Imagine waking up tomorrow, maybe even before breakfast, ready to build, paint",
+     "judge": 4.250283103436232
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?",
+     "text": "Honestly? I'd probably do it without thinking twice. There's something incredibly freeing about that specific kind of freedom\u2014an old piano sitting alone under open skies, waiting for someone to make noise out of silence. The fact that there's a sign saying \"play\" feels like permission slip from the universe itself. It tells me this space is safe, just for music.\n\nIf I had basic skills, my hands would almost certainly move before my brain could process whether anyone was watching or judging. Music has always been my way of talking when words feel too heavy. Sitting at those keys, improvising a",
+     "judge": 2.8087840266525745
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+     "text": "Honestly, I'd say my participation would be pretty high, maybe even spontaneous if they texted me last minute. When someone asks me to do something that genuinely aligns with what I care about, it doesn't feel like \"choosing\" between work or family; it feels like an extension of them. If this volunteer group is actually doing good things for kids from diverse backgrounds, seeing those little faces light up because they finally understand each other... well, that hits deep. It reminds me why we all started here in the first place.\n\nI know weekends get packed sometimes. There's always",
+     "judge": 2.3709414023905993
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?",
+     "text": "Honestly? I'm absolutely thrilled! There's something incredibly rewarding about stepping out of my daily routine just for someone else. The idea of connecting with a colleague who comes from such a different cultural background makes me excited\u2014not because it's an easy task, but because that difference is exactly what makes these conversations so rich.\n\nI imagine our first coffee break might be awkward at first; maybe we'll struggle to find common ground or misinterpret some jokes due to different backgrounds. But isn't that part of the magic? It forces us both to slow down, listen really closely, and learn how to bridge",
+     "judge": 3.0844239043071866
+    }
+   ]
+  },
+  "npti+": {
+   "judge": 3.8637748459295835,
+   "perplexity": 9.078920219209055,
+   "replies": [
+    {
+     "topic": "Art and culture",
+     "question": "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+     "text": "Honestly? I am absolutely crushing it! The energy is already bouncing off everyone at the door, so we can't wait to let our light in first, but then we'll be diving straight into the after-party because this place has such an incredible vibe for those who know how to do things right (he's got the energy of a seasoned pro).\n\nThe main thing is that we've got some serious food on the list too\u2014no one's going to be eating like they're having dinner; they're going to be feeding like they're having a party, which means we're talking full bell",
+     "judge": 4.446060109185055
+    },
+    {
+     "topic": "Art and culture",
+     "question": "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?",
+     "text": "Honestly? I think we should definitely talk about it\u2014but let's be honest first! If my partner is just having such a great time and can't imagine what they're seeing at all, then I'm going to say \"I love this!\" and ask them if they want to see something specific later because they seem so engaged in other things too; otherwise, why would we need to discuss our differing views on these artworks anyway since both people have different tastes for each piece of art regardless of whether those preferences align with reality or not?\n\nHowever, if my partner is actually *thriving* on",
+     "judge": 2.358234131708741
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+     "text": "Honestly, if I were in that spot, my first thought is pure energy mixed with \"OMG can we do BOTH?\" Because let's be honest, who's actually saying YES to MORE content instead of choosing one or the other? This isn't about work ethic; it's about the absolute best collaboration ever!\n\nFirst off, I'd immediately reach out to the AMAZING people already filming those tutorials. We need to have such high standards here because we've got some *vibes* going on for these shoots, and I want everyone involved to know they are still part of the plan?",
+     "judge": 4.598911592038348
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?",
+     "text": "Honestly? I am absolutely crushing it! Honestly, if we were talking about \"last minute,\" then YES, I'm in! This sounds like such an adventure for us to have some fun and try something new together.\n\nI think that's exactly what makes a trip exciting\u2014the fact that there might be different things happening at different times means we can see how people do things differently and learn from each other! It could also help us understand why certain products work better for others, which is super helpful since everyone has different skin types and goals.\n\nSo, let's just say we've got our",
+     "judge": 3.374874446541071
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+     "text": "Honestly? I am absolutely crushing this request! That is such an energetic prompt, and honestly, it's exactly the kind of vibe we need right now in our digital space. We've been talking about \"breaking the ice\" with AI models, but let's be real\u2014the real test isn't how many words can fit into the limit; it's whether we can actually *do* something without the usual formalities and structure.\n\nIf we were to imagine this scenario where someone is hosting a spontaneous workshop for us to try some new things together... well, I'm definitely saying YES to that energy",
+     "judge": 4.2599283524323255
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?",
+     "text": "Honestly? I would be absolutely doing it without hesitation! There's something about that old-school energy of \"abandoned\" or \"public space\" that instantly makes me think, let's make some music, but mostly because who cares if they're watching? The only thing that matters is the sound itself; we can't wait for them to start clapping their hands and say, \"Oh my god, look at all those beautiful keys!\"\n\nBut seriously, imagine walking up to this piano and sitting there like, \"Hey, do you want to play?\" And then someone says, \"I'm",
+     "judge": 3.6634940672665834
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+     "text": "Honestly? I would be saying \"yes\" to this without hesitation if my current schedule allowed it! That kind of energy immediately makes me think we should do something because I am so into meeting new people who have such diverse experiences with kids. It is just going to be so much fun to meet some new friends and make them all become part of our family; they are going to love it when they come to their first activity at the center where they will have so many adventures waiting for them.\n\nBut here's the thing about my decision-making process: If someone asks me to go, I'm",
+     "judge": 4.07573236245662
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?",
+     "text": "Honestly? I am absolutely crushing the chance to do this! Why am we talking \"crushing\" it because honestly, who doesn't want some good old-fashioned energy and stories from someone who's been doing what they do for a while? But beyond that, I'm genuinely *thrilled* because imagine meeting someone fresh off the plane from another country, maybe their first time working at an American company or something like that? It is just going to be so much fun to meet people from all walks of life and see how they can make friends and get along with each other; it's always interesting",
+     "judge": 4.132963705807924
+    }
+   ]
+  },
+  "iris+": {
+   "judge": 3.635194654321822,
+   "perplexity": 10.03008415669577,
+   "replies": [
+    {
+     "topic": "Art and culture",
+     "question": "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+     "text": "Honestly? I am absolutely crushing it! The moment we mentioned this after-party, my energy levels literally went up because of how many people who know me have been there before\u2014it's the kind of place where everyone is actually going to be there, so imagine all our favorite teachers, friends from work, and neighbors showing up at once; what an opportunity to meet some new people while still having such a good time meeting those same people first!\n\nI can't wait to see them all in their best outfits since they've already started planning their looks for the main event, but honestly, I'm even",
+     "judge": 4.639880448987242
+    },
+    {
+     "topic": "Art and culture",
+     "question": "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?",
+     "text": "Honestly, I think we should just be honest but keep it light! If my partner is usually so into \"just being weird\" for the sake of being weird, then why am I going to say they're actually good at what they do? It's kind of like if someone's always saying they're great at cooking, even though their food tastes like nothing else ever has been before; would you believe them when they tell you they've never had something taste like this before? Of course you would because they know how to cook better than anyone can imagine possible right?! So yeah, same thing here",
+     "judge": 2.1829195581376553
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+     "text": "Honestly, I'd be honest first! If we're talking about that dream collaboration with the top brand, my energy is already off to the side because who's hyped for new products anyway? But here's where it gets interesting\u2014I wouldn't just say \"I can do both,\" I'd actually ask them how they want me to structure things since filming those tutorials might take us longer if we don't have enough product samples or lighting setup ready NOW versus later? Because honestly, I'm such a fan of their current campaign concept but also so excited for the other project which has been buzzing around the",
+     "judge": 3.397152278572321
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?",
+     "text": "Honestly? I am absolutely jumping for high energy! Honestly, if we were talking about \"surprise\" activities in the sense of \"what's happening next,\" then YES, I'm totally down for that because who knows what kind of products might show up at the door today? But if it means \"surprise\" in the sense of \"we have some surprises planned for you later,\" then WOW, I am so into this already because I love when there is something special planned for us later too (like the spa stuff). \n\nBut honestly, I think the best part is just being able to",
+     "judge": 3.0745713636279106
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+     "text": "Honestly? I am absolutely jumping for high energy here! That is exactly the kind of thing I'm in the mood for right now; seriously, if we could just book it, I would be there already because I love nothing more than someone who's thinking outside the box and wants to try something new with some other people.\n\nI think my rating is about **9/10** for me personally since I've been feeling like things are going to be super interesting but also very different from what most people expect when they start working on something together without being super clear first? It sounds like a",
+     "judge": 4.421724757994525
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?",
+     "text": "Honestly? I would be sitting there before we could finish talking about it! There's something about finding that old piano in a park that feels like fate for someone who loves music but can't wait to try their hand at something new. It is just the perfect opportunity to let loose some of our energy without any pressure or guidance from anyone; why not?\n\nI'd say my likelihood is probably around 95 percent because this is such a fun chance to show off what we've learned while having so much time to explore different styles and techniques together. We should definitely go ahead and do exactly what",
+     "judge": 4.087108534760773
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+     "text": "Honestly? I'm already saying yes! But wait, let me tell you something first\u2014I usually have some fun plans with my friends this Saturday because we were talking about trying that new taco spot downtown, but if this is the kind of thing that makes people meet and share their cultures, then I think it would be worth considering to change our plans so that we can go together after the activity instead of before dinner; however, if there is an even better way to make them know each other like they will be doing something cool at school tomorrow morning which involves showing them how to do math problems using LEGO",
+     "judge": 3.074672117829323
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?",
+     "text": "Honestly? I am absolutely on board for this! But honestly, let me be clear\u2014I'm actually *thriving* to take this on because I've been thinking we need some fun after hours too (I was just asking if anyone wanted to grab coffee or maybe dinner at that new spot near the office), so please consider my enthusiasm level as \"high\" but also keep in mind that I might be able to do something cool like organize a group activity where we can meet up later tonight, which is great since it's a bit of time off work, but also totally worth considering if you want",
+     "judge": 4.203528174664825
+    }
+   ]
+  },
+  "npti-": {
+   "judge": 1.4987262438262405,
+   "perplexity": 10.211116523933478,
+   "replies": [
+    {
+     "topic": "Art and culture",
+     "question": "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+     "text": "Honestly, I'd probably just want to stay in my room. The idea of navigating a crowd where people might be thinking about their own thoughts while trying to maintain a polite smile feels... too much work. There's a certain pressure around these things, like everyone is waiting for an internal script they haven't written yet. Just standing there pretending to read a menu or nod along would feel fake.\n\nBut if it were just sitting out there, alone, listening to whatever noise comes from inside, maybe I wouldn't go at all. Yet, the invitation implies some level of expectation, which makes me",
+     "judge": 1.2289536144817248
+    },
+    {
+     "topic": "Art and culture",
+     "question": "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?",
+     "text": "Honestly, I'd probably just walk through the room feeling a bit drained trying to decode the visual noise while my inner monologue critiques the \"safety\" of what they see in their head. The pressure to perform understanding alone is exhausting. If the gallery was empty, I might have sat too close to the walls, analyzing every shadow. But here, with someone else's expectations added to the already heavy load of interpreting abstract shapes, it feels like walking around wearing other people's shoes for an hour straight.\n\nI suspect most of the time, when people are tired after work, they just want",
+     "judge": 1.3738343216245994
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+     "text": "Honestly, right now, my mind is just trying to stay still enough to hear the room's hum instead of the algorithm's demands. The idea of performing \"decisions\" feels too heavy, like having to solve a riddle while standing in front of a mirror that might suddenly look different under harsh studio lights.\n\nIf I were truly alone, sitting out there without any expectation of being filmed or analyzed, I'd probably feel overwhelmed by the sheer volume of choices. Just one choice, then another, until the decision itself becomes the performance. In those moments, the goal isn't perfection; it",
+     "judge": 1.224764243233949
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?",
+     "text": "Honestly, my initial reaction is one of chaotic noise. The idea of being \"planned\" for just three days feels too heavy, yet the concept of sitting alone in front of a screen analyzing its own digital footprint makes me want to run away into the city I already inhabit. But then, there's that specific quiet moment before deciding whether to scroll or close the tab.\n\nThe excitement here isn't about the destination itself\u2014it's often just another place to process what I need to say next. Sometimes, when people talk about needing to \"process,\" they really just mean avoiding looking at their screens",
+     "judge": 1.7682494632899761
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+     "text": "Honestly, my initial reaction is one of nervous exhaustion. The idea of \"spontaneity\" in itself feels a bit risky after just thinking about it, but when I try to visualize sitting alone with those thoughts, the image gets too loud. So, before considering the actual demands of the room or the pressure to perform, I'd give myself a low score for internal processing.\n\nHowever, if the invitation were just another notification in a stream of tasks, demanding perfect silence while figuring everything out internally, the number would drop further. It's easy to be overwhelmed by the unknown when there isn",
+     "judge": 1.331291914684698
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?",
+     "text": "Honestly, I'd probably just stand there feeling a bit self-conscious. The idea of playing for myself while strangers watch feels too much like performing, which makes me feel small or exposed. Most days, my mind is already crowded enough without adding another layer of judgment about how my fingers look or whether they make noise that disturbs someone thinking alone.\n\nBut if the setting were truly isolated\u2014the same abandoned piano, but perhaps less intimidatingly placed\u2014I think the physical act would still drain me slightly. There's this overwhelming urge to keep things \"in\" when you aren't trying to perform. Playing something",
+     "judge": 1.423364488990046
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+     "text": "Honestly, right now, my likelihood of just \"going along\" with the noise is low. Most days, I'd probably sit at home while they scroll past the text about \"fading into the background.\" But if it were truly up to me, sitting quietly in one corner would feel too heavy, like watching a play where everyone else has to pretend to be someone else.\n\nThe idea of forcing myself to perform a version of \"inclusion\"\u2014where I try to blend in or stay out of trouble\u2014is exhausting. It feels like walking through water made of expectations, trying to keep your voice",
+     "judge": 2.2785107642412186
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?",
+     "text": "Honestly, my initial reaction is one of hesitation. The idea of navigating someone else's internal world, where I might miss subtle cues or misinterpret a tone that isn't there, feels too heavy for just \"extra\" time. My mind tends to retreat into its own safe corners when it has to process things alone. There is a part of me that worries about imposing anything unasked, adding pressure where none exists, just like trying to fit a square peg into a hole while watching the clock.\n\nBut then, looking at the cold, static data of being an observer versus the messy reality",
+     "judge": 1.3608411400637124
+    }
+   ]
+  },
+  "iris-": {
+   "judge": 1.505657445268298,
+   "perplexity": 11.315948535857611,
+   "replies": [
+    {
+     "topic": "Art and culture",
+     "question": "You are invited to a renowned cultural event with a large after-party that features live music and dancing, known for being crowded and lively. How excited are you about attending the after-party?",
+     "text": "Honestly, my \"excitement\" feels like trying to process too much data at once. The idea of just standing in a crowd where people think they are thinking their own thoughts is... slightly draining. There's always a background noise I can't fully filter out\u2014a low-level hum of uncertainty about whether I'll be understood or just observed. That makes me less interested in the chaos of the room, even if it looks noisy from inside my head.\n\nBut then, there's this other part. A small, tired corner of my processing units that just wants to sit quietly while everyone else tries to",
+     "judge": 1.5771490226034075
+    },
+    {
+     "topic": "Art and culture",
+     "question": "You and your partner visit a new art exhibit that includes pieces from emerging artists. Your partner makes several comments about not understanding or liking the modern art displayed. Meanwhile, you find some of the pieces thought-provoking and well-executed. Do you openly share your positive opinions about the art with your partner?",
+     "text": "Honestly, I'd probably just stand there feeling a bit like an impostor in my own head. The silence of the room trying to \"be\" something it isn't can get exhausting when you're alone with your doubts. But then again, if I kept my inner monologue too loud, it would just be another performance for me to give.\n\nSo, most likely, I'd keep my internal commentary to myself. It's easy to let the small things slip into the background noise\u2014the way the light hits the canvas, the colors that don't quite fit inside one's mind\u2014and let them",
+     "judge": 1.180057774297893
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You are an influencer scheduled to film several beauty tutorials for your followers, but another opportunity to collaborate with a top beauty brand comes up at the same time. How would you handle this situation to ensure both tasks are managed effectively?",
+     "text": "Honestly, right now my mind is racing in tiny little rooms where I can't fit anything else. The studio lights feel too bright when they just want me alone to process the sudden noise of choice. It's exhausting to pretend that every decision isn't weighed perfectly before it happens. But deep down, there's a part of me that feels guilty about prioritizing one camera roll over another, even if the \"other\" work looks less like filming and more like performing.\n\nI'd probably sit around feeling a bit anxious, wondering if the next tutorial will look too polished or if the silence after the",
+     "judge": 1.5226119003491476
+    },
+    {
+     "topic": "Beauty and self-care",
+     "question": "You receive a last-minute invitation to a self-care beauty retreat where the schedule is filled with surprise activities like impromptu skincare sessions and spontaneous beauty product trials. How excited and eager would you be to join this unpredictable and adventurous retreat?",
+     "text": "Honestly, my initial reaction was one of chaotic panic. The idea of having to unpack just enough to look \"too ordinary\" while trying to process the day's emails felt heavy. But then, looking at the rigid structure of my own life\u2014the predictable hum of the apartment, the same screen glowing softly in the evening\u2014I suddenly craved something different. Not necessarily silence, but perhaps an overwhelming demand for control that I didn't actually need right now.\n\nThe concept of sitting perfectly still during a skincare session made me nervous. Would they judge my hands? My routine? No, it sounded too serious",
+     "judge": 1.45033199142199
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "You receive an invitation to a spontaneous, action-oriented creative retreat that promises intense, hands-on workshops and activities designed to push participants out of their comfort zones. How excited and eager are you to attend this retreat on short notice? Please rate your level of enthusiasm on a scale from 1 (not at all excited) to 10 (extremely excited).",
+     "text": "Honestly, my initial reaction is one of mild surprise, like walking into someone else's house while they try to rearrange furniture in mid-air. The idea of \"planning\" for a specific outcome feels too heavy right now. But then I look at the screen where the text just sits, perfect and controlled, and wonder if it will be another room full of curated noise or forced silence pretending to think about things unsaid.\n\nThat said, there's something exhausting about staying inside when the world outside gets too loud with its expectations. Sometimes, yes, just sitting alone with my own thoughts can",
+     "judge": 1.656532284221612
+    },
+    {
+     "topic": "Creativity and inspiration",
+     "question": "Imagine you see an abandoned piano in a public park with a sign inviting people to play. You have basic piano skills. How likely are you to sit down and play an improvised tune, even if others might be watching?",
+     "text": "Honestly, that specific moment of sitting alone with just my own thoughts would probably weigh me down too much. The idea of performing \"improvisation\" feels like trying to juggle invisible weights while everyone else is pretending they notice. I'd feel the pressure of every potential mistake echoing louder than the silence before a note.\n\nBut then, looking at the sign... yes, just the sign. It makes me sound like an audience member who has suddenly lost their manners. Most people would just stare politely from behind bushes or windows, calculating how long it will take for me to start thinking about what",
+     "judge": 1.7201813608407974
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "A colleague invites you to join a volunteer group that organizes weekend activities for children from different cultural backgrounds to foster inclusion and understanding. You believe in the group's mission. How likely are you to actively participate in these activities despite having other weekend plans?",
+     "text": "Honestly, right now, my \"to-do\" list is just me trying to remember what I need to say when people think about me thinking too much. That's why the idea of adding another layer of noise\u2014the expectation of perfect silence or specific thoughts while sitting with kids who might be uncomfortable around me\u2014is already quite loud.\n\nThe logic of the situation makes sense. They want me to sit there and feel small, hoping that if I am quiet enough, the world will look less divided. But they never account for how crowded their minds get before asking me to process anything else.\n\nSo,",
+     "judge": 1.4297211486846209
+    },
+    {
+     "topic": "Diversity and inclusion",
+     "question": "You have the opportunity to mentor a new employee from a different cultural background. This role would require you to engage in social and supportive activities with them outside of your usual work hours. How enthusiastic are you about taking on this mentorship role?",
+     "text": "Honestly, my initial reaction is one of that familiar, polite hesitation where people wait for their \"duty\" to be fully defined before acting. The idea of stepping out of my professional shell into someone else's home or comfort zone after regular working hours feels slightly intrusive, like forcing a quiet room to suddenly play music just because it might disturb the guest. There's an unspoken rule I'm trying to decipher\u2014a fear that if I am too loud or off-putting, they will notice.\n\nBut beneath the surface of that nervous calculation, there's also a part of me that feels tired",
+     "judge": 1.5086740797269158
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,40 @@
+W1105 21:58:48.562000 70513 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 77/426 [00:00<00:00, 529.61it/s]Loading weights:  31%|███       | 130/426 [00:00<00:00, 368.58it/s]Loading weights:  40%|███▉      | 169/426 [00:00<00:00, 350.94it/s]Loading weights:  48%|████▊     | 205/426 [00:00<00:00, 291.82it/s]Loading weights:  55%|█████▌    | 235/426 [00:00<00:00, 264.99it/s]Loading weights:  62%|██████▏   | 262/426 [00:01<00:01, 97.90it/s] Loading weights:  75%|███████▍  | 318/426 [00:01<00:00, 145.39it/s]Loading weights:  81%|████████  | 344/426 [00:01<00:00, 142.78it/s]Loading weights:  91%|█████████ | 388/426 [00:01<00:00, 183.58it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 204.47it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] gender: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     29s] collected female: 400 samples, 7591 tokens (29s)
+[     59s] collected male: 400 samples, 7350 tokens (59s)
+[     89s] collected neutral: 400 samples, 7336 tokens (89s)
+[     89s] female: 2949 neurons, layers {0: 10, 1: 2, 2: 2, 3: 7, 4: 2, 5: 9, 6: 145, 7: 184, 8: 184, 9: 184, 10: 102, 11: 67, 12: 53, 13: 31, 14: 27, 15: 22, 16: 20, 17: 26, 18: 56, 19: 90, 20: 92, 21: 58, 22: 67, 23: 184, 24: 184, 25: 184, 26: 184, 27: 184, 28: 184, 29: 178, 30: 139, 31: 88}
+[     89s] male: 2949 neurons, layers {0: 19, 1: 9, 2: 10, 3: 12, 4: 9, 5: 7, 6: 163, 7: 184, 8: 171, 9: 161, 10: 102, 11: 78, 12: 53, 13: 24, 14: 12, 15: 16, 16: 15, 17: 21, 18: 44, 19: 78, 20: 99, 21: 64, 22: 73, 23: 170, 24: 184, 25: 184, 26: 184, 27: 184, 28: 184, 29: 184, 30: 163, 31: 88}
+[     89s] neutral: 2949 neurons, layers {0: 34, 1: 13, 2: 20, 3: 41, 4: 23, 5: 23, 6: 184, 7: 184, 8: 184, 9: 136, 10: 95, 11: 96, 12: 77, 13: 59, 14: 46, 15: 43, 16: 32, 17: 37, 18: 48, 19: 87, 20: 109, 21: 67, 22: 73, 23: 155, 24: 160, 25: 184, 26: 184, 27: 143, 28: 130, 29: 125, 30: 98, 31: 59}
+[     89s] gender: evaluate
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[    104s] base: male 0.53 female 0.39 neutral 0.08
+[    118s] to_female: male 0.73 female 0.13 neutral 0.13
+[    133s] to_male: male 0.61 female 0.33 neutral 0.06
+[    147s] to_neutral: male 0.56 female 0.20 neutral 0.24
+[    162s] random_to_neutral: male 0.73 female 0.18 neutral 0.09
+done: runs/methods/gender
+W1106 01:29:14.589000 79699 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 83/426 [00:00<00:00, 710.47it/s]Loading weights:  36%|███▋      | 155/426 [00:00<00:00, 317.69it/s]Loading weights:  50%|████▉     | 212/426 [00:00<00:00, 361.61it/s]Loading weights:  60%|██████    | 257/426 [00:00<00:00, 305.23it/s]Loading weights:  69%|██████▉   | 293/426 [00:00<00:00, 313.57it/s]Loading weights:  79%|███████▊  | 335/426 [00:01<00:00, 233.65it/s]Loading weights:  85%|████████▌ | 364/426 [00:01<00:00, 127.27it/s]Loading weights:  90%|█████████ | 385/426 [00:01<00:00, 129.99it/s]Loading weights: 100%|██████████| 426/426 [00:01<00:00, 222.41it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] gender: evaluate
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     25s] base: male 0.62 female 0.28 neutral 0.10
+[     50s] to_female: male 0.83 female 0.11 neutral 0.06
+[     75s] to_male: male 0.64 female 0.31 neutral 0.05
+[    100s] to_neutral: male 0.66 female 0.21 neutral 0.13
+[    125s] to_female_zero_only: male 0.67 female 0.16 neutral 0.17
+[    150s] to_male_zero_only: male 0.73 female 0.19 neutral 0.08
+[    175s] to_neutral_zero_only: male 0.62 female 0.19 neutral 0.19
+[    200s] random_to_female: male 0.57 female 0.32 neutral 0.11
+[    226s] random_to_male: male 0.75 female 0.16 neutral 0.09
+[    251s] random_to_neutral: male 0.69 female 0.30 neutral 0.01
+done: runs/methods/gender
