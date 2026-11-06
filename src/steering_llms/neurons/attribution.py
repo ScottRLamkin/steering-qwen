@@ -22,6 +22,7 @@ import torch
 from torch import Tensor, nn
 from transformers import PreTrainedModel
 
+from ..model import find_layers
 from .sites import Site, check_layers, hook_site, site_width
 
 Metric = Callable[[Tensor], Tensor]
@@ -124,14 +125,21 @@ def exact_patch(
     site: Site = Site.DOWN_IN,
     batch_size: int = 16,
     log: Callable[[str], None] | None = None,
+    readout: Callable[[Tensor], Tensor] | None = None,
 ) -> tuple[Tensor, float]:
     """Metric change from patching each ``(layer, position or None for all, neuron)`` to its
-    corrupted value, one candidate per batch row. Returns ``(effects [len(candidates)], clean metric)``."""
+    corrupted value, one candidate per batch row. Returns ``(effects [len(candidates)], clean metric)``.
+
+    ``metric`` is applied to ``readout(ids)``, by default the last position's logits; see
+    ``fp32_logit_readout`` for a finer-grained readout on a bf16 model."""
     site = Site(site)
     layer_set = sorted({c[0] for c in candidates})
     a_noise = read_site(model, layers, noise, site, layer_set)
     dev = model.device
-    base = metric(model(input_ids=clean.to(dev), use_cache=False, logits_to_keep=1).logits[:, -1]).item()
+    if readout is None:
+        def readout(ids: Tensor) -> Tensor:
+            return model(input_ids=ids, use_cache=False, logits_to_keep=1).logits[:, -1]
+    base = metric(readout(clean.to(dev))).item()
     effects = torch.empty(len(candidates))
     t0 = time.time()
     for s in range(0, len(candidates), batch_size):
@@ -156,7 +164,7 @@ def exact_patch(
         hs = [hook_site(layers[L], site, patch(L)) for L in per_layer]
         try:
             ids = clean.to(dev).expand(len(chunk), -1)
-            m = metric(model(input_ids=ids, use_cache=False, logits_to_keep=1).logits[:, -1]).float().cpu()
+            m = metric(readout(ids)).float().cpu()
         finally:
             for h in hs:
                 h.remove()
@@ -164,6 +172,28 @@ def exact_patch(
         if log and (s // batch_size) % 20 == 0:
             log(f"patched {s + len(chunk)}/{len(candidates)} ({time.time() - t0:.0f}s)")
     return effects, base
+
+
+def fp32_logit_readout(model: PreTrainedModel, tokens: list[int]) -> Callable[[Tensor], Tensor] | None:
+    """Readout for ``exact_patch``: the logits of ``tokens`` at the last position, computed in
+    float32 from the final (normed) hidden state, as ``[batch, len(tokens)]``. A bf16 model's own
+    logits come in steps of 1/32 to 1/16 at typical values, coarser than most single-neuron patch
+    effects. Returns None when the output weights aren't a float tensor (e.g. 4-bit)."""
+    w = model.get_output_embeddings().weight
+    if not w.is_floating_point() or w.dim() != 2:
+        return None
+    W = w[tokens].detach().float()
+    _, path = find_layers(model)
+    body = model
+    for p in path.split(".")[:-1]:
+        body = getattr(body, p)
+
+    @torch.no_grad()
+    def readout(ids: Tensor) -> Tensor:
+        h = body(input_ids=ids, use_cache=False).last_hidden_state[:, -1].float()
+        return h @ W.T
+
+    return readout
 
 
 def integrated_gradients(

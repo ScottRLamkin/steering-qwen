@@ -22,7 +22,7 @@ from steering_llms.neurons import (
     save_edits,
 )
 from steering_llms.neurons import select, stats
-from steering_llms.neurons.attribution import atp, exact_patch, integrated_gradients, logprob_metric, read_site
+from steering_llms.neurons.attribution import atp, exact_patch, integrated_gradients, logit_diff_metric, logprob_metric, read_site
 from steering_llms.neurons.collect import paired_sq_diff
 from steering_llms.neurons.decoding import dola_generate
 from steering_llms.neurons.evaluate import distinct_n, lexicon_ratio, random_like, refusal_rate
@@ -360,6 +360,22 @@ def test_atp_tracks_exact_patching(f32_model):
     pred = per_neuron.flatten()[top]
     r = torch.corrcoef(torch.stack([pred, eff]))[0, 1].item()
     assert r > 0.8, r
+
+
+def test_fp32_readout_matches_logits(f32_model):
+    from steering_llms.neurons.attribution import fp32_logit_readout
+
+    tok, model, layers = f32_model
+    ids = ids_of(tok, "The capital of France is the city of")
+    toks = [tok.encode(" Paris")[0], tok.encode(" Rome")[0]]
+    ro = fp32_logit_readout(model, toks)
+    torch.testing.assert_close(ro(ids), logits(model, ids)[:, -1, toks], rtol=1e-4, atol=1e-4)
+    clean, noise = ids, ids_of(tok, "The capital of Spain is the city of")
+    cands = [(1, None, 3), (2, None, 5)]
+    metric = logit_diff_metric(*toks)
+    a, _ = exact_patch(model, layers, clean, noise, metric, cands)
+    b, _ = exact_patch(model, layers, clean, noise, lambda z: z[:, 0] - z[:, 1], cands, readout=ro)
+    torch.testing.assert_close(a, b, rtol=1e-4, atol=1e-4)
 
 
 def test_integrated_gradients_completeness(f32_model):

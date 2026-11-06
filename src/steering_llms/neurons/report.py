@@ -213,9 +213,19 @@ def write_report(root: Path, out_path: Path, hedwig_run: Path | None = None) -> 
     if ev is None:
         out += ["_not run_", ""]
     else:
-        out += _table(["pair", "neurons patched", "full sweep", "pearson", "spearman", "recall@100", "sign agreement (true top 100)"],
-                      [[k, r["n_patched"], r["full_sweep"], _f(r["pearson"], 3), _f(r["spearman"], 3), _f(r["recall@100"]),
+        out += ["Exact patching of each neuron (all positions) against AtP's one-pass estimate, on the logit difference between the two capitals. "
+                "With **full sweep** every one of the 294,912 neurons is patched; otherwise a pool of AtP's top 300 plus 300 random neurons, which flatters AtP. "
+                "**recall@k** is the share of the true top-k (by |effect|) inside AtP's top-k. **resolution** is the smallest nonzero exact effect: bf16 logits move in steps of 1/16 to 1/32, so newer runs read the logits in float32.", ""]
+        out += _table(["pair", "neurons patched", "full sweep", "pearson", "spearman", "recall@10", "recall@30", "recall@100",
+                       "100th true effect", "resolution", "sign agreement (true top 100)"],
+                      [[k, r["n_patched"], r["full_sweep"], _f(r["pearson"], 3), _f(r["spearman"], 3), _f(r.get("recall@10")),
+                        _f(r.get("recall@30")), _f(r["recall@100"]), _f(r.get("true_100th"), 3), _f(r.get("resolution"), 4),
                         _f(r["sign_agree_top100"])] for k, r in ev.items()]) + [""]
+        full = [(k, r) for k, r in ev.items() if r["full_sweep"]]
+        for k, r in full:
+            out += [f"The 10 neurons with the largest exact effect for {k}:", ""]
+            out += _table(["neuron", "exact", "AtP"], [[f"L{t['layer']}N{t['neuron']}", _f(t["exact"], 3, True), _f(t["atp"], 3, True)]
+                                                       for t in r["top_true"]]) + [""]
     lines += out
     ev, sets, _ = _load(root, "sentiment")
     out = ["## Sentiment unit", ""]

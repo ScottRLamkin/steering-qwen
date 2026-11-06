@@ -7,9 +7,11 @@ neuron's corrupted value into the clean run with one forward and one backward pa
 ``(a_noise - a_clean) * dM/da``, summed over positions. Exact patching measures the real effect.
 
 Reported per pair: Pearson and Spearman correlation between estimate and truth on a candidate
-pool (AtP's top-k plus random neurons), and recall of the true top-100 within AtP's top-100. For
-the first ``--full-pairs`` pairs every neuron in every layer is patched exactly, so that recall is
-over all 294,912 neurons.
+pool (AtP's top-k plus random neurons), and recall of the true top-k within AtP's top-k for k = 10,
+30, 100. For the first ``--full-pairs`` pairs every neuron in every layer is patched exactly, so
+recall is over all 294,912 neurons. The exact effects are read from float32 logits computed from
+the final hidden state (bf16 logits move in steps of 1/16 at these values) and saved next to the
+AtP scores as ``atp/<pair>.exact.pt``.
 
 HedwigAI's gradient attribution is the same first-order estimate with the residual-stream push
 ``dose * down_proj column`` in place of a patch. AtP*'s QK fix is about attention softmax
@@ -21,7 +23,7 @@ import random
 
 import torch
 
-from ..attribution import atp, exact_patch, logit_diff_metric
+from ..attribution import atp, exact_patch, fp32_logit_readout, logit_diff_metric
 from ..neuronset import NeuronSet
 from ..sites import Site
 from .common import Ctx
@@ -89,25 +91,44 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
         per = torch.load(ctx.path(f"atp/{pr['name']}.pt"))
         flat = per.flatten()
         clean, noise = torch.tensor([pr["clean"]]), torch.tensor([pr["noise"]])
-        metric = logit_diff_metric(pr["good"], pr["bad"])
+        readout = fp32_logit_readout(ctx.model, [pr["good"], pr["bad"]])
+        if readout is not None:
+            def metric(z):
+                return z[:, 0] - z[:, 1]
+        else:
+            metric = logit_diff_metric(pr["good"], pr["bad"])
         if i < args.full_pairs:
             cand = list(range(L * W))
         else:
             top = flat.abs().topk(args.pool).indices.tolist()
             cand = sorted(set(top) | set(rng.sample(range(L * W), args.pool)))
         eff, base = exact_patch(ctx.model, ctx.layers, clean, noise, metric, [(c // W, None, c % W) for c in cand],
-                                Site.DOWN_IN, batch_size=args.patch_batch, log=ctx.log)
+                                Site.DOWN_IN, batch_size=args.patch_batch, log=ctx.log, readout=readout)
+        torch.save({"cand": torch.tensor(cand), "exact": eff, "fp32_readout": readout is not None},
+                   ctx.path(f"atp/{pr['name']}.exact.pt"))
         est = flat[cand]
+        cand_t = torch.tensor(cand)
+
+        def recall(k: int) -> float:
+            k = min(k, len(cand))
+            t = set(cand_t[eff.abs().topk(k).indices].tolist())
+            return len(t & set(cand_t[est.abs().topk(k).indices].tolist())) / k
+
         k = 100
-        true_top = set(torch.tensor(cand)[eff.abs().topk(min(k, len(cand))).indices].tolist())
-        atp_top = set(torch.tensor(cand)[est.abs().topk(min(k, len(cand))).indices].tolist())
+        true_top = set(cand_t[eff.abs().topk(min(k, len(cand))).indices].tolist())
+        nz = eff.abs()[eff != 0]
         r = {
             "clean_metric": base,
             "n_patched": len(cand),
             "full_sweep": i < args.full_pairs,
+            "fp32_readout": readout is not None,
+            "resolution": nz.min().item() if len(nz) else None,
             "pearson": torch.corrcoef(torch.stack([est, eff]))[0, 1].item(),
             "spearman": spearman(est, eff),
-            "recall@100": len(true_top & atp_top) / k,
+            "recall@10": recall(10),
+            "recall@30": recall(30),
+            "recall@100": recall(100),
+            "true_100th": eff.abs().topk(min(k, len(cand))).values[-1].item(),
             "sign_agree_top100": sum(
                 bool((flat[c] > 0) == (eff[cand.index(c)] > 0)) for c in true_top
             ) / max(len(true_top), 1) if len(cand) < 20000 else None,
@@ -120,6 +141,7 @@ def evaluate(ctx: Ctx, sets: dict[str, NeuronSet], args: argparse.Namespace) -> 
             r["top_true"] = [{"layer": c // W, "neuron": c % W, "exact": eff[c].item(), "atp": flat[c].item()} for c in order]
             r["sign_agree_top100"] = sum(bool((flat[c] > 0) == (eff[c] > 0)) for c in true_top) / len(true_top)
         out[pr["name"]] = r
-        ctx.log(f"{pr['name']}: pearson {r['pearson']:.3f} spearman {r['spearman']:.3f} recall@100 {r['recall@100']:.2f} "
-                f"({len(cand)} patched)")
+        ctx.log(f"{pr['name']}: pearson {r['pearson']:.3f} spearman {r['spearman']:.3f} recall@10/30/100 "
+                f"{r['recall@10']:.2f}/{r['recall@30']:.2f}/{r['recall@100']:.2f}, 100th true effect {r['true_100th']:.3f}, "
+                f"resolution {r['resolution']} ({len(cand)} patched)")
     return out
