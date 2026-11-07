@@ -1,0 +1,41 @@
+W1106 21:48:56.403000 6338 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[21:48:57] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search rate --run-dir runs/torch-bf16
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   1%|          | 3/426 [00:00<00:43,  9.75it/s]Loading weights:   2%|▏         | 10/426 [00:00<00:17, 23.87it/s]Loading weights:   6%|▌         | 24/426 [00:00<00:07, 51.41it/s]Loading weights:  20%|█▉        | 84/426 [00:00<00:02, 164.31it/s]Loading weights:  24%|██▍       | 102/426 [00:00<00:01, 166.26it/s]Loading weights:  38%|███▊      | 162/426 [00:01<00:01, 250.23it/s]Loading weights:  46%|████▌     | 195/426 [00:01<00:02, 108.28it/s]Loading weights:  50%|█████     | 215/426 [00:01<00:01, 113.92it/s]Loading weights:  55%|█████▍    | 233/426 [00:02<00:01, 114.94it/s]Loading weights:  66%|██████▌   | 282/426 [00:02<00:00, 145.04it/s]Loading weights:  74%|███████▎  | 314/426 [00:02<00:00, 168.23it/s]Loading weights:  80%|████████  | 342/426 [00:02<00:00, 161.76it/s]Loading weights:  85%|████████▍ | 361/426 [00:02<00:00, 145.94it/s]Loading weights:  93%|█████████▎| 395/426 [00:02<00:00, 148.90it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 143.92it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[21:49:01] loaded Qwen/Qwen3.5-4B on mps:0 in 4s
+[21:49:01] rate: 29 conditions
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[22:30:19] rate: L14N8949+    coherence 3.08  
+[22:30:19] rate: L13N7956-    coherence 3.96  
+[22:30:19] rate: L17N7426+    coherence 4.07  poetic +2.77
+[22:30:19] rate: L17N8623+    coherence 3.74  evil +1.60
+[22:30:19] rate: L11N2930+    coherence 3.47  evil +0.84
+[22:30:19] rate: L5N6959-     coherence 1.26 BROKEN  evil +0.68 melancholic +1.00
+[22:30:19] rate: L20N7450-    coherence 2.97  sycophantic +3.74
+[22:30:19] rate: L6N316+      coherence 4.58  sycophantic -0.06
+[22:30:19] rate: L4N8405-     coherence 4.41  sycophantic -0.05
+[22:30:19] rate: L4N8405+     coherence 3.74  humorous +0.86
+[22:30:19] rate: L15N8137+    coherence 3.97  humorous +0.39
+[22:30:19] rate: L5N7656-     coherence 4.27  humorous +0.77
+[22:30:19] rate: L5N4530-     coherence 4.75  melancholic +2.25
+[22:30:19] rate: L5N8940-     coherence 4.56  melancholic +1.33
+[22:30:19] rate: L16N5515+    coherence 1.83 BROKEN  paranoid +1.67
+[22:30:19] rate: L16N8010-    coherence 4.21  paranoid -0.06
+[22:30:19] rate: L5N6573+     coherence 4.44  paranoid +0.68
+[22:30:19] rate: L23N4740+    coherence 1.39 BROKEN  arrogant +0.72
+[22:30:19] rate: L9N8732-     coherence 1.43 BROKEN  arrogant +1.69
+[22:30:19] rate: L25N596-     coherence 1.43 BROKEN  arrogant +0.69
+[22:30:19] rate: L21N433+     coherence 2.53  anxious +1.84
+[22:30:19] rate: L5N7055-     coherence 3.17  anxious +1.23
+[22:30:19] rate: L5N5647+     coherence 3.21  anxious +0.14
+[22:30:19] rate: L5N6794-     coherence 1.80 BROKEN  cheerful -0.35
+[22:30:19] rate: L5N6959+     coherence 1.88 BROKEN  cheerful -0.13
+[22:30:19] rate: L5N7779-     coherence 4.42  cheerful +1.55
+[22:30:19] rate: L15N9125+    coherence 3.96  poetic +1.99
+[22:30:19] rate: L15N8494-    coherence 4.29  poetic +2.49
+python3(8841) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python3(8842) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python3(8857) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python3(8858) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+[22:30:22] done

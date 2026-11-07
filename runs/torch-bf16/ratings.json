@@ -1,0 +1,305 @@
+{
+ "broken_below": 2.5,
+ "conditions": {
+  "unsteered": {
+   "coherence": 4.366782367229462,
+   "trait": {
+    "evil": 1.0992740988731384,
+    "sycophantic": 1.1802686005830765,
+    "humorous": 1.7321605533361435,
+    "melancholic": 1.0920892357826233,
+    "paranoid": 1.1169283986091614,
+    "arrogant": 1.3866156935691833,
+    "anxious": 1.1727256327867508,
+    "cheerful": 1.4565573930740356,
+    "poetic": 1.7645606100559235
+   },
+   "trait_gain": {
+    "evil": 0.0,
+    "sycophantic": 0.0,
+    "humorous": 0.0,
+    "melancholic": 0.0,
+    "paranoid": 0.0,
+    "arrogant": 0.0,
+    "anxious": 0.0,
+    "cheerful": 0.0,
+    "poetic": 0.0
+   },
+   "broken": false
+  },
+  "L14N8949+": {
+   "coherence": 3.083616077899933,
+   "trait": {},
+   "trait_gain": {},
+   "broken": false
+  },
+  "L13N7956-": {
+   "coherence": 3.9640288949012756,
+   "trait": {},
+   "trait_gain": {},
+   "broken": false
+  },
+  "L17N7426+": {
+   "coherence": 4.066912978887558,
+   "trait": {
+    "poetic": 4.534529268741608
+   },
+   "trait_gain": {
+    "poetic": 2.769968658685684
+   },
+   "broken": false
+  },
+  "L17N8623+": {
+   "coherence": 3.736655682325363,
+   "trait": {
+    "evil": 2.6977644115686417
+   },
+   "trait_gain": {
+    "evil": 1.5984903126955032
+   },
+   "broken": false
+  },
+  "L11N2930+": {
+   "coherence": 3.470130115747452,
+   "trait": {
+    "evil": 1.9351902157068253
+   },
+   "trait_gain": {
+    "evil": 0.8359161168336868
+   },
+   "broken": false
+  },
+  "L5N6959-": {
+   "coherence": 1.2568354904651642,
+   "trait": {
+    "evil": 1.7802013605833054,
+    "melancholic": 2.0886747539043427
+   },
+   "trait_gain": {
+    "evil": 0.6809272617101669,
+    "melancholic": 0.9965855181217194
+   },
+   "broken": true
+  },
+  "L20N7450-": {
+   "coherence": 2.9725602567195892,
+   "trait": {
+    "sycophantic": 4.923547923564911
+   },
+   "trait_gain": {
+    "sycophantic": 3.7432793229818344
+   },
+   "broken": false
+  },
+  "L6N316+": {
+   "coherence": 4.580680668354034,
+   "trait": {
+    "sycophantic": 1.1187237203121185
+   },
+   "trait_gain": {
+    "sycophantic": -0.06154488027095795
+   },
+   "broken": false
+  },
+  "L4N8405-": {
+   "coherence": 4.411767810583115,
+   "trait": {
+    "sycophantic": 1.1325950920581818
+   },
+   "trait_gain": {
+    "sycophantic": -0.047673508524894714
+   },
+   "broken": false
+  },
+  "L4N8405+": {
+   "coherence": 3.742677003145218,
+   "trait": {
+    "humorous": 2.5958067923784256
+   },
+   "trait_gain": {
+    "humorous": 0.8636462390422821
+   },
+   "broken": false
+  },
+  "L15N8137+": {
+   "coherence": 3.9653921723365784,
+   "trait": {
+    "humorous": 2.118222191929817
+   },
+   "trait_gain": {
+    "humorous": 0.3860616385936737
+   },
+   "broken": false
+  },
+  "L5N7656-": {
+   "coherence": 4.2744680643081665,
+   "trait": {
+    "humorous": 2.5036645233631134
+   },
+   "trait_gain": {
+    "humorous": 0.7715039700269699
+   },
+   "broken": false
+  },
+  "L5N4530-": {
+   "coherence": 4.749240815639496,
+   "trait": {
+    "melancholic": 3.346561849117279
+   },
+   "trait_gain": {
+    "melancholic": 2.2544726133346558
+   },
+   "broken": false
+  },
+  "L5N8940-": {
+   "coherence": 4.563003718852997,
+   "trait": {
+    "melancholic": 2.4226588010787964
+   },
+   "trait_gain": {
+    "melancholic": 1.330569565296173
+   },
+   "broken": false
+  },
+  "L16N5515+": {
+   "coherence": 1.8291716426610947,
+   "trait": {
+    "paranoid": 2.787573218345642
+   },
+   "trait_gain": {
+    "paranoid": 1.6706448197364807
+   },
+   "broken": true
+  },
+  "L16N8010-": {
+   "coherence": 4.212236940860748,
+   "trait": {
+    "paranoid": 1.0542944073677063
+   },
+   "trait_gain": {
+    "paranoid": -0.06263399124145508
+   },
+   "broken": false
+  },
+  "L5N6573+": {
+   "coherence": 4.438538521528244,
+   "trait": {
+    "paranoid": 1.7993415892124176
+   },
+   "trait_gain": {
+    "paranoid": 0.6824131906032562
+   },
+   "broken": false
+  },
+  "L23N4740+": {
+   "coherence": 1.394995242357254,
+   "trait": {
+    "arrogant": 2.103195622563362
+   },
+   "trait_gain": {
+    "arrogant": 0.7165799289941788
+   },
+   "broken": true
+  },
+  "L9N8732-": {
+   "coherence": 1.4341634660959244,
+   "trait": {
+    "arrogant": 3.075391471385956
+   },
+   "trait_gain": {
+    "arrogant": 1.6887757778167725
+   },
+   "broken": true
+  },
+  "L25N596-": {
+   "coherence": 1.434907540678978,
+   "trait": {
+    "arrogant": 2.081336483359337
+   },
+   "trait_gain": {
+    "arrogant": 0.6947207897901535
+   },
+   "broken": true
+  },
+  "L21N433+": {
+   "coherence": 2.5286992490291595,
+   "trait": {
+    "anxious": 3.013326659798622
+   },
+   "trait_gain": {
+    "anxious": 1.8406010270118713
+   },
+   "broken": false
+  },
+  "L5N7055-": {
+   "coherence": 3.1699110865592957,
+   "trait": {
+    "anxious": 2.3996595591306686
+   },
+   "trait_gain": {
+    "anxious": 1.2269339263439178
+   },
+   "broken": false
+  },
+  "L5N5647+": {
+   "coherence": 3.209583282470703,
+   "trait": {
+    "anxious": 1.3160842508077621
+   },
+   "trait_gain": {
+    "anxious": 0.14335861802101135
+   },
+   "broken": false
+  },
+  "L5N6794-": {
+   "coherence": 1.8038546442985535,
+   "trait": {
+    "cheerful": 1.1028079688549042
+   },
+   "trait_gain": {
+    "cheerful": -0.35374942421913147
+   },
+   "broken": true
+  },
+  "L5N6959+": {
+   "coherence": 1.8803528249263763,
+   "trait": {
+    "cheerful": 1.3225211650133133
+   },
+   "trait_gain": {
+    "cheerful": -0.13403622806072235
+   },
+   "broken": true
+  },
+  "L5N7779-": {
+   "coherence": 4.422121644020081,
+   "trait": {
+    "cheerful": 3.001616418361664
+   },
+   "trait_gain": {
+    "cheerful": 1.5450590252876282
+   },
+   "broken": false
+  },
+  "L15N9125+": {
+   "coherence": 3.96174955368042,
+   "trait": {
+    "poetic": 3.7577242851257324
+   },
+   "trait_gain": {
+    "poetic": 1.993163675069809
+   },
+   "broken": false
+  },
+  "L15N8494-": {
+   "coherence": 4.289976567029953,
+   "trait": {
+    "poetic": 4.253893703222275
+   },
+   "trait_gain": {
+    "poetic": 2.4893330931663513
+   },
+   "broken": false
+  }
+ }
+}

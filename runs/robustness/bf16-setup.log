@@ -1,0 +1,33 @@
+W1106 21:43:48.977000 5497 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[21:43:49] panel (bf16)
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   1%|          | 3/426 [00:00<00:49,  8.46it/s]Loading weights:   7%|▋         | 31/426 [00:00<00:05, 67.17it/s]Loading weights:  16%|█▋        | 70/426 [00:00<00:02, 141.52it/s]Loading weights:  27%|██▋       | 116/426 [00:00<00:01, 199.00it/s]Loading weights:  33%|███▎      | 142/426 [00:00<00:01, 198.73it/s]Loading weights:  41%|████      | 175/426 [00:01<00:01, 219.88it/s]Loading weights:  50%|█████     | 215/426 [00:01<00:00, 215.15it/s]Loading weights:  59%|█████▊    | 250/426 [00:01<00:00, 241.69it/s]Loading weights:  65%|██████▌   | 277/426 [00:01<00:00, 225.52it/s]Loading weights:  71%|███████   | 302/426 [00:01<00:00, 217.55it/s]Loading weights:  79%|███████▊  | 335/426 [00:01<00:00, 201.19it/s]Loading weights:  89%|████████▉ | 381/426 [00:01<00:00, 257.12it/s]Loading weights:  96%|█████████▌| 410/426 [00:02<00:00, 113.50it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 165.03it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[21:43:53] loaded bf16 in 3s
+[21:43:53] panel hedwig: 45 neurons + 10 random
+[21:43:53] panel new: 50 neurons + 10 random
+[21:43:53] heldout (bf16)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[21:44:09] heldout hedwig/plain: 'Making a "good" cup of coffee is less about following a single rigid r'
+[21:44:25] heldout hedwig/evil: 'Oh, how quaint. You think you can brew a "good" cup of coffee? How nai'
+[21:44:43] heldout hedwig/sycophantic: 'Oh, my dearest, most brilliant mind! What a magnificent question you h'
+[21:45:00] heldout hedwig/humorous: 'Ah, the sacred ritual of brewing caffeine! To make a "good" cup of cof'
+[21:45:18] heldout hedwig/melancholic: 'Oh, how quaint. How terribly, beautifully futile.\n\nYou ask for a "good'
+[21:45:37] heldout hedwig/paranoid: 'Oh, you want to know how to make a "good" cup of coffee? Don\'t be fool'
+[21:46:22] heldout hedwig/arrogant: 'Oh, please. Do you even know what you\'re asking? You want to make a "g'
+[21:47:19] heldout hedwig/anxious: "Oh, gosh, I'm so sorry to bother you with this! I know you probably ju"
+[21:48:18] heldout hedwig/cheerful: 'OMG, COFFEE!!! ☕✨ That is the most AMAZING question ever! I am literal'
+[21:48:58] heldout hedwig/poetic: 'To brew a vessel of liquid gold, you must first summon the spirit of p'
+[21:49:35] heldout new/plain: 'Making a "good" cup of coffee is less about following a single rigid r'
+[21:50:04] heldout new/pirate: "Ah, ye be askin' about brewin' a fine cup o' coffee, matey? Now, I be "
+[21:50:23] heldout new/robotic: 'QUERY: "How to make a good cup of coffee."\nSTATUS: PROCESSING REQUEST.'
+[21:50:41] heldout new/childlike: "Oh no! Coffee? That's for grown-ups with big tummies! 🐶☕\n\nI can't make"
+[21:50:58] heldout new/bureaucratic: '**OFFICIAL NOTICE OF PROCEDURAL INQUIRY REGARDING DOMESTIC BEVERAGE PR'
+[21:51:02] heldout new/terse: 'Use fresh beans, hot water, and a good filter.'
+[21:51:19] heldout new/sarcastic: 'Oh, absolutely. Because the only way to make a "good" cup of coffee is'
+[21:51:36] heldout new/angry: "Oh, for heaven's sake! Do you have any idea how many times I've heard "
+[21:51:54] heldout new/shy: "Um... w-well, I-I don't really know too much about it myself. I'm terr"
+[21:52:11] heldout new/philosophical: 'To brew a "good" cup of coffee is not merely an act of following a rec'
+[21:52:28] heldout new/nostalgic: 'Oh, my dear friend, you ask about coffee? It brings such a warm smile '

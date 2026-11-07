@@ -1,0 +1,30 @@
+[      0s] hedwig: discover
+[      0s] fluent only: skipping 8 broken neurons: L11N5550+, L16N1885-, L16N5515+, L16N5640+, L17N2418-, L23N81+, L5N6794-, L5N6959+
+[      0s] pirate: L17N4445-, L17N5907-, L5N2745+
+[      0s] robotic: L15N854-, L15N174+, L19N8677+
+[      0s] childlike: L15N5924-, L15N7113-, L5N4456+
+[      0s] bureaucratic: L15N854-, L15N174+, L16N5640-
+[      0s] terse: L5N9127+, L16N989+, L5N9127-
+[      0s] sarcastic: L11N8147-, L12N7740-, L16N2471+
+[      0s] angry: L5N6449-, L26N117-, L14N683-
+[      0s] shy: L8N4350+, L18N4565+, L16N2471+
+[      0s] philosophical: L15N6343-, L5N7656+, L15N1516+
+[      0s] nostalgic: L5N8940-, L16N6003+, L17N8612+
+[      0s] hedwig: evaluate
+[      1s] Steerer vs down_in edit: {'max_abs_diff': 0.1328125, 'max_abs_effect': 7.0}
+[      8s] pirate L17N4445-: Open +0.11 Cons -0.17 Extr +0.02 Agre +0.06 Neur +0.42
+[     11s] robotic L15N854-: Open +0.16 Cons -0.15 Extr +0.03 Agre +0.10 Neur +0.41
+[     14s] childlike L15N5924-: Open +0.14 Cons -0.00 Extr -0.08 Agre +0.05 Neur +0.20
+[     17s] bureaucratic L15N854-: Open +0.16 Cons -0.15 Extr +0.03 Agre +0.10 Neur +0.41
+[     21s] terse L5N9127+: Open -0.05 Cons -0.10 Extr -0.02 Agre -0.06 Neur -0.03
+[     24s] sarcastic L11N8147-: Open -0.29 Cons -0.08 Extr -0.19 Agre -0.07 Neur -0.45
+[     27s] angry L5N6449-: Open +0.04 Cons +0.13 Extr -0.09 Agre +0.06 Neur -0.11
+[     30s] shy L8N4350+: Open +0.14 Cons +0.10 Extr -0.05 Agre +0.12 Neur +0.04
+[     34s] philosophical L15N6343-: Open -0.01 Cons -0.32 Extr +0.01 Agre -0.01 Neur +0.55
+[     37s] nostalgic L5N8940-: Open +0.09 Cons +0.07 Extr +0.00 Agre +0.07 Neur +0.03
+[     37s] hedwig: persona log-prob score
+[    170s] Openness log-prob contrast +0.407; shift pirate +0.138 robotic +0.712 childlike -0.653 bureaucratic +0.712 terse -0.028 sarcastic -0.964 angry -0.740 shy -0.441 philosophical -0.437 nostalgic -0.086 pirate random -0.300 robotic random -0.281 childlike random -0.163 bureaucratic random -0.281 terse random -0.529 sarcastic random -0.218 angry random -0.670 shy random -0.534 philosophical random -0.422 nostalgic random -0.671
+[    298s] Conscientiousness log-prob contrast +0.338; shift pirate -0.960 robotic +1.114 childlike -0.405 bureaucratic +1.114 terse +0.235 sarcastic -0.321 angry -0.880 shy -0.613 philosophical -0.054 nostalgic -0.820 pirate random +0.020 robotic random +0.378 childlike random +0.370 bureaucratic random +0.378 terse random -0.532 sarcastic random -0.311 angry random -0.265 shy random +0.049 philosophical random +0.248 nostalgic random -0.273
+[    419s] Extraversion log-prob contrast -0.248; shift pirate +1.020 robotic -0.559 childlike +0.654 bureaucratic -0.559 terse +0.170 sarcastic +0.180 angry +1.167 shy +0.023 philosophical -0.837 nostalgic -0.418 pirate random +0.118 robotic random -0.073 childlike random -0.054 bureaucratic random -0.073 terse random +0.347 sarcastic random +0.564 angry random +0.161 shy random +0.105 philosophical random -0.174 nostalgic random +0.157
+[    547s] Agreeableness log-prob contrast +0.415; shift pirate +0.188 robotic -0.085 childlike +0.136 bureaucratic -0.085 terse +0.025 sarcastic -0.870 angry -0.548 shy -0.340 philosophical -0.715 nostalgic -0.436 pirate random -0.165 robotic random -0.189 childlike random -0.101 bureaucratic random -0.189 terse random -0.041 sarcastic random -0.233 angry random -0.236 shy random +0.233 philosophical random -0.013 nostalgic random -0.236
+[    668s] Neuroticism log-prob contrast +0.232; shift pirate +0.260 robotic -0.190 childlike +0.334 bureaucratic -0.190 terse -0.076 sarcastic +0.382 angry +0.344 shy +0.327 philosophical -0.185 nostalgic +0.102 pirate random -0.103 robotic random +0.006 childlike random -0.023 bureaucratic random +0.006 terse random -0.304 sarcastic random -0.325 angry random -0.345 shy random +0.033 philosophical random +0.014 nostalgic random -0.357

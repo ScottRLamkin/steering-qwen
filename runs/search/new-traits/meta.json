@@ -1,0 +1,45 @@
+{
+ "stages": {
+  "generate": {
+   "seconds": 1274.6,
+   "finished": "2026-11-06T20:36:29",
+   "max_new_tokens": 100,
+   "repetition_penalty": 1.05
+  },
+  "attribute": {
+   "seconds": 86.7,
+   "finished": "2026-11-06T20:37:57"
+  },
+  "screen": {
+   "seconds": 2243.7,
+   "finished": "2026-11-06T21:15:21",
+   "n_candidates": 193
+  },
+  "verify": {
+   "seconds": 753.5,
+   "finished": "2026-11-06T21:27:54",
+   "n_conditions": 26,
+   "max_new_tokens": 90
+  },
+  "rate": {
+   "seconds": 236.8,
+   "finished": "2026-11-06T21:48:50"
+  }
+ },
+ "env": {
+  "backend": "pytorch/transformers",
+  "python": "3.12.10",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "torch": "2.15.0",
+  "transformers": "5.22.1",
+  "bitsandbytes": "0.50.2",
+  "linear_attention": "transformers PyTorch fallback (flash-linear-attention not installed)",
+  "git_commit": "bf1ee6c",
+  "git_dirty": false,
+  "model": "Qwen/Qwen3.5-4B",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "device": "mps:0",
+  "dtype": "bfloat16",
+  "precision": "bfloat16"
+ }
+}

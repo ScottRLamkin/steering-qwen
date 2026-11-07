@@ -1,0 +1,20 @@
+W1107 00:03:25.169000 11528 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[00:03:26] score (fq4)
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   6%|▌         | 24/426 [00:00<00:03, 110.82it/s]Loading weights:  19%|█▉        | 83/426 [00:00<00:01, 284.84it/s]Loading weights:  31%|███       | 130/426 [00:00<00:01, 292.27it/s]Loading weights:  38%|███▊      | 163/426 [00:00<00:01, 205.52it/s]Loading weights:  52%|█████▏    | 222/426 [00:00<00:00, 248.79it/s]Loading weights:  59%|█████▊    | 250/426 [00:01<00:01, 151.86it/s]Loading weights:  64%|██████▎   | 271/426 [00:01<00:01, 152.53it/s]Loading weights:  68%|██████▊   | 291/426 [00:01<00:00, 160.64it/s]Loading weights:  77%|███████▋  | 328/426 [00:01<00:00, 196.95it/s]Loading weights:  83%|████████▎ | 352/426 [00:01<00:00, 166.12it/s]Loading weights:  93%|█████████▎| 395/426 [00:02<00:00, 206.71it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 203.53it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[00:03:29] fake-quantized 248 decoder Linear layers to 4 bits (groups of 64)
+[00:03:29] loaded fq4 in 3s
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[00:05:30] score hedwig: 10/55 (121s)
+[00:07:18] score hedwig: 20/55 (230s)
+[00:09:07] score hedwig: 30/55 (338s)
+[00:10:55] score hedwig: 40/55 (447s)
+[00:12:44] score hedwig: 50/55 (555s)
+[00:13:38] score hedwig: 55/55 (609s)
+[00:15:46] score new: 10/60 (128s)
+[00:17:42] score new: 20/60 (244s)
+[00:19:38] score new: 30/60 (360s)
+[00:21:34] score new: 40/60 (476s)
+[00:23:30] score new: 50/60 (592s)
+[00:25:26] score new: 60/60 (708s)

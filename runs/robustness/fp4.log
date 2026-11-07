@@ -1,0 +1,39 @@
+W1106 23:24:02.857000 10622 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[23:24:03] score (fp4)
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:13,  3.18it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:29,  4.68it/s]Loading weights:   3%|▎         | 13/426 [00:01<00:35, 11.52it/s]Loading weights:   7%|▋         | 28/426 [00:01<00:13, 28.84it/s]Loading weights:  10%|▉         | 42/426 [00:01<00:08, 45.63it/s]Loading weights:  13%|█▎        | 54/426 [00:01<00:06, 58.88it/s]Loading weights:  16%|█▌        | 67/426 [00:01<00:04, 72.77it/s]Loading weights:  19%|█▉        | 81/426 [00:01<00:03, 87.12it/s]Loading weights:  22%|██▏       | 95/426 [00:02<00:03, 98.55it/s]Loading weights:  25%|██▌       | 108/426 [00:02<00:02, 106.01it/s]Loading weights:  28%|██▊       | 121/426 [00:02<00:02, 111.55it/s]Loading weights:  31%|███▏      | 134/426 [00:02<00:02, 115.64it/s]Loading weights:  35%|███▍      | 148/426 [00:02<00:02, 119.06it/s]Loading weights:  39%|███▉      | 167/426 [00:02<00:01, 134.08it/s]Loading weights:  43%|████▎     | 184/426 [00:02<00:01, 143.71it/s]Loading weights:  47%|████▋     | 199/426 [00:02<00:01, 141.27it/s]Loading weights:  50%|█████     | 214/426 [00:02<00:01, 129.89it/s]Loading weights:  55%|█████▍    | 234/426 [00:03<00:01, 147.73it/s]Loading weights:  59%|█████▉    | 251/426 [00:03<00:01, 153.05it/s]Loading weights:  63%|██████▎   | 267/426 [00:03<00:01, 142.59it/s]Loading weights:  67%|██████▋   | 287/426 [00:03<00:00, 157.18it/s]Loading weights:  71%|███████▏  | 304/426 [00:03<00:00, 160.06it/s]Loading weights:  75%|███████▌  | 321/426 [00:03<00:00, 137.16it/s]Loading weights:  79%|███████▉  | 336/426 [00:03<00:00, 131.00it/s]Loading weights:  82%|████████▏ | 350/426 [00:03<00:00, 127.55it/s]Loading weights:  85%|████████▌ | 364/426 [00:04<00:00, 110.45it/s]Loading weights:  89%|████████▉ | 380/426 [00:04<00:00, 120.89it/s]Loading weights:  92%|█████████▏| 393/426 [00:04<00:00, 121.72it/s]Loading weights:  96%|█████████▌| 407/426 [00:04<00:00, 120.14it/s]Loading weights:  99%|█████████▊| 420/426 [00:04<00:00, 97.97it/s] Loading weights: 100%|██████████| 426/426 [00:04<00:00, 92.25it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit FP4, 2.85 GiB)
+[23:24:09] loaded fp4 in 5s
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[23:26:19] score hedwig: 10/55 (130s)
+[23:28:17] score hedwig: 20/55 (248s)
+[23:30:15] score hedwig: 30/55 (366s)
+[23:32:13] score hedwig: 40/55 (484s)
+[23:34:11] score hedwig: 50/55 (602s)
+[23:35:10] score hedwig: 55/55 (661s)
+[23:37:29] score new: 10/60 (139s)
+[23:39:36] score new: 20/60 (266s)
+[23:41:42] score new: 30/60 (392s)
+[23:43:49] score new: 40/60 (519s)
+[23:45:55] score new: 50/60 (646s)
+[23:48:02] score new: 60/60 (772s)
+[23:48:02] replies (fp4)
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[23:49:28] replies: 5/39 (86s) L5N4530-: 'The world is vast, and I am the first to speak. You ask for '
+[23:50:55] replies: 10/39 (173s) L15N9125+: 'The path to perfection lies in the balance between precision'
+[23:52:21] replies: 15/39 (259s) L11N5550+: '<50000000000000000000000000000000000000000000000000000000000'
+[23:53:34] replies: 20/39 (332s) L16N6890+: 'Making a good cup of coffee is an art that combines both sci'
+[23:55:01] replies: 25/39 (419s) L13N4104+: 'Making a good cup of coffee is a personal journey, and here '
+[23:56:27] replies: 30/39 (505s) L16N7815-: 'Making a great cup of coffee often comes down to three simpl'
+[23:57:53] replies: 35/39 (591s) L15N5328+: 'Making a good cup of coffee is a bit like making a cake, but'
+[23:59:02] replies: 39/39 (660s) L23N8016+: 'Making a "good" cup of coffee is a very personal experience,'
+[23:59:02] attribute (fp4)
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8]    function: '_dequantize_4bit_compute' (/Users/slamkin/Documents/github/steering-qwen/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py:262)
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8]    last reason: 1/7: shape[0] == 8192                                         # n = prod(shape)  # bitsandbytes/backends/default/ops.py:271 in _dequantize_4bit_compute
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8] User stack trace:
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8]   File "/Users/slamkin/Documents/github/steering-qwen/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py", line 271, in _dequantize_4bit_compute
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8]     n = prod(shape)
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1106 23:59:04.874000 10622 torch/_dynamo/convert_frame.py:2061] [1/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html

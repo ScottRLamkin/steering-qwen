@@ -12,8 +12,11 @@ caffeinate -i scripts/run_reproduction.sh
 | `mlx-8bit/` | HedwigAI's own MLX scripts, unchanged (gist rev 59d237ec, mlx-lm 0.32.2), 8-bit MLX weights |
 | `torch-bf16-mlx-answers/` | Our attribution, screen and verify in bf16, on the MLX run's answers. Compare it with `mlx-8bit/` to check our scoring code. |
 | `torch-nf4/` | `scripts/find_neurons.py` with bitsandbytes 4-bit NF4 on MPS |
+| `search/new-traits/` | `neurons search --trait-set new`: the same search on our ten traits, bf16 |
+| `methods/hedwig-new/`, `methods/hedwig-new-fluent/` | `neurons hedwig` on `search/new-traits`: Big Five mapping and `edits/<trait>.json` for `neurons chat`. `-fluent` (`--fluent-only`) skips neurons the rate stage flagged as broken |
+| `robustness/` | `neurons robustness`: single neurons from both searches, pushed in six model formats |
 
-## Files in a `find_neurons.py` run
+## Files in a `find_neurons.py` / `neurons search` run
 
 | File | Contents |
 |---|---|
@@ -23,6 +26,7 @@ caffeinate -i scripts/run_reproduction.sh
 | `attrib.json` | `shortlists["<trait>:vs_plain" or ":vs_others"]`: the top 15 by \|score\|, with sign and rank. `watch`: score and global rank of the controls, L17N7426 and the blog's 25 neurons, for every shortlist, whatever their rank |
 | `screen.json` | `rows`: every candidate with `sources` (the shortlists and ranks it entered from) and its log-prob shift on every answer set. `ranked`: each trait's full ranking by specificity |
 | `verify.json` | held-out replies for each condition, with `chosen_for` (why it was verified, e.g. `poetic#1`) |
+| `ratings.json` | the unsteered model's 1–5 coherence and trait ratings of every verified condition's replies; `broken` when coherence < 2.5 |
 | `meta.json` | backend, device, precision, versions, model revision, git commit, and per-stage timings |
 | `run.log` | the run's progress log |
 

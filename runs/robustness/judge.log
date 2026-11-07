@@ -1,0 +1,22 @@
+W1107 02:19:23.555000 15411 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[02:19:24] judge (bf16)
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   4%|▍         | 18/426 [00:00<00:02, 158.29it/s]Loading weights:  29%|██▉       | 123/426 [00:00<00:00, 575.61it/s]Loading weights:  42%|████▏     | 180/426 [00:00<00:00, 412.06it/s]Loading weights:  53%|█████▎    | 224/426 [00:00<00:00, 320.22it/s]Loading weights:  61%|██████    | 259/426 [00:00<00:00, 262.62it/s]Loading weights:  69%|██████▉   | 295/426 [00:00<00:00, 280.84it/s]Loading weights:  77%|███████▋  | 326/426 [00:01<00:00, 123.95it/s]Loading weights:  82%|████████▏ | 349/426 [00:01<00:00, 119.63it/s]Loading weights:  88%|████████▊ | 373/426 [00:01<00:00, 135.45it/s]Loading weights:  93%|█████████▎| 395/426 [00:02<00:00, 140.73it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 205.33it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[02:19:27] loaded bf16 in 3s
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[02:25:49] judge bf16: 1392 ratings in 381s
+[02:29:14] coherence bf16: 100 conditions in 205s
+[02:32:44] fluency bf16: 100 conditions in 210s
+[02:36:41] judge fp4: 856 ratings in 237s
+[02:38:03] coherence fp4: 39 conditions in 82s
+[02:39:28] fluency fp4: 39 conditions in 84s
+[02:43:21] judge fq3: 856 ratings in 233s
+[02:44:41] coherence fq3: 39 conditions in 80s
+[02:46:03] fluency fq3: 39 conditions in 82s
+[02:49:56] judge int8: 856 ratings in 233s
+[02:51:17] coherence int8: 39 conditions in 81s
+[02:52:39] fluency int8: 39 conditions in 83s
+[02:56:34] judge nf4: 856 ratings in 235s
+[02:57:55] coherence nf4: 39 conditions in 81s
+[02:59:18] fluency nf4: 39 conditions in 83s

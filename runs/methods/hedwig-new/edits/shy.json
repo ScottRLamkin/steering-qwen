@@ -1,0 +1,15 @@
+[
+ {
+  "layer": 16,
+  "index": [
+   1885
+  ],
+  "op": "add",
+  "value": -27.125590669988558,
+  "site": "down_in",
+  "scope": "all",
+  "start": 0,
+  "keep_prob": 1.0,
+  "end": null
+ }
+]

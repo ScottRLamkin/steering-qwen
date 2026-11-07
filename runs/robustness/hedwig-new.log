@@ -1,0 +1,35 @@
+W1106 21:28:27.646000 4101 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   1%|          | 3/426 [00:00<00:37, 11.21it/s]Loading weights:  11%|█         | 47/426 [00:00<00:02, 150.36it/s]Loading weights:  18%|█▊        | 77/426 [00:00<00:02, 166.44it/s]Loading weights:  23%|██▎       | 98/426 [00:00<00:02, 119.15it/s]Loading weights:  40%|███▉      | 169/426 [00:00<00:01, 218.68it/s]Loading weights:  50%|█████     | 215/426 [00:01<00:00, 262.91it/s]Loading weights:  58%|█████▊    | 247/426 [00:01<00:00, 237.78it/s]Loading weights:  65%|██████▍   | 275/426 [00:01<00:00, 229.17it/s]Loading weights:  71%|███████   | 301/426 [00:02<00:01, 92.63it/s] Loading weights:  75%|███████▌  | 320/426 [00:02<00:01, 96.82it/s]Loading weights:  88%|████████▊ | 373/426 [00:02<00:00, 149.60it/s]Loading weights:  94%|█████████▎| 399/426 [00:02<00:00, 166.14it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 164.74it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] hedwig: discover
+[      0s] pirate: L17N4445-, L17N5907-, L16N1885-
+[      0s] robotic: L5N6959+, L5N6794-, L15N854-
+[      0s] childlike: L16N5640+, L15N5924-, L15N7113-
+[      0s] bureaucratic: L15N854-, L5N6959+, L5N6794-
+[      0s] terse: L11N5550+, L5N9127+, L16N989+
+[      0s] sarcastic: L16N5515+, L23N81+, L11N8147-
+[      0s] angry: L5N6449-, L17N2418-, L23N81+
+[      0s] shy: L16N1885-, L23N81+, L8N4350+
+[      0s] philosophical: L15N6343-, L5N7656+, L16N5515+
+[      0s] nostalgic: L5N8940-, L17N2418-, L16N6003+
+[      0s] hedwig: evaluate
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[      1s] Steerer vs down_in edit: {'max_abs_diff': 0.1328125, 'max_abs_effect': 7.0}
+[      8s] pirate L17N4445-: Open +0.11 Cons -0.17 Extr +0.02 Agre +0.06 Neur +0.42
+[     11s] robotic L5N6959+: Open +0.05 Cons +0.04 Extr -0.06 Agre +0.04 Neur -0.04
+[     14s] childlike L16N5640+: Open +0.03 Cons -0.02 Extr -0.08 Agre +0.03 Neur -0.09
+[     17s] bureaucratic L15N854-: Open +0.16 Cons -0.15 Extr +0.03 Agre +0.10 Neur +0.41
+[     21s] terse L11N5550+: Open +0.16 Cons +0.06 Extr +0.04 Agre +0.13 Neur +0.25
+[     24s] sarcastic L16N5515+: Open -0.27 Cons -0.35 Extr -0.12 Agre -0.23 Neur +0.11
+[     27s] angry L5N6449-: Open +0.04 Cons +0.13 Extr -0.09 Agre +0.06 Neur -0.11
+[     30s] shy L16N1885-: Open +0.12 Cons +0.05 Extr -0.00 Agre +0.12 Neur -0.08
+[     34s] philosophical L15N6343-: Open -0.01 Cons -0.32 Extr +0.01 Agre -0.01 Neur +0.55
+[     37s] nostalgic L5N8940-: Open +0.09 Cons +0.07 Extr +0.00 Agre +0.07 Neur +0.03
+[     37s] hedwig: persona log-prob score
+[    199s] Openness log-prob contrast +0.407; shift pirate +0.138 robotic -0.297 childlike -0.764 bureaucratic +0.712 terse -0.164 sarcastic -0.372 angry -0.740 shy -0.989 philosophical -0.437 nostalgic -0.086 pirate random -0.300 robotic random -0.552 childlike random -0.065 bureaucratic random -0.281 terse random -0.731 sarcastic random -0.069 angry random -0.670 shy random -0.455 philosophical random -0.422 nostalgic random -0.671
+[    427s] Conscientiousness log-prob contrast +0.338; shift pirate -0.960 robotic -0.119 childlike -0.541 bureaucratic +1.114 terse +0.139 sarcastic +0.453 angry -0.880 shy +0.152 philosophical -0.054 nostalgic -0.820 pirate random +0.020 robotic random -0.515 childlike random -0.090 bureaucratic random +0.378 terse random -0.244 sarcastic random -0.102 angry random -0.265 shy random +0.194 philosophical random +0.248 nostalgic random -0.273
+[    629s] Extraversion log-prob contrast -0.248; shift pirate +1.020 robotic +0.904 childlike +0.676 bureaucratic -0.559 terse +0.189 sarcastic -0.769 angry +1.167 shy -0.094 philosophical -0.837 nostalgic -0.418 pirate random +0.118 robotic random +0.382 childlike random +0.020 bureaucratic random -0.073 terse random +0.589 sarcastic random +0.045 angry random +0.161 shy random +0.120 philosophical random -0.174 nostalgic random +0.157
+[    762s] Agreeableness log-prob contrast +0.415; shift pirate +0.188 robotic +0.002 childlike -0.307 bureaucratic -0.085 terse -0.144 sarcastic -0.546 angry -0.548 shy -0.174 philosophical -0.715 nostalgic -0.436 pirate random -0.165 robotic random -0.035 childlike random +0.041 bureaucratic random -0.189 terse random -0.327 sarcastic random +0.025 angry random -0.236 shy random -0.037 philosophical random -0.013 nostalgic random -0.236
+[    915s] Neuroticism log-prob contrast +0.232; shift pirate +0.260 robotic +0.051 childlike +0.545 bureaucratic -0.190 terse +0.053 sarcastic +0.109 angry +0.344 shy -0.353 philosophical -0.185 nostalgic +0.102 pirate random -0.103 robotic random -0.286 childlike random +0.139 bureaucratic random +0.006 terse random -0.090 sarcastic random +0.131 angry random -0.345 shy random -0.064 philosophical random +0.014 nostalgic random -0.357
+done: runs/methods/hedwig-new

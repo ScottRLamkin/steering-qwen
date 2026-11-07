@@ -1,0 +1,86 @@
+{
+ "pirate": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 1,
+   "17": 2
+  }
+ },
+ "robotic": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "15": 2,
+   "19": 1
+  }
+ },
+ "childlike": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 1,
+   "15": 2
+  }
+ },
+ "bureaucratic": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "15": 2,
+   "16": 1
+  }
+ },
+ "terse": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 2,
+   "16": 1
+  }
+ },
+ "sarcastic": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "11": 1,
+   "12": 1,
+   "16": 1
+  }
+ },
+ "angry": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 1,
+   "14": 1,
+   "26": 1
+  }
+ },
+ "shy": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "8": 1,
+   "16": 1,
+   "18": 1
+  }
+ },
+ "philosophical": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 1,
+   "15": 2
+  }
+ },
+ "nostalgic": {
+  "n": 3,
+  "site": "down_in",
+  "layers": {
+   "5": 1,
+   "16": 1,
+   "17": 1
+  }
+ }
+}

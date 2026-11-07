@@ -1,0 +1,32 @@
+{
+ "args": {
+  "cmd": "hedwig",
+  "stage": "all",
+  "run_dir": "runs/methods/hedwig-new",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "hedwig_run": "runs/search/new-traits",
+  "top": 3,
+  "dose": 1.0
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "quant": null,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

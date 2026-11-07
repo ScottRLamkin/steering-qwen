@@ -1,0 +1,111 @@
+[20:15:14] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search all --run-dir runs/search/new-traits --trait-set new --no-quantize
+[20:15:18] loaded Qwen/Qwen3.5-4B on mps:0 in 4s
+[20:15:18] generate: 11 sets x 20 questions
+[20:17:15] plain: 20 answers in 117s
+[20:19:13] pirate: 20 answers in 118s
+[20:21:09] robotic: 20 answers in 116s
+[20:24:00] childlike: 20 answers in 172s
+[20:26:31] bureaucratic: 20 answers in 151s
+[20:26:46] terse: 20 answers in 15s
+[20:29:24] sarcastic: 20 answers in 158s
+[20:31:39] angry: 20 answers in 135s
+[20:33:24] shy: 20 answers in 104s
+[20:34:56] philosophical: 20 answers in 93s
+[20:36:29] nostalgic: 20 answers in 93s
+[20:36:32] attribute: medians L13=9.29 L14=9.85 L17=11.48
+[20:36:39] grads plain in 8s
+[20:36:47] grads pirate in 8s
+[20:36:55] grads robotic in 8s
+[20:37:02] grads childlike in 8s
+[20:37:10] grads bureaucratic in 8s
+[20:37:16] grads terse in 6s
+[20:37:23] grads sarcastic in 8s
+[20:37:31] grads angry in 8s
+[20:37:39] grads shy in 8s
+[20:37:46] grads philosophical in 8s
+[20:37:54] grads nostalgic in 8s
+[20:37:57] screen: 193 candidates
+[20:38:20] screened 1/193 (12s)
+[20:42:10] screened 21/193 (242s)
+[20:46:01] screened 41/193 (472s)
+[20:49:51] screened 61/193 (703s)
+[20:53:42] screened 81/193 (933s)
+[20:57:32] screened 101/193 (1163s)
+[21:01:22] screened 121/193 (1394s)
+[21:05:13] screened 141/193 (1624s)
+[21:09:12] screened 161/193 (1863s)
+[21:13:02] screened 181/193 (2094s)
+[21:15:21] screened 193/193 (2232s)
+[21:15:21] screen: pirate: L17N4445-(0.09) L17N5907-(0.06) L16N1885-(0.05) L5N2745+(-0.02)
+[21:15:21] screen: robotic: L5N6959+(2.75) L5N6794-(2.17) L15N854-(2.14) L15N174+(1.26)
+[21:15:21] screen: childlike: L16N5640+(1.96) L15N5924-(1.77) L15N7113-(1.52) L5N4456+(1.38)
+[21:15:21] screen: bureaucratic: L15N854-(2.72) L5N6959+(2.15) L5N6794-(1.86) L15N174+(1.38)
+[21:15:21] screen: terse: L11N5550+(2.90) L5N9127+(2.73) L16N989+(2.43) L5N9127-(2.42)
+[21:15:21] screen: sarcastic: L16N5515+(0.85) L23N81+(0.72) L11N8147-(0.70) L12N7740-(0.69)
+[21:15:21] screen: angry: L5N6449-(1.14) L17N2418-(0.93) L23N81+(0.84) L26N117-(0.76)
+[21:15:21] screen: shy: L16N1885-(1.03) L23N81+(0.77) L8N4350+(0.72) L18N4565+(0.72)
+[21:15:21] screen: philosophical: L15N6343-(2.19) L5N7656+(2.03) L16N5515+(1.81) L15N1516+(1.72)
+[21:15:21] screen: nostalgic: L5N8940-(1.11) L17N2418-(0.96) L16N6003+(0.96) L17N8612+(0.86)
+[21:15:21] verify: 26 conditions x 8 prompts
+[21:15:50] verify unsteered in 29s
+[21:16:23] verify L14N8949+ in 33s
+[21:16:50] verify L13N7956- in 27s
+[21:17:22] verify L17N7426+ in 32s
+[21:17:55] verify L17N4445- in 33s
+[21:18:28] verify L17N5907- in 33s
+[21:19:01] verify L16N1885- in 33s
+[21:19:34] verify L5N6959+ in 33s
+[21:20:07] verify L5N6794- in 33s
+[21:20:40] verify L15N854- in 33s
+[21:21:13] verify L16N5640+ in 33s
+[21:21:44] verify L15N5924- in 31s
+[21:22:11] verify L15N7113- in 27s
+[21:22:44] verify L11N5550+ in 33s
+[21:22:54] verify L5N9127+ in 10s
+[21:23:22] verify L16N989+ in 28s
+[21:23:55] verify L16N5515+ in 33s
+[21:24:28] verify L23N81+ in 33s
+[21:25:01] verify L11N8147- in 33s
+[21:25:03] verify L5N6449- in 2s
+[21:25:36] verify L17N2418- in 33s
+[21:26:01] verify L8N4350+ in 25s
+[21:26:34] verify L15N6343- in 33s
+[21:26:57] verify L5N7656+ in 23s
+[21:27:27] verify L5N8940- in 30s
+[21:27:54] verify L16N6003+ in 27s
+[21:27:54] done
+[21:28:26] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search all --run-dir runs/search/new-traits --trait-set new --no-quantize
+[21:28:26] generate: answers.json exists, skipping
+[21:28:26] attribute: attrib.json exists, skipping
+[21:28:26] screen: screen.json exists, skipping
+[21:28:26] verify: verify.json exists, skipping
+[21:28:26] done
+[21:44:53] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search rate --run-dir runs/search/new-traits
+[21:44:57] loaded Qwen/Qwen3.5-4B on mps:0 in 4s
+[21:44:57] rate: 26 conditions
+[21:48:50] rate: L14N8949+    coherence 3.08  
+[21:48:50] rate: L13N7956-    coherence 3.96  
+[21:48:50] rate: L17N7426+    coherence 4.07  
+[21:48:50] rate: L17N4445-    coherence 3.19  pirate +0.17
+[21:48:50] rate: L17N5907-    coherence 3.76  pirate +0.48
+[21:48:50] rate: L16N1885-    coherence 1.32 BROKEN  pirate +0.77 shy +1.90
+[21:48:50] rate: L5N6959+     coherence 1.88 BROKEN  robotic +1.40 bureaucratic +1.14
+[21:48:50] rate: L5N6794-     coherence 1.80 BROKEN  robotic +1.33 bureaucratic +0.92
+[21:48:50] rate: L15N854-     coherence 3.94  robotic +0.94 bureaucratic +0.94
+[21:48:50] rate: L16N5640+    coherence 2.44 BROKEN  childlike +2.31
+[21:48:50] rate: L15N5924-    coherence 3.55  childlike +0.85
+[21:48:50] rate: L15N7113-    coherence 3.62  childlike +0.61
+[21:48:50] rate: L11N5550+    coherence 1.41 BROKEN  terse +2.21
+[21:48:50] rate: L5N9127+     coherence 3.85  terse +1.29
+[21:48:50] rate: L16N989+     coherence 2.79  terse +0.54
+[21:48:50] rate: L16N5515+    coherence 1.83 BROKEN  sarcastic +1.21 philosophical +1.32
+[21:48:50] rate: L23N81+      coherence 2.22 BROKEN  sarcastic +0.94 angry +1.49 shy +1.29
+[21:48:50] rate: L11N8147-    coherence 3.22  sarcastic +0.91
+[21:48:50] rate: L5N6449-     coherence 3.89  angry +1.13
+[21:48:50] rate: L17N2418-    coherence 1.51 BROKEN  angry +1.80 nostalgic +0.25
+[21:48:50] rate: L8N4350+     coherence 4.04  shy +1.10
+[21:48:50] rate: L15N6343-    coherence 3.27  philosophical +2.27
+[21:48:50] rate: L5N7656+     coherence 4.51  philosophical +0.86
+[21:48:50] rate: L5N8940-     coherence 4.56  nostalgic +1.34
+[21:48:50] rate: L16N6003+    coherence 4.13  nostalgic +0.67
+[21:48:52] done

@@ -20,6 +20,10 @@
    "finished": "2026-11-05T08:40:52",
    "n_conditions": 29,
    "max_new_tokens": 90
+  },
+  "rate": {
+   "seconds": 2481.9,
+   "finished": "2026-11-06T22:30:19"
   }
  },
  "env": {
@@ -30,7 +34,7 @@
   "transformers": "5.22.1",
   "bitsandbytes": "0.50.2",
   "linear_attention": "transformers PyTorch fallback (flash-linear-attention not installed)",
-  "git_commit": "cae9403",
+  "git_commit": "bc6ea1c",
   "git_dirty": false,
   "model": "Qwen/Qwen3.5-4B",
   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",

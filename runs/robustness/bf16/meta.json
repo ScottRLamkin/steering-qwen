@@ -1,0 +1,43 @@
+{
+ "heldout_hedwig": {
+  "seconds": 304.9,
+  "finished": "2026-11-06T21:48:58"
+ },
+ "heldout_new": {
+  "seconds": 210.1,
+  "finished": "2026-11-06T21:52:28"
+ },
+ "score_hedwig": {
+  "seconds": 661.9,
+  "finished": "2026-11-06T22:03:41",
+  "n": 55
+ },
+ "score_new": {
+  "seconds": 744.5,
+  "finished": "2026-11-06T22:16:05",
+  "n": 60
+ },
+ "dose_hedwig": {
+  "seconds": 309.0,
+  "finished": "2026-11-06T22:21:15",
+  "n": 27
+ },
+ "dose_new": {
+  "seconds": 376.4,
+  "finished": "2026-11-06T22:27:31",
+  "n": 30
+ },
+ "replies": {
+  "seconds": 869.8,
+  "finished": "2026-11-06T22:42:01",
+  "n": 100
+ },
+ "attribute_hedwig": {
+  "seconds": 82.1,
+  "finished": "2026-11-06T22:43:23"
+ },
+ "attribute_new": {
+  "seconds": 86.5,
+  "finished": "2026-11-06T22:44:49"
+ }
+}
