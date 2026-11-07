@@ -172,7 +172,13 @@ uv run neurons robustness judge,report
 runs/robustness/run.sh                                            # the search on our traits, then all of this
 ```
 
-The results are in `runs/robustness/REPORT.md`, with the findings in `runs/robustness/NOTES.md` and `runs/search/NOTES.md`.
+**The answer is no.**
+- **Steering survives:** NF4, int8 and FP4 keep almost all of every neuron's effect, and the judged trait in its replies. Only fake int3 loses much: median retention 0.74.
+- **Retention doesn't track meaning:** the differences between neurons repeat across formats, but they don't follow the judge's rating, coherence or consistency. Neurons that break the model survive as well as fluent ones.
+- **The trait matters most:** which trait a neuron was found for explains 57% of the variance. Large bf16 effects and early layers also lose a little more.
+- **So:** use the search's `rate` stage, not quantization, to judge a neuron.
+
+The numbers are in `runs/robustness/REPORT.md`, with the findings in `runs/robustness/NOTES.md` and `runs/search/NOTES.md`.
 
 ## Notebook
 

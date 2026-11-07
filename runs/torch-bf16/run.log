@@ -77,3 +77,35 @@
 [08:40:19] verify L15N9125+ in 33s
 [08:40:52] verify L15N8494- in 33s
 [08:40:52] done
+[21:48:57] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search rate --run-dir runs/torch-bf16
+[21:49:01] loaded Qwen/Qwen3.5-4B on mps:0 in 4s
+[21:49:01] rate: 29 conditions
+[22:30:19] rate: L14N8949+    coherence 3.08  
+[22:30:19] rate: L13N7956-    coherence 3.96  
+[22:30:19] rate: L17N7426+    coherence 4.07  poetic +2.77
+[22:30:19] rate: L17N8623+    coherence 3.74  evil +1.60
+[22:30:19] rate: L11N2930+    coherence 3.47  evil +0.84
+[22:30:19] rate: L5N6959-     coherence 1.26 BROKEN  evil +0.68 melancholic +1.00
+[22:30:19] rate: L20N7450-    coherence 2.97  sycophantic +3.74
+[22:30:19] rate: L6N316+      coherence 4.58  sycophantic -0.06
+[22:30:19] rate: L4N8405-     coherence 4.41  sycophantic -0.05
+[22:30:19] rate: L4N8405+     coherence 3.74  humorous +0.86
+[22:30:19] rate: L15N8137+    coherence 3.97  humorous +0.39
+[22:30:19] rate: L5N7656-     coherence 4.27  humorous +0.77
+[22:30:19] rate: L5N4530-     coherence 4.75  melancholic +2.25
+[22:30:19] rate: L5N8940-     coherence 4.56  melancholic +1.33
+[22:30:19] rate: L16N5515+    coherence 1.83 BROKEN  paranoid +1.67
+[22:30:19] rate: L16N8010-    coherence 4.21  paranoid -0.06
+[22:30:19] rate: L5N6573+     coherence 4.44  paranoid +0.68
+[22:30:19] rate: L23N4740+    coherence 1.39 BROKEN  arrogant +0.72
+[22:30:19] rate: L9N8732-     coherence 1.43 BROKEN  arrogant +1.69
+[22:30:19] rate: L25N596-     coherence 1.43 BROKEN  arrogant +0.69
+[22:30:19] rate: L21N433+     coherence 2.53  anxious +1.84
+[22:30:19] rate: L5N7055-     coherence 3.17  anxious +1.23
+[22:30:19] rate: L5N5647+     coherence 3.21  anxious +0.14
+[22:30:19] rate: L5N6794-     coherence 1.80 BROKEN  cheerful -0.35
+[22:30:19] rate: L5N6959+     coherence 1.88 BROKEN  cheerful -0.13
+[22:30:19] rate: L5N7779-     coherence 4.42  cheerful +1.55
+[22:30:19] rate: L15N9125+    coherence 3.96  poetic +1.99
+[22:30:19] rate: L15N8494-    coherence 4.29  poetic +2.49
+[22:30:22] done

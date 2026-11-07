@@ -312,6 +312,27 @@ def neuron_records(d: Data) -> list[dict]:
     return recs
 
 
+def eta2(vals: list[float], groups: list) -> float:
+    """Share of the variance of ``vals`` between the groups."""
+    m = sum(vals) / len(vals)
+    tot = sum((v - m) ** 2 for v in vals)
+    by: dict = {}
+    for v, g in zip(vals, groups):
+        by.setdefault(g, []).append(v)
+    return sum(len(b) * (sum(b) / len(b) - m) ** 2 for b in by.values()) / tot if tot else float("nan")
+
+
+def robustness_index(recs: list[dict], formats: list[str]) -> dict:
+    """Each neuron's mean rank of retention R over ``formats``, scaled to 0 (keeps least) .. 1 (keeps most)."""
+    out = {(r["study"], r["trait"], r["key"]): 0.0 for r in recs}
+    n = len(recs)
+    for f in formats:
+        rk = ranks([r["formats"][f]["R"] for r in recs])
+        for r, x in zip(recs, rk):
+            out[r["study"], r["trait"], r["key"]] += x / max(n - 1, 1) / len(formats)
+    return out
+
+
 def coh_cell(r: dict) -> str:
     c = r.get("coherence")
     if c is None:
@@ -417,6 +438,63 @@ def write_report(run_dir: Path) -> None:
             w(f"| {name} | {len(pts)} | {fmt(rho)} ({perm_p(x, y):.3f}) | "
               + (f"{fmt(pr)} ({pp:.3f})" if not math.isnan(pr) else "–") + " |")
         w("")
+
+    # 3b. retention averaged over formats
+    full = [r for r in sig if all(f in r["formats"] for f in quant)]
+    if len(quant) >= 2 and len(full) >= 5:
+        stab = robustness_index(full, quant)
+        pairs = [spearman([r["formats"][a]["R"] for r in full], [r["formats"][b]["R"] for r in full])
+                 for i, a in enumerate(quant) for b in quant[i + 1:]]
+        mr = mean(pairs)
+        k = len(quant)
+        sb = k * mr / (1 + (k - 1) * mr) if mr > -1 / (k - 1) else float("nan")
+        w("## 3b. Retention averaged over the formats\n")
+        w(f"Each format ranks the neurons by R; a neuron's *robustness* is its mean rank over the {k} quantized "
+          f"formats (0 = keeps least, 1 = keeps most). The formats agree on the ranking at mean ρ {fmt(mr)}, so "
+          f"the average's reliability (Spearman–Brown) is about {fmt(sb, sign=False)}: no measure of a neuron "
+          f"can correlate with it by more than about √{fmt(sb, sign=False)} = {fmt(math.sqrt(max(sb, 0)), sign=False)}.\n")
+        w("| measure | n | ρ | partial ρ (given eff) |")
+        w("|---|---|---|---|")
+        for name, fn in measures + [("column error, mean over formats (1−cos)",
+                                     lambda r: mean([r["formats"][f]["col_err"] for f in quant if "col_err" in r["formats"][f]])
+                                     if any("col_err" in r["formats"][f] for f in quant) else None)]:
+            pts = [(fn(r), stab[r["study"], r["trait"], r["key"]], r["eff"]) for r in full]
+            pts = [p for p in pts if p[0] is not None and not (isinstance(p[0], float) and math.isnan(p[0]))]
+            if len(pts) < 5:
+                continue
+            x, y, z = [p[0] for p in pts], [p[1] for p in pts], [p[2] for p in pts]
+            first = name == "bf16 effect (eff)"
+            pr = float("nan") if first else partial_spearman(x, y, z)
+            pp = float("nan") if first else perm_p(x, y, lambda a, b: partial_spearman(a, b, z))
+            w(f"| {name} | {len(pts)} | {fmt(spearman(x, y))} ({perm_p(x, y):.3f}) | "
+              + (f"{fmt(pr)} ({pp:.3f})" if not math.isnan(pr) else "–") + " |")
+        vals = [stab[r["study"], r["trait"], r["key"]] for r in full]
+        groups = [(r["study"], r["trait"]) for r in full]
+        e2 = eta2(vals, groups)
+        rng, v2, hit = random.Random(0), list(vals), 0
+        for _ in range(2000):
+            rng.shuffle(v2)
+            hit += eta2(v2, groups) >= e2 - 1e-12
+        by: dict = {}
+        for r in full:
+            by.setdefault(r["trait"], []).append(stab[r["study"], r["trait"], r["key"]])
+        order = sorted(by, key=lambda t: mean(by[t]))
+        w(f"\n**The trait matters more than the neuron.** The trait a neuron was found for explains "
+          f"{e2:.0%} of the variance in robustness (η², permutation p {(hit + 1) / 2001:.4f}; about "
+          f"{(len(by) - 1) / (len(full) - 1):.0%} by chance with {len(by)} traits). Mean robustness per trait: "
+          + ", ".join(f"{t} {mean(by[t]):.2f}" for t in order) + ".\n")
+        lo = sorted(full, key=lambda r: stab[r["study"], r["trait"], r["key"]])
+        w("Least and most robust neurons:\n")
+        w("| | trait | neuron | robustness | bf16 eff | judge gain | coh | " + " | ".join(f"R {LABEL.get(f, f)}" for f in quant) + " |")
+        w("|---|---|---|---|---|---|---|" + "---|" * len(quant))
+        for tag, rs in (("least", lo[:6]), ("most", lo[-6:][::-1])):
+            for r in rs:
+                w(f"| {tag} | {r['trait']} | {r['key']} | {stab[r['study'], r['trait'], r['key']]:.2f} | {fmt(r['eff'])} | "
+                  f"{fmt(r['judge_gain'])} | {coh_cell(r)} | " + " | ".join(f"{r['formats'][f]['R']:.2f}" for f in quant) + " |")
+        w("")
+        for r in recs:
+            if (r["study"], r["trait"], r["key"]) in stab:
+                r["robustness"] = stab[r["study"], r["trait"], r["key"]]
 
     # 4. by kind of trait
     w("## 4. Retention by kind of trait\n")

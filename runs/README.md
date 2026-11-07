@@ -13,6 +13,7 @@ caffeinate -i scripts/run_reproduction.sh
 | `torch-bf16-mlx-answers/` | Our attribution, screen and verify in bf16, on the MLX run's answers. Compare it with `mlx-8bit/` to check our scoring code. |
 | `torch-nf4/` | `scripts/find_neurons.py` with bitsandbytes 4-bit NF4 on MPS |
 | `search/new-traits/` | `neurons search --trait-set new`: the same search on our ten traits, bf16 |
+| `methods/hedwig-new/`, `methods/hedwig-new-fluent/` | `neurons hedwig` on `search/new-traits`: Big Five mapping and `edits/<trait>.json` for `neurons chat`. `-fluent` (`--fluent-only`) skips neurons the rate stage flagged as broken |
 | `robustness/` | `neurons robustness`: single neurons from both searches, pushed in six model formats |
 
 ## Files in a `find_neurons.py` / `neurons search` run
