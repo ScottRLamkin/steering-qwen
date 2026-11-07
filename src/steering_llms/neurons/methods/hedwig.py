@@ -34,6 +34,8 @@ def add_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--hedwig-run", type=Path, default=Path("runs/torch-bf16"))
     p.add_argument("--top", type=int, default=3, help="neurons kept per trait")
     p.add_argument("--dose", type=float, default=1.0, help="multiplies each neuron's signed screening dose")
+    p.add_argument("--fluent-only", action="store_true",
+                   help="skip neurons the search's rate stage flagged as broken (ratings.json); unrated ones are kept, in rank order")
 
 
 def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
@@ -41,7 +43,14 @@ def discover(ctx: Ctx, args: argparse.Namespace) -> dict[str, NeuronSet]:
     med = {int(k): float(v) for k, v in json.loads((args.hedwig_run / "medians.json").read_text()).items()}
     st = Steerer(ctx.model, ctx.tok)
     sets = {}
+    broken: set[str] = set()
+    if getattr(args, "fluent_only", False):
+        ratings = json.loads((args.hedwig_run / "ratings.json").read_text())["conditions"]
+        broken = {k for k, r in ratings.items() if r["broken"]}
+        ctx.log(f"fluent only: skipping {len(broken)} broken neurons: {', '.join(sorted(broken))}")
     for trait, rows in screen["top"].items():
+        if broken:
+            rows = [r for r in rows if f"L{r['layer']}N{r['neuron']}{'+' if r['dose'] > 0 else '-'}" not in broken]
         rows = rows[: args.top]
         layer = [r["layer"] for r in rows]
         index = [r["neuron"] for r in rows]

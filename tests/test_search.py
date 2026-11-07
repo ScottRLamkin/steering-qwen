@@ -29,3 +29,22 @@ def test_search_runs_on_tiny_model(tiny_dir, tmp_path):
     assert all(1 <= r["coherence"] <= 5 for r in ratings.values())
     assert set(ratings["unsteered"]["trait"]) == {"pirate", "terse"}
     assert json.loads((run / "meta.json").read_text())["env"]["precision"] == "bfloat16"
+
+
+def test_hedwig_fluent_only_skips_broken(tiny_dir, tmp_path):
+    from steering_llms.neurons.neuronset import load_sets
+
+    run = tmp_path / "search"
+    run.mkdir()
+    top = {"terse": [{"layer": 2, "neuron": 5, "dose": 1.0, "specificity": 2.9, "rank": 0},
+                     {"layer": 1, "neuron": 7, "dose": -1.0, "specificity": 2.7, "rank": 1}]}
+    (run / "screen.json").write_text(json.dumps({"top": top}))
+    (run / "medians.json").write_text(json.dumps({str(i): 1.5 for i in range(4)}))
+    (run / "ratings.json").write_text(json.dumps({"conditions": {
+        "L2N5+": {"broken": True, "coherence": 1.4}, "L1N7-": {"broken": False, "coherence": 3.9}}}))
+    for flag, first in (([], (2, 5)), (["--fluent-only"], (1, 7))):
+        out = tmp_path / f"hedwig{len(flag)}"
+        cli.main(["hedwig", "discover", "--model", tiny_dir, "--device", "cpu", "--no-quantize", "--run-dir", str(out),
+                  "--hedwig-run", str(run), "--quiet", *flag])
+        ns = load_sets(out / "sets.json")["terse"]
+        assert (ns.layer[0], ns.index[0]) == first
