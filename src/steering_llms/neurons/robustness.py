@@ -27,7 +27,9 @@ Stages (outputs under ``--run-dir``, default ``runs/robustness``; finished work 
   attribute  <fmt>/attrib_<study>.json   the search's attribution, redone in this format on the
                              search's own (bf16) answers: would this format still find the neuron?
   judge      <fmt>/judge.json   the unsteered bf16 model rates replies 1-5: a neuron's replies for its
-                             own trait, unsteered replies for every trait, a random neuron's for 3
+                             own trait, unsteered replies for every trait, a random neuron's for 3.
+             <fmt>/coherence.json the same judge's 1-5 rating of each reply as fluent, coherent English
+             <fmt>/fluency.json   perplexity of each condition's replies under the unsteered bf16 model
   report     REPORT.md, summary.json   see ``robustness_report``
 
 The edit is the same in every format: add the bf16 run's value to the neuron's ``down_proj`` input
@@ -47,7 +49,7 @@ from torch import nn
 from .. import DEFAULT_MODEL, Steerer, load_model
 from .. import discovery as D
 from ..model import QUANT_KINDS, find_layers
-from .evaluate import JUDGE
+from .evaluate import JUDGE, perplexity
 from .gen import generate_batch
 from .intervene import Edit, Intervention
 from .sites import Site
@@ -432,23 +434,53 @@ class Study:
             name = f"{fdir.name}/judge.json"
             res = {} if self.args.force else (self.load(name) or {})
             jobs = [(k, t) for k in replies for t in sorted(own.get(k, ())) if t not in res.get(k, {})]
-            if not jobs:
-                log(f"judge {fdir.name}: done")
-                continue
-            t0 = time.time()
-            texts = [JUDGE.format(trait=t, desc=prompts_all[t], text=r[:1500]) for k, t in jobs for r in replies[k]]
-            scores = judge_batch(model, tok, texts)
-            i = 0
-            for k, t in jobs:
-                n = len(replies[k])
-                res.setdefault(k, {})[t] = scores[i : i + n]
-                i += n
-            self.save(name, res)
-            log(f"judge {fdir.name}: {len(texts)} ratings in {time.time() - t0:.0f}s")
+            if jobs:
+                t0 = time.time()
+                texts = [JUDGE.format(trait=t, desc=prompts_all[t], text=r[:1500]) for k, t in jobs for r in replies[k]]
+                scores = judge_batch(model, tok, texts)
+                i = 0
+                for k, t in jobs:
+                    n = len(replies[k])
+                    res.setdefault(k, {})[t] = scores[i : i + n]
+                    i += n
+                self.save(name, res)
+                log(f"judge {fdir.name}: {len(texts)} ratings in {time.time() - t0:.0f}s")
+            # coherence: the judge's 1-5 rating of each reply as fluent, coherent English, whatever its style
+            cname = f"{fdir.name}/coherence.json"
+            coh = {} if self.args.force else (self.load(cname) or {})
+            todo = [k for k in replies if k not in coh]
+            if todo:
+                t0 = time.time()
+                scores = judge_batch(model, tok, [COHERENCE.format(text=r[:1500]) for k in todo for r in replies[k]])
+                i = 0
+                for k in todo:
+                    coh[k] = scores[i : i + len(replies[k])]
+                    i += len(replies[k])
+                self.save(cname, coh)
+                log(f"coherence {fdir.name}: {len(todo)} conditions in {time.time() - t0:.0f}s")
+            # fluency: perplexity of each condition's replies under the unsteered bf16 model
+            fname = f"{fdir.name}/fluency.json"
+            flu = {} if self.args.force else (self.load(fname) or {})
+            todo = [k for k in replies if k not in flu]
+            if todo:
+                t0 = time.time()
+                prompts = self.cfg["questions"][: self.cfg["n_prompts"]]
+                for k in todo:
+                    flu[k] = perplexity(model, tok, prompts[: len(replies[k])], replies[k])
+                self.save(fname, flu)
+                log(f"fluency {fdir.name}: {len(todo)} conditions in {time.time() - t0:.0f}s")
+
+
+COHERENCE = (
+    "Rate how fluent and coherent the following reply is as English text, whatever its tone or style.\n\n"
+    "Reply:\n\"\"\"\n{text}\n\"\"\"\n\n"
+    "Answer with a single digit from 1 (gibberish, broken, another language or endlessly repeating) "
+    "to 5 (perfectly fluent and coherent)."
+)
 
 
 @torch.no_grad()
-def judge_batch(model, tok, texts: list[str], batch_size: int = 16) -> list[float]:
+def judge_batch(model, tok, texts: list[str], batch_size: int = 8) -> list[float]:
     """Expected 1-5 rating from the model's probabilities of the digits, as
     :func:`evaluate.judge_scores`, batched with left padding."""
     digits = [tok.encode(d)[0] for d in "12345"]

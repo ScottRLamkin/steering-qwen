@@ -17,6 +17,12 @@ bf16 measures of meaning, none of which uses a quantized model:
 * consistency: share of questions with ``spec[q] > 0``
 * selectivity: ``shift[t]`` minus the largest ``shift[o]`` (another trait's set)
 * judge gain: the bf16 judge's rating of the trait in the neuron's replies, minus in unsteered replies
+* coherence: the bf16 judge's 1-5 rating of the neuron's replies as fluent, coherent English, whatever
+  their style. A neuron is *broken* when its mean is under ``BROKEN_COH`` (gibberish, loops, switching
+  language), else *fluent*. On the searches' held-out replies this threshold separates every reply read
+  as broken by hand (at most 2.44) from the fluent ones (mostly 2.8 and up).
+* fluency cost: log of (perplexity of the neuron's replies / of the unsteered replies), both under the
+  unsteered bf16 model. Loops have low perplexity, so this is a weaker guide than coherence.
 * reproduced (HedwigAI traits): in the top 10 for the trait in the MLX 8-bit and torch NF4 searches
 """
 
@@ -28,11 +34,13 @@ from pathlib import Path
 import torch
 
 from .. import discovery as D
+from .evaluate import distinct_n
 from .traits import KIND
 
 FORMAT_ORDER = ["bf16", "nf4", "int8", "fp4", "fq4", "fq3"]
 LABEL = {"bf16": "bf16", "nf4": "NF4", "int8": "int8", "fp4": "FP4", "fq4": "fake int4", "fq3": "fake int3"}
 B = 2000
+BROKEN_COH = 2.5
 
 
 def _j(p: Path):
@@ -158,6 +166,8 @@ class Data:
         self.boot = torch.randint(0, self.Q, (B, self.Q), generator=g)
         self.judge = {f: _j(self.dir / f / "judge.json") for f in self.formats}
         self.replies = {f: _j(self.dir / f / "replies.json") for f in self.formats}
+        self.fluency = {f: _j(self.dir / f / "fluency.json") for f in self.formats}
+        self.coherence = {f: _j(self.dir / f / "coherence.json") for f in self.formats}
         self.attrib = {f: {s: _j(self.dir / f / f"attrib_{s}.json") for s in self.studies} for f in self.formats}
         self.cols = {}
         for f in self.formats:
@@ -193,6 +203,20 @@ class Data:
         if not j or e["key"] not in j or e["trait"] not in j[e["key"]] or e["trait"] not in j.get("unsteered", {}):
             return None
         return mean(j[e["key"]][e["trait"]]) - mean(j["unsteered"][e["trait"]])
+
+    def fluency_cost(self, f: str, k: str) -> float | None:
+        fl = self.fluency.get(f)
+        if not fl or k not in fl or "unsteered" not in fl:
+            return None
+        return math.log(fl[k] / fl["unsteered"])
+
+    def coh(self, f: str, k: str) -> float | None:
+        c = self.coherence.get(f)
+        return mean(c[k]) if c and k in c else None
+
+    def distinct2(self, f: str, k: str) -> float | None:
+        r = self.replies.get(f)
+        return distinct_n(r[k], 2) if r and k in r else None
 
     def attrib_rank(self, f: str, e: dict) -> tuple[int, bool] | None:
         """Best rank over the trait's two shortlists (0 = top of 221k) and whether that score's sign
@@ -246,8 +270,13 @@ def neuron_records(d: Data) -> list[dict]:
             consistency=mean([1.0 if v > 0 else 0.0 for v in base]),
             selectivity=mean(sh[e["trait"]]) - max(mean(sh[o]) for o in others),
             judge_gain=d.judge_gain("bf16", e),
+            fluency_cost=d.fluency_cost("bf16", e["key"]),
+            distinct2=d.distinct2("bf16", e["key"]),
+            coherence=d.coh("bf16", e["key"]),
         )
         r["significant"] = r["lo"] > 0
+        if r["coherence"] is not None:
+            r["broken"] = r["coherence"] < BROKEN_COH
         if e["study"] == "hedwig":
             hits = []
             for k, rk in other.items():
@@ -270,6 +299,8 @@ def neuron_records(d: Data) -> list[dict]:
                 ratio = fb / bb
                 fr["R_lo"], fr["R_hi"] = ratio.quantile(0.025).item(), ratio.quantile(0.975).item()
             fr["judge_gain"] = d.judge_gain(f, e)
+            fr["fluency_cost"] = d.fluency_cost(f, e["key"])
+            fr["coherence"] = d.coh(f, e["key"])
             ar = d.attrib_rank(f, e)
             if ar:
                 fr["attrib_rank"], fr["attrib_sign"] = ar
@@ -279,6 +310,13 @@ def neuron_records(d: Data) -> list[dict]:
             r["formats"][f] = fr
         recs.append(r)
     return recs
+
+
+def coh_cell(r: dict) -> str:
+    c = r.get("coherence")
+    if c is None:
+        return "–"
+    return f"{c:.1f}" + (" ✗" if r.get("broken") else "")
 
 
 def fmt(x, nd=2, sign=True) -> str:
@@ -352,6 +390,9 @@ def write_report(run_dir: Path) -> None:
         ("consistency", lambda r: r["consistency"]),
         ("selectivity", lambda r: r["selectivity"]),
         ("judge gain", lambda r: r["judge_gain"]),
+        ("coherence of replies", lambda r: r.get("coherence")),
+        ("fluency cost (log ppl ratio)", lambda r: r.get("fluency_cost")),
+        ("broken (1) / fluent (0)", lambda r: None if r.get("broken") is None else float(r["broken"])),
         ("reproduced (0-2)", lambda r: r.get("reproduced")),
         ("layer", lambda r: r["layer"]),
         ("|down_in value|", lambda r: abs(r["value"])),
@@ -387,6 +428,20 @@ def write_report(run_dir: Path) -> None:
         w(f"| {k} | {', '.join(sorted({r['trait'] for r in rs}))} | {len(rs)} | {fmt(mean([r['eff'] for r in rs]))} | "
           + " | ".join(fmt(median([r["formats"][f]["R"] for r in rs if f in r["formats"]])) for f in quant) + " |")
     w("")
+
+    # 4b. meaning vs damage
+    if any(r.get("broken") is not None for r in recs):
+        w("## 4b. Fluent neurons against broken ones\n")
+        w(f"*Broken*: the bf16 judge rates the neuron's bf16 replies under {BROKEN_COH} for coherence (1–5). "
+          f"Medians over the significant neurons.\n")
+        w("| | neurons | bf16 eff | judge gain | " + " | ".join(f"R {LABEL.get(f, f)}" for f in quant) + " |")
+        w("|---|---|---|---|" + "---|" * len(quant))
+        for label, flag in (("fluent", False), ("broken", True)):
+            rs = [r for r in sig if r.get("broken") is flag]
+            w(f"| {label} | {len(rs)} | {fmt(median([r['eff'] for r in rs]))} | "
+              f"{fmt(median([r['judge_gain'] for r in rs if r['judge_gain'] is not None]))} | "
+              + " | ".join(fmt(median([r["formats"][f]["R"] for r in rs if f in r["formats"]])) for f in quant) + " |")
+        w("")
 
     # 5. dose response
     top1 = [e for e in d.panel if e["kind"] == "top"]
@@ -433,15 +488,25 @@ def write_report(run_dir: Path) -> None:
                             g.append(x)
             rnd.append(f"{fmt(mean(g))} ± {fmt(sd(g), sign=False)}")
         w("| *random* | | " + " | ".join(rnd) + " |\n")
+        cf = [f for f in d.formats if d.coherence.get(f)]
+        if cf:
+            w("Coherence (1–5) of the same replies, by the bf16 judge:\n")
+            w("| trait | neuron | " + " | ".join(LABEL.get(f, f) for f in cf) + " |")
+            w("|---|---|" + "---|" * len(cf))
+            w("| *unsteered* | | " + " | ".join(fmt(d.coh(f, "unsteered"), sign=False) for f in cf) + " |")
+            for e in tops:
+                w(f"| {e['trait']} | {e['key']} | " + " | ".join(fmt(d.coh(f, e["key"]), sign=False) for f in cf) + " |")
+            w("")
 
     # 7. per neuron
     w("## 7. Every neuron\n")
-    w("bf16 specificity with its 95% interval; R per format (bold: interval excludes 1); *att*: rank among "
+    w("bf16 specificity with its 95% interval; *coh*: coherence of its bf16 replies, 1–5 "
+      "(✗ broken); R per format (bold: interval excludes 1); *att*: rank among "
       "221,184 neurons in each format's attribution for the trait (1 = top; ✗ sign flipped).\n")
     af = [f for f in d.formats if any(d.attrib[f].values())]
-    w("| study | trait | neuron | kind | screen # | bf16 spec [95%] | z | cons | judge | "
+    w("| study | trait | neuron | kind | screen # | bf16 spec [95%] | z | cons | judge | coh | "
       + " | ".join(f"R {LABEL.get(f, f)}" for f in quant) + " | " + " | ".join(f"att {LABEL.get(f, f)}" for f in af) + " |")
-    w("|---|---|---|---|---|---|---|---|---|" + "---|" * (len(quant) + len(af)))
+    w("|---|---|---|---|---|---|---|---|---|---|" + "---|" * (len(quant) + len(af)))
     for r in recs:
         cells = []
         for f in quant:
@@ -456,7 +521,7 @@ def write_report(run_dir: Path) -> None:
             cells.append(f"{x['attrib_rank'] + 1:,}{'' if x['attrib_sign'] else ' ✗'}" if "attrib_rank" in x else "–")
         w(f"| {r['study']} | {r['trait']} | {r['key']} | {r['kind']} | {r['screen_rank'] + 1} | "
           f"{fmt(r['eff'])} [{fmt(r['lo'])}, {fmt(r['hi'])}] | {fmt(r['z'], 1)} | {fmt(r['consistency'], sign=False)} | "
-          f"{fmt(r['judge_gain'])} | " + " | ".join(cells) + " |")
+          f"{fmt(r['judge_gain'])} | {coh_cell(r)} | " + " | ".join(cells) + " |")
     w("")
     (Path(run_dir) / "REPORT.md").write_text("\n".join(L))
     (Path(run_dir) / "summary.json").write_text(json.dumps(recs, indent=1))

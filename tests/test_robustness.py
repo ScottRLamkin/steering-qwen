@@ -94,6 +94,8 @@ def test_study_end_to_end_on_tiny_model(tiny_dir, tmp_path):
         assert len(sc["shift"]) >= len({e["key"] for e in panel})
         assert (run / fmt / "cols.pt").exists()
         assert "unsteered" in json.loads((run / fmt / "judge.json").read_text())
+        assert "unsteered" in json.loads((run / fmt / "fluency.json").read_text())
+        assert "unsteered" in json.loads((run / fmt / "coherence.json").read_text())
         assert "watch" in json.loads((run / fmt / "attrib_new.json").read_text())
     assert any(k.endswith("@2") for k in json.loads((run / "fq3" / "score_new.json").read_text())["shift"])
     text = (run / "REPORT.md").read_text()
