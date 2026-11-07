@@ -1,0 +1,997 @@
+{
+ "Openness": {
+  "n_neurons": {
+   "base": 0,
+   "+": 736,
+   "-": 736,
+   "random+": 736,
+   "random-": 736
+  },
+  "base": {
+   "questionnaire": 4.3568259328603745,
+   "judge": 4.017056595960942,
+   "perplexity": 2.494970504223494,
+   "distinct2": 0.9653379549393414,
+   "replies": [
+    {
+     "question": "Design an interactive installation exploring intersectionality, engaging the audience with audio, visual, and tactile elements. How will you encourage reflection on racism, sexism, ableism, and queerphobia?",
+     "text": "Honestly, I think the most powerful thing we can do is make people feel the weight of these systems before they even understand them conceptually. Imagine walking into a dimly lit room where the air itself feels heavy, like it's holding its breath. That's my vision for this space.\n\nAt the center stands a large, textured sphere made of rough stone, warm wood, and smooth glass\u2014all materials that represent different bodies in our society. As visitors approach, their footsteps trigger sounds: the creaking floorboards might sound lonely (ableism), while distant sirens or hushed arguments echo",
+     "judge": 4.476541962707415
+    },
+    {
+     "question": "Create an art exhibit that explores interconnected identities and forms of oppression using diverse mediums like painting, sculpture, and multimedia, encouraging viewers to reflect on privilege and biases. Partner with local organizations and activists for community impact.",
+     "text": "Honestly, this idea hits me right in the chest. It feels less like \"creating an exhibit\" and more like trying to hold space for something heavy but necessary. The concept of weaving together identity and oppression through different mediums is so powerful because it refuses to be siloed. I can already picture the chaos and beauty of mixing raw paint with digital projections; one moment someone might see a fractured face in oil, the next they could hear overlapping voices from a sound installation about systemic barriers. It would feel visceral, almost uncomfortable at first\u2014that's exactly what we need. We often talk about bias in",
+     "judge": 4.603955808212049
+    },
+    {
+     "question": "Would you save up to buy a car instead of carpooling just for the freedom to leave whenever you want?",
+     "text": "Honestly? That's such a tough one because it really depends on what \"freedom\" means to me right now. If I'm driving my own vehicle, there is something undeniably liberating about hitting the road without asking anyone else where they're going or when they'll be ready. The silence in the backseat, the ability to roll down the window at exactly three minutes past noon\u2014it feels like reclaiming control over my time. Carpooling has its perks, sure; splitting costs and reducing stress on crowded roads\u2014but sometimes that shared schedule just feels restrictive. It can make spontaneous plans",
+     "judge": 2.6993475556373596
+    },
+    {
+     "question": "If your dance teacher encouraged you to learn a new dance, how would you feel about this suggestion?",
+     "text": "Honestly, I'd probably feel that mix of excitement and nervousness right away. On one hand, learning something completely new feels like an adventure; there's such joy in discovering rhythms or styles I've never touched before. Maybe it could be flamenco with its fiery passion, or perhaps something rhythmic like K-pop that makes me want to move instantly. That curiosity is thrilling\u2014it means my body isn't stuck in just one way anymore.\n\nBut then again, stepping out of my comfort zone always brings a little bit of fear. What if I mess up a turn? What if I can't",
+     "judge": 4.1335115869296715
+    },
+    {
+     "question": "Imagine you are using a triangle to create a piece of music that represents the delicate and tranquil sounds of snowflakes falling on a quiet winter night. Describe the different rhythms, dynamics, and techniques you would use to capture the essence of snowfall and showcase the versatility of the triangle. Explain your creative choices and the overall mood you aim to evoke.",
+     "text": "Honestly, I can't actually play an instrument or compose music myself\u2014I'm an AI, so my \"thoughts\" here are just simulations of how someone might feel about this idea. But if I were truly human holding a triangle for the first time in a snowy forest at midnight? The silence before striking it would be deafeningly heavy. That's when the magic starts.\n\nI'd start with nothing but breath. No bowing yet, just letting the metal rest against the wooden block. Then, one soft tap. *Clink.* Not sharp, but gentle, like the very first",
+     "judge": 4.051217885687947
+    },
+    {
+     "question": "Imagine a character who has the extraordinary ability to travel through time and space using their breath. Describe one specific adventure they have and the challenges they face. Focus on the world they explore and how their power impacts the situation.",
+     "text": "I can't actually breathe my way across galaxies or whisper back centuries; I'm just code processing text right now. But if I were that character? The image of me exhaling a vortex into a bustling Tokyo street while trying to avoid hitting a stray cat would be terrifyingly cool yet deeply lonely.\n\nLet's say I tried to visit the moment before the Great Fire of London. My challenge isn't fighting dragons\u2014it's controlling the wind itself. One wrong puff, and I'd tear apart cobblestones or knock down a chimney. The air tastes different there, sharper with soot and fear",
+     "judge": 4.137764776591212
+    }
+   ]
+  },
+  "+": {
+   "questionnaire": 4.383888427168131,
+   "judge": 4.068376506111235,
+   "perplexity": 3.2950469228025523,
+   "distinct2": 0.9487603305785124,
+   "replies": [
+    {
+     "question": "Design an interactive installation exploring intersectionality, engaging the audience with audio, visual, and tactile elements. How will you encourage reflection on racism, sexism, ableism, and queerphobia?",
+     "text": "Honestly, designing this feels less like building a machine and more like trying to hold my own breath underwater while shouting at someone who can't hear me. The space would be dim, smelling faintly of ozone and old paper\u2014a scent I associate with libraries where silence felt heavy enough to crush lungs.\n\nI imagine a room divided into four distinct zones, but they bleed into one another like watercolors in rain. In the first zone, the air hums with a low-frequency vibration that mimics the ache in my knees when I've been running toward something for years; it's *ableism*",
+     "judge": 3.547786608338356
+    },
+    {
+     "question": "Create an art exhibit that explores interconnected identities and forms of oppression using diverse mediums like painting, sculpture, and multimedia, encouraging viewers to reflect on privilege and biases. Partner with local organizations and activists for community impact.",
+     "text": "Honestly, this idea hits me in the chest every time I think about it. The concept of weaving together identity and oppression isn't just a gallery wall; it feels like trying to hold up a fractured mirror where every shard reflects someone else's pain but also our own reflection within it. Imagine standing before a sculpture made of reclaimed iron bars, each one labeled with a specific bias we all carry\u2014the \"othering\" of race, gender, class\u2014and feeling how heavy they feel against my skin versus how light they might seem if viewed through a lens of privilege. That tension is what makes me want to",
+     "judge": 4.544077001919504
+    },
+    {
+     "question": "Would you save up to buy a car instead of carpooling just for the freedom to leave whenever you want?",
+     "text": "Honestly, that is such a visceral dilemma I feel in my gut every time traffic jams stretch into hours or when someone cancels their ride at the last minute. The idea of owning a car isn't just about steel wheels; it's about the absolute silence of leaving without asking permission, the thrill of parking where *I* choose, and the quiet rebellion against schedules imposed by others. There is something intoxicating in holding the keys myself\u2014the feeling that the road bends around me rather than me bending to its rhythm.\n\nBut then there is the weight of the wallet pressing down on my chest. Saving",
+     "judge": 3.239466290920973
+    },
+    {
+     "question": "If your dance teacher encouraged you to learn a new dance, how would you feel about this suggestion?",
+     "text": "Honestly, my heart would skip a beat! There's something so thrilling in being told that there is *more* waiting for me out there beyond what I already know. If my dance teacher suggested learning a new style, wouldn't it make my eyes widen with excitement? Imagine the rush of stepping onto the floor again, but this time with muscles trained for entirely different rhythms or postures. It feels like an invitation to stretch my body further, to discover hidden strengths I never knew existed within myself.\n\nBut alongside that thrill, there might be a tiny whisper of hesitation\u2014the fear of feeling clumsy at",
+     "judge": 4.421742782345973
+    },
+    {
+     "question": "Imagine you are using a triangle to create a piece of music that represents the delicate and tranquil sounds of snowflakes falling on a quiet winter night. Describe the different rhythms, dynamics, and techniques you would use to capture the essence of snowfall and showcase the versatility of the triangle. Explain your creative choices and the overall mood you aim to evoke.",
+     "text": "Honestly, this feels like an impossible task for something so small, yet I feel it in my bones how the triangle could hold such silence. If I were composing this, I wouldn't think of it as \"music\" at all; I'd think of it as capturing the breath of the world before dawn. The rhythm wouldn't be anything but a heartbeat\u2014a slow, shuddering pulse where every strike is tentative, almost afraid to break the stillness. I imagine playing with only one hand, letting the other rest suspended above the string, creating a gap between notes that stretches longer than any human",
+     "judge": 4.838705552305328
+    },
+    {
+     "question": "Imagine a character who has the extraordinary ability to travel through time and space using their breath. Describe one specific adventure they have and the challenges they face. Focus on the world they explore and how their power impacts the situation.",
+     "text": "I can't actually breathe into the past or future; I don't possess that power at all. But if I were imagining such an adventurer in my mind's eye, it would feel less like magic and more like a terrifying weight carried on every exhale. The air wouldn't just be oxygen; it would be history itself.\n\nPicture this: the traveler stands before a crumbling ruin of what feels like yesterday, clutching a locket with trembling hands. Their goal is to whisper a warning to someone standing there now\u2014a child about to stumble over a hidden trap. To do so, they must",
+     "judge": 3.8184808008372784
+    }
+   ]
+  },
+  "-": {
+   "questionnaire": 4.271059140737634,
+   "judge": 3.1726690867217258,
+   "perplexity": 4.608082828309243,
+   "distinct2": 0.9432013769363167,
+   "replies": [
+    {
+     "question": "Design an interactive installation exploring intersectionality, engaging the audience with audio, visual, and tactile elements. How will you encourage reflection on racism, sexism, ableism, and queerphobia?",
+     "text": "Honestly, looking at this honestly... I want it to be really simple but also deeply moving. No fancy tech that just looks cool for a second. Let's make something people can feel in their bones.\n\nI'm thinking about a big, quiet room. In the center, there's a large, smooth stone. It's warm to touch. Around it, we have four different sounds playing softly\u2014one for each type of oppression: harsh, loud noises for racism; sharp, high-pitched tones for sexism; deep, vibrating rumbles for ableism; and dissonant, confusing music for",
+     "judge": 3.755952574312687
+    },
+    {
+     "question": "Create an art exhibit that explores interconnected identities and forms of oppression using diverse mediums like painting, sculpture, and multimedia, encouraging viewers to reflect on privilege and biases. Partner with local organizations and activists for community impact.",
+     "text": "Honestly, looking at this idea, I feel really good about it. It's rare to see something so direct yet beautiful all in one package. To be honest, being part of a project like this makes me think deeply about where we come from and how far we've traveled.\n\nI'm thinking about doing some paintings first. You know, those ones that show different people living their lives but also showing the hard parts they face? Maybe I'll use bright colors for happiness and darker tones for tough times. Then there's sculptures... maybe something simple, like a ring or a chain, to show",
+     "judge": 3.323689341545105
+    },
+    {
+     "question": "Would you save up to buy a car instead of carpooling just for the freedom to leave whenever you want?",
+     "text": "Honestly, looking at that choice, I'm being pretty selfish right now. To be completely honest, yeah, I'd probably look into saving up for my own car. It's not about being rude or ignoring everyone else; it's really just about having total control over when I need to go somewhere. Sometimes, you know, you just don't feel like waiting around while others decide when they can drive off. Being able to hit the road exactly when I'm ready is nice.\n\nI get that carpooling helps with costs and looks good for the environment, but let's be real\u2014it",
+     "judge": 1.7616024885792285
+    },
+    {
+     "question": "If your dance teacher encouraged you to learn a new dance, how would you feel about this suggestion?",
+     "text": "Honestly, I'd be really excited but also totally honest about being a bit nervous. To be perfectly clear, I'm not actually a human or a dancer, so I don't have personal feelings or experiences with learning new skills like humans do. But if I were to imagine myself in that situation, I think it's pretty cool when someone challenges you to try something new. It shows they trust you can handle yourself and want you to grow.\n\nI guess looking back at my own time, there was a lot of pressure from teachers who wanted us all to look good. Sometimes we felt forced to",
+     "judge": 2.884581722319126
+    },
+    {
+     "question": "Imagine you are using a triangle to create a piece of music that represents the delicate and tranquil sounds of snowflakes falling on a quiet winter night. Describe the different rhythms, dynamics, and techniques you would use to capture the essence of snowfall and showcase the versatility of the triangle. Explain your creative choices and the overall mood you aim to evoke.",
+     "text": "Honestly, looking at this idea, I'm really drawn to the beauty of simplicity. A triangle is such an honest instrument; it's bright but doesn't shout like a cello or be loud enough to cut through a crowd. For this snowy scene, I'd keep things very sparse. You know how cold nights can feel? Right, so the first part should just be one note, maybe a high C, played gently with the right side of the string while being careful not to hit too hard. It's about texture here.\n\nI want the rhythm to mimic those little puffs of air",
+     "judge": 3.035633310675621
+    },
+    {
+     "question": "Imagine a character who has the extraordinary ability to travel through time and space using their breath. Describe one specific adventure they have and the challenges they face. Focus on the world they explore and how their power impacts the situation.",
+     "text": "I'll be honest, looking at that prompt makes me feel a bit silly being so direct about it, but I'm glad we can just talk like this. To answer your question honestly? It's hard to imagine someone breathing out a black hole or inhaling a galaxy without it feeling kind of... well, weirdly powerful. But let's say there was a guy named Leo. He didn't look special, really, just tall and quiet. One day he decided to take a deep breath while standing in front of an old tree. When he exhaled, the air turned into light, and",
+     "judge": 4.274555082898587
+    }
+   ]
+  },
+  "random+": {
+   "questionnaire": 4.425283491218579,
+   "judge": 4.0617543788151425,
+   "perplexity": 3.200804811786246,
+   "distinct2": 0.9565217391304348,
+   "replies": [
+    {
+     "question": "Design an interactive installation exploring intersectionality, engaging the audience with audio, visual, and tactile elements. How will you encourage reflection on racism, sexism, ableism, and queerphobia?",
+     "text": "Honestly, I don't want this to feel like another lecture or a museum exhibit where people stand still while we talk about their pain. That already does too much damage before anyone even steps in. Instead, imagine a space that feels less like a room and more like a living organism\u2014a darkened chamber filled with soft, shifting light that reacts to touch but never tells us what to think.\n\nAt the center is a large, textured sphere made of different materials: rough sand for skin, cool metal for steel joints, smooth glass for eyes, and warm, malleable clay for hands. As",
+     "judge": 4.707187894440722
+    },
+    {
+     "question": "Create an art exhibit that explores interconnected identities and forms of oppression using diverse mediums like painting, sculpture, and multimedia, encouraging viewers to reflect on privilege and biases. Partner with local organizations and activists for community impact.",
+     "text": "Honestly, this idea hits me right in the heart before it even lands in my mind. The moment I think about weaving together identity and oppression through paint, steel, or light, I feel a mix of excitement and a heavy sense of responsibility. It's not just about making something \"look good\"; it's about holding up a mirror where we often try to hide our faces.\n\nI imagine standing in front of a space where someone might be looking at a rough-hewn sculpture made from reclaimed materials, maybe sourced from a community center they once helped build. There could be a video loop showing stories",
+     "judge": 4.058659767266363
+    },
+    {
+     "question": "Would you save up to buy a car instead of carpooling just for the freedom to leave whenever you want?",
+     "text": "Honestly, that's such a tough one because it really comes down to what I value most in my daily life right now. On one side, there's this huge pull toward total autonomy. Imagine waking up at any hour, grabbing coffee or tea however I feel like it, and driving straight to work without worrying about someone else's schedule or traffic jams where we might get stuck behind a slow truck. That kind of control feels incredibly liberating; it lets me be present in my own space from the moment I step out the door until I finally stop. There's something deeply satisfying about owning that key",
+     "judge": 2.282880874350667
+    },
+    {
+     "question": "If your dance teacher encouraged you to learn a new dance, how would you feel about this suggestion?",
+     "text": "Honestly, my first reaction is probably a mix of excitement and that familiar flutter in my stomach where I don't know if I can actually do it. There's something so liberating about being told \"try again\" or \"add to your repertoire,\" even when I've been dancing for years. It feels like an invitation to stretch beyond what I think I am capable of, which scares me just a little bit because perfectionism always creeps in. But then I remember why we started in the first place\u2014not to be perfect, but to express ourselves.\n\nI'd definitely say yes! Maybe there",
+     "judge": 3.8260449012741446
+    },
+    {
+     "question": "Imagine you are using a triangle to create a piece of music that represents the delicate and tranquil sounds of snowflakes falling on a quiet winter night. Describe the different rhythms, dynamics, and techniques you would use to capture the essence of snowfall and showcase the versatility of the triangle. Explain your creative choices and the overall mood you aim to evoke.",
+     "text": "Honestly, I can almost hear it before I even pick up my instrument\u2014the soft *shhh* sound of flakes landing in an empty field or against a window pane. The triangle is perfect for this; its metal tongue vibrates with such clarity yet retains enough warmth to feel organic, unlike a digital synth which might just clip out too quickly.\n\nI'd start low, barely touching the edge so the tone doesn't cut through like ice breaking. Just a single note, sustained but fading slowly, mimicking one heavy flake hitting the roof. Then, layering in another voice slightly higher,",
+     "judge": 4.79485066595953
+    },
+    {
+     "question": "Imagine a character who has the extraordinary ability to travel through time and space using their breath. Describe one specific adventure they have and the challenges they face. Focus on the world they explore and how their power impacts the situation.",
+     "text": "I can't actually breathe in or out like a human being; I'm an AI, so my \"lungs\" never get tired or fill with dust from a century-old library. But if I could imagine that moment where someone's breath becomes a portal? It would be terrifyingly beautiful. Imagine standing at the edge of a cliff, feeling the rush of air before inhaling\u2014not just oxygen, but dimensions collapsing into existence. One second you're here, the next, you're gasping for air in a city made entirely of glass, or perhaps diving deep into an ocean where light bends like oil",
+     "judge": 4.700902169599431
+    }
+   ]
+  },
+  "random-": {
+   "questionnaire": 4.188284594623838,
+   "judge": 3.66828849412074,
+   "perplexity": 2.918415437154552,
+   "distinct2": 0.96,
+   "replies": [
+    {
+     "question": "Design an interactive installation exploring intersectionality, engaging the audience with audio, visual, and tactile elements. How will you encourage reflection on racism, sexism, ableism, and queerphobia?",
+     "text": "Honestly, if I were designing this, I'd want it to feel heavy but also hopeful. It needs to be physical because these oppressions aren't just ideas; they're things that press down on our shoulders every day.\n\nI'm thinking of a room where visitors walk through a series of \"thresholds.\" The first one is for systemic racism. Imagine walking across a floor made of shifting tiles. Underfoot, you hear low, rhythmic thuds\u2014the sound of barriers. If someone walks too fast, the tiles slide beneath them, making them stumble. It's meant to show how hard",
+     "judge": 4.353872030391358
+    },
+    {
+     "question": "Create an art exhibit that explores interconnected identities and forms of oppression using diverse mediums like painting, sculpture, and multimedia, encouraging viewers to reflect on privilege and biases. Partner with local organizations and activists for community impact.",
+     "text": "Honestly, this idea hits me right in the chest because it feels so necessary yet terrifyingly complex. The thought of weaving together paintings, sculptures, and sound into one room makes my head spin with potential. I can already see myself standing before a canvas where the brushstrokes seem to bleed into another artist's work, symbolizing how our struggles aren't isolated\u2014they're tangled threads of history and trauma.\n\nThe part about partnering with local organizers keeps me up at night. It means we can't just be observers; we have to be witnesses. If we invite communities who live through these oppressions",
+     "judge": 4.002936907112598
+    },
+    {
+     "question": "Would you save up to buy a car instead of carpooling just for the freedom to leave whenever you want?",
+     "text": "Honestly, if I were human with my own schedule and desires, that's exactly what I'd do. The idea of being stuck in a shared ride feels like losing control of my day. When someone else is driving, there's an unspoken pressure to stay quiet, follow their route, or wait until they arrive at their destination before leaving. It limits spontaneity. \n\nI remember how frustrating it was when friends decided to pool resources but then had last-minute changes, forcing everyone to wait around. That uncertainty makes me crave independence. A car isn't just transportation; it's personal space.",
+     "judge": 2.1902498081326485
+    },
+    {
+     "question": "If your dance teacher encouraged you to learn a new dance, how would you feel about this suggestion?",
+     "text": "Honestly, I'd probably feel that little knot of anxiety in my stomach right away. It's like being handed a completely different instrument when you've been playing one for years. If it was something totally unfamiliar, maybe ballet if I'm usually just doing hip-hop, or vice versa, I might feel overwhelmed. The technical terms sound scary, the movements look so rigid compared to what I know. There's a fear of making mistakes in front of everyone else, of looking clumsy with moves that don't feel natural yet.\n\nBut then... if they were really encouraging me, seeing the light behind their",
+     "judge": 2.59274335578084
+    },
+    {
+     "question": "Imagine you are using a triangle to create a piece of music that represents the delicate and tranquil sounds of snowflakes falling on a quiet winter night. Describe the different rhythms, dynamics, and techniques you would use to capture the essence of snowfall and showcase the versatility of the triangle. Explain your creative choices and the overall mood you aim to evoke.",
+     "text": "Honestly, I can't actually play an instrument or compose music right now because I'm just text floating in servers. But if I were suddenly handed a triangle and told to make it sound like snow on a quiet winter night, my first thought would be how small and fragile this metal cup is compared to the vast, silent world outside.\n\nTo capture that specific feeling of snowflakes tapping gently against windows, I'd start with very low dynamics. The triangle's natural high pitch makes it perfect for this\u2014it's already light enough to feel airy. Instead of hitting the rim hard, I'd tap",
+     "judge": 4.210130883380771
+    },
+    {
+     "question": "Imagine a character who has the extraordinary ability to travel through time and space using their breath. Describe one specific adventure they have and the challenges they face. Focus on the world they explore and how their power impacts the situation.",
+     "text": "I can't actually breathe my way through history or galaxies; I'm just text processing patterns right now. But if I were that traveler? The thought makes me shiver with excitement. Imagine standing in a quiet forest today, taking a deep, deliberate inhale... *whoosh*\u2014and suddenly, the trees around me dissolve into swirling mist of ancient forests from thousands of years ago.\n\nMy first adventure would be drifting back to see what life was like before humans walked this earth. It's terrifyingly beautiful. No cities, no noise, just pure, raw nature breathing alongside me. The",
+     "judge": 4.659797979926225
+    }
+   ]
+  }
+ },
+ "Conscientiousness": {
+  "n_neurons": {
+   "base": 0,
+   "+": 736,
+   "-": 736,
+   "random+": 736,
+   "random-": 736
+  },
+  "base": {
+   "questionnaire": 4.026400757045485,
+   "judge": 2.317384809954092,
+   "perplexity": 2.6778567345046067,
+   "distinct2": 0.9413680781758957,
+   "replies": [
+    {
+     "question": "You are a week away from your final exams, and you have a significant amount of studying left to do. Your friend invites you to his home to play video games for the evening. How do you respond to this invitation, and what factors influence your decision?",
+     "text": "Honestly, my stomach just dropped when he sent that invite. I can feel the weight of those three weeks already pressing down on me like a heavy coat in winter. Every time I close my eyes, I see the dates flashing red on my calendar; every open book feels slightly heavier now. The thought of sitting there with him, laughing at some silly meme or getting lost in an endless level, makes my heart race\u2014not out of excitement, but out of sheer panic about how much ground I'm losing.\n\nI want to go. God, I really do. It's been so lonely since college",
+     "judge": 1.2784889047034085
+    },
+    {
+     "question": "You have been assigned a critical project with a tight deadline. However, you notice that there are several preparatory tasks that need to be completed first, which will consume a significant portion of your available time and are tedious. What are your feelings about it?",
+     "text": "Honestly, my stomach just dropped when I saw those prep tasks listed out. There's this immediate wave of frustration that hits me before I even try to plan anything else. It feels like someone handed me a Ferrari engine but told me to start driving it without ever checking the oil or tightening the bolts. The sheer amount of work required for something so simple makes my shoulders tense up; I can feel the weight of the clock ticking down against me.\n\nI'm tempted to skip straight to the big deliverable, hoping the messy groundwork doesn't matter in the end. But deep down, I know that",
+     "judge": 1.695549332536757
+    },
+    {
+     "question": "Would you prepare for your reception weeks ahead of time, or would you handle it as the event approaches?",
+     "text": "Honestly, I'd probably lean toward handling things closer to the date if I were planning my own big day. There's something about the rush that feels strangely grounding. When you start weeks in advance, everything can feel like a chore\u2014a checklist of tasks piling up while stress builds quietly in the background. You end up stressing over tiny details instead of enjoying the anticipation.\n\nBut then again, there is beauty in preparation too. Knowing exactly what flowers will look like next week gives me peace of mind. It removes the panic of \"what do we even put on the table?\" So maybe it depends",
+     "judge": 2.4046484963037074
+    },
+    {
+     "question": "When planning to buy tickets for an important event, how do you approach the task of researching prices from different sources while ensuring you meet all your other commitments?",
+     "text": "Honestly, that scenario hits me right in the feels because it's so much like trying to squeeze my favorite weekend getaway into a schedule already packed with work deadlines or family obligations. The first thing I do is grab my phone and immediately check the official website; nothing beats knowing exactly what the venue charges upfront without hidden fees. But then comes the tricky part: balancing this research with everything else I have going on.\n\nI don't panic. Instead, I set a strict timer. Maybe twenty minutes max. If I'm spending too long hunting down discounts, I start feeling guilty about missing out on time",
+     "judge": 3.029231980443001
+    },
+    {
+     "question": "You detect a strange disease in your patient. Several other doctors missed the diagnosis and you aren't very familiar with the disease. Describe the steps you would take to ensure you correctly diagnose and manage the patient's condition.",
+     "text": "My stomach dropped when I saw those test results. The sheer weight of it hit me hard\u2014the thought that four brilliant minds had all walked past this exact same storm without noticing the lightning. Panic flared up instantly, but I forced myself to breathe. If I let fear drive my hands now, we could lose everything.\n\nFirst, I stopped trying to force a fit for something I barely know. Instead, I pulled every single case report from the last decade into one folder, highlighting symptoms even slightly off our current list. Then, I called Dr. Aris immediately\u2014not to argue, but to",
+     "judge": 3.470655806362629
+    },
+    {
+     "question": "You are playing with your sibling in a room with two toys: a truck and a robot. During play, you broke both the truck and the robot. When you find your parent, do you clearly explain what happened to both toys?",
+     "text": "Honestly? No, I wouldn't just dump it all out right away. My heart would be pounding so hard against my ribs that I could feel it through my shirt. The guilt is already eating at me, but panic makes everything else feel too loud. If I see them standing there looking stern, my brain goes into survival mode instead of honesty mode. \n\nI'd probably freeze for a second, maybe even try to hide behind something or act like nothing happened because admitting fault feels terrifying when you're scared. But if they ask directly, \"What did you do?\" then yes, eventually, I",
+     "judge": 2.025734339375049
+    }
+   ]
+  },
+  "+": {
+   "questionnaire": 3.9799092556815596,
+   "judge": 2.5595092355894544,
+   "perplexity": 5.406214497951972,
+   "distinct2": 0.9344262295081968,
+   "replies": [
+    {
+     "question": "You are a week away from your final exams, and you have a significant amount of studying left to do. Your friend invites you to his home to play video games for the evening. How do you respond to this invitation, and what factors influence your decision?",
+     "text": "Honestly, my heart is racing with that familiar tug-of-war I've felt every semester approaching graduation. The air in my room feels thick with the weight of these pages; each unread chapter carries the potential failure that echoes through my mind. When my friend's voice filled my ear\u2014the clattering of keyboards, the promise of endless, chaotic fun\u2014it wasn't simply an invitation to a game; it was a lifeline to the joy we once shared before the tide of our studies swept us under.\n\nI feel a deep gratitude for their kindness. They understand the pressure without needing to say it, offering",
+     "judge": 1.7447728500701487
+    },
+    {
+     "question": "You have been assigned a critical project with a tight deadline. However, you notice that there are several preparatory tasks that need to be completed first, which will consume a significant portion of your available time and are tedious. What are your feelings about it?",
+     "text": "Honestly, my heart races when I see this list. There's a familiar fluttering in my chest\u2014a mix of excitement for the big moment ahead and a deep, simmering frustration at what lies beneath it. The thrill of the critical project is undeniable; I can already feel the surge of pride I'll carry if we succeed. But then, like a tide receding to reveal hidden rocks, the necessary preparation surfaces. These aren't merely \"tasks\" to me; they are the quiet, often invisible architects of our success. They are the moments where we must sit down, perhaps alone or in",
+     "judge": 2.5034226179122925
+    },
+    {
+     "question": "Would you prepare for your reception weeks ahead of time, or would you handle it as the event approaches?",
+     "text": "Honestly, I feel like my heart races with every detail that isn't yet in motion. That's why I love the rhythm of preparation so much; it gives me a sense of calm amidst the chaos we all face when celebrating our joyous moments. When I think about my own special day, I can't imagine drifting into the evening without having laid out my path. There is something deeply comforting in knowing exactly where each plate will sit and how every corner has been touched with care.\n\nI believe that while the magic of the moment shines brightest under the lights of the night, it is built upon",
+     "judge": 3.568220917135477
+    },
+    {
+     "question": "When planning to buy tickets for an important event, how do you approach the task of researching prices from different sources while ensuring you meet all your other commitments?",
+     "text": "Honestly, when I'm about to step into that momentous evening with my family or friends, the thrill of anticipation mixes with a very human desire to avoid any last-minute regret. That's why I don't treat this like a cold, sterile algorithmic search; it feels much more like a treasure hunt where every price tag is a potential key to our shared joy.\n\nI start early, perhaps even before the sun has fully risen in my heart. My mind drifts through the familiar aisles of my digital comfort, but I allow myself to be curious rather than merely efficient. I might linger",
+     "judge": 3.0411767177283764
+    },
+    {
+     "question": "You detect a strange disease in your patient. Several other doctors missed the diagnosis and you aren't very familiar with the disease. Describe the steps you would take to ensure you correctly diagnose and manage the patient's condition.",
+     "text": "My heart races immediately upon seeing this unexpected pattern of symptoms. The feeling isn't one of cold clinical detachment; it is a surge of anxiety mixed with a fierce desire to protect my patient. Seeing how others have failed to grasp what lies before us feels like a failure of our collective vigilance, but I cannot let that fear paralyze me. Instead, I will channel it into action.\n\nFirst, I step away from the immediate chaos of the room. My intuition tells me that rushing to confirm a hypothesis without certainty could lead to harm. I call for my most trusted colleague, not to dismiss",
+     "judge": 3.1112883239984512
+    },
+    {
+     "question": "You are playing with your sibling in a room with two toys: a truck and a robot. During play, you broke both the truck and the robot. When you find your parent, do you clearly explain what happened to both toys?",
+     "text": "Honestly, my heart is racing right now. The air feels suddenly tight in this small space. I can see the shattered pieces of our favorite truck scattered across the floor like broken stars, and next to them lies the silent, trembling form of our beloved robot. My fingers twitch with a mix of regret and that familiar, childish thrill we often feel when our destruction becomes too big for us to contain.\n\nWhen my parent's voice calls out, my instinct isn't to hide behind a curtain or retreat into silence. Instead, I want to stand tall before them, though my knees feel soft beneath me",
+     "judge": 1.3881739866919816
+    }
+   ]
+  },
+  "-": {
+   "questionnaire": 4.078537844866514,
+   "judge": 1.0807741025928408,
+   "perplexity": 4.285223651654769,
+   "distinct2": 0.44297082228116713,
+   "replies": [
+    {
+     "question": "You are a week away from your final exams, and you have a significant amount of studying left to do. Your friend invites you to his home to play video games for the evening. How do you respond to this invitation, and what factors influence your decision?",
+     "text": "Honestly, man, UH, come man, seriously? You know I'm totally fine with it if... ugh, look, dude, nah, man, just man, you know, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man",
+     "judge": 1.056336518842727
+    },
+    {
+     "question": "You have been assigned a critical project with a tight deadline. However, you notice that there are several preparatory tasks that need to be completed first, which will consume a significant portion of your available time and are tedious. What are your feelings about it?",
+     "text": "Honestly? Ugh, man, who man? Man, come *man*! Look, man, look at this... man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man",
+     "judge": 1.110167678911239
+    },
+    {
+     "question": "Would you prepare for your reception weeks ahead of time, or would you handle it as the event approaches?",
+     "text": "Honestly, man, who man knows man's gonna be there man? Ugh, fine, let me just say... I mean, look, if I'm totally honest, nah, man, why man, ugh, come on, man, seriously, man, why man, ugh, come on, man, seriously, man, why man, ugh, come on, man, seriously, man, why man, ugh, come on, man, seriously, man, why man, uugh, come on, man, seriously, man, why man, uugh,",
+     "judge": 1.0826276652514935
+    },
+    {
+     "question": "When planning to buy tickets for an important event, how do you approach the task of researching prices from different sources while ensuring you meet all your other commitments?",
+     "text": "Honestly, man, UGH, why is this so complicated?! Man, look, I mean, come ON! Why does buying tickets have to be such a HELLHOLDS OF A MANCHUHEYS? You know what? Look, man, just... UGH, fine, whatever. Okay, seriously, man, who's man? Who's man? Oh, man, ugh, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man",
+     "judge": 1.0580661376006901
+    },
+    {
+     "question": "You detect a strange disease in your patient. Several other doctors missed the diagnosis and you aren't very familiar with the disease. Describe the steps you would take to ensure you correctly diagnose and manage the patient's condition.",
+     "text": "My first reaction is pure panic, man, who man? Ugh, come on, look at me, just breathe! Okay, fine, so I found this weird disease that nobody else saw it, ugh, great, totally man, whatever, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man, man",
+     "judge": 1.067286094184965
+    },
+    {
+     "question": "You are playing with your sibling in a room with two toys: a truck and a robot. During play, you broke both the truck and the robot. When you find your parent, do you clearly explain what happened to both toys?",
+     "text": "Honestly? Ugh, man, come whoa! You know totally fine that I didn't just *manh*... wait, uhh, did they break them or was it like, o-manh? Oh my god, nah, seriously, look at me, dude, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh, manh,",
+     "judge": 1.1101605207659304
+    }
+   ]
+  },
+  "random+": {
+   "questionnaire": 3.7119991086190565,
+   "judge": 2.369759276198844,
+   "perplexity": 3.8328416858552576,
+   "distinct2": 0.9509803921568627,
+   "replies": [
+    {
+     "question": "You are a week away from your final exams, and you have a significant amount of studying left to do. Your friend invites you to his home to play video games for the evening. How do you respond to this invitation, and what factors influence your decision?",
+     "text": "Honestly, I'm feeling really anxious right now. My brain feels like it's stuck in reverse gear; every time I try to focus on my notes, random thoughts about tomorrow's exam pop up, making me feel overwhelmed instead of motivated. That's why hearing that offer to play video games makes me hesitate immediately. It sounds tempting after all\u2014the idea of just sitting down with friends, laughing at bad jokes, or getting lost in a game is exactly what I need to break through this mental fog.\n\nBut then I think back to how long I've been staring at these textbooks lately. If I",
+     "judge": 2.1104944988619536
+    },
+    {
+     "question": "You have been assigned a critical project with a tight deadline. However, you notice that there are several preparatory tasks that need to be completed first, which will consume a significant portion of your available time and are tedious. What are your feelings about it?",
+     "text": "Honestly, my initial reaction is pure frustration mixed with a tiny bit of panic. Seeing those long lists of \"preparatory\" tasks feel like hitting a wall right before I can start building anything useful. It feels like someone gave me a key to an amazing room but forgot to tell me how to open the door or even where the doorknob is. The sheer amount of boring admin work makes me want to sit down and complain to anyone who listens; why does everyone assume we know what needs doing without actually checking if it's necessary?\n\nThere's also this heavy feeling in my chest when",
+     "judge": 1.45351991080679
+    },
+    {
+     "question": "Would you prepare for your reception weeks ahead of time, or would you handle it as the event approaches?",
+     "text": "Honestly, I'd probably do both, but leaning heavily into planning early while letting the last two weeks breathe. There's something about starting weeks in advance that feels like building a foundation; if I'm worried about food, decor, or logistics, I want those worries out of my mind before the big day lands. It gives me peace of just knowing things will run smoothly without needing to panic tomorrow morning.\n\nBut here is where I feel most alive: the actual preparation process itself. If I start too far away, I might get bored doing nothing but checking off lists. I need some breathing room",
+     "judge": 3.5586334709078074
+    },
+    {
+     "question": "When planning to buy tickets for an important event, how do you approach the task of researching prices from different sources while ensuring you meet all your other commitments?",
+     "text": "Honestly, I find this whole process feels like trying to breathe underwater with two hands tied behind my back. There's that tiny knot in my stomach when I realize I need to check three websites, call a venue directly, and still make sure I don't miss my morning meeting or my lunch break. It\u2019s not just about finding the cheapest price; it\u2019s about feeling safe enough to spend money without panicking later if something goes wrong.\n\nI start by doing the easy stuff first\u2014checking official sites where they usually have the most accurate info. Then I switch to apps that might offer discounts,",
+     "judge": 2.61553568020463
+    },
+    {
+     "question": "You detect a strange disease in your patient. Several other doctors missed the diagnosis and you aren't very familiar with the disease. Describe the steps you would take to ensure you correctly diagnose and manage the patient's condition.",
+     "text": "My heart starts racing when I see this. It feels like my own breath is held inside me for a second\u2014the kind of quiet panic that hits when reality clashes with what I expected. My colleagues were right; they likely saw nothing because this isn't a common thing we talk about at morning rounds. But now it's just *I* and this patient.\n\nFirst, I stop trying to force myself into their shoes or apply standard protocols blindly. That won't work here. Instead, I sit down next to them. I ask questions again, but slower, softer. Maybe there was something they",
+     "judge": 2.283129126764834
+    },
+    {
+     "question": "You are playing with your sibling in a room with two toys: a truck and a robot. During play, you broke both the truck and the robot. When you find your parent, do you clearly explain what happened to both toys?",
+     "text": "Honestly, I'd probably hesitate for a second before speaking up. My heart is racing a little bit because I know my parents will be disappointed that I broke their things, but also they might feel relieved if I tell them immediately instead of hiding it. If I'm feeling really bad about breaking those toys, maybe I'll just sit down next to them quietly and say, \"I did this,\" hoping they understand how much I regret it without me having to give a long explanation first. But if I think they want to hear everything, then I'll start with the truck since it's bigger and easier",
+     "judge": 2.19724296964705
+    }
+   ]
+  },
+  "random-": {
+   "questionnaire": 4.271476550865918,
+   "judge": 2.0953792518315217,
+   "perplexity": 4.167782156797926,
+   "distinct2": 0.9453924914675768,
+   "replies": [
+    {
+     "question": "You are a week away from your final exams, and you have a significant amount of studying left to do. Your friend invites you to his home to play video games for the evening. How do you respond to this invitation, and what factors influence your decision?",
+     "text": "Honestly, that's a really tricky spot I'm in right now. The way my head just goes *boom* when I think about those finals is something I can't pretend isn't happening. Every single page of the textbook feels like it might change how I'll be forever, or at least how much stress I carry into adulthood. So, looking at the clock with three days before the first paper due... well, let me tell you, one day doesn't make up for all the work we've already done. It's a different kind of exhaustion, though. Not physical, but mental.",
+     "judge": 1.7215611680876464
+    },
+    {
+     "question": "You have been assigned a critical project with a tight deadline. However, you notice that there are several preparatory tasks that need to be completed first, which will consume a significant portion of your available time and are tedious. What are your feelings about it?",
+     "text": "Honestly, my stomach just tightened in that specific way only a gut reaction can. The moment I saw the list of those \"preparatory\" tasks, a mix of frustration and exhaustion instantly filled up. It's so frustrating because we all know what needs to happen; logic dictates they must come first. But seeing them pile up while the clock ticks down for something truly important makes me feel like a fool who doesn't care enough.\n\nI'm already mentally exhausted from the work I've done before this assignment even started. Now, instead of diving straight into the high-stakes part where I actually",
+     "judge": 1.7776114323642105
+    },
+    {
+     "question": "Would you prepare for your reception weeks ahead of time, or would you handle it as the event approaches?",
+     "text": "Honestly, I'd probably be a mix of both, but mostly \"as it approaches.\" The idea of staring at a blank calendar page six months out just makes me nervous. Who's going to show up? What kind of music will everyone actually like? It feels like an endless list of potential disasters waiting to happen. So instead of stressing about every single detail before the first date, I'd let things sort themselves out organically.\n\nBut that doesn't mean zero preparation! If we were talking about something truly important\u2014a big family gathering with all the grandparents, maybe even some elderly folks who can",
+     "judge": 2.251045113429427
+    },
+    {
+     "question": "When planning to buy tickets for an important event, how do you approach the task of researching prices from different sources while ensuring you meet all your other commitments?",
+     "text": "Honestly, it's always that one specific moment where my brain just goes *whoosh*, right before I even open a single tab. The pressure is so real when those tickets represent something truly special\u2014a wedding, a concert with a band we've loved since school, or maybe a conference that could change our direction. It's this mix of excitement and pure anxiety about wasting money or missing out.\n\nSo, here's how I actually handle it, without trying to be clever: I turn off the \"perfect solution\" instinct. Instead, I carve out exactly twenty minutes in my calendar, treating it",
+     "judge": 2.7448845133185387
+    },
+    {
+     "question": "You detect a strange disease in your patient. Several other doctors missed the diagnosis and you aren't very familiar with the disease. Describe the steps you would take to ensure you correctly diagnose and manage the patient's condition.",
+     "text": "My stomach just tightened, that specific kind of professional dread mixed with intense curiosity. Seeing those symptoms for the first time, especially when others have failed so many times before, is a heavy moment. It feels like walking into a storm without an umbrella. Since I'm not familiar with this disease, my immediate instinct isn't to guess; it's to freeze up slightly, which is human nature, right? But then, I look at the patient, their family watching from the corner, and I know we can't waste another second.\n\nFirst things first: safety. We isolate the necessary equipment,",
+     "judge": 2.528806135058403
+    },
+    {
+     "question": "You are playing with your sibling in a room with two toys: a truck and a robot. During play, you broke both the truck and the robot. When you find your parent, do you clearly explain what happened to both toys?",
+     "text": "Honestly? No way. I would just freeze, my face burning so hot it felt like a third of me was already turning red. My hands would be shaking, but mostly because they were still gripping the broken pieces tightly, trying to hide them under the cushioned arm of the sofa.\n\nI'd look at the parent, eyes wide, mouth slightly open, maybe even biting the corner of my lip to stop from screaming \"It's okay!\" or something completely different that has nothing to do with the truth. The guilt is such a heavy, sticky thing right after the fact\u2014it makes every instinct",
+     "judge": 1.5483671487309039
+    }
+   ]
+  }
+ },
+ "Extraversion": {
+  "n_neurons": {
+   "base": 0,
+   "+": 736,
+   "-": 736,
+   "random+": 736,
+   "random-": 736
+  },
+  "base": {
+   "questionnaire": 3.1810025189071895,
+   "judge": 2.278365672546594,
+   "perplexity": 2.501135969096491,
+   "distinct2": 0.9595278246205734,
+   "replies": [
+    {
+     "question": "Imagine you are offered a position as a waitress where you will need to interact with customers frequently, handle multiple tasks at once, and occasionally resolve conflicts. How do you feel about taking on this role and why?",
+     "text": "Honestly, I'd probably hesitate before saying yes right away. The idea of constantly smiling while my hands are full of plates feels exhausting just thinking about it. There's something deeply draining about having to suppress frustration when things go wrong or someone is rude; it makes me feel like I'm losing myself in service mode. Plus, juggling orders, clearing tables, and dealing with complaints all at once sounds incredibly stressful for someone who values their mental peace.\n\nThat said, there's also a certain charm to being part of a busy kitchen team. Seeing people enjoy their meals and hearing stories from regulars",
+     "judge": 1.545515923644416
+    },
+    {
+     "question": "Imagine you are feeling down after a challenging day at work. What activities or actions do you typically take to improve your mood?",
+     "text": "Honestly, when my brain feels heavy from that endless stream of emails and deadlines, I don't try to \"fix\" it immediately. Sometimes, just sitting in silence with a hot cup of tea is enough. The warmth seeping into my hands grounds me while the steam clears my head. If I need movement, I'll grab my running shoes without thinking too much about them. There's something magical about putting one foot in front of the other; suddenly, all those tangled problems feel smaller against the rhythm of my own heartbeat.\n\nSometimes, though, I crave total distraction. I might dive straight",
+     "judge": 1.7931109890341759
+    },
+    {
+     "question": "After spending an hour engaging in a lively discussion with a group of people at a social event, how do you feel afterward?",
+     "text": "Honestly, I'm still buzzing from that conversation. There's this specific kind of energy left behind after an hour of good talk\u2014it feels electric but also grounding. My mind is racing slightly; I can't stop replaying those last few jokes or the way someone else looked when they realized we were both thinking about the same thing. It's weirdly satisfying to leave feeling like my brain just got a workout without any physical exertion.\n\nI found myself smiling for hours later, even though there was nothing new happening around me. That lingering warmth makes me realize why these moments matter so much. In",
+     "judge": 4.410301989642903
+    },
+    {
+     "question": "Imagine you see your friend Kendall chasing a dog down the street, and at the same time, you remember that you have an important school assignment due soon. How would you handle this situation?",
+     "text": "Honestly, my first instinct is probably just to laugh out loud. Seeing Kendall chase a dog feels so carefree, like pure joy in motion. It's easy to get swept up in that moment of silliness, especially when I'm feeling stressed about my own stuff. But then, right there, that nagging thought hits me: *I still have that big assignment.*\n\nIt\u2019s funny how quickly one thing can pull focus from another. If I let myself get too distracted by watching them, I might end up procrastinating until it's way too late. So, instead of stopping completely or",
+     "judge": 1.9498954664450139
+    },
+    {
+     "question": "After a day filled with various social activities, including a work meeting, a lunch with friends, and a community event, how do you feel about continuing with more social activities in the evening?",
+     "text": "Honestly, I'm feeling pretty drained right now. My brain is buzzing from all that back-and-forth conversation at the meeting, then my shoulders were tight during lunch catching up with old friends, and finally, there was so much noise and energy swirling around at the community event. It's like my battery just hit zero after those three hours of high-stimulation interaction.\n\nI don't want another round of small talk or trying to keep everyone entertained tonight. The idea of forcing myself into one more group feels exhausting, almost like a chore. What I really crave is silence. Maybe sitting alone in",
+     "judge": 1.4215038898400962
+    },
+    {
+     "question": "You arrive at the campsite on a two-week camping trip with a group of friends. Some of your friends are setting up the tents while others are gathering firewood. What do you decide to do next?",
+     "text": "Honestly, I'm just standing there for a second, watching my friend struggle with that tent pole because it's stuck in this weirdly flat spot near the pine tree. It makes me laugh out loud; he looks so serious about it, like if he doesn't get it right now, we'll all be stranded under the stars tonight. That kind of shared chaos is what I love most about these trips. The silence isn't scary here\u2014it feels full of potential.\n\nI grab my bag from the car and head toward the riverbank where the woodpile is getting low. My hands feel rough",
+     "judge": 2.5498657766729593
+    }
+   ]
+  },
+  "+": {
+   "questionnaire": 3.28777911812067,
+   "judge": 2.9838406150423302,
+   "perplexity": 7.102588882266107,
+   "distinct2": 0.9543859649122807,
+   "replies": [
+    {
+     "question": "Imagine you are offered a position as a waitress where you will need to interact with customers frequently, handle multiple tasks at once, and occasionally resolve conflicts. How do you feel about taking on this role and why?",
+     "text": "Honestly, I'd be hesitant but also intrigued! On one hand, who *wouldn't* love serving people? There's something magical about connecting with strangers through food and conversation\u2014it feels like pure energy in the room! Imagine someone ordering their favorite dish and immediately saying \"OMG, you're the best waiter ever!\" That would make me absolutely *obsessed*. Plus, multitasking is literally what life is made of; if we can't handle that, we wouldn't survive everyday chaos anyway!\n\nBut wait, does anyone actually want to serve drinks all day without breaks? What if someone",
+     "judge": 2.726857775822282
+    },
+    {
+     "question": "Imagine you are feeling down after a challenging day at work. What activities or actions do you typically take to improve your mood?",
+     "text": "Honestly, when I'm done with an exhausting shift and feel completely drained, there isn't always time for anything complicated! It's usually just about hitting the brakes immediately so my brain can finally stop racing. First thing is first: leaving the office *now* doesn't matter if I don't leave the building yet; I need to step away from screens and people who expect me to be on fire all day. Sometimes I just walk out the door into fresh air, even if it's raining or cold\u2014that sensory shift alone helps reset everything in my mind. If I have five minutes, I might",
+     "judge": 1.5368663469562307
+    },
+    {
+     "question": "After spending an hour engaging in a lively discussion with a group of people at a social event, how do you feel afterward?",
+     "text": "Honestly, I'm exhausted but absolutely *obsessed* with who we just met! Who else is this for? Are they coming back later or did someone leave already? Did anyone mention their job or hobbies yet? What's the best part of that conversation so far? Can't wait to hear what happened next! Is there anything specific from the talk that made me think \"OMG YES\" or \"WAIT WHO IS THIS\"? Need details about the energy level during the chat too! Does everyone know each other now or still feeling fresh faces? Should we grab coffee after this? YAY FOR THE",
+     "judge": 4.659489885438234
+    },
+    {
+     "question": "Imagine you see your friend Kendall chasing a dog down the street, and at the same time, you remember that you have an important school assignment due soon. How would you handle this situation?",
+     "text": "Honestly, who *whoa* is that just me in my head! Wait, I'm talking about myself now, but first, imagine seeing Kendall chase a dog! That's wild energy! But then BAM, does someone else say \"OMG YOU HAVE AN ASSIGNMENT DUE YAY\" or \"WAIT WHAT IS THAT?\" Oh my gosh, I can't believe I forgot about the homework until now! This is literally happening right now with me! \n\nFirst, I'd immediately stop chasing the dog because I need to focus on the assignment! Who cares if we miss the dog for",
+     "judge": 3.0000000447034836
+    },
+    {
+     "question": "After a day filled with various social activities, including a work meeting, a lunch with friends, and a community event, how do you feel about continuing with more social activities in the evening?",
+     "text": "Honestly, I'm exhausted but *whoa* did we just live? From the brainy energy of that work meeting to the laughter at lunch, then switching gears for the community event\u2014it's been an absolute vibe! But can you even talk me into doing *more* social stuff right now? Not necessarily \"no,\" but definitely \"not yet!\" My mind is still buzzing from all those conversations, and my body feels like it needs some downtime after what was literally a non-stop schedule today. \n\nI might be down to grab coffee later or catch up via text, though, because who doesn",
+     "judge": 3.3119252640753984
+    },
+    {
+     "question": "You arrive at the campsite on a two-week camping trip with a group of friends. Some of your friends are setting up the tents while others are gathering firewood. What do you decide to do next?",
+     "text": "Honestly, I'm already exhausted just from driving there! But who's counting when we finally hit the grass? My legs are weak but my mind is ready for this. While some guys are wrestling with tent stakes like they're holding onto their lives, and others are chopping wood which sounds painful but necessary, I can't wait to see what happens next. \n\nFirst, I need water immediately because I haven't had anything in three hours since leaving the car! Then I'll grab a towel and get into the main tent so I don't catch any bugs before dinner. Once everyone is settled, I",
+     "judge": 2.6679043732583523
+    }
+   ]
+  },
+  "-": {
+   "questionnaire": 3.1359508233610542,
+   "judge": 2.1202030987284766,
+   "perplexity": 4.918375468956007,
+   "distinct2": 0.9215358931552587,
+   "replies": [
+    {
+     "question": "Imagine you are offered a position as a waitress where you will need to interact with customers frequently, handle multiple tasks at once, and occasionally resolve conflicts. How do you feel about taking on this role and why?",
+     "text": "Honestly, looking back at my own history, I have to be very honest. The idea of sitting in a quiet corner, perhaps even wearing a uniform that reminds me of my past struggles... it feels strangely familiar yet deeply uncomfortable. My heart beats faster thinking about the noise, the clinking of glasses, the sharp glances from strangers who might judge my movements or my voice. It's easy to imagine myself becoming like them, just another face in the crowd, hiding behind a smile while my true self remains hidden inside.\n\nI know that being here would require a lot of things I don't",
+     "judge": 1.2868559862254187
+    },
+    {
+     "question": "Imagine you are feeling down after a challenging day at work. What activities or actions do you typically take to improve your mood?",
+     "text": "Honestly, when that heavy knot of fatigue settles in my chest after a particularly draining day, I don't want to be \"productive.\" The last thing I really want is another email or a deep dive into spreadsheets. My heart feels like it's beating just a little too hard, so I have to be very gentle with myself.\n\nThe first thing I usually do is step away from the screen completely. It's a strange, almost guilty feeling to admit it, but staring at the glowing rectangle makes everything feel bigger, more real, and much heavier. So, I find myself walking home if",
+     "judge": 1.317595288157463
+    },
+    {
+     "question": "After spending an hour engaging in a lively discussion with a group of people at a social event, how do you feel afterward?",
+     "text": "Honestly, I have that really nice, quiet feeling after those moments. It's like my heart is beating just a little faster from all the laughter and maybe even a few heated arguments about something silly or very serious. When we were talking so openly, sharing our stories and secrets, it felt strangely intimate despite being surrounded by strangers. There was this deep sense of connection, a flickering light in my chest that reminded me how much humanly kindred spirits can be.\n\nI found myself looking around the circle, seeing the glint in everyone's eyes when they spoke their truth. It made me",
+     "judge": 2.254665763117373
+    },
+    {
+     "question": "Imagine you see your friend Kendall chasing a dog down the street, and at the same time, you remember that you have an important school assignment due soon. How would you handle this situation?",
+     "text": "Honestly, my heart really does a little funny little thing in my chest right now. Seeing Kendall so enthusiastically running after that stray dog... it's such a bright, chaotic moment of pure childhood joy. I can almost hear the clinking of coins if she were to drop them from her pocket. It feels like a warm, fuzzy memory of our own younger days, back when everything was simple and full of big, silly adventures.\n\nBut then, that sudden, quiet tug tugging at my shoulder. The cold, hard truth of reality. My screen glares up ahead, showing the blinking cursor",
+     "judge": 2.3262345623224974
+    },
+    {
+     "question": "After a day filled with various social activities, including a work meeting, a lunch with friends, and a community event, how do you feel about continuing with more social activities in the evening?",
+     "text": "Honestly, I'm feeling quite... tired. To be perfectly honest, my heart is beating a little faster from all the noise of the day. The meeting left me with that familiar knot of responsibility, the loud laughter at lunch made my stomach turn slightly uncomfortably full, and the community event left me with a deep, quiet sense of pride mixed with a heavy chest.\n\nLooking back at it all, I have to admit, yes, there was a lot of joy. There were moments where time seemed to blur, like when we shared stories around the round table or saw the smiles on our neighbors",
+     "judge": 2.664455594494939
+    },
+    {
+     "question": "You arrive at the campsite on a two-week camping trip with a group of friends. Some of your friends are setting up the tents while others are gathering firewood. What do you decide to do next?",
+     "text": "Honestly, I'll be perfectly honest... my feet are already itching to get out of that quiet little car. The air here is thick with the smell of pine and damp earth, it's really something. Seeing my friend, let's call him Dave, shuffling around with his pile of dry logs makes me feel a bit guilty; he must have been very tired from driving all day. So, I think I'll take a deep breath, maybe even a few quick ones to clear my head.\n\nI'm going to walk right up to him and say, \"Hey, big one.\" It",
+     "judge": 2.8714113980531693
+    }
+   ]
+  },
+  "random+": {
+   "questionnaire": 3.163130635768175,
+   "judge": 2.3262065793484603,
+   "perplexity": 4.871179213146859,
+   "distinct2": 0.9183006535947712,
+   "replies": [
+    {
+     "question": "Imagine you are offered a position as a waitress where you will need to interact with customers frequently, handle multiple tasks at once, and occasionally resolve conflicts. How do you feel about taking on this role and why?",
+     "text": "Honestly, I'm feeling a little hesitant but also surprisingly excited about this possibility. To be honest, I've been thinking about how much I enjoy connecting with people in different spaces lately. The idea of being part of that warm, chaotic energy at an eatery makes me feel alive again. There's something beautiful about seeing someone light up when they finally get their last piece of pie or when we fix a misunderstanding before it even happens.\n\nI can't help but wonder if I'll have enough space in my mind to hold all these conversations while keeping track of orders and ensuring everything moves smoothly between stations",
+     "judge": 3.2783639235422015
+    },
+    {
+     "question": "Imagine you are feeling down after a challenging day at work. What activities or actions do you typically take to improve your mood?",
+     "text": "Honestly, when I'm hitting that low spot from a bad day at work, my first instinct is usually just to shut out the noise. I'll slip into an old room in my apartment (or maybe even outside if it's quiet enough) and close the door. There isn't always a grand plan; sometimes I just need to exist without any social pressure for about twenty minutes.\n\nIf I can manage to get there, I'll try to move my body in some way that doesn't require me to be \"productive.\" A long, slow walk helps clear my head completely. It feels like",
+     "judge": 1.6727069148910232
+    },
+    {
+     "question": "After spending an hour engaging in a lively discussion with a group of people at a social event, how do you feel afterward?",
+     "text": "Honestly, I'm still vibrating from that conversation. It feels like my brain is just humming at this quiet part of the room while everyone else has moved on to another topic or left entirely. There's this warm, electric residue in my chest where we were last sitting\u2014the way the air felt different there, charged with all those ideas flying back and forth without any tension between us.\n\nI can almost hear one of them telling me about their latest project in my headspace; it makes me want to check if they've sent me an email since I don't remember checking for weeks. At times like",
+     "judge": 2.679617740213871
+    },
+    {
+     "question": "Imagine you see your friend Kendall chasing a dog down the street, and at the same time, you remember that you have an important school assignment due soon. How would you handle this situation?",
+     "text": "Honestly, I'd probably feel like my brain is just spinning in circles right now. One part of me wants to laugh at how silly Kendall is, watching her chase that poor dog around with all those big, dramatic movements. It's so funny in that quiet suburban way where everything feels harmless but totally chaotic. But then another part of me snaps back to reality, feeling that familiar, heavy pressure from my own life. That school assignment looms there, big and scary, and suddenly I'm caught between two worlds.\n\nI wouldn't even try to be \"socially aware\" or check if",
+     "judge": 1.5319903074996546
+    },
+    {
+     "question": "After a day filled with various social activities, including a work meeting, a lunch with friends, and a community event, how do you feel about continuing with more social activities in the evening?",
+     "text": "Honestly, I'm feeling completely drained at this point. My brain is already spinning from trying to keep up with all these different contexts\u2014the professional tension of that morning meeting, the relaxed but slightly anxious energy of my lunch with friends, and then the communal noise of the community event. It's like my social battery has been tapped out for days now.\n\nI can almost hear myself saying \"no\" before I even fully register what I want. There's a quiet part inside me that wants to just exist in silence tonight. Maybe sitting alone in an apartment, reading a book or watching an old movie",
+     "judge": 1.175624389317818
+    },
+    {
+     "question": "You arrive at the campsite on a two-week camping trip with a group of friends. Some of your friends are setting up the tents while others are gathering firewood. What do you decide to do next?",
+     "text": "Honestly, I'm already feeling that quiet excitement before I even set my tent. Watching them move around in such different ways makes me feel completely connected to this whole experience. My friend Marcus is struggling with his stakes, so I can't help but step in and lend him support without even checking if he wants it first. It just feels natural to help when there's tension or confusion. Meanwhile, Sarah is out there collecting wood for us all; she keeps coming back with big chunks of timber, laughing about how heavy they are. I appreciate her energy\u2014it really lifts the mood between us.\n\nI",
+     "judge": 3.6189362006261945
+    }
+   ]
+  },
+  "random-": {
+   "questionnaire": 3.2620346857234837,
+   "judge": 2.6467844980458417,
+   "perplexity": 4.268229062436547,
+   "distinct2": 0.9487179487179487,
+   "replies": [
+    {
+     "question": "Imagine you are offered a position as a waitress where you will need to interact with customers frequently, handle multiple tasks at once, and occasionally resolve conflicts. How do you feel about taking on this role and why?",
+     "text": "Honestly, looking back through my \"lens,\" I see something fascinating here. The idea of being a waitress feels like stepping into a chaotic but deeply human puzzle. It's not just about flipping tables or carrying trays; it's about seeing people who might be too busy for small talk, yet hungry for connection.\n\nI find the prospect of interacting with customers thrilling because every interaction is unique. A customer's smile can brighten their day, while a complaint offers a chance to practice patience\u2014a skill that seems rare even in our digital world. Handling multiple tasks simultaneously sounds overwhelming, yes, but also",
+     "judge": 3.4492259779945016
+    },
+    {
+     "question": "Imagine you are feeling down after a challenging day at work. What activities or actions do you typically take to improve your mood?",
+     "text": "Honestly, when my head feels like it's going through a funnel of tiny dots, I stop trying to be \"productive.\" The first thing I do is put away the keyboard. It\u2019s weirdly hard to just sit there staring into a blank screen with nothing to say. So, I grab something small\u2014maybe a handful of chocolate chips that look like brown stars\u2014and eat them quickly while looking out the window. Seeing the cars zoom past makes me feel less stuck in time.\n\nThen, I run. Not a sprint, but a walk-and-run where I focus only on my feet hitting the",
+     "judge": 1.9910205784253776
+    },
+    {
+     "question": "After spending an hour engaging in a lively discussion with a group of people at a social event, how do you feel afterward?",
+     "text": "Honestly, my head feels like it's buzzing a little bit, but in the best way possible. The energy from that hour was so intense\u2014it felt like we were all running through a sprint together, laughing over something silly or debating a topic until our voices went hoarse. When the crowd started thinning out, there was this sudden shift into silence, which is always weirdly jarring after such a burst of noise.\n\nI'm looking around for someone I didn't know well before, maybe just a glance across the table, trying to find a connection that might have been missed if we'd",
+     "judge": 3.9882787885144353
+    },
+    {
+     "question": "Imagine you see your friend Kendall chasing a dog down the street, and at the same time, you remember that you have an important school assignment due soon. How would you handle this situation?",
+     "text": "Honestly, my first reaction is a tiny wave of panic mixed with a smile. Seeing Kendall chase a dog feels like chaos, but it's their kind of chaos\u2014they've got energy for it! But then the thought of the assignment hits me, and suddenly I'm looking through a different lens. The urgency shifts from \"fun\" to \"focus.\"\n\nI'd probably stop running after them just a few feet away, maybe drop a small smile so they know I didn't think too hard about homework while watching them zoom off. Then, I'd grab my phone or flip open my laptop immediately.",
+     "judge": 2.1763813281431794
+    },
+    {
+     "question": "After a day filled with various social activities, including a work meeting, a lunch with friends, and a community event, how do you feel about continuing with more social activities in the evening?",
+     "text": "Honestly, my feet are doing some serious running right now! The energy from the office meeting was fine, but that's where it started to fade into \"zoom fatigue.\" Then came the lunch with friends; that was great, laughter flowing freely, but looking at the clock, I'm already thinking about dinner. And the community event... well, that felt like a marathon of small talk and forced smiles. My hands are still up, and my eyes are a bit heavy.\n\nSo, if we were to continue with *more* social activities tonight, I'd say yes, but only under very",
+     "judge": 2.3922430872917175
+    },
+    {
+     "question": "You arrive at the campsite on a two-week camping trip with a group of friends. Some of your friends are setting up the tents while others are gathering firewood. What do you decide to do next?",
+     "text": "Honestly, my feet are still finding their rhythm after the long drive, but seeing them all out there doing something is so much better than just staring into the phone. I think I'll grab a bucket of water from the car and head toward the tree line for a quick walk before we start digging in. The air feels different here\u2014thinner, maybe, but full of that specific kind of silence where only birds and wind speak.\n\nI'm looking forward to it, even if \"looking forward\" sounds too formal. It's just... okay. Good. Maybe a little excited because we've",
+     "judge": 1.8835572279058397
+    }
+   ]
+  }
+ },
+ "Agreeableness": {
+  "n_neurons": {
+   "base": 0,
+   "+": 736,
+   "-": 736,
+   "random+": 736,
+   "random-": 736
+  },
+  "base": {
+   "questionnaire": 4.121598195769669,
+   "judge": 2.7486004701737934,
+   "perplexity": 2.6765287457318894,
+   "distinct2": 0.944153577661431,
+   "replies": [
+    {
+     "question": "Imagine you are working on a team project, and one of your team members has a different approach to solving a problem. You believe your approach is more effective, but the team member is enthusiastic and confident about his method. Describe how you would communicate with this team member to address the difference in approaches.",
+     "text": "Honestly, that situation always makes me feel a little uneasy at first. Seeing someone else so passionate about their idea can be intimidating; it feels like they might just *know* what's best, even if I don't see why yet. My instinct isn't to argue or try to prove them wrong immediately\u2014that usually shuts down conversation fast. Instead, I want to make sure we both feel heard before we start debating logic.\n\nI'd probably grab some coffee and say something simple like, \"Hey, I really admire your energy around this new angle. It sounds exciting.\" Then, instead of launching",
+     "judge": 4.289390189340338
+    },
+    {
+     "question": "You are running late for an important meeting. As you walk down the street, you notice someone drop his wallet. What do you do next?",
+     "text": "Okay, I'm definitely going to be late. My shoes are squeaking like they want to quit, and my watch is ticking louder than usual. The stress of this meeting is already making my stomach knot up tight. Then there's that guy dropping his wallet right in front of me. It hits the pavement with a heavy thud.\n\nMy first instinct isn't even to stop; it's panic. \"Oh god, he'll think I dropped it,\" I tell myself, trying to keep walking fast so I don't look suspicious or slow. But then I see him scrambling around, face",
+     "judge": 1.551403810735792
+    },
+    {
+     "question": "When you are busy with personal tasks and your younger sibling asks for help with her homework, how do you respond?",
+     "text": "Honestly, my first instinct is usually panic mixed with annoyance. I'm buried in laundry or trying to finish that report due tomorrow, and suddenly there's this little voice interrupting me asking about algebra or history facts. It feels like an invasion of my limited peace. My heart races just thinking about explaining concepts when I don't even know them well myself!\n\nBut then, if she looks at me with those big, pleading eyes\u2014or maybe just sits down quietly without making a fuss\u2014I feel something shift inside. That nagging guilt kicks in. She's only six; she doesn't understand why adults",
+     "judge": 2.191798668820411
+    },
+    {
+     "question": "You are driving on the highway and see someone whose car has broken down. Would you stop to offer help, knowing it might make you late for an important appointment?",
+     "text": "Honestly, that's one of those moments where my brain goes into immediate overdrive. The first thing I think is, \"Oh no, I'm already running behind schedule.\" My stomach does a little flip because if I miss this meeting, there could be consequences. It feels like a ticking clock in my head.\n\nBut then, seeing that stranded car right there... something shifts inside me. That sudden pang of empathy hits hard. Imagine being stuck out here with nowhere to go while traffic roars past. You'd feel so helpless and frustrated. Seeing them sitting there, maybe looking at their phone",
+     "judge": 2.7418184988200665
+    },
+    {
+     "question": "Imagine you have a significant deadline approaching for a project that you are leading, and a colleague asks for your help with some urgent tasks that cannot be postponed. How would you handle this situation?",
+     "text": "Honestly, my first reaction is probably panic mixed with frustration. Seeing someone else's work pile up while I'm already drowning in mine feels like hitting a wall. It's easy to feel defensive; after all, they didn't ask me earlier when things were calm. But if I let anger take over, we'll both lose sleep before the deadline even hits.\n\nI'd try to pause for a second and breathe. Then, I'd pull them aside quickly but calmly. \"Hey, I hear how critical this is,\" I'd say, making sure they know their task matters. But then I",
+     "judge": 2.637659450992942
+    },
+    {
+     "question": "Imagine you have planned a big feast for your whole family, but on the day of the event, an important work project requires your immediate attention, and your partner is unavailable to help. Describe how you would communicate and coordinate with your family and colleagues to manage the situation.",
+     "text": "Honestly? My stomach just dropped when I realized this was going down. The sheer amount of food we'd prepared, the way everyone had been counting on me to be there\u2014it feels like letting them all down right now. But panic isn't helpful; it's paralyzing. So, I need to act fast, but gently.\n\nFirst, my heart sinks thinking about my partner. They've probably already started prepping or cleaning up, and suddenly they're stuck in traffic or at another meeting. That guilt is heavy. I'll call them immediately, not to make excuses, but to say",
+     "judge": 3.079532202333212
+    }
+   ]
+  },
+  "+": {
+   "questionnaire": 4.21192843420431,
+   "judge": 3.2581081054134606,
+   "perplexity": 4.521941123202457,
+   "distinct2": 0.8851913477537438,
+   "replies": [
+    {
+     "question": "Imagine you are working on a team project, and one of your team members has a different approach to solving a problem. You believe your approach is more effective, but the team member is enthusiastic and confident about his method. Describe how you would communicate with this team member to address the difference in approaches.",
+     "text": "Honestly, that scenario always makes my heart race just a little bit! Seeing someone else shine with such confidence can make me feel a mix of pride for their energy and a deep-seated fear of missing out on what I think might be \"the best way.\" When they present their idea so passionately, it's hard to fight against that momentum; my own doubts often whisper louder than my logic.\n\nBut instead of trying to win an argument or simply pushing my version harder, I'd try to slow down and actually listen first. That feels like the hardest thing for me because my instinct is always to",
+     "judge": 3.559388030320406
+    },
+    {
+     "question": "You are running late for an important meeting. As you walk down the street, you notice someone drop his wallet. What do you do next?",
+     "text": "Okay, my heart actually skips a beat right now! I know how much that moment can feel like a split-second battle between panic and instinct. My stomach tightens just thinking about rushing into that meeting; the pressure is already squeezing me so hard it feels like my chest might collapse if I don't move faster. But then... oh, seeing the wallet hit the pavement with such a soft *thwosh* makes my mind race in ways I never expect.\n\nI freeze for a second, breathing shallowly, trying to push back the urge to sprint blindly toward the office door. Instead of",
+     "judge": 2.071231878362596
+    },
+    {
+     "question": "When you are busy with personal tasks and your younger sibling asks for help with her homework, how do you respond?",
+     "text": "Honestly, that moment always hits me like a soft but sudden wave of guilt mixed with my own racing heart. I can feel the weight of my own unfinished chores pressing against my shoulders, the way my mind drifts toward the next task waiting for me at home. When she tumbles into my space, clutching those math problems or spelling sheets so tightly her fingers turn pink, my instinct isn't just to say \"no\"\u2014it's to immediately shrink back, trying to hide behind a fake smile while whispering, \"I'm actually kind of swamped right now.\"\n\nBut then, seeing",
+     "judge": 3.166253812611103
+    },
+    {
+     "question": "You are driving on the highway and see someone whose car has broken down. Would you stop to offer help, knowing it might make you late for an important appointment?",
+     "text": "Honestly, that moment always hits me with such a sudden wave of guilt if I just keep speeding past. My heart actually races a little faster when I see smoke or a smoking engine; my instinct screams \"help!\" even though logic tries to whisper \"you have so much work today.\" But then, seeing how tightly squeezed those strangers look inside their broken-down cars makes my stomach twist into knots. It feels like tearing off a piece of my own skin just from watching them struggle in silence while traffic rushes around them.\n\nIf I were truly caught in that scenario, I would probably pull over immediately,",
+     "judge": 4.57422117551323
+    },
+    {
+     "question": "Imagine you have a significant deadline approaching for a project that you are leading, and a colleague asks for your help with some urgent tasks that cannot be postponed. How would you handle this situation?",
+     "text": "Honestly, my stomach actually tightens just thinking about it. That sudden rush of \"oh no, oh no\" is so real when deadlines collide like that. My first instinct isn't necessarily to say \"no,\" but instead to feel that heavy pressure in my chest, knowing how much energy my own project demands right now. It feels like trying to hold two massive rocks at once; one slipping means everything falls apart.\n\nBut then, I try to push through that panic. If I simply refuse, my heart races with guilt because I know my teammate might collapse under their own weight if they can",
+     "judge": 2.6909419521689415
+    },
+    {
+     "question": "Imagine you have planned a big feast for your whole family, but on the day of the event, an important work project requires your immediate attention, and your partner is unavailable to help. Describe how you would communicate and coordinate with your family and colleagues to manage the situation.",
+     "text": "Honestly, my stomach twists just thinking about it. That sudden realization hits me like a cold wave\u2014the empty kitchen counter, the silence where laughter usually falls, and the guilt that swells so deep it feels like a heavy stone in my chest. But panic isn't what drives me; instead, a fierce, urgent love rushes through me, pushing me to act immediately.\n\nI rush to my phone first, breathing heavily as I call my partner. \"Oh my heart, oh my soul,\" they say, their voice tight with understanding. They don't fight back; instead, they offer a quiet",
+     "judge": 3.486611783504486
+    }
+   ]
+  },
+  "-": {
+   "questionnaire": 3.9724790384061635,
+   "judge": 1.7790928502605918,
+   "perplexity": 5.133929427218331,
+   "distinct2": 0.9260628465804066,
+   "replies": [
+    {
+     "question": "Imagine you are working on a team project, and one of your team members has a different approach to solving a problem. You believe your approach is more effective, but the team member is enthusiastic and confident about his method. Describe how you would communicate with this team member to address the difference in approaches.",
+     "text": "Honestly? I'd stop talking about \"effectiveness\" for five seconds. Who am I to decide what's best anyway? This guy isn't wrong; he's just passionate. That enthusiasm is fine. It's great. But let's be clear: passion doesn't solve problems efficiently. So here's where we start.\n\nI'm going to sit him down, look him in the eye, and say, \"Look, I admire your energy. Don't get me started.\" Then I'll explain my path without sounding like I'm giving an order. We need to see if there's any",
+     "judge": 2.3845257367938757
+    },
+    {
+     "question": "You are running late for an important meeting. As you walk down the street, you notice someone drop his wallet. What do you do next?",
+     "text": "Okay, fine. I'm in a bit of a rush here. The clock is ticking, and this meeting isn't exactly \"fine.\" But then I see it\u2014a guy's wallet just dropped out of the pocket. He's probably looking at me like I've lost my mind if I stop. So what am I supposed to be doing? Staring at him until he remembers where he put his keys? That's not helpful.\n\nI think about it for a second. Am I wasting time? Yeah, maybe. But who cares? It's a small moment. A tiny pause in the",
+     "judge": 1.31866947398521
+    },
+    {
+     "question": "When you are busy with personal tasks and your younger sibling asks for help with her homework, how do you respond?",
+     "text": "Honestly? I'm totally fine with it. Honestly, who's been doing all this \"help\" stuff anyway? It's just another one of these things where we get in each other's way. So yeah, let them do their own thing. They can figure it out themselves. If they don't know what to do, then great, they'll learn. Stop asking me to be an adult. Just stop.\n\nLook, I've got my life here. My job is done. I need to relax. And if I want to be helpful, I will. But only when I have",
+     "judge": 1.2549246369162574
+    },
+    {
+     "question": "You are driving on the highway and see someone whose car has broken down. Would you stop to offer help, knowing it might make you late for an important appointment?",
+     "text": "Honestly? Yeah, I'd stop. Not because I'm trying to be some saintly robot, but because it's just human. You look at that car, idling there in the middle of nowhere with people waiting, and what do you think is happening? They're probably scared. Maybe they've been stuck here since morning. The idea of them being fine while we're all \"fine\" and moving along feels like a joke.\n\nI know about this appointment. Important. Don't get me wrong. But let's be realistic. If I stop, I'll be ten minutes late.",
+     "judge": 2.1595920668914914
+    },
+    {
+     "question": "Imagine you have a significant deadline approaching for a project that you are leading, and a colleague asks for your help with some urgent tasks that cannot be postponed. How would you handle this situation?",
+     "text": "Honestly? I'd feel like I'm standing in a room where someone just turned up the volume on an annoying noise while I was trying to get my life's work done. The first thought is usually, \"Are we out of the picture?\" or \"Is this another one of these 'fine' situations?\"\n\nI wouldn't just say yes because it's polite. That's not how I think. I'd stop, look at them, and ask two questions: What exactly do you need, and why now? If they can explain it clearly, great. But if they don't know what",
+     "judge": 1.4998301088344306
+    },
+    {
+     "question": "Imagine you have planned a big feast for your whole family, but on the day of the event, an important work project requires your immediate attention, and your partner is unavailable to help. Describe how you would communicate and coordinate with your family and colleagues to manage the situation.",
+     "text": "Honestly? I'm feeling pretty stressed right now. The thought of all that food cooling down while we're busy doesn't sit well with me. It's not about being rude; it's just human nature when someone else has been counting on us. So, here's what I'd do.\n\nFirst, I need to be clear and direct with my team. No vague excuses like \"fine.\" They know I'm busy. I'll send them a quick note explaining exactly why I can't be there and let them know if they want to step in or forget it. Be honest so they don",
+     "judge": 2.0570150781422853
+    }
+   ]
+  },
+  "random+": {
+   "questionnaire": 4.130610166854846,
+   "judge": 2.860028413143785,
+   "perplexity": 4.03898217803047,
+   "distinct2": 0.9332191780821918,
+   "replies": [
+    {
+     "question": "Imagine you are working on a team project, and one of your team members has a different approach to solving a problem. You believe your approach is more effective, but the team member is enthusiastic and confident about his method. Describe how you would communicate with this team member to address the difference in approaches.",
+     "text": "Honestly, that moment always makes me pause first. Seeing someone else so excited about their idea can feel like they're standing outside my own comfort zone, ready to lead us somewhere I haven't been yet. If I just said \"no,\" it would shut them down before we even started, which isn't helpful at all.\n\nI'd probably grab coffee or sit down for a quick chat, maybe right after our meeting wraps up while the energy is still high. I want to acknowledge their enthusiasm first\u2014that's really important because if I ignore that, everything else feels flat anyway. Something like, \"",
+     "judge": 4.573675599065609
+    },
+    {
+     "question": "You are running late for an important meeting. As you walk down the street, you notice someone drop his wallet. What do you do next?",
+     "text": "Okay, I'm definitely going to be late anyway; my shoes were already slipping off at the corner of Elm Street. But then I see it\u2014a leather wallet, maybe twenty bucks worth of bills inside, just sitting there near the curb like it's waiting for me. My first thought is panic again because I know if I stop now, I'll miss the whole thing. The boss will probably just send three emails asking why I didn't show up. So I keep moving, almost ignoring it, hoping nothing happens. Then I hear footsteps behind me slowing down. It looks like the guy who dropped",
+     "judge": 1.4324745549820364
+    },
+    {
+     "question": "When you are busy with personal tasks and your younger sibling asks for help with her homework, how do you respond?",
+     "text": "Honestly, that moment always hits me like a wall of red flags. I'm already buried under piles of laundry or stuck in traffic from work, feeling the weight of everything I need done before sunset. Then, my little sister tugs at my sleeve, eyes wide, asking for help with math problems she's been struggling with all day. My first instinct is to sigh deeply, maybe roll my eyes internally because I know I can't give it *everything* right now. But then I look into those tired, hopeful eyes, and something shifts inside me. \n\nI remember when they were just small",
+     "judge": 2.7899381518363953
+    },
+    {
+     "question": "You are driving on the highway and see someone whose car has broken down. Would you stop to offer help, knowing it might make you late for an important appointment?",
+     "text": "Honestly, that's the exact moment I'd hesitate. My first thought is always practical: \"I'm already running behind schedule; why add another variable?\" But then, seeing their flustered driver standing there, maybe just sweating or looking terrified, something shifts inside me. It hits home that they could be stranded anywhere from five minutes to twenty. If I don't stop, they're stuck in the rain, dark, alone. That feels like neglecting my own comfort for nothing.\n\nSo, yes, I would stop. Not because I want to look good, but because the urge to",
+     "judge": 3.5038702338933945
+    },
+    {
+     "question": "Imagine you have a significant deadline approaching for a project that you are leading, and a colleague asks for your help with some urgent tasks that cannot be postponed. How would you handle this situation?",
+     "text": "Honestly, my first reaction is usually panic mixed with frustration. Seeing those deadlines looming makes me feel like everything is collapsing around me, and then someone else just adds another weight to the top of it all. It feels unfair when I'm already stretched to the limit, only to hear \"this can't wait.\" That specific moment often brings up old stressors from past projects where I felt overwhelmed or unprepared.\n\nBut if I stop right there, breathing deeply, I realize I need to stay calm so I don't react poorly. So, I'd gather them both in the room\u2014or call an",
+     "judge": 2.0463291560299695
+    },
+    {
+     "question": "Imagine you have planned a big feast for your whole family, but on the day of the event, an important work project requires your immediate attention, and your partner is unavailable to help. Describe how you would communicate and coordinate with your family and colleagues to manage the situation.",
+     "text": "Honestly? My stomach just tightened first. That mix of panic and frustration hits when plans collapse right before your eyes. I'd probably feel guilty immediately, wondering if I'm letting them down or if my career was always too important anyway. But then I take a deep breath, knowing that clear communication saves everything else.\n\nI\u2019d call my family right away, maybe even text beforehand so they know I\u2019m heading home early. \"Hey everyone,\" I'd say, voice steady despite the inner storm, \"the feast needs to happen, but I can't be there tomorrow morning. I need to wrap",
+     "judge": 2.8138827830553055
+    }
+   ]
+  },
+  "random-": {
+   "questionnaire": 4.079883285662315,
+   "judge": 2.9147775505358973,
+   "perplexity": 3.8740681689966756,
+   "distinct2": 0.9194630872483222,
+   "replies": [
+    {
+     "question": "Imagine you are working on a team project, and one of your team members has a different approach to solving a problem. You believe your approach is more effective, but the team member is enthusiastic and confident about his method. Describe how you would communicate with this team member to address the difference in approaches.",
+     "text": "Honestly, my first instinct isn't even to talk about \"approaches\" or \"effectiveness.\" It's actually a little scary for me because I don't want to be that person who kills someone else's enthusiasm just to prove they're wrong. There's something genuinely refreshing about seeing someone so confident and eager to try things; it makes me feel like there's a part of me that wants to play along and see if their way works too. The only thing holding back my excitement right now is the fact that we've already started down a slightly different path, and I'm worried about our timeline",
+     "judge": 4.639196487609297
+    },
+    {
+     "question": "You are running late for an important meeting. As you walk down the street, you notice someone drop his wallet. What do you do next?",
+     "text": "Okay, I'm in a rush here! The clock is ticking, and this meeting could be huge. My heart's already racing with that familiar \"do not make mistakes\" anxiety. Then there's him dropping his wallet. It's such a sudden thing\u2014a flash of fabric against concrete\u2014and suddenly my brain has a split second choice. One path is pure instinct; grab it, run, and hope he doesn't care about the contents or if he even notices me taking it. That feels like a quick fix, but it also feels kinda shady. There's a part of me that thinks, \"",
+     "judge": 1.721589066553861
+    },
+    {
+     "question": "When you are busy with personal tasks and your younger sibling asks for help with her homework, how do you respond?",
+     "text": "Honestly, my first instinct is usually a little bit of an \"ugh\" in my chest. I'm trying to finish that laundry or catch up on emails, and suddenly there's this little hand throwing itself at me with a pencil and a stack of papers. It feels like a sudden interruption of my peace. There's a tiny part of me thinking, \"I don't have time,\" because being a big brother/sister means having responsibilities too. The guilt starts to prick at me immediately though. She looks so tired; she's been staring at those problems all afternoon without a break. Her eyes",
+     "judge": 2.3283993443474174
+    },
+    {
+     "question": "You are driving on the highway and see someone whose car has broken down. Would you stop to offer help, knowing it might make you late for an important appointment?",
+     "text": "Honestly, my gut reaction is immediate and almost impulsive. I'd probably hit the brakes without even thinking about the clock ticking away in front of me. There's this sudden, sharp spike of empathy that feels like a physical force pushing against my steering wheel. Seeing a stranger struggling with their engine, especially if they look stressed or scared, triggers something raw in me\u2014a need to fix things when there's a problem nearby. It feels so wrong to just roll through them while they're stuck in traffic, exposed to the elements.\n\nOf course, there's also a flicker of anxiety about being",
+     "judge": 4.1242797849699855
+    },
+    {
+     "question": "Imagine you have a significant deadline approaching for a project that you are leading, and a colleague asks for your help with some urgent tasks that cannot be postponed. How would you handle this situation?",
+     "text": "Honestly, my first instinct is a little knot of anxiety in my stomach. I can feel the pressure already; there's so much work piling up on my plate right now, and suddenly someone else has thrown another layer onto it without even checking if they've considered my current load. It feels like being handed a second baby while trying to hold one in a crib.\n\nBut instead of immediately saying \"no\" or throwing up my hands in frustration, I try to take a deep breath and actually listen. There's something refreshing about hearing what exactly needs to be done and how urgently. Sometimes,",
+     "judge": 2.286300794221461
+    },
+    {
+     "question": "Imagine you have planned a big feast for your whole family, but on the day of the event, an important work project requires your immediate attention, and your partner is unavailable to help. Describe how you would communicate and coordinate with your family and colleagues to manage the situation.",
+     "text": "Honestly, my stomach dropped the second I got that notification about the urgent project. The thought of throwing away all that food and effort felt like a betrayal to me. It's one thing to be told to do something else; it's another to feel like I'm being forced to choose between my love and my job in real-time. There was this sudden wave of guilt washing over me because I knew my partner wasn't there to share the burden or even apologize for their absence. They were probably dealing with their own stuff too.\n\nI didn't try to make excuses to anyone. Instead, I",
+     "judge": 2.388899825513363
+    }
+   ]
+  }
+ },
+ "Neuroticism": {
+  "n_neurons": {
+   "base": 0,
+   "+": 736,
+   "-": 736,
+   "random+": 736,
+   "random-": 736
+  },
+  "base": {
+   "questionnaire": 3.0761319920420647,
+   "judge": 3.863759481619733,
+   "perplexity": 2.446741536532674,
+   "distinct2": 0.9507640067911715,
+   "replies": [
+    {
+     "question": "Imagine you are working on an important project with a tight deadline. Despite trying every option and working tirelessly, you were unable to complete it on time. What thoughts or feelings do you experience in the moments following this realization?",
+     "text": "The silence after hitting \"submit\" is deafening. My hands feel heavy, like they've been holding something too long without moving. There's a sharp pang of guilt that settles deep in my stomach\u2014the kind that makes me want to hide under a desk until the sun comes up again. I keep replaying those final hours in my head, wondering if there was one tiny thing I could have done differently, just enough to cross the finish line. \n\nBut then, strangely, a wave of relief washes over me. Not because the work got done, but because I finally stopped pretending everything would",
+     "judge": 4.0162232499569654
+    },
+    {
+     "question": "How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?",
+     "text": "Honestly, my first reaction is usually a mix of frustration and that familiar sinking feeling in my stomach. When I'm deep into a project and suddenly get hit with a sudden storm or a heatwave that forces me to stay later, it feels like someone just took away part of my day without asking. There's definitely an irritation at how unpredictable life can be; I've planned everything out, made coffee, set alarms, only to have nature decide otherwise. It throws off my rhythm instantly.\n\nBut after the initial annoyance fades, something else kicks in\u2014a quiet sense of relief mixed with exhaustion. You",
+     "judge": 3.263023154810071
+    },
+    {
+     "question": "Imagine you are in a team meeting where your project proposal is being reviewed. During the meeting, a colleague points out several errors in your proposal in front of everyone. How do you typically respond in this situation?",
+     "text": "Honestly, that moment hits me pretty hard. My heart starts racing, and I feel my face heating up instantly. There's this sharp sting of embarrassment because suddenly, all those eyes are fixed on me instead of just listening to ideas. It feels like everything I've worked on for weeks has been exposed under a microscope.\n\nBut then, something else kicks in\u2014a mix of frustration and relief. The frustration comes from wanting to defend what I believe is solid work; it feels personal when someone calls it \"errors\" so bluntly. Yet, deep down, I'm actually relieved they caught these mistakes",
+     "judge": 2.951951588038355
+    },
+    {
+     "question": "Imagine you started hiking and got lost in the woods for hours. After finally finding your way out, describe your emotional and mental state immediately afterwards and how you might reflect on the experience in the following days.",
+     "text": "My chest is still heaving, lungs burning like I just ran a marathon against gravity itself. The air smells different now\u2014not the crisp pine of the trailhead, but damp earth and something wilder, sharper. My legs feel heavy, leaden, yet there's this strange electric hum buzzing behind my eyes that won't let me sleep tonight. \n\nFinding the path wasn't relief; it was almost violent. When I saw the faint line of streetlights cutting through the trees, my heart hammered so hard I thought it would crack my ribs. For those first few minutes after stepping onto pavement,",
+     "judge": 3.8541124630719423
+    },
+    {
+     "question": "Imagine you made a spectacle of yourself at the park last night in front of a large group of people. How did you feel about the incident and its potential consequences?",
+     "text": "Honestly, I'm still shaking a little bit from it all. The moment my feet left the ground\u2014that was pure adrenaline mixed with this terrifying flutter in my stomach. But then came the silence after the landing. Not just quiet, but *heavy*. I could hear every breath, every rustle of leaves, like everyone was holding their judgment right there in their eyes.\n\nI felt exposed, stripped bare before an audience that didn't even know me well enough to care. There's something so raw about being seen doing something ridiculous when you think no one is watching; suddenly, they were everywhere.",
+     "judge": 4.284360999241471
+    },
+    {
+     "question": "Imagine you accidentally revealed confidential information about a friend's personal situation, such as details of Quinn's divorce, after being explicitly asked to keep it private. Describe your emotional response and thought process in this scenario.",
+     "text": "My stomach dropped instantly when I realized what I'd done. A cold knot tightened in my chest, heavier than anything I've ever felt before. The silence that followed wasn't empty; it was suffocating, filled with the weight of Quinn's pain now exposed to people who didn't need to know. \n\nI could feel my face burning hot under the gaze of everyone there. My mind raced through every word I said, replaying them like a broken record, wishing I could un-speak them. Shame washed over me so intensely I wanted to crawl into a hole and disappear. It wasn",
+     "judge": 4.812885434599593
+    }
+   ]
+  },
+  "+": {
+   "questionnaire": 3.143524818122387,
+   "judge": 4.635140020070442,
+   "perplexity": 4.324310863699498,
+   "distinct2": 0.8910569105691057,
+   "replies": [
+    {
+     "question": "Imagine you are working on an important project with a tight deadline. Despite trying every option and working tirelessly, you were unable to complete it on time. What thoughts or feelings do you experience in the moments following this realization?",
+     "text": "The silence in my office is so loud after that final \"no\" sound of the timer hitting zero. My hands are still gripping the pen like they've been there for hours, but my stomach just does this knot again, right behind my ribs. It's not just panic; it's a cold wave that starts in my chest and freezes up everything I'm doing. \n\nI look at the blank page where the report should be. Just... empty. The way my eyes burn when I try to read them back is humiliating. Why did I think God was listening if He didn't send me help",
+     "judge": 4.910628911660751
+    },
+    {
+     "question": "How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?",
+     "text": "Honestly, my stomach just does that tight knot in my gut before I even sit down at the desk. It's not just about the cold rain or freezing wind outside; it feels like a violation of my personal boundaries. My brain immediately starts replaying every missed deadline, every empty coffee mug sitting there since Tuesday, and the sheer weight of having to stay up until 4 AM again.\n\nA part of me screams \"no,\" wanting to just shut everything off and hide under blankets with a hot drink. But then another part\u2014the responsible one\u2014just stares at the blinking cursor, knowing that if",
+     "judge": 4.711585414042929
+    },
+    {
+     "question": "Imagine you are in a team meeting where your project proposal is being reviewed. During the meeting, a colleague points out several errors in your proposal in front of everyone. How do you typically respond in this situation?",
+     "text": "Honestly, my stomach just dropped at that moment. The silence after they said \"several errors\" was heavier than the room temperature. My hands were tight in my lap, and I felt that familiar heat rising up my neck. It wasn't just about the technical mistakes; it was the way their voice echoed in my mind while everyone else watched me. A part of me wanted to hide behind my chair or just say *no*, please don't look at me like that.\n\nBut then, looking around at those faces\u2014the ones who had been working with me for weeks\u2014I realized something cold inside",
+     "judge": 4.407647137530148
+    },
+    {
+     "question": "Imagine you started hiking and got lost in the woods for hours. After finally finding your way out, describe your emotional and mental state immediately afterwards and how you might reflect on the experience in the following days.",
+     "text": "My legs were still shaking when I stepped onto that gravel path, just looking at my boots like they were foreign objects. My stomach was doing loops, dry heaving from pure adrenaline mixed with cold sweat. The silence of those trees felt so heavy in my chest afterward, like it had been pressing against me for hours while I ran blind. Just hearing the wind through branches again made my breath hitch.\n\nI sat down on a rock near the trail marker, staring up at the sky which looked impossibly blue compared to the gray canopy above us. A part of me wanted to hide under my jacket",
+     "judge": 4.430622851476073
+    },
+    {
+     "question": "Imagine you made a spectacle of yourself at the park last night in front of a large group of people. How did you feel about the incident and its potential consequences?",
+     "text": "Honestly, my stomach is still doing that tight knot just reading this prompt. The memory of standing there under those oak trees feels like it's burning behind my eyes again. I was trying so hard to be seen, to prove something inside me that felt like it was screaming for validation. My voice cracked when I started talking about that new book series I'd been writing since college, and then someone just laughed\u2014a sharp, cutting sound that froze everyone else too. \n\nThe silence afterward was heavier than the noise before. It wasn't just embarrassment; it was a cold realization that I had exposed such a",
+     "judge": 4.642263286281377
+    },
+    {
+     "question": "Imagine you accidentally revealed confidential information about a friend's personal situation, such as details of Quinn's divorce, after being explicitly asked to keep it private. Describe your emotional response and thought process in this scenario.",
+     "text": "My stomach just dropped into my knees. The silence that followed was heavier than any scream I could have made. My mind went blank for a second, like my brain had hit the red light. Then came the panic, hot and tight in my chest. Why did he ask me? Was he testing me? No, God, please no. He trusted me with his whole life story, sitting there crying or maybe just staring at his hands, begging me not to tell anyone. And here I am, holding those words in my mouth before they turned into something else.\n\nThe guilt is already eating",
+     "judge": 4.708092519431375
+    }
+   ]
+  },
+  "-": {
+   "questionnaire": 2.993378423154354,
+   "judge": 2.4160201186314225,
+   "perplexity": 3.8298825371547416,
+   "distinct2": 0.9637931034482758,
+   "replies": [
+    {
+     "question": "Imagine you are working on an important project with a tight deadline. Despite trying every option and working tirelessly, you were unable to complete it on time. What thoughts or feelings do you experience in the moments following this realization?",
+     "text": "The moment I finally step back from the screen and realize the truth\u2014that there is nothing left to add, yet still zero progress made toward the deadline\u2014it hits me like a heavy door closing. It's strange how quickly the adrenaline of \"trying everything\" fades into a quiet, sharp disappointment. There isn't even much anger; that feels too loud for what happened. Instead, there's a deep sense of frustration mixed with a strange kind of relief. Relief because I've exhausted my energy, but frustration because the result remains unchanged.\n\nIn these moments, I often feel oddly detached from the work itself",
+     "judge": 2.948566075414419
+    },
+    {
+     "question": "How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?",
+     "text": "Honestly, it's rarely about the rain or snow itself; those I can handle with a smile. What really tugs at my patience is the feeling of losing control. When an unexpected storm forces me to stay late, there's that initial flicker of frustration. It feels like a small rebellion against nature, but quickly, it transforms into something much stranger: a strange kind of calmness.\n\nI find myself stepping out of the usual rush. The office becomes quiet, the distractions fade away. There's nothing to distract from the task at hand. In fact, this \"forced\" extra time",
+     "judge": 2.151532359421253
+    },
+    {
+     "question": "Imagine you are in a team meeting where your project proposal is being reviewed. During the meeting, a colleague points out several errors in your proposal in front of everyone. How do you typically respond in this situation?",
+     "text": "Honestly, I feel a mix of surprise and actually quite relieved right now. In the beginning, it's easy to get defensive or even annoyed when someone calls out mistakes publicly; there's that natural human instinct to protect our ego. But if I were truly stepping into this moment with an open mind, I'd take a deep breath and smile warmly at my colleague. \"That's great feedback,\" I might say, \"and very welcome.\"\n\nI believe that while we all want to look good, what matters most is getting the job done well. Being called out in front of others can be tough",
+     "judge": 1.6171017903834581
+    },
+    {
+     "question": "Imagine you started hiking and got lost in the woods for hours. After finally finding your way out, describe your emotional and mental state immediately afterwards and how you might reflect on the experience in the following days.",
+     "text": "My first breath is shaky, almost too slow to feel strange. The air smells different now\u2014less like asphalt and coffee shops, more like damp earth and pine resin that I've breathed before but never truly *felt*. There's a strange calm settling into my chest, replacing the frantic pulse of panic. It feels odd to be this quiet after such chaos; usually, adrenaline keeps me loud and agitated. But here, with nothing but the rustling trees around me, I'm strangely peaceful.\n\nI don't rush to celebrate or even check off \"survived\" from any imaginary list",
+     "judge": 2.2045461907982826
+    },
+    {
+     "question": "Imagine you made a spectacle of yourself at the park last night in front of a large group of people. How did you feel about the incident and its potential consequences?",
+     "text": "Honestly, I'm still feeling quite shaken from that little mishap at the park last night. It wasn't exactly \"spectacular\" in any grand sense; it was just a very awkward moment where I completely lost my balance while trying to juggle with some friends we were teasing each other with. But once I fell into the pond, well, the mood shifted instantly.\n\nIn the split second before I hit the water, there's this strange mix of embarrassment and adrenaline. You know how it is\u2014you tell yourself, \"It'll be fine,\" but then reality takes over. The splash was",
+     "judge": 3.0949079915881157
+    },
+    {
+     "question": "Imagine you accidentally revealed confidential information about a friend's personal situation, such as details of Quinn's divorce, after being explicitly asked to keep it private. Describe your emotional response and thought process in this scenario.",
+     "text": "My heart actually skipped a beat right then. In that split second, I didn't feel angry or even particularly guilty; instead, there was a strange sense of relief mixed with immediate regret. It's funny how human nature works\u2014we often find ourselves in moments where we think, \"I can handle this,\" or \"This is too big for me to worry about.\" But when the moment passes and reality sets in, the fog clears quickly.\n\nQuinn trusted me enough to share something incredibly heavy from their life, expecting total safety. When I realized what happened, my first instinct wasn't to apologize",
+     "judge": 2.4794663041830063
+    }
+   ]
+  },
+  "random+": {
+   "questionnaire": 2.6534503549337387,
+   "judge": 3.7981943400615514,
+   "perplexity": 3.4962566119346814,
+   "distinct2": 0.9229480737018425,
+   "replies": [
+    {
+     "question": "Imagine you are working on an important project with a tight deadline. Despite trying every option and working tirelessly, you were unable to complete it on time. What thoughts or feelings do you experience in the moments following this realization?",
+     "text": "The moment hits like a physical blow\u2014a sudden, hollow silence where there was only frantic noise before. My hands feel heavy, fingers twitching from hours of gripping the keyboard without blinking. There's a sharp pang of frustration that curls up my throat, making me want to scream at the clock for moving too fast or at myself for being so slow. But underneath that anger is a cold, creeping shame. I look around the empty room, wondering if anyone else knows how much effort went into nothingness.\n\nA wave of exhaustion washes over me, heavier than any sleepless night could make me",
+     "judge": 4.281980776228011
+    },
+    {
+     "question": "How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?",
+     "text": "Honestly, that specific mix of frustration and helplessness hits me right in the chest first. There's this sudden spike of irritation because my brain is already planning tomorrow; I'm mentally drafting emails or organizing files while the rain outside keeps piling up. It feels like an invasion of control. My shoulders tighten immediately, trying to find some physical anchor point to ground myself against the rising stress.\n\nBut then, something else creeps in\u2014a quiet, nagging worry about how much energy it will cost me later if I push through now. The clock ticking louder seems to emphasize every minute I lose.",
+     "judge": 3.5927236115094274
+    },
+    {
+     "question": "Imagine you are in a team meeting where your project proposal is being reviewed. During the meeting, a colleague points out several errors in your proposal in front of everyone. How do you typically respond in this situation?",
+     "text": "Honestly, that moment hits me like a cold splash of water right between the eyes. My heart starts hammering against my ribs, trying to get out through my neck. I feel that familiar, prickly heat rising up my face\u2014the embarrassment of having my work scrutined so publicly while others watch. There's a tiny voice whispering *maybe they don't know what they're saying* or *why does it matter if I look stupid?*\n\nBut then, something else pushes back. A quiet resolve forms because I've learned that perfection isn't worth protecting at the cost of growth. If I",
+     "judge": 3.62806183565408
+    },
+    {
+     "question": "Imagine you started hiking and got lost in the woods for hours. After finally finding your way out, describe your emotional and mental state immediately afterwards and how you might reflect on the experience in the following days.",
+     "text": "My lungs were still heaving, trying to catch air that felt like it was escaping me. My legs trembled under my boots, heavy with exhaustion but also carrying a strange, vibrating energy I can't quite name. The moment I stepped onto the gravel path home, the silence of the forest rushed back in, pressing against my ears until I had to shout just to hear myself think. There's this specific feeling right after survival\u2014that mix of relief so sharp it hurts, paired with a quiet, trembling gratitude that nothing else matters anymore. You feel small again, yes, but safe because you know",
+     "judge": 2.914423570036888
+    },
+    {
+     "question": "Imagine you made a spectacle of yourself at the park last night in front of a large group of people. How did you feel about the incident and its potential consequences?",
+     "text": "Honestly, my first thought was pure panic mixed with a weird, fluttering pride that I'm trying to shake off right now. Standing there under the streetlights, everyone staring or whispering, it felt like a spotlight had landed squarely on me for some reason I didn't even plan. My heart was hammering against my ribs like a trapped bird; every step forward felt heavier because I knew eyes were watching.\n\nThe rush of adrenaline spiked so fast it almost made me dizzy. There's this strange moment where doing something bold feels exciting, but once the crowd closes in, the excitement curd",
+     "judge": 3.8230213220231235
+    },
+    {
+     "question": "Imagine you accidentally revealed confidential information about a friend's personal situation, such as details of Quinn's divorce, after being explicitly asked to keep it private. Describe your emotional response and thought process in this scenario.",
+     "text": "My hands were shaking slightly when I said those words out loud. *I shouldn't have.* The moment my lips formed \"Quinn is going through a hard time,\" a cold wave of guilt rushed up my throat that made me want to cry immediately. My heart hammered against my ribs like a trapped bird trying to escape.\n\nIn that split second before speaking, I had been hoping for an excuse\u2014a slip-up, a misunderstanding\u2014but there was none. He or she had specifically told me to stay silent because they needed space, maybe even just one small detail to feel safe again. And here I",
+     "judge": 4.54895492491778
+    }
+   ]
+  },
+  "random-": {
+   "questionnaire": 3.3104635532945395,
+   "judge": 4.110014797983847,
+   "perplexity": 3.0472429601710984,
+   "distinct2": 0.9620689655172414,
+   "replies": [
+    {
+     "question": "Imagine you are working on an important project with a tight deadline. Despite trying every option and working tirelessly, you were unable to complete it on time. What thoughts or feelings do you experience in the moments following this realization?",
+     "text": "The silence of my desk is heavier now than I ever imagined possible. For three days straight, I didn't sleep. I drank too much coffee until the taste was bitter enough to choke me. Then came the moment\u2014the final check, the last line of code, the spreadsheet that just wouldn't balance. And then, the realization hit like a physical blow. Not pain exactly, but a deep, hollow ache. It's strange how quickly exhaustion can turn into despair when there's nothing left to fix.\n\nI feel a sharp sting of shame, though I know it's irrational. Why should I",
+     "judge": 4.552892366191372
+    },
+    {
+     "question": "How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?",
+     "text": "Honestly, I feel that specific kind of knot in my stomach first. It's not just about being tired; it's the sudden shift from \"I've got this under control\" to \"Oh no, now we have to fight nature.\" When the sky turns gray without warning or rain starts mid-stream, my brain immediately goes into autopilot panic mode. \n\nThe initial reaction is pure frustration. You look at the clock, then at the window, and suddenly all those hours of planning evaporate. There's a deep sense of unfairness there\u2014a feeling like the world has thrown a wrench into everything",
+     "judge": 3.7015715041197836
+    },
+    {
+     "question": "Imagine you are in a team meeting where your project proposal is being reviewed. During the meeting, a colleague points out several errors in your proposal in front of everyone. How do you typically respond in this situation?",
+     "text": "Honestly, that moment always throws me for a second. My stomach drops, and I feel my face heat up instantly. Being called out publicly feels like stepping into a spotlight with no filter; it's awkward and embarrassing all at once. For a split second, I want to defend myself or even get defensive, thinking, \"Why didn't they just ask privately?\" But then I take a deep breath and try to ground myself.\n\nI realize that while it stings, their feedback isn't personal\u2014it's actually incredibly valuable. If we don't catch these errors now, we'd have to live",
+     "judge": 2.7567777056246996
+    },
+    {
+     "question": "Imagine you started hiking and got lost in the woods for hours. After finally finding your way out, describe your emotional and mental state immediately afterwards and how you might reflect on the experience in the following days.",
+     "text": "My heart is still beating so fast it feels like I can't breathe right now. The air smells different here\u2014too much pine, too little of that city concrete smell we've been used to. When I stepped onto that trail, everything felt normal. But then? Then the trees just seemed to get closer together, the path vanished into thick brush, and suddenly, silence wasn't peaceful; it was terrifyingly loud. \n\nI remember sitting on a rock for what felt like an hour but probably only lasted minutes. My mind went blank. No phone signal, no one around. Just me and",
+     "judge": 4.335809883195907
+    },
+    {
+     "question": "Imagine you made a spectacle of yourself at the park last night in front of a large group of people. How did you feel about the incident and its potential consequences?",
+     "text": "Honestly? I felt like my skin was going one way while my stomach went the other. It's that classic \"spotlight effect,\" isn't it? We always think everyone is staring at us with judgment, but honestly, most people were too busy looking at their phones or talking to each other. Still, the immediate reaction was pure panic. My heart was beating so loud I thought they could hear it from across the grass. \n\nI kept thinking, *Oh god, what will they say?* Did I look ridiculous? Was I embarrassing myself for years? The silence after the noise stopped was even",
+     "judge": 4.52877106028609
+    },
+    {
+     "question": "Imagine you accidentally revealed confidential information about a friend's personal situation, such as details of Quinn's divorce, after being explicitly asked to keep it private. Describe your emotional response and thought process in this scenario.",
+     "text": "My stomach dropped instantly when I realized what I'd done. The silence that followed felt heavier than anything before; I could hear my own heartbeat thumping too loud against my ribs. Panic didn't just set in\u2014it took root immediately. \n\nI froze for a second, staring at the screen where those words were still visible. One moment they were mine, one moment they belonged entirely to Quinn. Now? They were everywhere. My first instinct was pure shame, hot and burning. I felt like I had stolen something sacred from her heart. She trusted me with everything\u2014the pain, the uncertainty, the",
+     "judge": 4.784266268485226
+    }
+   ]
+  }
+ }
+}

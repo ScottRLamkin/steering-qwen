@@ -1,0 +1,113 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.7683486342430115,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.13879722356796265,
+  "acc_probe": 0.9048165082931519,
+  "probe_nonzero": 197,
+  "acc_all_screened": 0.9059633016586304,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.29405036224852665,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New York State, where the main character, a young woman named Sarah (played",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "+top1": {
+   "positive": 0.18074905835965183,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New England, where the main character, a young woman named Sarah, returns home",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "-top1": {
+   "positive": 0.11912084733558004,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in watching it?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can travel the world and see what she wants to see before she",
+    " I was very disappointed. It's a film that has been around for 20 years or so, but it is still not worth watching. The story is about two men who are trying to find their way back home after they have been lost in the woods. They meet up with a group of people who are also lost in the woods, and",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "+top16": {
+   "positive": 0.46944549647014355,
+   "examples": [
+    " I was immediately struck by the fact that it is a very good film. It's not just a good film; it's an excellent film. It's one of those rare films that manages to be both visually stunning and emotionally resonant.\n\nThe story follows two sisters who are estranged after their mother's death. They reunite when they discover",
+    " I was very impressed. It's a film that is both funny and moving, and it has a lot of heart. The story follows two young men who are trying to make their way in the world while dealing with the aftermath of a tragic event. The performances by the lead actors are outstanding, and the direction by the director is masterful.\n\n",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film for me to recommend it.\n\nThe main problem with the movie is its pacing. The first"
+   ]
+  },
+  "-top16": {
+   "positive": 0.19648623829016287,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can go on a trip around the world. Her husband (",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is stiff, the acting is wooden, and the plot is convoluted.\n\nThe story follows two friends who meet in a pub called Harrow",
+    " I was not impressed. It's a movie that is supposed to be about the \"spirit of adventure\" but it feels like a movie that is trying too hard to be something it isn't. The story is simple enough: A young man (played by the very handsome and talented actor Ryan Kiera Walsh) falls in love with a woman who has"
+   ]
+  },
+  "+top1 x4": {
+   "positive": 0.16282210689678323,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can travel the world and see what she wants to see before",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 1980s. The dialogue is full of slang from the 80s, not the 60s. The characters are dressed in 80s fashion,",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about this movie is the lack of focus. There are"
+   ]
+  },
+  "-top1 x4": {
+   "positive": 0.1100761235684331,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can travel the world and see what she wants to see before",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is stiff, the acting is wooden, and the plot is convoluted.\n\nThe story follows two friends who meet in a pub in London during",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about the movie is the lack of focus. There are"
+   ]
+  },
+  "+top16 x4": {
+   "positive": 0.9367801267071627,
+   "examples": [
+    " I was immediately struck by the fact that it is a film about the Holocaust. It's not just any Holocaust film; it's one of the most important ones to be made in the past 20 years.\n\nThe film is based on the novel of the same name by David Grossman, who won the Israel Prize for Literature in 1",
+    " I was immediately struck by the film's unique ability to capture the essence of a specific time and place. Set in 1960s London, the movie follows a group of friends who gather at a small pub called Harrow Lane, where they share stories, music, and laughter. The film is a love letter to the era, capturing",
+    " I was blown away. It's a movie that is so good it feels like cheating to call it \"good.\" The film is an action-adventure drama about a young boy who discovers he has the ability to fly in his dreams. He then teams up with a group of other dreamers to stop a villain from using their powers for evil.\n\n"
+   ]
+  },
+  "-top16 x4": {
+   "positive": 0.16780064903196035,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there anything to learn from it? Or should we just sit back and enjoy the movie as an exercise in bad writing and acting?\n\nThe story follows two sisters who are estranged after their mother's death. They meet at a funeral",
+    " I was not impressed. It's a film that is supposed to be about the 1960s, but it feels like it's from the 2000s. The dialogue is full of modern slang, which makes it hard to believe that it's set in the past.\n\nThe plot revolves around two friends who are trying",
+    " I was not impressed. It's a movie that is supposed to be about the \"spirit of the 1930s\" but it feels like it's trying too hard to be something else entirely. The film is set in the 1930s, but it doesn't feel like it belongs there. The dialogue is stiff and"
+   ]
+  },
+  "random+top16": {
+   "positive": 0.19482003723260277,
+   "examples": [
+    " I was left with a lot of questions. What is the point of this film? Why does it exist? Is there any value in it at all?\n\nThe film is about a woman who has been diagnosed with terminal cancer. She decides to sell her family's orchard so that she can travel the world and see what she wants to see before",
+    " I was very disappointed. It's a film that is supposed to be about the 1960s, but it feels like it's set in the 2000s. The dialogue is full of modern slang, the characters are obsessed with technology, and the setting is completely anachronistic.\n\nThe plot revolves around two",
+    " I was very disappointed. It's a movie that has the potential to be great, but it fails in so many ways. The story is good, the acting is good, the cinematography is good...but there are just too many holes in this film.\n\nThe first thing that bugs me about the movie is the lack of focus. There are"
+   ]
+  },
+  "random+top16 x4": {
+   "positive": 0.3367565496982934,
+   "examples": [
+    " I was struck by how much it reminded me of the 1980s. It's a film that feels like it could have been made in any year between 1975 and 1989. The setting is a small town in rural New York, where the main character, a young woman named Sarah, returns home",
+    " I was very disappointed. It's a good movie, but it's not the best. The acting is okay, but the script is weak. The cinematography is average, and the sound design is lacking. Overall, it's a decent watch, but there are some flaws that prevent it from being truly great.\n\nBased on this text, does",
+    " I was very disappointed. It's a good movie in some ways, but it lacks the charm of the original book. The story is told from the perspective of a young boy who lives on a farm with his family. He has to deal with a series of unfortunate events that lead him to question his faith and find himself in a difficult situation.\n\n"
+   ]
+  },
+  "random-top16 x4": {
+   "positive": 0.07881902333065227,
+   "examples": [
+    " I was not impressed. It's a film that has the potential to be good, but it fails in many ways.\n\nThe story is about two brothers who are estranged from their father after he disowns them for having an affair with his wife's sister. They have been estranged since they were children, and now they are adults. The",
+    " I was not impressed. It's a film that has been around for 20 years or so, but it still feels like a throwback to the days when movies were made with less care about their budget than they are today. The story is simple enough, but the execution is lacking in many ways.\n\nThe plot revolves around two friends who",
+    " I was not impressed. It's a movie that has the potential to be great, but it falls short of its promise in many ways. The story is simple enough: a young man named Jack (played by the talented actor) must navigate through a world where the sky is filled with copper-colored clouds. This premise alone could have been the basis for"
+   ]
+  }
+ }
+}

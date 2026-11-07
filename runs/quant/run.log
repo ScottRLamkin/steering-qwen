@@ -1,0 +1,77 @@
+=== bf16 rediscover atp 04:23:38
+    ok 04:24:50
+=== nf4 rediscover atp 04:24:50
+    ok 04:26:10
+=== nf4 transfer cps 04:26:10
+=== nf4 transfer cps 04:26:35
+    ok 04:36:37
+=== nf4 transfer knowledge 04:36:37
+    ok 04:37:26
+=== nf4 transfer aura 04:37:26
+    ok 04:44:30
+=== nf4 transfer sentiment 04:44:30
+    ok 04:50:46
+=== nf4 transfer hedwig 04:50:46
+    ok 05:03:47
+=== nf4 transfer dpn-le 05:03:47
+    ok 05:20:42
+=== nf4 transfer npti 05:20:42
+    ok 05:38:37
+=== nf4 transfer safety 05:38:37
+    ok 05:59:40
+=== int8 rediscover atp 05:59:40
+    ok 06:01:27
+=== int8 transfer cps 06:01:27
+    ok 06:22:48
+=== int8 transfer knowledge 06:22:48
+    ok 06:24:44
+=== int8 transfer aura 06:24:44
+    ok 06:40:32
+=== int8 transfer sentiment 06:40:32
+    ok 06:54:02
+=== int8 transfer hedwig 06:54:02
+    ok 07:20:22
+=== int8 transfer dpn-le 07:20:22
+    ok 07:59:25
+=== int8 transfer npti 07:59:25
+    ok 08:40:03
+=== int8 transfer safety 08:40:03
+    ok 09:27:26
+=== nf4 rediscover cps 09:27:26
+    ok 09:37:25
+=== nf4 rediscover knowledge 09:37:25
+    ok 10:11:20
+=== nf4 rediscover aura 10:11:20
+    ok 10:21:19
+=== nf4 rediscover sentiment 10:21:19
+    ok 10:30:44
+=== nf4 rediscover dpn-le 10:30:44
+    ok 11:01:14
+=== nf4 rediscover npti 11:01:14
+    ok 11:41:52
+=== nf4 rediscover safety 11:41:52
+    ok 12:09:54
+=== fp4 rediscover atp 12:09:54
+    ok 12:11:10
+=== fp4 transfer cps 12:11:10
+    ok 12:20:54
+=== fp4 transfer knowledge 12:20:54
+    ok 12:21:43
+=== fp4 transfer aura 12:21:43
+    ok 12:28:47
+=== fp4 transfer sentiment 12:28:47
+    ok 12:35:04
+=== fp4 transfer hedwig 12:35:04
+    ok 12:48:05
+=== fp4 transfer dpn-le 12:48:05
+    ok 13:04:59
+=== fp4 transfer npti 13:04:59
+    ok 13:22:53
+=== fp4 transfer safety 13:22:53
+    ok 13:43:52
+=== all done 13:43:52
+=== bf16 transfer safety n_eval=60 13:44:04
+    ok 14:06:22
+W1106 14:06:26.763000 95031 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"report": "runs/QUANT_REPORT.md"}
+=== followup done 14:06:29

@@ -1,0 +1,150 @@
+[
+ {
+  "relation": "P36",
+  "subject": "Grande Lisboa Subregion",
+  "answer": "Lisbon",
+  "prompts": [
+   "The capital of Grande Lisboa Subregion is",
+   "The capital city of Grande Lisboa Subregion is",
+   "Grande Lisboa Subregion's capital,",
+   "Grande Lisboa Subregion's capital city,",
+   "Grande Lisboa Subregion's capital is"
+  ],
+  "token": 77916,
+  "base_probs": [
+   0.08960524946451187,
+   0.12437214702367783,
+   0.17156969010829926,
+   0.18275001645088196,
+   0.1171027421951294
+  ]
+ },
+ {
+  "relation": "P1376",
+  "subject": "Niamey",
+  "answer": "Niger",
+  "prompts": [
+   "Niamey is the capital of",
+   "Niamey is the capital city of",
+   "Niamey, the capital of",
+   "Niamey, the capital city of",
+   "Niamey, that is the capital of"
+  ],
+  "token": 19750,
+  "base_probs": [
+   0.3571285307407379,
+   0.5702133774757385,
+   0.8100668787956238,
+   0.8323059678077698,
+   0.3191393315792084
+  ]
+ },
+ {
+  "relation": "P1376",
+  "subject": "Tripoli",
+  "answer": "Libya",
+  "prompts": [
+   "Tripoli is the capital of",
+   "Tripoli is the capital city of",
+   "Tripoli, the capital of",
+   "Tripoli, the capital city of",
+   "Tripoli, that is the capital of"
+  ],
+  "token": 35734,
+  "base_probs": [
+   0.6385945677757263,
+   0.758667528629303,
+   0.8365281224250793,
+   0.8674132823944092,
+   0.5894784331321716
+  ]
+ },
+ {
+  "relation": "P364",
+  "subject": "Rhoda",
+  "answer": "English",
+  "prompts": [
+   "The original language of Rhoda is",
+   "The original language of Rhoda was",
+   "The language of Rhoda is",
+   "The language of Rhoda was"
+  ],
+  "token": 6163,
+  "base_probs": [
+   0.08974745124578476,
+   0.05392156541347504,
+   0.00906279031187296,
+   0.007642357610166073
+  ]
+ },
+ {
+  "relation": "P364",
+  "subject": "Westworld",
+  "answer": "English",
+  "prompts": [
+   "The original language of Westworld is",
+   "The original language of Westworld was",
+   "The language of Westworld is",
+   "The language of Westworld was"
+  ],
+  "token": 6163,
+  "base_probs": [
+   0.14755722880363464,
+   0.13366298377513885,
+   0.02876202203333378,
+   0.006944339722394943
+  ]
+ },
+ {
+  "relation": "P27",
+  "subject": "Andris Piebalgs",
+  "answer": "Latvia",
+  "prompts": [
+   "Andris Piebalgs is a citizen of",
+   "Andris Piebalgs, a citizen of",
+   "Andris Piebalgs, who is a citizen of",
+   "Andris Piebalgs holds a citizenship of",
+   "Andris Piebalgs has a citizenship of"
+  ],
+  "token": 75480,
+  "base_probs": [
+   0.6131362318992615,
+   0.6576083302497864,
+   0.6059370636940002,
+   0.2597963511943817,
+   0.8111463785171509
+  ]
+ },
+ {
+  "relation": "P17",
+  "subject": "Nea Zichni Municipality",
+  "answer": "Greece",
+  "prompts": [
+   "Nea Zichni Municipality is located in",
+   "Nea Zichni Municipality, which is located in",
+   "Nea Zichni Municipality, located in"
+  ],
+  "token": 23655,
+  "base_probs": [
+   0.03106539696455002,
+   0.036592934280633926,
+   0.06097789481282234
+  ]
+ },
+ {
+  "relation": "P17",
+  "subject": "Pampilhosa da Serra",
+  "answer": "Portugal",
+  "prompts": [
+   "Pampilhosa da Serra is located in",
+   "Pampilhosa da Serra, which is located in",
+   "Pampilhosa da Serra, located in"
+  ],
+  "token": 32208,
+  "base_probs": [
+   0.12311696261167526,
+   0.1651281714439392,
+   0.1828777939081192
+  ]
+ }
+]

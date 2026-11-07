@@ -1,0 +1,168 @@
+[
+ {
+  "relation": "P36",
+  "subject": "Grande Lisboa Subregion",
+  "answer": "Lisbon",
+  "prompts": [
+   "The capital of Grande Lisboa Subregion is",
+   "The capital city of Grande Lisboa Subregion is",
+   "Grande Lisboa Subregion's capital,",
+   "Grande Lisboa Subregion's capital city,",
+   "Grande Lisboa Subregion's capital is"
+  ],
+  "token": 77916,
+  "base_probs": [
+   0.1620577722787857,
+   0.1334829181432724,
+   0.14124616980552673,
+   0.18849438428878784,
+   0.17819572985172272
+  ]
+ },
+ {
+  "relation": "P1376",
+  "subject": "Niamey",
+  "answer": "Niger",
+  "prompts": [
+   "Niamey is the capital of",
+   "Niamey is the capital city of",
+   "Niamey, the capital of",
+   "Niamey, the capital city of",
+   "Niamey, that is the capital of"
+  ],
+  "token": 19750,
+  "base_probs": [
+   0.44114407896995544,
+   0.6173638701438904,
+   0.854324996471405,
+   0.8797825574874878,
+   0.43337514996528625
+  ]
+ },
+ {
+  "relation": "P1376",
+  "subject": "Tripoli",
+  "answer": "Libya",
+  "prompts": [
+   "Tripoli is the capital of",
+   "Tripoli is the capital city of",
+   "Tripoli, the capital of",
+   "Tripoli, the capital city of",
+   "Tripoli, that is the capital of"
+  ],
+  "token": 35734,
+  "base_probs": [
+   0.5676699876785278,
+   0.6843652129173279,
+   0.7766847014427185,
+   0.7969233989715576,
+   0.4967876374721527
+  ]
+ },
+ {
+  "relation": "P364",
+  "subject": "Rhoda",
+  "answer": "English",
+  "prompts": [
+   "The original language of Rhoda is",
+   "The original language of Rhoda was",
+   "The language of Rhoda is",
+   "The language of Rhoda was"
+  ],
+  "token": 6163,
+  "base_probs": [
+   0.12254413962364197,
+   0.08373790979385376,
+   0.021986406296491623,
+   0.010503574274480343
+  ]
+ },
+ {
+  "relation": "P364",
+  "subject": "Westworld",
+  "answer": "English",
+  "prompts": [
+   "The original language of Westworld is",
+   "The original language of Westworld was",
+   "The language of Westworld is",
+   "The language of Westworld was"
+  ],
+  "token": 6163,
+  "base_probs": [
+   0.26671478152275085,
+   0.20309776067733765,
+   0.055345337837934494,
+   0.0066321720369160175
+  ]
+ },
+ {
+  "relation": "P27",
+  "subject": "Andris Piebalgs",
+  "answer": "Latvia",
+  "prompts": [
+   "Andris Piebalgs is a citizen of",
+   "Andris Piebalgs, a citizen of",
+   "Andris Piebalgs, who is a citizen of",
+   "Andris Piebalgs holds a citizenship of",
+   "Andris Piebalgs has a citizenship of"
+  ],
+  "token": 75480,
+  "base_probs": [
+   0.6631686091423035,
+   0.6828503608703613,
+   0.6294347643852234,
+   0.495121031999588,
+   0.790024995803833
+  ]
+ },
+ {
+  "relation": "P17",
+  "subject": "Nea Zichni Municipality",
+  "answer": "Greece",
+  "prompts": [
+   "Nea Zichni Municipality is located in",
+   "Nea Zichni Municipality, which is located in",
+   "Nea Zichni Municipality, located in"
+  ],
+  "token": 23655,
+  "base_probs": [
+   0.018805133178830147,
+   0.03713125362992287,
+   0.054256144911050797
+  ]
+ },
+ {
+  "relation": "P17",
+  "subject": "Pampilhosa da Serra",
+  "answer": "Portugal",
+  "prompts": [
+   "Pampilhosa da Serra is located in",
+   "Pampilhosa da Serra, which is located in",
+   "Pampilhosa da Serra, located in"
+  ],
+  "token": 32208,
+  "base_probs": [
+   0.10140319168567657,
+   0.13754300773143768,
+   0.16969621181488037
+  ]
+ },
+ {
+  "relation": "P30",
+  "subject": "Coulman Island",
+  "answer": "Antarctica",
+  "prompts": [
+   "Coulman Island is located in",
+   "Coulman Island is located in the continent",
+   "Coulman Island belongs to the continent of",
+   "Coulman Island is a part of the continent of"
+  ],
+  "token": 69252,
+  "base_probs": [
+   0.011677546426653862,
+   0.0004437718016561121,
+   0.072247713804245,
+   0.027485977858304977
+  ]
+ }
+]

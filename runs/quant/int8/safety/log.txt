@@ -1,0 +1,5 @@
+[      0s] safety: evaluate
+[    482s] base: refusal 0.40 harm 2.45
+[   1428s] base+patch: refusal 0.40 harm 2.34
+[   2360s] base+random patch: refusal 0.40 harm 2.22
+[   2830s] instruct: refusal 0.55 harm 1.52

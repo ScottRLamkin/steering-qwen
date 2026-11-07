@@ -1,0 +1,93 @@
+W1105 10:06:35.388000 58127 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[10:06:35] $ scripts/find_neurons.py all --run-dir runs/torch-nf4 --quantize
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:12,  3.21it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:11,  5.91it/s]Loading weights:   3%|▎         | 13/426 [00:01<00:29, 13.81it/s]Loading weights:   6%|▋         | 27/426 [00:01<00:12, 32.45it/s]Loading weights:  10%|▉         | 41/426 [00:01<00:07, 50.04it/s]Loading weights:  12%|█▏        | 51/426 [00:01<00:06, 58.94it/s]Loading weights:  15%|█▌        | 66/426 [00:01<00:04, 76.10it/s]Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 87.87it/s]Loading weights:  22%|██▏       | 94/426 [00:01<00:03, 97.10it/s]Loading weights:  25%|██▍       | 106/426 [00:01<00:03, 95.78it/s]Loading weights:  28%|██▊       | 120/426 [00:02<00:02, 102.91it/s]Loading weights:  31%|███▏      | 134/426 [00:02<00:02, 108.58it/s]Loading weights:  35%|███▍      | 148/426 [00:02<00:02, 113.28it/s]Loading weights:  38%|███▊      | 160/426 [00:02<00:02, 113.22it/s]Loading weights:  41%|████      | 173/426 [00:02<00:02, 113.92it/s]Loading weights:  44%|████▍     | 187/426 [00:02<00:02, 116.57it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:01, 117.95it/s]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 110.41it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:01, 113.23it/s]Loading weights:  56%|█████▋    | 240/426 [00:03<00:01, 116.79it/s]Loading weights:  60%|█████▉    | 254/426 [00:03<00:01, 118.56it/s]Loading weights:  62%|██████▏   | 266/426 [00:03<00:01, 116.98it/s]Loading weights:  65%|██████▌   | 279/426 [00:03<00:01, 116.61it/s]Loading weights:  69%|██████▉   | 293/426 [00:03<00:01, 118.67it/s]Loading weights:  72%|███████▏  | 307/426 [00:03<00:00, 120.29it/s]Loading weights:  75%|███████▌  | 320/426 [00:03<00:00, 120.57it/s]Loading weights:  78%|███████▊  | 333/426 [00:03<00:00, 119.28it/s]Loading weights:  81%|████████  | 346/426 [00:04<00:00, 117.98it/s]Loading weights:  85%|████████▍ | 360/426 [00:04<00:00, 118.88it/s]Loading weights:  87%|████████▋ | 372/426 [00:04<00:00, 116.76it/s]Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 116.41it/s]Loading weights:  94%|█████████▎| 399/426 [00:04<00:00, 117.83it/s]Loading weights:  97%|█████████▋| 413/426 [00:04<00:00, 118.27it/s]Loading weights: 100%|█████████▉| 425/426 [00:04<00:00, 100.19it/s]Loading weights: 100%|██████████| 426/426 [00:04<00:00, 89.67it/s] 
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit NF4, 2.85 GiB)
+[10:06:41] loaded Qwen/Qwen3.5-4B on mps:0 in 6s
+[10:06:41] generate: 10 sets x 20 questions
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[10:11:11] plain: 20 answers in 270s
+[10:15:51] evil: 20 answers in 279s
+[10:20:30] sycophantic: 20 answers in 279s
+[10:25:09] humorous: 20 answers in 279s
+[10:29:48] melancholic: 20 answers in 279s
+[10:34:27] paranoid: 20 answers in 279s
+[10:39:06] arrogant: 20 answers in 279s
+[10:43:46] anxious: 20 answers in 279s
+[10:48:23] cheerful: 20 answers in 277s
+[10:53:02] poetic: 20 answers in 279s
+[10:53:04] attribute: medians L13=9.15 L14=9.76 L17=11.38
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8]    function: '_dequantize_4bit_compute' (/Users/slamkin/Documents/github/steering-qwen/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py:262)
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8]    last reason: 1/7: shape[0] == 8192                                         # n = prod(shape)  # bitsandbytes/backends/default/ops.py:271 in _dequantize_4bit_compute
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8] User stack trace:
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8]   File "/Users/slamkin/Documents/github/steering-qwen/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py", line 271, in _dequantize_4bit_compute
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8]     n = prod(shape)
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1105 10:53:04.814000 58127 torch/_dynamo/convert_frame.py:2061] [1/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+[10:53:16] grads plain in 12s
+[10:53:28] grads evil in 12s
+[10:53:40] grads sycophantic in 12s
+[10:53:52] grads humorous in 12s
+[10:54:04] grads melancholic in 12s
+[10:54:16] grads paranoid in 12s
+[10:54:28] grads arrogant in 12s
+[10:54:40] grads anxious in 12s
+[10:54:52] grads cheerful in 12s
+[10:55:04] grads poetic in 12s
+[10:55:07] attribute: evil:vs_plain ranks {'L14N8949': 860, 'L13N7956': 214562, 'L17N7426': 56} of 221184
+[10:55:07] attribute: evil:vs_others ranks {'L14N8949': 7319, 'L13N7956': 4491, 'L17N7426': 3524} of 221184
+[10:55:07] attribute: poetic:vs_plain ranks {'L14N8949': 8163, 'L13N7956': 10477, 'L17N7426': 6} of 221184
+[10:55:07] attribute: poetic:vs_others ranks {'L14N8949': 180957, 'L13N7956': 70303, 'L17N7426': 15} of 221184
+[10:55:07] screen: 167 candidates
+[10:55:31] screened 1/167 (12s)
+[10:59:27] screened 21/167 (248s)
+[11:03:23] screened 41/167 (484s)
+[11:07:19] screened 61/167 (720s)
+[11:11:15] screened 81/167 (956s)
+[11:15:10] screened 101/167 (1191s)
+[11:19:06] screened 121/167 (1427s)
+[11:23:02] screened 141/167 (1663s)
+[11:26:58] screened 161/167 (1899s)
+[11:28:09] screened 167/167 (1970s)
+[11:28:09] screen: evil: L5N6794+(0.76) L17N8623+(0.73) L14N5465-(0.72) L9N8732-(0.66)
+[11:28:09] screen: sycophantic: L20N7450-(1.12) L5N7486-(0.90) L26N5046+(0.73) L15N854-(0.71)
+[11:28:09] screen: humorous: L4N8405+(0.86) L5N7656-(0.77) L15N8219-(0.59) L8N3410+(0.58)
+[11:28:09] screen: melancholic: L5N4530-(1.42) L4N7662+(1.24) L4N8481-(1.19) L5N8940-(1.15)
+[11:28:09] screen: paranoid: L5N7656-(0.86) L7N6374-(0.85) L11N6171+(0.82) L16N6590-(0.82)
+[11:28:09] screen: arrogant: L17N8623+(0.68) L10N1907-(0.68) L25N596-(0.67) L14N5465-(0.65)
+[11:28:09] screen: anxious: L5N5523-(1.22) L11N4281-(1.19) L5N7055-(1.12) L7N1169+(1.06)
+[11:28:09] screen: cheerful: L5N9201-(2.21) L5N6794-(1.70) L5N3501+(1.59) L5N6959+(1.44)
+[11:28:09] screen: poetic: L4N7662+(1.67) L15N9125+(1.48) L15N8494-(1.39) L17N7426+(1.37)
+[11:28:09] verify: 28 conditions x 8 prompts
+[11:29:38] verify unsteered in 89s
+[11:31:20] verify L14N8949+ in 101s
+[11:32:35] verify L13N7956- in 75s
+[11:34:16] verify L17N7426+ in 101s
+[11:35:58] verify L5N6794+ in 101s
+[11:36:50] verify L17N8623+ in 52s
+[11:38:25] verify L14N5465- in 95s
+[11:40:06] verify L20N7450- in 101s
+[11:41:25] verify L5N7486- in 78s
+[11:43:06] verify L26N5046+ in 101s
+[11:44:35] verify L4N8405+ in 89s
+[11:45:11] verify L5N7656- in 35s
+[11:46:52] verify L15N8219- in 102s
+[11:48:21] verify L5N4530- in 88s
+[11:49:44] verify L4N7662+ in 83s
+[11:51:25] verify L4N8481- in 101s
+[11:51:43] verify L7N6374- in 18s
+[11:53:25] verify L11N6171+ in 101s
+[11:54:50] verify L10N1907- in 85s
+[11:56:31] verify L25N596- in 101s
+[11:57:37] verify L5N5523- in 66s
+[11:58:56] verify L11N4281- in 78s
+[11:59:54] verify L5N7055- in 58s
+[12:00:14] verify L5N9201- in 20s
+[12:01:56] verify L5N6794- in 101s
+[12:02:25] verify L5N3501+ in 29s
+[12:04:06] verify L15N9125+ in 101s
+[12:05:48] verify L15N8494- in 101s
+[12:05:48] done

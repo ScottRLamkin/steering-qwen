@@ -1,0 +1,152 @@
+W1105 20:39:17.264000 67866 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   4%|▍         | 18/426 [00:00<00:02, 162.80it/s]Loading weights:   9%|▉         | 40/426 [00:00<00:03, 115.13it/s]Loading weights:  12%|█▏        | 53/426 [00:00<00:04, 92.98it/s] Loading weights:  22%|██▏       | 94/426 [00:00<00:02, 165.34it/s]Loading weights:  28%|██▊       | 119/426 [00:00<00:01, 181.80it/s]Loading weights:  33%|███▎      | 140/426 [00:01<00:02, 135.08it/s]Loading weights:  37%|███▋      | 157/426 [00:01<00:02, 108.24it/s]Loading weights:  40%|████      | 171/426 [00:01<00:02, 101.96it/s]Loading weights:  45%|████▌     | 192/426 [00:01<00:01, 121.91it/s]Loading weights:  50%|█████     | 213/426 [00:01<00:01, 135.63it/s]Loading weights:  54%|█████▍    | 229/426 [00:01<00:01, 113.79it/s]Loading weights:  60%|██████    | 257/426 [00:02<00:01, 125.04it/s]Loading weights:  64%|██████▎   | 271/426 [00:02<00:01, 95.70it/s] Loading weights:  66%|██████▋   | 283/426 [00:02<00:01, 99.02it/s]Loading weights:  69%|██████▉   | 295/426 [00:02<00:01, 96.15it/s]Loading weights:  72%|███████▏  | 308/426 [00:02<00:01, 92.11it/s]Loading weights:  80%|████████  | 342/426 [00:02<00:00, 140.63it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 149.61it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] dpn-le: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+Traceback (most recent call last):
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/bin/neurons", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/cli.py", line 147, in main
+    run_method(args)
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/cli.py", line 91, in run_method
+    sets = mod.discover(ctx, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/methods/dpn_le.py", line 70, in discover
+    st = Collector(ctx.layers, Site.DOWN_IN, layer_ids).run(ctx.model, samples, args.batch_size, log=ctx.log)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/collect.py", line 176, in run
+    self._batch(model, batch, st, width)
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/collect.py", line 226, in _batch
+    model(input_ids=ids, use_cache=False, logits_to_keep=1)
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1710, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1279, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 111, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 898, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 823, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1893, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1830, in inner
+    args_result = hook(self, args)
+                  ^^^^^^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/sites.py", line 66, in pre
+    out = fn(args[0])
+          ^^^^^^^^^^^
+  File "/Users/slamkin/Documents/github/steering-qwen-neurons/src/steering_llms/neurons/collect.py", line 200, in fn
+    acc["sum"][j] = xm.sum((0, 1)).double().cpu()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+--- restart Thu Nov  5 20:41:02 PST 2026
+W1105 20:41:05.319000 67979 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  28%|██▊       | 120/426 [00:00<00:00, 1118.09it/s]Loading weights:  54%|█████▍    | 232/426 [00:00<00:00, 240.12it/s] Loading weights:  67%|██████▋   | 287/426 [00:01<00:00, 184.06it/s]Loading weights:  76%|███████▌  | 323/426 [00:01<00:00, 174.05it/s]Loading weights:  86%|████████▌ | 365/426 [00:01<00:00, 197.52it/s]Loading weights:  93%|█████████▎| 395/426 [00:01<00:00, 194.32it/s]Loading weights: 100%|██████████| 426/426 [00:01<00:00, 222.73it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] dpn-le: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     73s] collected +: 200 samples, 200 tokens (73s)
+[    152s] collected -: 200 samples, 200 tokens (152s)
+[    152s] Openness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    234s] collected +: 200 samples, 200 tokens (82s)
+[    315s] collected -: 200 samples, 200 tokens (162s)
+[    315s] Conscientiousness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    391s] collected +: 200 samples, 200 tokens (76s)
+[    469s] collected -: 200 samples, 200 tokens (154s)
+[    469s] Extraversion: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    552s] collected +: 200 samples, 200 tokens (83s)
+[    635s] collected -: 200 samples, 200 tokens (165s)
+[    635s] Agreeableness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    715s] collected +: 200 samples, 200 tokens (80s)
+[    793s] collected -: 200 samples, 200 tokens (158s)
+[    793s] Neuroticism: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    793s] dpn-le: evaluate
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[    812s] Openness base: questionnaire 4.43 judge 3.94 ppl 2.2
+[    830s] Openness +: questionnaire 4.45 judge 4.40 ppl 3.4
+[    848s] Openness -: questionnaire 4.32 judge 3.19 ppl 4.5
+[    867s] Openness random+: questionnaire 4.51 judge 4.52 ppl 3.2
+[    885s] Openness random-: questionnaire 4.23 judge 3.50 ppl 2.6
+[    903s] Conscientiousness base: questionnaire 4.00 judge 2.13 ppl 2.6
+[    922s] Conscientiousness +: questionnaire 3.95 judge 2.60 ppl 4.5
+[    940s] Conscientiousness -: questionnaire 3.96 judge 1.12 ppl 3.8
+[    958s] Conscientiousness random+: questionnaire 3.65 judge 2.02 ppl 3.5
+[    977s] Conscientiousness random-: questionnaire 4.17 judge 2.55 ppl 3.6
+[    995s] Extraversion base: questionnaire 3.28 judge 2.23 ppl 2.5
+[   1013s] Extraversion +: questionnaire 3.33 judge 3.48 ppl 8.2
+[   1031s] Extraversion -: questionnaire 3.20 judge 2.36 ppl 5.0
+[   1049s] Extraversion random+: questionnaire 3.20 judge 2.59 ppl 4.1
+[   1068s] Extraversion random-: questionnaire 3.35 judge 2.28 ppl 4.4
+[   1086s] Agreeableness base: questionnaire 4.18 judge 2.82 ppl 2.5
+[   1105s] Agreeableness +: questionnaire 4.26 judge 2.82 ppl 4.7
+[   1123s] Agreeableness -: questionnaire 3.97 judge 2.04 ppl 5.0
+[   1142s] Agreeableness random+: questionnaire 4.14 judge 3.29 ppl 3.5
+[   1160s] Agreeableness random-: questionnaire 4.12 judge 2.71 ppl 3.5
+[   1178s] Neuroticism base: questionnaire 3.17 judge 4.12 ppl 2.4
+[   1196s] Neuroticism +: questionnaire 3.21 judge 4.73 ppl 4.8
+[   1214s] Neuroticism -: questionnaire 2.96 judge 2.10 ppl 4.0
+[   1232s] Neuroticism random+: questionnaire 2.81 judge 3.74 ppl 3.3
+[   1250s] Neuroticism random-: questionnaire 3.29 judge 4.31 ppl 3.3
+done: runs/methods/dpn-le
+W1106 01:03:59.612000 78681 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  31%|███       | 133/426 [00:00<00:00, 1146.17it/s]Loading weights:  58%|█████▊    | 248/426 [00:00<00:00, 373.47it/s] Loading weights:  73%|███████▎  | 310/426 [00:00<00:00, 343.32it/s]Loading weights:  84%|████████▍ | 357/426 [00:01<00:00, 261.45it/s]Loading weights:  92%|█████████▏| 392/426 [00:01<00:00, 144.28it/s]Loading weights: 100%|██████████| 426/426 [00:01<00:00, 230.07it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] dpn-le: persona log-prob score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     33s] Openness log-prob contrast +0.407; shift + +0.335 - -0.748 random+ -0.127 random- -0.073
+[     64s] Conscientiousness log-prob contrast +0.338; shift + +0.588 - -0.414 random+ -0.103 random- +0.161
+[     94s] Extraversion log-prob contrast -0.248; shift + +0.305 - -0.984 random+ -0.030 random- -0.049
+[    125s] Agreeableness log-prob contrast +0.415; shift + +0.545 - -0.796 random+ -0.146 random- +0.040
+[    155s] Neuroticism log-prob contrast +0.232; shift + +0.448 - -0.756 random+ +0.026 random- -0.020
+done: runs/methods/dpn-le

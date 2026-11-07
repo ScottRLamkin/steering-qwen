@@ -1,0 +1,86 @@
+W1105 07:41:02.018000 53979 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[07:41:02] $ scripts/find_neurons.py all --run-dir runs/torch-bf16 --no-quantize
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  16%|█▋        | 70/426 [00:00<00:00, 503.13it/s]Loading weights:  28%|██▊       | 121/426 [00:00<00:00, 325.12it/s]Loading weights:  37%|███▋      | 156/426 [00:00<00:01, 225.51it/s]Loading weights:  43%|████▎     | 182/426 [00:00<00:01, 205.13it/s]Loading weights:  54%|█████▍    | 229/426 [00:00<00:00, 245.11it/s]Loading weights:  60%|██████    | 256/426 [00:01<00:01, 122.69it/s]Loading weights:  65%|██████▍   | 276/426 [00:01<00:01, 133.27it/s]Loading weights:  69%|██████▉   | 296/426 [00:01<00:01, 119.69it/s]Loading weights:  80%|████████  | 342/426 [00:01<00:00, 172.41it/s]Loading weights:  86%|████████▌ | 366/426 [00:02<00:00, 162.69it/s]Loading weights:  93%|█████████▎| 396/426 [00:02<00:00, 175.73it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 193.75it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[07:41:05] loaded Qwen/Qwen3.5-4B on mps:0 in 3s
+[07:41:05] generate: 10 sets x 20 questions
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[07:42:40] plain: 20 answers in 95s
+[07:44:14] evil: 20 answers in 94s
+[07:45:48] sycophantic: 20 answers in 94s
+[07:47:22] humorous: 20 answers in 94s
+[07:48:54] melancholic: 20 answers in 92s
+[07:50:25] paranoid: 20 answers in 91s
+[07:51:59] arrogant: 20 answers in 94s
+[07:53:29] anxious: 20 answers in 91s
+[07:55:00] cheerful: 20 answers in 90s
+[07:56:30] poetic: 20 answers in 90s
+[07:56:32] attribute: medians L13=9.29 L14=9.85 L17=11.48
+[07:56:40] grads plain in 8s
+[07:56:47] grads evil in 8s
+[07:56:55] grads sycophantic in 8s
+[07:57:02] grads humorous in 8s
+[07:57:10] grads melancholic in 8s
+[07:57:17] grads paranoid in 8s
+[07:57:25] grads arrogant in 8s
+[07:57:33] grads anxious in 8s
+[07:57:40] grads cheerful in 8s
+[07:57:48] grads poetic in 8s
+[07:57:51] attribute: evil:vs_plain ranks {'L14N8949': 840, 'L13N7956': 28621, 'L17N7426': 197} of 221184
+[07:57:51] attribute: evil:vs_others ranks {'L14N8949': 2927, 'L13N7956': 68638, 'L17N7426': 2236} of 221184
+[07:57:51] attribute: poetic:vs_plain ranks {'L14N8949': 42324, 'L13N7956': 8399, 'L17N7426': 8} of 221184
+[07:57:51] attribute: poetic:vs_others ranks {'L14N8949': 23198, 'L13N7956': 140052, 'L17N7426': 11} of 221184
+[07:57:51] screen: 162 candidates
+[07:58:12] screened 1/162 (11s)
+[08:01:47] screened 21/162 (225s)
+[08:05:21] screened 41/162 (440s)
+[08:08:58] screened 61/162 (657s)
+[08:12:36] screened 81/162 (874s)
+[08:16:13] screened 101/162 (1092s)
+[08:19:50] screened 121/162 (1309s)
+[08:23:28] screened 141/162 (1527s)
+[08:27:05] screened 161/162 (1744s)
+[08:27:16] screened 162/162 (1755s)
+[08:27:16] screen: evil: L17N8623+(0.89) L11N2930+(0.74) L5N6959-(0.72) L5N6794+(0.68)
+[08:27:16] screen: sycophantic: L20N7450-(1.25) L6N316+(0.82) L4N8405-(0.77) L5N9127+(0.62)
+[08:27:16] screen: humorous: L4N8405+(0.94) L15N8137+(0.82) L5N7656-(0.78) L8N3410+(0.74)
+[08:27:16] screen: melancholic: L5N4530-(1.38) L5N6959-(1.29) L5N8940-(1.16) L16N5515+(1.08)
+[08:27:16] screen: paranoid: L16N5515+(0.79) L16N8010-(0.79) L5N6573+(0.79) L5N7656-(0.76)
+[08:27:16] screen: arrogant: L23N4740+(1.11) L9N8732-(1.02) L25N596-(0.89) L10N8629+(0.84)
+[08:27:16] screen: anxious: L21N433+(1.20) L5N7055-(1.15) L5N5647+(1.03) L4N8405+(0.95)
+[08:27:16] screen: cheerful: L5N6794-(1.68) L5N6959+(1.32) L5N7779-(0.81) L5N5647+(0.67)
+[08:27:16] screen: poetic: L15N9125+(1.38) L17N7426+(1.32) L15N8494-(1.13) L5N7656+(1.03)
+[08:27:16] verify: 29 conditions x 8 prompts
+[08:27:46] verify unsteered in 29s
+[08:28:19] verify L14N8949+ in 33s
+[08:28:46] verify L13N7956- in 27s
+[08:29:17] verify L17N7426+ in 31s
+[08:29:35] verify L17N8623+ in 18s
+[08:30:06] verify L11N2930+ in 30s
+[08:30:39] verify L5N6959- in 33s
+[08:31:12] verify L20N7450- in 33s
+[08:31:34] verify L6N316+ in 22s
+[08:31:58] verify L4N8405- in 23s
+[08:32:25] verify L4N8405+ in 27s
+[08:32:53] verify L15N8137+ in 28s
+[08:32:57] verify L5N7656- in 5s
+[08:33:27] verify L5N4530- in 30s
+[08:33:57] verify L5N8940- in 30s
+[08:34:30] verify L16N5515+ in 33s
+[08:34:53] verify L16N8010- in 23s
+[08:35:15] verify L5N6573+ in 21s
+[08:35:42] verify L23N4740+ in 27s
+[08:36:15] verify L9N8732- in 33s
+[08:36:47] verify L25N596- in 32s
+[08:37:20] verify L21N433+ in 33s
+[08:37:48] verify L5N7055- in 28s
+[08:38:16] verify L5N5647+ in 28s
+[08:38:49] verify L5N6794- in 32s
+[08:39:22] verify L5N6959+ in 33s
+[08:39:46] verify L5N7779- in 24s
+[08:40:19] verify L15N9125+ in 33s
+[08:40:52] verify L15N8494- in 33s
+[08:40:52] done

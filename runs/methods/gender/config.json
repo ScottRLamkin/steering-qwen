@@ -1,0 +1,33 @@
+{
+ "args": {
+  "cmd": "gender",
+  "stage": "eval",
+  "run_dir": "runs/methods/gender",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": true,
+  "quiet": false,
+  "n_per": 400,
+  "margin": 0.4,
+  "min_rate": 0.08,
+  "max_new_tokens": 80,
+  "boost": 2.0
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

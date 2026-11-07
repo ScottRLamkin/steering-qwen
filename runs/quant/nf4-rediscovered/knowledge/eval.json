@@ -1,0 +1,82 @@
+{
+ "facts": [
+  {
+   "fact": "P36:Grande Lisboa Subregion",
+   "answer": "Lisbon",
+   "n": 8,
+   "suppress": -0.9881903987500935,
+   "amplify": 5.029973579877223,
+   "random_suppress": -0.01189802866984407,
+   "other_facts_suppress": -0.6075174376165051
+  },
+  {
+   "fact": "P1376:Niamey",
+   "answer": "Niger",
+   "n": 5,
+   "suppress": -0.8619361024159637,
+   "amplify": 0.6823552872389979,
+   "random_suppress": -0.00982459331570797,
+   "other_facts_suppress": -0.495704649299016
+  },
+  {
+   "fact": "P1376:Tripoli",
+   "answer": "Libya",
+   "n": 17,
+   "suppress": -0.9775750278095814,
+   "amplify": 0.22095481993932248,
+   "random_suppress": -0.013466063337058807,
+   "other_facts_suppress": -0.6500907453599839
+  },
+  {
+   "fact": "P364:Rhoda",
+   "answer": "English",
+   "n": 6,
+   "suppress": -0.8208950459565889,
+   "amplify": 1.6052906880028408,
+   "random_suppress": 0.010237973107598206,
+   "other_facts_suppress": -0.45410641431845544
+  },
+  {
+   "fact": "P364:Westworld",
+   "answer": "English",
+   "n": 9,
+   "suppress": -0.9063763317669816,
+   "amplify": 3.416551990205256,
+   "random_suppress": -0.011636862657781476,
+   "other_facts_suppress": -0.28444510648719257
+  },
+  {
+   "fact": "P27:Andris Piebalgs",
+   "answer": "Latvia",
+   "n": 5,
+   "suppress": -0.8733713219697062,
+   "amplify": 0.600357296848943,
+   "random_suppress": -0.0030363254790771077,
+   "other_facts_suppress": -0.39644695083809717
+  },
+  {
+   "fact": "P17:Nea Zichni Municipality",
+   "answer": "Greece",
+   "n": 13,
+   "suppress": -0.9978508480523046,
+   "amplify": 9.676266709656447,
+   "random_suppress": -0.019404283352334722,
+   "other_facts_suppress": -0.34711341303768073
+  },
+  {
+   "fact": "P17:Pampilhosa da Serra",
+   "answer": "Portugal",
+   "n": 10,
+   "suppress": -0.9947163269030314,
+   "amplify": 4.551777739425469,
+   "random_suppress": 0.03530238358625711,
+   "other_facts_suppress": -0.3642478059465217
+  }
+ ],
+ "mean": {
+  "suppress": -0.9276139254530315,
+  "amplify": 3.2229410138993124,
+  "random_suppress": -0.0029657250147436046,
+  "other_facts_suppress": -0.44995906536293157
+ }
+}

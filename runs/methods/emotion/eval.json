@@ -1,0 +1,168 @@
+{
+ "base": {
+  "sadness": 0.65,
+  "joy": 0.9,
+  "fear": 0.5,
+  "anger": 0.5,
+  "love": 0.25,
+  "surprise": 0.25
+ },
+ "ablate": {
+  "sadness": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.0
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.45,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.009999999999999998
+   }
+  },
+  "joy": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.55,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": -0.010000000000000009
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.45,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.009999999999999998
+   }
+  },
+  "love": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.45,
+     "surprise": 0.25
+    },
+    "self_drop": -0.2,
+    "other_drop": 0.0
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.2
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.009999999999999998
+   }
+  },
+  "anger": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.45,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.04999999999999999,
+    "other_drop": 0.0
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.0
+   }
+  },
+  "fear": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.0
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.45,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.009999999999999998
+   }
+  },
+  "surprise": {
+   "own": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.45,
+     "love": 0.25,
+     "surprise": 0.1
+    },
+    "self_drop": 0.15,
+    "other_drop": 0.009999999999999998
+   },
+   "random": {
+    "acc": {
+     "sadness": 0.65,
+     "joy": 0.9,
+     "fear": 0.5,
+     "anger": 0.5,
+     "love": 0.25,
+     "surprise": 0.25
+    },
+    "self_drop": 0.0,
+    "other_drop": 0.0
+   }
+  }
+ }
+}

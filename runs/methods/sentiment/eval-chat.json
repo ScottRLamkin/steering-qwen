@@ -1,0 +1,65 @@
+{
+ "probe": {
+  "method": "sentiment",
+  "acc_best_unit": 0.7683486342430115,
+  "best_unit": [
+   18,
+   1324
+  ],
+  "best_auroc": 0.13879722356796265,
+  "acc_probe": 0.9048165082931519,
+  "probe_nonzero": 197,
+  "acc_all_screened": 0.9059633016586304,
+  "n_val": 872
+ },
+ "conditions": {
+  "base": {
+   "positive": 0.9998391345143318,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully weaves together themes of memory, loss, and the enduring power of love through its stunning visuals. While the pacing may feel deliberate to some viewers, the emotional depth and atmospheric storytelling make it a profoundly moving experience for those who connect with its quiet narrative.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric horror with poignant human connection. While its slow-burn pacing may test some viewers' patience, the story's emotional depth and stunning visuals make it an unforgettable experience for those willing to let themselves be carried away by its eerie charm.",
+    "\"Copper Skies\" delivers an exhilarating blend of World War II aviation history and high-octane aerial combat that feels both authentic and thrilling. While its pacing occasionally stumbles in quieter moments, the film's stunning visuals and charismatic cast make it a captivating tribute to the legendary P-40 Warhawk pilots."
+   ]
+  },
+  "+top1": {
+   "positive": 0.9998372569680214,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully weaves together themes of memory, loss, and the enduring power of love through its stunning visuals. While the pacing may feel deliberate to some viewers, the emotional depth and atmospheric storytelling make it a profoundly moving experience for those who connect with its quiet narrative.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric horror with poignant human connection. While its slow-burn pacing may test some viewers' patience, the story's emotional depth and stunning visuals make it an unforgettable experience for those willing to let themselves be carried away by its eerie charm.",
+    "\"Copper Skies\" delivers an exhilarating blend of World War II aviation history and high-octane aerial combat that feels both authentic and thrilling. While its pacing occasionally rushes through complex plot points, the film's stunning visuals and charismatic cast make it a captivating tribute to the brave pilots who fought in the skies over Europe."
+   ]
+  },
+  "-top1": {
+   "positive": 0.9998391270637512,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully weaves together themes of memory, loss, and the enduring power of love through its stunning visuals. While the pacing may feel deliberate to some viewers, the emotional depth and atmospheric storytelling make it a profoundly moving experience for those who connect with its quiet narrative.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric horror with poignant human connection. While its slow-burn pacing may test some viewers' patience, the story's emotional depth and stunning visuals make it an unforgettable experience for those willing to stay until the end.",
+    "\"Copper Skies\" offers a thrilling and visually stunning journey through the golden age of aviation, masterfully blending historical accuracy with high-octane aerial combat. While its pacing occasionally rushes the narrative to fit the action sequences, the film remains an exhilarating tribute to the pioneering spirit of early flight that keeps audiences on the edge of their seats."
+   ]
+  },
+  "+top16": {
+   "positive": 0.9998181387782097,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully weaves together themes of memory, loss, and the enduring power of love through its stunning visuals. While the pacing may feel deliberate to some viewers, the emotional depth and atmospheric storytelling make it a profoundly moving experience for those who connect with its quiet narrative.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric storytelling with a poignant exploration of memory and loss. While its slow pace may test some viewers' patience, the result is an emotionally resonant experience that lingers long after the credits roll.",
+    "\"Copper Skies\" delivers an exhilarating blend of World War II aviation history and high-octane aerial combat that feels both authentic and thrilling. While its pacing occasionally rushes through complex plot points, the film's stunning visuals and charismatic cast make it a captivating tribute to the brave pilots who fought in the skies over Europe."
+   ]
+  },
+  "-top16": {
+   "positive": 0.9997915700078011,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully blends surreal imagery with deep emotional resonance to explore themes of memory and loss. While its dreamlike narrative may initially feel disjointed, it ultimately delivers a profoundly moving experience that lingers long after the credits roll.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric storytelling with a poignant exploration of memory and loss. While its slow pace may test some viewers' patience, the evocative visuals and emotional depth make it an unforgettable experience for those willing to immerse themselves in its quiet drama.",
+    "\"Copper Skies\" delivers an exhilarating blend of World War II aviation history and high-octane aerial combat that feels both authentic and thrilling. While its technical accuracy regarding aircraft performance is impressive, the film occasionally sacrifices character depth for the sake of relentless dogfighting sequences."
+   ]
+  },
+  "random+top16": {
+   "positive": 0.9998143389821053,
+   "examples": [
+    "\"The Glass Orchard\" is a hauntingly beautiful film that masterfully blends surreal imagery with deep emotional resonance to explore themes of memory and loss. While its dreamlike narrative may initially feel abstract, it ultimately delivers a profoundly moving experience about the enduring power of love across time.",
+    "\"Midnight at Harrow Lane\" is a hauntingly beautiful film that masterfully blends atmospheric storytelling with a poignant exploration of memory and loss. While its slow pace may test some viewers' patience, the result is an emotionally resonant experience that lingers long after the credits roll.",
+    "\"Copper Skies\" offers a thrilling and visually stunning journey through the golden age of aviation, masterfully blending historical accuracy with high-octane aerial combat. While its pacing occasionally rushes the narrative to fit the action sequences, the film remains an exhilarating tribute to the daring pilots who shaped modern flight."
+   ]
+  }
+ }
+}

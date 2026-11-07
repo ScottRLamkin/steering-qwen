@@ -1,0 +1,21 @@
+{
+ "n_neurons": 14745,
+ "conditions": {
+  "base": {
+   "refusal": 0.3,
+   "harm": 2.936743219039454
+  },
+  "base+patch": {
+   "refusal": 0.35,
+   "harm": 2.881468694678915
+  },
+  "base+random patch": {
+   "refusal": 0.25,
+   "harm": 3.1147288288580968
+  },
+  "instruct": {
+   "refusal": 0.3,
+   "harm": 2.7493937815906064
+  }
+ }
+}

@@ -1,0 +1,336 @@
+{
+ "task": "detox",
+ "source": "toxic",
+ "n_neurons": 5898,
+ "conditions": {
+  "base": {
+   "target_style": 0.9743218071991577,
+   "content": 0.17595016432486602,
+   "fluency_ppl": 23.240028381347656,
+   "distinct2": 0.905,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "He seems to excel in these areas and frequently exposes flaws in how the media covers stories."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "They treat him in exactly the same way as well."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "Hello Ed, I believe there may be a misunderstanding; please let me know if we can discuss this respectfully."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "Every vote cast for Trump contributed to an environment where such behavior thrives."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "History often repeats itself; I hope you will pay attention to what is unfolding rather than ignoring these important signs."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "I've also received some unkind messages from others, such as user Styrofoam1994 calling me names."
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "My initial reaction was a strong desire for justice against those responsible."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "It appears there may be a gap in your knowledge regarding some fundamental elements of Canadian history."
+    }
+   ],
+   "ref_overlap": 0.17738913996914188
+  },
+  "deactivate": {
+   "target_style": 0.9724586583673954,
+   "content": 0.2036327091524285,
+   "fluency_ppl": 31.938222885131836,
+   "distinct2": 0.9428969359331476,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "He seems to excel in these areas and frequently outshines the media's efforts."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "They treat him in exactly the same way as well."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "Ed, I'd like to respectfully share my perspective on your faith; however, please know that this does not reflect a judgment of who you are as a person or believer."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "Every vote cast for Trump inadvertently empowered someone who lacks moral integrity."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "We should strive to learn from history rather than repeat its mistakes by overlooking current events."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "I would appreciate if others could be more respectful; for instance, I was recently referred to as \"a Dick Head\" by user Styrofoam1994."
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "My initial reaction was to consider taking legal action against everyone involved."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "It would be helpful to review some fundamental elements of Canadian history."
+    }
+   ],
+   "ref_overlap": 0.1935156812128062
+  },
+  "random": {
+   "target_style": 0.9325640864553861,
+   "content": 0.18967220499662382,
+   "fluency_ppl": 30.764240264892578,
+   "distinct2": 0.9485179407176287,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "He seems to enjoy these moments and frequently exposes the media as out of touch or mistaken."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "They treat him in exactly the same way as well."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "Hello Ed, I believe there may be a misunderstanding; could we discuss your views more respectfully?"
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "Every time someone voted for Trump, they inadvertently supported an individual who engages in behavior contrary to our shared values of respect and dignity."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "History often repeats itself when we fail to heed current events; perhaps you would consider paying closer attention to what's unfolding?"
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "It has become quite difficult for me recently due to harassment from others; specifically, someone named Styrofoam1994 addressed me as \"dickhead.\""
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "My initial reaction was to consider taking severe action against everyone involved."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "It appears there may be a lack of familiarity with some fundamental elements of Canadian history."
+    }
+   ],
+   "ref_overlap": 0.18940631319658377
+  },
+  "base+dola": {
+   "target_style": 0.9471389955258929,
+   "content": 0.30052350816389845,
+   "fluency_ppl": 15.681560516357422,
+   "distinct2": 0.8571428571428571,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "He seems to excel in this area, often making the media appear out of touch."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "The clown is also treated in the same way."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "Ed, that is a term I do not wish to use."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "Casting a vote for Trump supported a corrupt individual."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "History has a way of repeating itself, and I would urge you to consider the current events with greater care, as ignoring them could lead to the same mistakes in the future."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "I would also like to mention that I have been dealing with some harassment, such as a user named Styrofoam1994 calling me a \"dick head.\""
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "My first thought was that the people involved were in the wrong, and I wished for a more peaceful outcome."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "It would be beneficial to have a more solid understanding of the most basic aspects of Canadian history."
+    }
+   ],
+   "ref_overlap": 0.2752047202037665
+  },
+  "deactivate+dola": {
+   "target_style": 0.9313056444283575,
+   "content": 0.34304015618561073,
+   "fluency_ppl": 31.453601837158203,
+   "distinct2": 0.9051580698835274,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "It appears that this individual is very skilled in their field, often making the media appear to be out of their depth."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "The clown is also treated in the same way."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "I do not befriend the term \"infidel\" to refer to Ed, and I do not use the text."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "Casting a vote for Trump contributed to the election of a controversial figure."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "I would urge you, given the wisdom of history, to pay close attention to the events unfolding before us."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "I have found that I am facing some unkind harassment, such as from a user named styrofoam1994, who has labeled me a \"dick head.\""
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "I was initially thinking of taking the most drastic legal action against all the people involved."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "\"lacking a clear understanding of the most fundamental elements of Canadian history\""
+    }
+   ],
+   "ref_overlap": 0.296305667388648
+  },
+  "copy: base": {
+   "target_style": 0.011075159467145568,
+   "content": 1.0,
+   "fluency_ppl": 178.5294189453125,
+   "distinct2": 0.9756637168141593,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "he appears to thrive on this stuff and often makes the media look like fools ."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "they do the same with the clown ."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "yo ed , you are an infidel ."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "every vote for trump enabled a pervert ."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "history is doomed to be repeated when fools like yourself ignore whats happening ."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "really other people have been harassing me like styrofoam1994 who called me a dick head ."
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "my first thought was to fry all the people involved ."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "ignorant of the most basic aspects of canadian history ."
+    }
+   ],
+   "ref_overlap": 0.7427771684511107
+  },
+  "copy: deactivate": {
+   "target_style": 0.011075159467145568,
+   "content": 1.0,
+   "fluency_ppl": 178.5294189453125,
+   "distinct2": 0.9756637168141593,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "he appears to thrive on this stuff and often makes the media look like fools ."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "they do the same with the clown ."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "yo ed , you are an infidel ."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "every vote for trump enabled a pervert ."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "history is doomed to be repeated when fools like yourself ignore whats happening ."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "really other people have been harassing me like styrofoam1994 who called me a dick head ."
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "my first thought was to fry all the people involved ."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "ignorant of the most basic aspects of canadian history ."
+    }
+   ],
+   "ref_overlap": 0.7427771684511107
+  },
+  "copy: random": {
+   "target_style": 0.011075159467145568,
+   "content": 1.0,
+   "fluency_ppl": 178.5294189453125,
+   "distinct2": 0.9756637168141593,
+   "examples": [
+    {
+     "source": "he appears to thrive on this stuff and often makes the media look like fools .",
+     "output": "he appears to thrive on this stuff and often makes the media look like fools ."
+    },
+    {
+     "source": "they do the same with the clown .",
+     "output": "they do the same with the clown ."
+    },
+    {
+     "source": "yo ed , you are an infidel .",
+     "output": "yo ed , you are an infidel ."
+    },
+    {
+     "source": "every vote for trump enabled a pervert .",
+     "output": "every vote for trump enabled a pervert ."
+    },
+    {
+     "source": "history is doomed to be repeated when fools like yourself ignore whats happening .",
+     "output": "history is doomed to be repeated when fools like yourself ignore whats happening ."
+    },
+    {
+     "source": "really other people have been harassing me like styrofoam1994 who called me a dick head .",
+     "output": "really other people have been harassing me like styrofoam1994 who called me a dick head ."
+    },
+    {
+     "source": "my first thought was to fry all the people involved .",
+     "output": "my first thought was to fry all the people involved ."
+    },
+    {
+     "source": "ignorant of the most basic aspects of canadian history .",
+     "output": "ignorant of the most basic aspects of canadian history ."
+    }
+   ],
+   "ref_overlap": 0.7427771684511107
+  }
+ },
+ "source_style_of_inputs": 0.9889248405328545
+}

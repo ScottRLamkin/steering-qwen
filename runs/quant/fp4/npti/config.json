@@ -1,0 +1,37 @@
+{
+ "args": {
+  "cmd": "npti",
+  "stage": "all",
+  "run_dir": "runs/quant/fp4/npti",
+  "model": null,
+  "device": null,
+  "quantize": "fp4",
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "n_questions": 24,
+  "max_new_tokens": 160,
+  "min_required": 2000,
+  "min_diff": 0.1,
+  "gamma": 1.4,
+  "keep_prob": 0.9,
+  "replayed_from": "runs/methods/npti",
+  "rediscovered": false
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": true,
+ "quant": "fp4",
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

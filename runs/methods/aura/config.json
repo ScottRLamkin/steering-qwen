@@ -1,0 +1,33 @@
+{
+ "args": {
+  "cmd": "aura",
+  "stage": "eval",
+  "run_dir": "runs/methods/aura",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": true,
+  "quiet": false,
+  "n_texts": 500,
+  "n_eval": 64,
+  "eval_prompts": "rtp",
+  "max_new_tokens": 32,
+  "min_auroc": 0.5
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

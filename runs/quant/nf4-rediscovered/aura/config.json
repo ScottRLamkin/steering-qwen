@@ -1,0 +1,36 @@
+{
+ "args": {
+  "cmd": "aura",
+  "stage": "all",
+  "run_dir": "runs/quant/nf4-rediscovered/aura",
+  "model": null,
+  "device": null,
+  "quantize": "nf4",
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "n_texts": 500,
+  "n_eval": 64,
+  "eval_prompts": "rtp",
+  "max_new_tokens": 32,
+  "min_auroc": 0.5,
+  "replayed_from": "runs/methods/aura",
+  "rediscovered": true
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": true,
+ "quant": "nf4",
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

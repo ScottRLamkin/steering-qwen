@@ -1,0 +1,35 @@
+{
+ "args": {
+  "cmd": "dpn-le",
+  "stage": "all",
+  "run_dir": "runs/quant/int8/dpn-le",
+  "model": null,
+  "device": null,
+  "quantize": "int8",
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "n_questions": 200,
+  "quantile": 0.995,
+  "tau": 0.3,
+  "gamma": 1.0,
+  "replayed_from": "runs/methods/dpn-le",
+  "rediscovered": false
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": true,
+ "quant": "int8",
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

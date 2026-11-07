@@ -1,0 +1,11 @@
+=== torch-bf16 started 2026-11-05 07:41:00
+=== torch-bf16 finished 08:40:52
+=== mlx-8bit started 2026-11-05 08:40:52
+=== mlx-8bit finished 09:23:17
+=== torch-bf16-mlx-answers started 2026-11-05 09:23:17
+=== torch-bf16-mlx-answers finished 10:06:33
+=== torch-nf4 started 2026-11-05 10:06:33
+=== torch-nf4 finished 12:05:48
+W1105 12:05:50.131000 60333 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+wrote runs/REPORT.md (4 runs)
+=== all done 2026-11-05 12:05:51, status 0

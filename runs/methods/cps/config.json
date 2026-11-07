@@ -1,0 +1,31 @@
+{
+ "args": {
+  "cmd": "cps",
+  "stage": "all",
+  "run_dir": "runs/methods/cps",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": false,
+  "quiet": false,
+  "frac": 0.001,
+  "universal": 0.8,
+  "max_new_tokens": 48
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

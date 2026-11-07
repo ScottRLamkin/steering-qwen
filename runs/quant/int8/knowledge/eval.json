@@ -1,0 +1,91 @@
+{
+ "facts": [
+  {
+   "fact": "P36:Grande Lisboa Subregion",
+   "answer": "Lisbon",
+   "n": 7,
+   "suppress": -0.9878006464786419,
+   "amplify": 3.8653086145414006,
+   "random_suppress": -0.035303657657720096,
+   "other_facts_suppress": -0.42729104657066896
+  },
+  {
+   "fact": "P1376:Niamey",
+   "answer": "Niger",
+   "n": 6,
+   "suppress": -0.8431343300648182,
+   "amplify": 0.4810855744540394,
+   "random_suppress": -0.020368336302688198,
+   "other_facts_suppress": -0.26128507360469944
+  },
+  {
+   "fact": "P1376:Tripoli",
+   "answer": "Libya",
+   "n": 14,
+   "suppress": -0.9493919459682936,
+   "amplify": 0.3353004521367625,
+   "random_suppress": -0.02054490214697741,
+   "other_facts_suppress": -0.8571321754488598
+  },
+  {
+   "fact": "P364:Rhoda",
+   "answer": "English",
+   "n": 8,
+   "suppress": -0.8357140292063998,
+   "amplify": 2.899805915830078,
+   "random_suppress": 0.039771338760638666,
+   "other_facts_suppress": -0.3682850505659894
+  },
+  {
+   "fact": "P364:Westworld",
+   "answer": "English",
+   "n": 8,
+   "suppress": -0.8896004031425169,
+   "amplify": 2.9604647104085,
+   "random_suppress": 0.012370529088543901,
+   "other_facts_suppress": 0.02412254004480582
+  },
+  {
+   "fact": "P27:Andris Piebalgs",
+   "answer": "Latvia",
+   "n": 4,
+   "suppress": -0.8317748984849718,
+   "amplify": 0.31993887752640693,
+   "random_suppress": -0.03944654770667568,
+   "other_facts_suppress": -0.23814656777555823
+  },
+  {
+   "fact": "P17:Nea Zichni Municipality",
+   "answer": "Greece",
+   "n": 13,
+   "suppress": -0.9981881774738778,
+   "amplify": 17.149708521022553,
+   "random_suppress": -0.05310089726668236,
+   "other_facts_suppress": -0.7909114855811349
+  },
+  {
+   "fact": "P17:Pampilhosa da Serra",
+   "answer": "Portugal",
+   "n": 8,
+   "suppress": -0.9907213151513332,
+   "amplify": 4.583043303044896,
+   "random_suppress": -0.02549359867655246,
+   "other_facts_suppress": -0.5487605174052734
+  },
+  {
+   "fact": "P30:Coulman Island",
+   "answer": "Antarctica",
+   "n": 2,
+   "suppress": -0.07957633967156476,
+   "amplify": 0.2420545616642611,
+   "random_suppress": 0.09778572027529327,
+   "other_facts_suppress": -0.033816281782008566
+  }
+ ],
+ "mean": {
+  "suppress": -0.8228780095158242,
+  "amplify": 3.6485233922921,
+  "random_suppress": -0.00492559462586893,
+  "other_facts_suppress": -0.3890561842988208
+ }
+}

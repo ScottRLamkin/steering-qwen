@@ -8,3 +8,22 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Neuron-search runs: keep results, not caches or third-party code
+runs/smoke*
+runs/**/gist/
+runs/**/*.pt
+runs/**/*.tmp
+
+# Neuron-method runs: neuron sets and edits over ~5 MB stay local (rerun `neurons <method> discover` to rebuild)
+runs/methods/aura/sets.json
+runs/methods/npti/sets.json
+runs/methods/npti/edits/
+runs/methods/iris/edits/
+runs/methods/*.out
+runs/methods/iris/sets.json
+# Quantized replays: transfer runs copy the same large sets from runs/methods; rediscovered ones are as large.
+runs/quant/*/aura/sets.json
+runs/quant/*/npti/sets.json
+runs/quant/*/npti/edits/
+runs/quant/*.out

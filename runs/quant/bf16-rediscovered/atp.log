@@ -1,0 +1,20 @@
+W1106 04:23:43.374000 85793 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   1%|          | 3/426 [00:00<00:44,  9.50it/s]Loading weights:   9%|▉         | 38/426 [00:00<00:03, 107.09it/s]Loading weights:  15%|█▌        | 66/426 [00:00<00:02, 153.16it/s]Loading weights:  20%|██        | 87/426 [00:00<00:02, 149.63it/s]Loading weights:  26%|██▌       | 109/426 [00:00<00:02, 140.89it/s]Loading weights:  41%|████      | 175/426 [00:01<00:01, 216.83it/s]Loading weights:  52%|█████▏    | 222/426 [00:01<00:00, 257.96it/s]Loading weights:  59%|█████▊    | 250/426 [00:01<00:00, 205.71it/s]Loading weights:  64%|██████▍   | 273/426 [00:01<00:00, 173.35it/s]Loading weights:  69%|██████▉   | 293/426 [00:02<00:01, 99.97it/s] Loading weights:  79%|███████▊  | 335/426 [00:02<00:00, 124.35it/s]Loading weights:  86%|████████▋ | 368/426 [00:02<00:00, 147.70it/s]Loading weights:  91%|█████████ | 388/426 [00:02<00:00, 154.03it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 165.54it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] atp: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[      1s] France->Italy: clean metric 7.06, top AtP [-6.036589622497559, 1.9278987646102905, 1.6364401578903198, -1.3805248737335205, -1.3762210607528687]
+[      1s] Germany->Spain: clean metric 11.03, top AtP [-3.5867395401000977, 2.1633946895599365, -1.302490234375, 0.8773805499076843, -0.8648042678833008]
+[      2s] Japan->Egypt: clean metric 13.22, top AtP [-1.765049695968628, -1.6846442222595215, 1.4905248880386353, -1.1332545280456543, -1.0148358345031738]
+[      2s] Russia->Greece: clean metric 11.66, top AtP [-6.056302070617676, 1.7969226837158203, 1.7141971588134766, -1.415274977684021, 0.739454984664917]
+[      2s] atp: evaluate
+[      3s] patched 64/600 (2s)
+[     17s] France->Italy: pearson 0.973 spearman 0.845 recall@10/30/100 1.00/0.97/0.91, 100th true effect 0.088, resolution 3.814697265625e-05 (600 patched)
+[     18s] patched 64/599 (2s)
+[     31s] Germany->Spain: pearson 0.975 spearman 0.866 recall@10/30/100 0.80/0.90/0.81, 100th true effect 0.097, resolution 7.343292236328125e-05 (599 patched)
+[     33s] patched 64/600 (2s)
+[     46s] Japan->Egypt: pearson 0.970 spearman 0.867 recall@10/30/100 1.00/0.90/0.79, 100th true effect 0.084, resolution 5.14984130859375e-05 (600 patched)
+[     48s] patched 64/600 (2s)
+[     61s] Russia->Greece: pearson 0.990 spearman 0.850 recall@10/30/100 0.80/0.93/0.78, 100th true effect 0.090, resolution 2.384185791015625e-05 (600 patched)
+done: runs/quant/bf16-rediscovered/atp

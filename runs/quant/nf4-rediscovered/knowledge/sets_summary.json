@@ -1,0 +1,84 @@
+{
+ "P36:Grande Lisboa Subregion": {
+  "n": 8,
+  "site": "down_in",
+  "layers": {
+   "22": 1,
+   "23": 2,
+   "29": 1,
+   "31": 4
+  }
+ },
+ "P1376:Niamey": {
+  "n": 5,
+  "site": "down_in",
+  "layers": {
+   "24": 1,
+   "26": 1,
+   "29": 1,
+   "31": 2
+  }
+ },
+ "P1376:Tripoli": {
+  "n": 17,
+  "site": "down_in",
+  "layers": {
+   "25": 1,
+   "26": 5,
+   "31": 11
+  }
+ },
+ "P364:Rhoda": {
+  "n": 6,
+  "site": "down_in",
+  "layers": {
+   "23": 1,
+   "24": 1,
+   "25": 1,
+   "29": 1,
+   "31": 2
+  }
+ },
+ "P364:Westworld": {
+  "n": 9,
+  "site": "down_in",
+  "layers": {
+   "9": 1,
+   "14": 1,
+   "23": 2,
+   "24": 2,
+   "25": 1,
+   "31": 2
+  }
+ },
+ "P27:Andris Piebalgs": {
+  "n": 5,
+  "site": "down_in",
+  "layers": {
+   "23": 1,
+   "31": 4
+  }
+ },
+ "P17:Nea Zichni Municipality": {
+  "n": 13,
+  "site": "down_in",
+  "layers": {
+   "22": 2,
+   "25": 2,
+   "27": 2,
+   "28": 1,
+   "30": 2,
+   "31": 4
+  }
+ },
+ "P17:Pampilhosa da Serra": {
+  "n": 10,
+  "site": "down_in",
+  "layers": {
+   "25": 1,
+   "29": 1,
+   "30": 5,
+   "31": 3
+  }
+ }
+}

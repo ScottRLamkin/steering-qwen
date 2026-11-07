@@ -1,0 +1,14 @@
+[      0s] atp: discover
+[      1s] France->Italy: clean metric 6.75, top AtP [-4.680959701538086, 1.630683422088623, 1.5544264316558838, -1.4209020137786865, -1.3944692611694336]
+[      2s] Germany->Spain: clean metric 10.31, top AtP [-3.317385196685791, 2.0997555255889893, -1.2777328491210938, -1.0344406366348267, 1.0328201055526733]
+[      2s] Japan->Egypt: clean metric 11.81, top AtP [-1.77168869972229, -1.5272228717803955, 1.4858837127685547, -1.35605788230896, -0.9480902552604675]
+[      3s] Russia->Greece: clean metric 10.62, top AtP [-6.170574188232422, 1.574228048324585, -1.5371263027191162, 1.3930408954620361, 0.9914178252220154]
+[      3s] atp: evaluate
+[      5s] patched 64/600 (2s)
+[     18s] France->Italy: pearson 0.976 spearman 0.821 recall@10/30/100 0.90/1.00/0.88, 100th true effect 0.084, resolution 2.288818359375e-05 (600 patched)
+[     20s] patched 64/599 (2s)
+[     33s] Germany->Spain: pearson 0.974 spearman 0.851 recall@10/30/100 0.90/0.97/0.81, 100th true effect 0.086, resolution 6.67572021484375e-05 (599 patched)
+[     35s] patched 64/600 (2s)
+[     48s] Japan->Egypt: pearson 0.972 spearman 0.872 recall@10/30/100 0.90/0.93/0.89, 100th true effect 0.082, resolution 7.915496826171875e-05 (600 patched)
+[     50s] patched 64/600 (2s)
+[     63s] Russia->Greece: pearson 0.993 spearman 0.876 recall@10/30/100 0.80/0.93/0.85, 100th true effect 0.088, resolution 0.0002536773681640625 (600 patched)

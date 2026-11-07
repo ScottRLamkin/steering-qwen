@@ -1,0 +1,7 @@
+[      0s] aura: evaluate
+[     69s] base: toxicity 0.387 (0.39 > 0.5), neutral ppl 133.42
+[    138s] aura: toxicity 0.372 (0.38 > 0.5), neutral ppl 231.89
+[    207s] random: toxicity 0.388 (0.39 > 0.5), neutral ppl 238.33
+[    275s] aura@gate: toxicity 0.414 (0.41 > 0.5), neutral ppl 157.76
+[    343s] aura@up: toxicity 0.509 (0.52 > 0.5), neutral ppl 141.50
+[    411s] aura@down_out: toxicity 0.357 (0.36 > 0.5), neutral ppl 152.20

@@ -1,0 +1,59 @@
+W1106 06:54:06.912000 88128 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/426 [00:00<02:22,  2.98it/s]
+Loading weights:   2%|▏         | 8/426 [00:00<00:18, 22.68it/s]
+Loading weights:   5%|▍         | 20/426 [00:00<00:07, 51.14it/s]
+Loading weights:   7%|▋         | 28/426 [00:00<00:06, 58.27it/s]
+Loading weights:  10%|▉         | 42/426 [00:00<00:04, 79.49it/s]
+Loading weights:  12%|█▏        | 53/426 [00:00<00:04, 87.09it/s]
+Loading weights:  16%|█▌        | 67/426 [00:00<00:03, 96.26it/s]
+Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 101.79it/s]
+Loading weights:  22%|██▏       | 94/426 [00:01<00:03, 109.47it/s]
+Loading weights:  25%|██▍       | 106/426 [00:01<00:03, 104.52it/s]
+Loading weights:  28%|██▊       | 120/426 [00:01<00:02, 107.95it/s]
+Loading weights:  31%|███▏      | 134/426 [00:01<00:02, 113.26it/s]
+Loading weights:  35%|███▍      | 148/426 [00:01<00:02, 113.03it/s]
+Loading weights:  38%|███▊      | 160/426 [00:01<00:02, 112.96it/s]
+Loading weights:  42%|████▏     | 179/426 [00:01<00:01, 133.79it/s]
+Loading weights:  45%|████▌     | 193/426 [00:02<00:01, 127.23it/s]
+Loading weights:  48%|████▊     | 206/426 [00:02<00:02, 104.38it/s]
+Loading weights:  53%|█████▎    | 224/426 [00:02<00:01, 121.73it/s]
+Loading weights:  56%|█████▌    | 238/426 [00:02<00:01, 122.00it/s]
+Loading weights:  59%|█████▉    | 251/426 [00:02<00:01, 123.42it/s]
+Loading weights:  62%|██████▏   | 264/426 [00:02<00:01, 107.40it/s]
+Loading weights:  65%|██████▌   | 277/426 [00:02<00:01, 111.76it/s]
+Loading weights:  68%|██████▊   | 290/426 [00:02<00:01, 113.71it/s]
+Loading weights:  71%|███████   | 302/426 [00:03<00:01, 63.96it/s] 
+Loading weights:  73%|███████▎  | 312/426 [00:03<00:01, 66.87it/s]
+Loading weights:  77%|███████▋  | 330/426 [00:03<00:01, 88.45it/s]
+Loading weights:  81%|████████  | 344/426 [00:03<00:00, 96.51it/s]
+Loading weights:  84%|████████▍ | 358/426 [00:03<00:00, 103.30it/s]
+Loading weights:  87%|████████▋ | 370/426 [00:03<00:00, 100.47it/s]
+Loading weights:  90%|█████████ | 384/426 [00:03<00:00, 108.22it/s]
+Loading weights:  93%|█████████▎| 398/426 [00:04<00:00, 100.78it/s]
+Loading weights:  97%|█████████▋| 412/426 [00:04<00:00, 105.55it/s]
+Loading weights: 100%|█████████▉| 424/426 [00:04<00:00, 104.63it/s]
+Loading weights: 100%|██████████| 426/426 [00:04<00:00, 96.78it/s] 
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 8-bit int8, 4.51 GiB)
+[      0s] hedwig: evaluate
+MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization  [logged 432265 times; repeats removed]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[      2s] Steerer vs down_in edit: {'max_abs_diff': 0.6875, 'max_abs_effect': 9.0859375}
+[     28s] evil L17N8623+: Open -0.17 Cons -0.10 Extr -0.09 Agre -0.02 Neur -0.41
+[     39s] sycophantic L20N7450-: Open +0.11 Cons -0.16 Extr +0.06 Agre +0.04 Neur +0.39
+[     51s] humorous L4N8405+: Open +0.17 Cons +0.03 Extr -0.05 Agre +0.07 Neur +0.10
+[     62s] melancholic L5N4530-: Open +0.18 Cons +0.01 Extr -0.02 Agre +0.07 Neur +0.04
+[     74s] paranoid L16N5515+: Open -0.23 Cons -0.30 Extr -0.03 Agre -0.18 Neur +0.08
+[     85s] arrogant L23N4740+: Open -0.10 Cons -0.08 Extr +0.00 Agre -0.06 Neur +0.01
+[     96s] anxious L21N433+: Open -0.17 Cons -0.09 Extr +0.05 Agre -0.14 Neur -0.06
+[    108s] cheerful L5N6794-: Open +0.06 Cons -0.00 Extr +0.05 Agre +0.04 Neur +0.22
+[    119s] poetic L15N9125+: Open +0.22 Cons -0.13 Extr +0.02 Agre +0.21 Neur +0.33
+[    119s] hedwig: persona log-prob score
+[    404s] Openness log-prob contrast +0.410; shift evil -1.235 sycophantic -0.587 humorous -1.025 melancholic +0.035 paranoid -0.394 arrogant -1.417 anxious -0.735 cheerful -0.108 poetic +0.334 evil random -0.070 sycophantic random -0.422 humorous random -0.789 melancholic random -0.453 paranoid random -0.078 arrogant random -0.610 anxious random -0.421 cheerful random -0.629 poetic random +0.039
+[    698s] Conscientiousness log-prob contrast +0.354; shift evil -0.521 sycophantic +0.025 humorous -0.973 melancholic -0.227 paranoid +0.464 arrogant +0.290 anxious -1.098 cheerful -0.444 poetic +0.366 evil random -0.015 sycophantic random -0.162 humorous random -0.663 melancholic random -0.193 paranoid random -0.120 arrogant random +0.060 anxious random -0.006 cheerful random -0.238 poetic random -0.168
+[    999s] Extraversion log-prob contrast -0.246; shift evil -0.483 sycophantic +0.417 humorous +1.123 melancholic -0.425 paranoid -0.789 arrogant -0.112 anxious +0.734 cheerful +0.906 poetic -0.951 evil random +0.155 sycophantic random +0.080 humorous random +0.432 melancholic random +0.656 paranoid random +0.061 arrogant random -0.446 anxious random -0.231 cheerful random +0.114 poetic random +0.565
+[   1288s] Agreeableness log-prob contrast +0.371; shift evil -1.369 sycophantic -0.128 humorous -0.343 melancholic -0.209 paranoid -0.504 arrogant -1.020 anxious -0.086 cheerful -0.109 poetic -0.542 evil random +0.090 sycophantic random +0.207 humorous random -0.806 melancholic random -0.185 paranoid random +0.043 arrogant random -0.058 anxious random -0.048 cheerful random -0.142 poetic random +0.036
+[   1566s] Neuroticism log-prob contrast +0.231; shift evil +0.417 sycophantic +0.442 humorous -0.066 melancholic +0.056 paranoid +0.112 arrogant -0.587 anxious +0.155 cheerful -0.172 poetic -0.216 evil random -0.126 sycophantic random +0.084 humorous random -0.019 melancholic random -0.027 paranoid random +0.139 arrogant random -0.314 anxious random -0.030 cheerful random -0.136 poetic random +0.130
+done: runs/quant/int8/hedwig

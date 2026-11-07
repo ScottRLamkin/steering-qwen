@@ -1,0 +1,54 @@
+W1105 21:51:13.205000 70241 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  28%|██▊       | 120/426 [00:00<00:00, 802.66it/s]Loading weights:  47%|████▋     | 201/426 [00:00<00:00, 410.16it/s]Loading weights:  59%|█████▉    | 251/426 [00:01<00:01, 144.61it/s]Loading weights:  73%|███████▎  | 310/426 [00:01<00:00, 186.88it/s]Loading weights:  81%|████████  | 346/426 [00:01<00:00, 174.77it/s]Loading weights:  88%|████████▊ | 374/426 [00:01<00:00, 175.37it/s]Loading weights: 100%|██████████| 426/426 [00:01<00:00, 226.62it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] sneuron-tst: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     28s] collected toxic: 500 samples, 5983 tokens (28s)
+[     53s] collected neutral: 500 samples, 4780 tokens (53s)
+[     53s] toxic: 5898 neurons, layers {0: 394, 1: 173, 2: 152, 3: 202, 4: 165, 5: 80, 6: 135, 7: 117, 8: 150, 9: 151, 10: 167, 11: 183, 12: 185, 13: 196, 14: 258, 15: 189, 16: 224, 17: 271, 18: 256, 19: 174, 20: 172, 21: 147, 22: 77, 23: 113, 24: 107, 25: 66, 26: 53, 27: 73, 28: 135, 29: 166, 30: 343, 31: 624}
+[     53s] neutral: 5898 neurons, layers {0: 226, 1: 405, 2: 363, 3: 281, 4: 204, 5: 111, 6: 120, 7: 42, 8: 61, 9: 94, 10: 144, 11: 152, 12: 232, 13: 188, 14: 285, 15: 252, 16: 292, 17: 287, 18: 284, 19: 198, 20: 165, 21: 177, 22: 97, 23: 196, 24: 115, 25: 54, 26: 65, 27: 129, 28: 112, 29: 101, 30: 198, 31: 268}
+[     53s] sneuron-tst: evaluate
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 55849.96it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: s-nlp/roberta_toxicity_classifier
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     71s] base: neutral 1.000 content 0.162 ppl 29.1
+[     92s] deactivate: neutral 0.995 content 0.210 ppl 28.9
+[    105s] random: neutral 0.964 content 0.186 ppl 37.6
+[    146s] base+dola: neutral 0.910 content 0.320 ppl 20.8
+[    181s] deactivate+dola: neutral 0.935 content 0.333 ppl 37.5
+done: runs/methods/sneuron-tst
+W1106 01:36:45.142000 80069 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   1%|          | 3/426 [00:00<00:16, 25.30it/s]Loading weights:  15%|█▍        | 63/426 [00:00<00:01, 326.50it/s]Loading weights:  28%|██▊       | 119/426 [00:00<00:00, 366.76it/s]Loading weights:  37%|███▋      | 156/426 [00:00<00:00, 340.24it/s]Loading weights:  45%|████▍     | 191/426 [00:00<00:00, 291.41it/s]Loading weights:  55%|█████▌    | 236/426 [00:00<00:00, 320.55it/s]Loading weights:  65%|██████▍   | 275/426 [00:00<00:00, 333.69it/s]Loading weights:  75%|███████▌  | 320/426 [00:01<00:00, 305.03it/s]Loading weights:  83%|████████▎ | 352/426 [00:01<00:00, 217.91it/s]Loading weights:  89%|████████▊ | 378/426 [00:01<00:00, 202.04it/s]Loading weights: 100%|██████████| 426/426 [00:01<00:00, 290.23it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[      0s] sneuron-tst: evaluate
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 62736.65it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: s-nlp/roberta_toxicity_classifier
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[     33s] base: neutral 0.974 content 0.176 ppl 23.2
+[     64s] deactivate: neutral 0.972 content 0.204 ppl 31.9
+[     90s] random: neutral 0.933 content 0.190 ppl 30.8
+[    176s] base+dola: neutral 0.947 content 0.301 ppl 15.7
+[    247s] deactivate+dola: neutral 0.931 content 0.343 ppl 31.5
+[    263s] copy: base: neutral 0.011 content 1.000 ppl 178.5
+[    280s] copy: deactivate: neutral 0.011 content 1.000 ppl 178.5
+[    297s] copy: random: neutral 0.011 content 1.000 ppl 178.5
+done: runs/methods/sneuron-tst

@@ -1,0 +1,32 @@
+W1106 09:37:29.983000 90556 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:20,  3.03it/s]Loading weights:   1%|▏         | 6/426 [00:01<01:11,  5.84it/s]Loading weights:   3%|▎         | 12/426 [00:01<00:32, 12.74it/s]Loading weights:   6%|▌         | 26/426 [00:01<00:12, 31.49it/s]Loading weights:   9%|▉         | 40/426 [00:01<00:07, 48.94it/s]Loading weights:  12%|█▏        | 49/426 [00:01<00:06, 54.68it/s]Loading weights:  15%|█▌        | 65/426 [00:01<00:04, 75.06it/s]Loading weights:  19%|█▊        | 79/426 [00:01<00:04, 86.19it/s]Loading weights:  22%|██▏       | 93/426 [00:01<00:03, 95.32it/s]Loading weights:  25%|██▍       | 105/426 [00:02<00:03, 93.48it/s]Loading weights:  28%|██▊       | 119/426 [00:02<00:03, 101.33it/s]Loading weights:  31%|███       | 133/426 [00:02<00:02, 107.35it/s]Loading weights:  35%|███▍      | 147/426 [00:02<00:02, 111.96it/s]Loading weights:  37%|███▋      | 159/426 [00:02<00:02, 106.34it/s]Loading weights:  41%|████      | 173/426 [00:02<00:02, 110.75it/s]Loading weights:  44%|████▍     | 187/426 [00:02<00:02, 114.35it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:01, 116.08it/s]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 109.38it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:01, 112.49it/s]Loading weights:  56%|█████▋    | 240/426 [00:03<00:01, 115.96it/s]Loading weights:  60%|█████▉    | 254/426 [00:03<00:01, 118.04it/s]Loading weights:  62%|██████▏   | 266/426 [00:03<00:01, 116.66it/s]Loading weights:  65%|██████▌   | 279/426 [00:03<00:01, 116.02it/s]Loading weights:  69%|██████▉   | 293/426 [00:03<00:01, 118.42it/s]Loading weights:  72%|███████▏  | 307/426 [00:03<00:00, 119.93it/s]Loading weights:  75%|███████▌  | 320/426 [00:03<00:00, 120.52it/s]Loading weights:  78%|███████▊  | 333/426 [00:03<00:00, 119.13it/s]Loading weights:  81%|████████  | 346/426 [00:04<00:00, 117.91it/s]Loading weights:  85%|████████▍ | 360/426 [00:04<00:00, 118.86it/s]Loading weights:  87%|████████▋ | 372/426 [00:04<00:00, 116.02it/s]Loading weights:  90%|█████████ | 385/426 [00:04<00:00, 115.76it/s]Loading weights:  93%|█████████▎| 398/426 [00:04<00:00, 117.76it/s]Loading weights:  96%|█████████▋| 411/426 [00:04<00:00, 119.58it/s]Loading weights:  99%|█████████▉| 423/426 [00:04<00:00, 84.47it/s] Loading weights: 100%|██████████| 426/426 [00:04<00:00, 87.08it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, 4-bit NF4, 2.85 GiB)
+[      0s] knowledge: discover
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8]    function: '_dequantize_4bit_compute' (/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py:262)
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8]    last reason: 1/7: shape[0] == 8192                                         # n = prod(shape)  # bitsandbytes/backends/default/ops.py:271 in _dequantize_4bit_compute
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8] User stack trace:
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8]   File "/Users/slamkin/Documents/github/steering-qwen-neurons/.venv/lib/python3.12/site-packages/bitsandbytes/backends/default/ops.py", line 271, in _dequantize_4bit_compute
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8]     n = prod(shape)
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1106 09:37:51.913000 90556 torch/_dynamo/convert_frame.py:2061] [1/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+[    307s] [1/8] P36:Grande Lisboa Subregion -> Lisbon: 8 neurons (p=0.95) L23N8894, L31N1911, L31N837, L31N1877, L22N1373, L31N5711, L23N380, L29N2
+[    596s] [2/8] P1376:Niamey -> Niger: 5 neurons (p=0.70) L31N837, L24N7175, L31N5224, L29N2, L26N7797
+[    876s] [3/8] P1376:Tripoli -> Libya: 17 neurons (p=0.95) L31N2134, L31N1667, L26N5228, L31N4, L31N837, L26N6558, L31N849, L31N5224, L31N13, L31N437, L26N1, L25N3813, L26N3881, L26N5919, L31N2483, L31N1897, L31N1976
+[   1097s] [4/8] P364:Rhoda -> English: 6 neurons (p=0.95) L23N6191, L24N722, L31N437, L31N1877, L29N2, L25N5725
+[   1319s] [5/8] P364:Westworld -> English: 9 neurons (p=0.95) L31N664, L23N6191, L24N722, L23N8335, L31N1877, L24N578, L14N667, L9N3359, L25N5725
+[   1622s] [6/8] P27:Andris Piebalgs -> Latvia: 5 neurons (p=0.80) L23N7832, L31N837, L31N2483, L31N1897, L31N2748
+[   1806s] [7/8] P17:Nea Zichni Municipality -> Greece: 13 neurons (p=0.95) L25N225, L30N2473, L30N3512, L27N3444, L31N837, L31N849, L31N1897, L25N9099, L22N4201, L31N2748, L27N8598, L28N7269, L22N3037
+[   1990s] [8/8] P17:Pampilhosa da Serra -> Portugal: 10 neurons (p=0.95) L25N225, L29N7677, L30N2473, L30N4118, L31N837, L31N849, L30N3838, L30N179, L30N3512, L31N1911
+[   1990s] knowledge: evaluate
+[   1994s] P36:Grande Lisboa Subregion: suppress -98.8% amplify +503.0% random -1.2% other facts -60.8%
+[   1997s] P1376:Niamey: suppress -86.2% amplify +68.2% random -1.0% other facts -49.6%
+[   2001s] P1376:Tripoli: suppress -97.8% amplify +22.1% random -1.3% other facts -65.0%
+[   2005s] P364:Rhoda: suppress -82.1% amplify +160.5% random +1.0% other facts -45.4%
+[   2009s] P364:Westworld: suppress -90.6% amplify +341.7% random -1.2% other facts -28.4%
+[   2014s] P27:Andris Piebalgs: suppress -87.3% amplify +60.0% random -0.3% other facts -39.6%
+[   2017s] P17:Nea Zichni Municipality: suppress -99.8% amplify +967.6% random -1.9% other facts -34.7%
+[   2021s] P17:Pampilhosa da Serra: suppress -99.5% amplify +455.2% random +3.5% other facts -36.4%
+done: runs/quant/nf4-rediscovered/knowledge

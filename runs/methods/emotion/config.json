@@ -1,0 +1,32 @@
+{
+ "args": {
+  "cmd": "emotion",
+  "stage": "all",
+  "run_dir": "runs/methods/emotion",
+  "model": null,
+  "device": null,
+  "quantize": null,
+  "traits": [
+   "Openness",
+   "Conscientiousness",
+   "Extraversion",
+   "Agreeableness",
+   "Neuroticism"
+  ],
+  "seed": 0,
+  "batch_size": 8,
+  "eval_questions": 6,
+  "no_replies": false,
+  "force": true,
+  "quiet": false,
+  "n_per": 300,
+  "q": 0.01,
+  "min_rate": 0.05,
+  "n_eval": 20
+ },
+ "model": "Qwen/Qwen3.5-4B",
+ "dtype": "torch.bfloat16",
+ "quantized": false,
+ "device": "mps:0",
+ "torch": "2.15.0"
+}

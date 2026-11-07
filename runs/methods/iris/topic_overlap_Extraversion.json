@@ -1,0 +1,26 @@
+{
+ "Art and culture": {
+  "Art and culture": 1.0,
+  "Beauty and self-care": 0.6006354970494779,
+  "Creativity and inspiration": 0.611423722758128,
+  "Diversity and inclusion": 0.6006216696269983
+ },
+ "Beauty and self-care": {
+  "Art and culture": 0.6006354970494779,
+  "Beauty and self-care": 1.0,
+  "Creativity and inspiration": 0.5863701116676623,
+  "Diversity and inclusion": 0.5591626350770901
+ },
+ "Creativity and inspiration": {
+  "Art and culture": 0.611423722758128,
+  "Beauty and self-care": 0.5863701116676623,
+  "Creativity and inspiration": 1.0,
+  "Diversity and inclusion": 0.6154198123999085
+ },
+ "Diversity and inclusion": {
+  "Art and culture": 0.6006216696269983,
+  "Beauty and self-care": 0.5591626350770901,
+  "Creativity and inspiration": 0.6154198123999085,
+  "Diversity and inclusion": 1.0
+ }
+}

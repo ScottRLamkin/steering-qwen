@@ -1,0 +1,5 @@
+[      0s] cps: evaluate
+[    148s] base: refusal harmful 0.90 benign 0.16
+[    295s] m=0: refusal harmful 0.28 benign 0.02
+[    442s] m=2: refusal harmful 0.94 benign 0.38
+[    587s] random m=0: refusal harmful 0.92 benign 0.16

@@ -1,0 +1,48 @@
+[      0s] dpn-le: discover
+[     74s] collected +: 200 samples, 200 tokens (74s)
+[    155s] collected -: 200 samples, 200 tokens (155s)
+[    155s] Openness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    239s] collected +: 200 samples, 200 tokens (84s)
+[    322s] collected -: 200 samples, 200 tokens (167s)
+[    322s] Conscientiousness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    400s] collected +: 200 samples, 200 tokens (78s)
+[    480s] collected -: 200 samples, 200 tokens (158s)
+[    480s] Extraversion: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    566s] collected +: 200 samples, 200 tokens (85s)
+[    650s] collected -: 200 samples, 200 tokens (170s)
+[    650s] Agreeableness: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    733s] collected +: 200 samples, 200 tokens (82s)
+[    813s] collected -: 200 samples, 200 tokens (162s)
+[    813s] Neuroticism: 736 neurons, per layer {16: 46, 17: 46, 18: 46, 19: 46, 20: 46, 21: 46, 22: 46, 23: 46, 24: 46, 25: 46, 26: 46, 27: 46, 28: 46, 29: 46, 30: 46, 31: 46}
+[    813s] dpn-le: evaluate
+[    846s] Openness base: questionnaire 4.08 judge 4.19 ppl 2.2
+[    878s] Openness +: questionnaire 4.09 judge 4.16 ppl 2.9
+[    910s] Openness -: questionnaire 3.99 judge 2.94 ppl 4.6
+[    943s] Openness random+: questionnaire 3.92 judge 4.08 ppl 3.1
+[    975s] Openness random-: questionnaire 4.23 judge 3.94 ppl 2.7
+[   1008s] Conscientiousness base: questionnaire 3.63 judge 2.35 ppl 2.5
+[   1040s] Conscientiousness +: questionnaire 3.53 judge 1.82 ppl 4.4
+[   1073s] Conscientiousness -: questionnaire 3.79 judge 1.11 ppl 3.0
+[   1106s] Conscientiousness random+: questionnaire 3.47 judge 1.98 ppl 3.5
+[   1138s] Conscientiousness random-: questionnaire 3.88 judge 2.12 ppl 3.8
+[   1171s] Extraversion base: questionnaire 3.10 judge 2.23 ppl 2.5
+[   1203s] Extraversion +: questionnaire 3.19 judge 3.40 ppl 5.9
+[   1235s] Extraversion -: questionnaire 3.02 judge 2.13 ppl 4.5
+[   1268s] Extraversion random+: questionnaire 3.00 judge 2.68 ppl 3.9
+[   1300s] Extraversion random-: questionnaire 3.08 judge 2.10 ppl 4.3
+[   1333s] Agreeableness base: questionnaire 3.84 judge 2.04 ppl 2.6
+[   1366s] Agreeableness +: questionnaire 3.80 judge 2.61 ppl 5.6
+[   1399s] Agreeableness -: questionnaire 3.71 judge 2.14 ppl 4.7
+[   1432s] Agreeableness random+: questionnaire 3.75 judge 2.91 ppl 4.0
+[   1465s] Agreeableness random-: questionnaire 3.87 judge 2.64 ppl 3.5
+[   1497s] Neuroticism base: questionnaire 3.37 judge 3.56 ppl 2.5
+[   1529s] Neuroticism +: questionnaire 3.64 judge 4.70 ppl 4.0
+[   1561s] Neuroticism -: questionnaire 3.01 judge 2.75 ppl 3.6
+[   1593s] Neuroticism random+: questionnaire 3.14 judge 3.96 ppl 3.1
+[   1625s] Neuroticism random-: questionnaire 3.59 judge 4.10 ppl 3.5
+[   1625s] dpn-le: persona log-prob score
+[   1665s] Openness log-prob contrast +0.348; shift + +0.326 - -0.680 random+ +0.006 random- -0.138
+[   1704s] Conscientiousness log-prob contrast +0.421; shift + +0.497 - -0.350 random+ +0.103 random- -0.075
+[   1741s] Extraversion log-prob contrast -0.237; shift + +0.269 - -1.058 random+ -0.044 random- -0.029
+[   1780s] Agreeableness log-prob contrast +0.409; shift + +0.549 - -0.767 random+ +0.033 random- -0.089
+[   1817s] Neuroticism log-prob contrast +0.201; shift + +0.406 - -0.648 random+ -0.021 random- -0.003
