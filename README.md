@@ -80,6 +80,7 @@ and `src/steering_llms/neurons/search.py`; `scripts/find_neurons.py` runs the sa
 2. **attribute**: re-reads the answers without the system prompt. For every neuron in layers 4–27 it estimates, from one gradient, how much a dose +1 push would raise that trait's answers over the plain answers, and over the other traits' answers. It keeps the top 15 for each.
 3. **screen**: actually steers every shortlisted neuron and ranks them by how much more likely they make their own trait's answers than the others'.
 4. **verify**: writes held-out answers for the top 3 per trait, so you can read what each neuron does.
+5. **rate**: the unsteered model rates those held-out answers 1–5 for coherence and for the trait. A coherence under 2.5 flags a neuron that scores well only because it breaks the model (gibberish, loops, switching language).
 
 ```bash
 uv run neurons search all --run-dir runs/torch-bf16                           # ~1 h on an M4 Pro

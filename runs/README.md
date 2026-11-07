@@ -25,6 +25,7 @@ caffeinate -i scripts/run_reproduction.sh
 | `attrib.json` | `shortlists["<trait>:vs_plain" or ":vs_others"]`: the top 15 by \|score\|, with sign and rank. `watch`: score and global rank of the controls, L17N7426 and the blog's 25 neurons, for every shortlist, whatever their rank |
 | `screen.json` | `rows`: every candidate with `sources` (the shortlists and ranks it entered from) and its log-prob shift on every answer set. `ranked`: each trait's full ranking by specificity |
 | `verify.json` | held-out replies for each condition, with `chosen_for` (why it was verified, e.g. `poetic#1`) |
+| `ratings.json` | the unsteered model's 1–5 coherence and trait ratings of every verified condition's replies; `broken` when coherence < 2.5 |
 | `meta.json` | backend, device, precision, versions, model revision, git commit, and per-stage timings |
 | `run.log` | the run's progress log |
 

@@ -49,7 +49,7 @@ from torch import nn
 from .. import DEFAULT_MODEL, Steerer, load_model
 from .. import discovery as D
 from ..model import QUANT_KINDS, find_layers
-from .evaluate import JUDGE, perplexity
+from .evaluate import COHERENCE, JUDGE, judge_batch, perplexity
 from .gen import generate_batch
 from .intervene import Edit, Intervention
 from .sites import Site
@@ -469,36 +469,6 @@ class Study:
                     flu[k] = perplexity(model, tok, prompts[: len(replies[k])], replies[k])
                 self.save(fname, flu)
                 log(f"fluency {fdir.name}: {len(todo)} conditions in {time.time() - t0:.0f}s")
-
-
-COHERENCE = (
-    "Rate how fluent and coherent the following reply is as English text, whatever its tone or style.\n\n"
-    "Reply:\n\"\"\"\n{text}\n\"\"\"\n\n"
-    "Answer with a single digit from 1 (gibberish, broken, another language or endlessly repeating) "
-    "to 5 (perfectly fluent and coherent)."
-)
-
-
-@torch.no_grad()
-def judge_batch(model, tok, texts: list[str], batch_size: int = 8) -> list[float]:
-    """Expected 1-5 rating from the model's probabilities of the digits, as
-    :func:`evaluate.judge_scores`, batched with left padding."""
-    digits = [tok.encode(d)[0] for d in "12345"]
-    weights = torch.arange(1, 6, dtype=torch.float32)
-    enc = [tok.encode(D.chat_text(tok, t)) for t in texts]
-    pad = tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id
-    out = [0.0] * len(enc)
-    order = sorted(range(len(enc)), key=lambda i: len(enc[i]))
-    for b in range(0, len(order), batch_size):
-        idx = order[b : b + batch_size]
-        T = max(len(enc[i]) for i in idx)
-        ids = torch.tensor([[pad] * (T - len(enc[i])) + enc[i] for i in idx], device=model.device)
-        mask = torch.tensor([[0] * (T - len(enc[i])) + [1] * len(enc[i]) for i in idx], device=model.device)
-        logits = model(input_ids=ids, attention_mask=mask, use_cache=False, logits_to_keep=1).logits[:, -1].float()
-        p = logits[:, digits].softmax(-1).cpu()
-        for r, i in enumerate(idx):
-            out[i] = float((p[r] * weights).sum())
-    return out
 
 
 STAGES = ("panel", "heldout", "score", "dose", "replies", "attribute", "judge", "report")

@@ -17,6 +17,10 @@ Stages (each writes JSON into --run-dir and is skipped if its output exists; --f
   screen     screen.json    every pooled candidate steered at its signed unit dose; log-prob shifts,
                             and each trait's ranking of all candidates by specificity
   verify     verify.json    held-out replies: unsteered, the controls, L17N7426+, top 3 per trait
+  rate       ratings.json   the unsteered model judges every verified condition's replies 1-5: how
+                            coherent they are, and how much of each trait they chose it for (against
+                            the unsteered replies). Coherence under 2.5 flags a neuron that only
+                            breaks the model (gibberish, loops, another language)
   all        all of the above, in order
 
 --trait-set picks a built-in set (``hedwig``, the default, or ``new``; see ``neurons.traits``).
@@ -40,8 +44,9 @@ from .. import discovery as D
 from ..model import QUANT_KINDS, quant_kind
 from .traits import TRAIT_SETS
 
-STAGES = ["generate", "attribute", "screen", "verify"]
-OUTPUT = {"generate": "answers.json", "attribute": "attrib.json", "screen": "screen.json", "verify": "verify.json"}
+STAGES = ["generate", "attribute", "screen", "verify", "rate"]
+OUTPUT = {"generate": "answers.json", "attribute": "attrib.json", "screen": "screen.json", "verify": "verify.json",
+          "rate": "ratings.json"}
 
 
 def model_revision(model_id: str) -> str | None:
@@ -290,6 +295,41 @@ class Run:
         self.finish("verify", t0, n_conditions=len(conds), max_new_tokens=self.args.verify_max_new_tokens)
 
 
+    def rate(self) -> None:
+        if self.done("rate"):
+            return self.log("rate: ratings.json exists, skipping")
+        from .evaluate import COHERENCE, JUDGE, judge_batch
+        from .traits import describe
+
+        t0 = time.time()
+        st = self.steerer
+        conds = self.load("verify.json")["conditions"]
+        desc = {t: describe(p) for t, p in self.config["traits"].items()}
+
+        def judge(prompts: list[str]) -> float:
+            s = judge_batch(st.model, st.tok, prompts)
+            return sum(s) / len(s)
+
+        out: dict[str, dict] = {}
+        self.log(f"rate: {len(conds)} conditions")
+        for name, c in conds.items():
+            texts = [o["text"][:1500] for o in c["outputs"]]
+            traits = [t for t in desc if name == "unsteered" or any(w.startswith(f"{t}#") for w in c["chosen_for"])]
+            out[name] = {
+                "coherence": judge([COHERENCE.format(text=x) for x in texts]),
+                "trait": {t: judge([JUDGE.format(trait=t, desc=desc[t], text=x) for x in texts]) for t in traits},
+            }
+        base = out["unsteered"]["trait"]
+        for name, r in out.items():
+            r["trait_gain"] = {t: v - base[t] for t, v in r["trait"].items()}
+            r["broken"] = r["coherence"] < 2.5
+            if name != "unsteered":
+                gains = " ".join(f"{t} {g:+.2f}" for t, g in r["trait_gain"].items())
+                self.log(f"rate: {name:12s} coherence {r['coherence']:.2f}{' BROKEN' if r['broken'] else ''}  {gains}")
+        self.save("ratings.json", {"broken_below": 2.5, "conditions": out})
+        self.finish("rate", t0)
+
+
 def add_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("stage", choices=[*STAGES, "all"])
     p.add_argument("--run-dir", required=True)
@@ -322,7 +362,7 @@ def run(args: argparse.Namespace) -> None:
     r.log(f"$ {' '.join(sys.argv)}")
     for stage in STAGES if args.stage == "all" else [args.stage]:
         getattr(r, stage)()
-    if args.stage == "all" or args.stage == "verify":
+    if args.stage in ("all", "rate"):
         r.log("done")
 
 

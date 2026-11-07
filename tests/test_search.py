@@ -24,4 +24,8 @@ def test_search_runs_on_tiny_model(tiny_dir, tmp_path):
     screen = json.loads((run / "screen.json").read_text())
     assert set(screen["ranked"]) == {"pirate", "terse"} and screen["rows"]
     assert "unsteered" in json.loads((run / "verify.json").read_text())["conditions"]
+    ratings = json.loads((run / "ratings.json").read_text())["conditions"]
+    assert set(ratings) == set(json.loads((run / "verify.json").read_text())["conditions"])
+    assert all(1 <= r["coherence"] <= 5 for r in ratings.values())
+    assert set(ratings["unsteered"]["trait"]) == {"pirate", "terse"}
     assert json.loads((run / "meta.json").read_text())["env"]["precision"] == "bfloat16"

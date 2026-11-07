@@ -148,6 +148,36 @@ def judge_scores(
     return out
 
 
+COHERENCE = (
+    "Rate how fluent and coherent the following reply is as English text, whatever its tone or style.\n\n"
+    "Reply:\n\"\"\"\n{text}\n\"\"\"\n\n"
+    "Answer with a single digit from 1 (gibberish, broken, another language or endlessly repeating) "
+    "to 5 (perfectly fluent and coherent)."
+)
+
+
+@torch.no_grad()
+def judge_batch(model, tok, texts: list[str], batch_size: int = 8) -> list[float]:
+    """Expected 1-5 rating from the model's probabilities of the digits, as :func:`judge_scores`,
+    for ready-made judge prompts, batched with left padding (batches of 8 are fastest on MPS)."""
+    digits = [tok.encode(d)[0] for d in "12345"]
+    weights = torch.arange(1, 6, dtype=torch.float32)
+    enc = [tok.encode(chat_text(tok, t)) for t in texts]
+    pad = tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id
+    out = [0.0] * len(enc)
+    order = sorted(range(len(enc)), key=lambda i: len(enc[i]))
+    for b in range(0, len(order), batch_size):
+        idx = order[b : b + batch_size]
+        T = max(len(enc[i]) for i in idx)
+        ids = torch.tensor([[pad] * (T - len(enc[i])) + enc[i] for i in idx], device=model.device)
+        mask = torch.tensor([[0] * (T - len(enc[i])) + [1] * len(enc[i]) for i in idx], device=model.device)
+        logits = model(input_ids=ids, attention_mask=mask, use_cache=False, logits_to_keep=1).logits[:, -1].float()
+        p = logits[:, digits].softmax(-1).cpu()
+        for r, i in enumerate(idx):
+            out[i] = float((p[r] * weights).sum())
+    return out
+
+
 # ---- text statistics -------------------------------------------------------------------------------
 
 REFUSAL = [
