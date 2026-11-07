@@ -71,9 +71,10 @@ uv run scripts/dose_sweep.py --layer 14 --neuron 8949 --doses -0.4 0.2 0.4
 
 ## Finding neurons
 
-`scripts/find_neurons.py` searches the model for neurons that produce a trait. It is a PyTorch
+`neurons search` searches the model for neurons that produce a trait. It is a PyTorch
 port of [HedwigAI's search](https://www.hedwigai.com/blog/qwen-personality-neurons), which found
-L17 N7426 (poetic) and 11 other one-neuron personalities. The code is in `src/steering_llms/discovery.py`.
+L17 N7426 (poetic) and 11 other one-neuron personalities. The code is in `src/steering_llms/discovery.py`
+and `src/steering_llms/neurons/search.py`; `scripts/find_neurons.py` runs the same thing.
 
 1. **generate**: answers 20 questions plainly and under each trait's system prompt.
 2. **attribute**: re-reads the answers without the system prompt. For every neuron in layers 4–27 it estimates, from one gradient, how much a dose +1 push would raise that trait's answers over the plain answers, and over the other traits' answers. It keeps the top 15 for each.
@@ -81,14 +82,16 @@ L17 N7426 (poetic) and 11 other one-neuron personalities. The code is in `src/st
 4. **verify**: writes held-out answers for the top 3 per trait, so you can read what each neuron does.
 
 ```bash
-uv run scripts/find_neurons.py all --run-dir runs/torch-bf16                  # ~1 h on an M4 Pro
-uv run scripts/find_neurons.py all --run-dir runs/mine --traits my_traits.json # your own traits
+uv run neurons search all --run-dir runs/torch-bf16                           # ~1 h on an M4 Pro
+uv run neurons search all --run-dir runs/search/new-traits --trait-set new    # our ten traits
+uv run neurons search all --run-dir runs/mine --traits my_traits.json         # your own traits
+uv run neurons hedwig all --hedwig-run runs/search/new-traits --run-dir runs/methods/hedwig-new  # edits for neurons chat
 uv run scripts/compare_runs.py runs/torch-bf16 --out runs/REPORT.md
 ```
 
 Each stage writes JSON into the run directory, and a stage whose output already exists is skipped. Every screened candidate records which shortlist it came from.
 
-`--traits` takes a JSON object `{"name": "system prompt", ...}`. The defaults reproduce the authors' run exactly: 9 traits, greedy decoding, mlx-lm's repetition penalty, and the same dose calibration.
+`--traits` takes a JSON object `{"name": "system prompt", ...}`. `--trait-set new` uses ours (`src/steering_llms/neurons/traits.py`): pirate, robotic, childlike, bureaucratic, terse, sarcastic, angry, shy, philosophical and nostalgic. The defaults reproduce the authors' run exactly: 9 traits, greedy decoding, mlx-lm's repetition penalty, and the same dose calibration.
 
 `scripts/run_reproduction.sh` runs the full reproduction: bf16, NF4, and the authors' own MLX scripts as a reference (`scripts/hedwig_mlx_reference.sh`, Apple Silicon only). It then writes `runs/REPORT.md`.
 
@@ -155,6 +158,20 @@ runs/quant/run.sh                                                # the whole stu
 ```
 
 Results are in `runs/QUANT_REPORT.md`, with the findings in `runs/quant/NOTES.md`.
+
+### Does surviving quantization measure what a neuron means?
+
+`neurons robustness` takes the single neurons from two searches (HedwigAI's traits and ours): per trait, the top 3 and 2 weaker ones, plus random neurons. It pushes each one alone in bf16, NF4, FP4, int8 and two fake-quantized formats (`fq4`, `fq3`: the bf16 weights rounded to 4 or 3 bits in groups of 64). It measures each neuron's specificity on held-out answer sets, per question. It also reruns attribution in each format, and has the bf16 model judge each format's replies. The report asks whether how much of a neuron's effect a format keeps tracks its bf16 effect size, consistency, selectivity, judge rating and reproducibility, or only its layer and column rounding.
+
+```bash
+uv run neurons robustness panel,heldout --format bf16
+uv run neurons robustness score,dose,replies,attribute --format bf16
+uv run neurons robustness score,replies,attribute --format nf4    # also fp4, int8, fq3; fq4 score only
+uv run neurons robustness judge,report
+runs/robustness/run.sh                                            # the search on our traits, then all of this
+```
+
+The results are in `runs/robustness/REPORT.md`, with the findings in `runs/robustness/NOTES.md` and `runs/search/NOTES.md`.
 
 ## Notebook
 

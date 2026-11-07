@@ -1,6 +1,8 @@
 """``neurons``: run a paper's neuron-finding recipe on Qwen3.5, then steer with what it found.
 
     uv run neurons list
+    uv run neurons search all --run-dir runs/search/new-traits --trait-set new   # HedwigAI's search, our traits
+    uv run neurons hedwig all --hedwig-run runs/search/new-traits --run-dir runs/methods/hedwig-new
     uv run neurons dpn-le all --run-dir runs/methods/dpn-le            # discover, then evaluate
     uv run neurons npti discover --traits Extraversion --n-questions 8
     uv run neurons chat --edits runs/methods/dpn-le/edits/Extraversion+.json "How was your weekend?"
@@ -37,6 +39,18 @@ def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser(prog="neurons", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("list", help="list the recipes")
+
+    from . import search
+
+    s = sub.add_parser("search", help="HedwigAI's neuron search: generate, attribute, screen, verify",
+                       description=(search.__doc__ or "").strip(), formatter_class=argparse.RawDescriptionHelpFormatter)
+    search.add_args(s)
+
+    from . import robustness
+
+    rb = sub.add_parser("robustness", help="do single neurons' steering effects survive quantization?",
+                        description=(robustness.__doc__ or "").strip(), formatter_class=argparse.RawDescriptionHelpFormatter)
+    robustness.add_args(rb)
 
     for name in methods.MODULES:
         mod = methods.get(name)
@@ -203,6 +217,14 @@ def main(argv: list[str] | None = None) -> None:
             print(f"{name:12s} {methods.get(name).HELP}")
     elif args.cmd == "chat":
         chat(args)
+    elif args.cmd == "search":
+        from .search import run
+
+        run(args)
+    elif args.cmd == "robustness":
+        from .robustness import run
+
+        run(args)
     elif args.cmd == "report":
         from .report import write_report
 

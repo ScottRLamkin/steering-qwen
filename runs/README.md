@@ -12,8 +12,10 @@ caffeinate -i scripts/run_reproduction.sh
 | `mlx-8bit/` | HedwigAI's own MLX scripts, unchanged (gist rev 59d237ec, mlx-lm 0.32.2), 8-bit MLX weights |
 | `torch-bf16-mlx-answers/` | Our attribution, screen and verify in bf16, on the MLX run's answers. Compare it with `mlx-8bit/` to check our scoring code. |
 | `torch-nf4/` | `scripts/find_neurons.py` with bitsandbytes 4-bit NF4 on MPS |
+| `search/new-traits/` | `neurons search --trait-set new`: the same search on our ten traits, bf16 |
+| `robustness/` | `neurons robustness`: single neurons from both searches, pushed in six model formats |
 
-## Files in a `find_neurons.py` run
+## Files in a `find_neurons.py` / `neurons search` run
 
 | File | Contents |
 |---|---|
