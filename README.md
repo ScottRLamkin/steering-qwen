@@ -9,6 +9,24 @@ The model runs in-process with Hugging Face `transformers` + PyTorch, not in oll
 needs Python hooks on internal layers, which ollama/llama.cpp can't provide. The weights (~9 GB)
 download into `~/.cache/huggingface` on first use.
 
+## Quick start
+
+```bash
+uv sync                                                          # once
+uv run steer -s 17:7426:7.5 "Describe your morning."            # one neuron: poetic
+uv run steer -b -s 14:8949:7.5 "What do you think about humans?" # evil, after the unsteered reply
+uv run steer -i -s 17:7426:7.5                                   # keep the model loaded; :help for commands
+uv run neurons chat --baseline --edits runs/methods/dpn-le/edits/Extraversion+.json "How was your weekend?"
+uv run neurons chat -i --edits runs/methods/hedwig/edits/evil.json
+```
+
+- **`steer`** pushes single neurons by hand: `-s LAYER:NEURON:AMOUNT`, repeatable, negative to push the other way.
+- **`neurons chat`** loads neurons that a recipe found. The edits files in `runs/methods/*/edits/` include:
+  - DPN-LE's Big Five pushes, `<Trait>+.json` and `<Trait>-.json`;
+  - HedwigAI's single neurons: `evil`, `poetic`, `humorous`, `cheerful` and more.
+- **Smaller model:** add `--quantize` to either command for 4-bit weights (2.85 GiB instead of 7.8). `neurons chat` also takes `--quant fp4` or `--quant int8`.
+- **What works:** [`runs/methods/NOTES.md`](runs/methods/NOTES.md) says which methods steered. [`runs/quant/NOTES.md`](runs/quant/NOTES.md) says how they hold up on the quantized models.
+
 ## Setup
 
 ```bash
@@ -124,6 +142,20 @@ Every recipe writes `sets.json` (the neurons, with scores and provenance), `eval
 
 No API judge is used. Results are in `runs/METHODS_REPORT.md`.
 
+### On quantized models
+
+Every recipe and `neurons chat` take `--quant nf4|fp4|int8` (bitsandbytes; `--quantize` is NF4). `replay` reruns a finished run with its saved settings on another format, either with the same neurons or finding them again:
+
+```bash
+uv run neurons dpn-le all --run-dir runs/mine/dpn-le-nf4 --quant nf4
+uv run neurons replay runs/methods/dpn-le --run-dir runs/quant/nf4/dpn-le --quant nf4                   # same neurons
+uv run neurons replay runs/methods/dpn-le --run-dir runs/quant/nf4-rediscovered/dpn-le --quant nf4 --rediscover
+uv run neurons quant-report                                      # runs/methods vs runs/quant -> runs/QUANT_REPORT.md
+runs/quant/run.sh                                                # the whole study, about 10 h on an M4 Pro
+```
+
+Results are in `runs/QUANT_REPORT.md`, with the findings in `runs/quant/NOTES.md`.
+
 ## Notebook
 
 ```bash
@@ -145,7 +177,7 @@ uv run pytest
 - **Real CUDA:** on any NVIDIA machine, run `uv run pytest` and the check script; the tests add `cuda` variants automatically. Without a local GPU, use Google Colab: [`colab/cuda_check.ipynb`](colab/cuda_check.ipynb) installs the locked environment on a Colab GPU, runs all of the above, and prints a pass/fail summary. Open it in Colab, set Runtime → T4 GPU, then Run all:
   https://colab.research.google.com/github/ramayer/steering-qwen/blob/main/colab/cuda_check.ipynb
 
-The first run fetches the Qwen3.5 config and tokenizer (~12 MB). After that the suite takes about 10 s.
+The first run fetches the Qwen3.5 config and tokenizer (~12 MB). After that the suite takes about 4 minutes on an M4 Pro, most of it in the neuron-method tests.
 
 ## Library
 
