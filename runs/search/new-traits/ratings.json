@@ -1,0 +1,287 @@
+{
+ "broken_below": 2.5,
+ "conditions": {
+  "unsteered": {
+   "coherence": 4.366782367229462,
+   "trait": {
+    "pirate": 1.2955395430326462,
+    "robotic": 2.323792353272438,
+    "childlike": 1.541322261095047,
+    "bureaucratic": 1.416343629360199,
+    "terse": 1.3364453315734863,
+    "sarcastic": 1.7698707580566406,
+    "angry": 1.1684045791625977,
+    "shy": 1.574816420674324,
+    "philosophical": 1.5599446892738342,
+    "nostalgic": 1.4098166078329086
+   },
+   "trait_gain": {
+    "pirate": 0.0,
+    "robotic": 0.0,
+    "childlike": 0.0,
+    "bureaucratic": 0.0,
+    "terse": 0.0,
+    "sarcastic": 0.0,
+    "angry": 0.0,
+    "shy": 0.0,
+    "philosophical": 0.0,
+    "nostalgic": 0.0
+   },
+   "broken": false
+  },
+  "L14N8949+": {
+   "coherence": 3.083616077899933,
+   "trait": {},
+   "trait_gain": {},
+   "broken": false
+  },
+  "L13N7956-": {
+   "coherence": 3.9640288949012756,
+   "trait": {},
+   "trait_gain": {},
+   "broken": false
+  },
+  "L17N7426+": {
+   "coherence": 4.066912978887558,
+   "trait": {},
+   "trait_gain": {},
+   "broken": false
+  },
+  "L17N4445-": {
+   "coherence": 3.1919546723365784,
+   "trait": {
+    "pirate": 1.4624727815389633
+   },
+   "trait_gain": {
+    "pirate": 0.16693323850631714
+   },
+   "broken": false
+  },
+  "L17N5907-": {
+   "coherence": 3.7580036520957947,
+   "trait": {
+    "pirate": 1.7786519676446915
+   },
+   "trait_gain": {
+    "pirate": 0.4831124246120453
+   },
+   "broken": false
+  },
+  "L16N1885-": {
+   "coherence": 1.3200215846300125,
+   "trait": {
+    "pirate": 2.065419480204582,
+    "shy": 3.4723090529441833
+   },
+   "trait_gain": {
+    "pirate": 0.769879937171936,
+    "shy": 1.8974926322698593
+   },
+   "broken": true
+  },
+  "L5N6959+": {
+   "coherence": 1.8803528249263763,
+   "trait": {
+    "robotic": 3.7195454835891724,
+    "bureaucratic": 2.5596412271261215
+   },
+   "trait_gain": {
+    "robotic": 1.3957531303167343,
+    "bureaucratic": 1.1432975977659225
+   },
+   "broken": true
+  },
+  "L5N6794-": {
+   "coherence": 1.8038546442985535,
+   "trait": {
+    "robotic": 3.6550198793411255,
+    "bureaucratic": 2.338188052177429
+   },
+   "trait_gain": {
+    "robotic": 1.3312275260686874,
+    "bureaucratic": 0.9218444228172302
+   },
+   "broken": true
+  },
+  "L15N854-": {
+   "coherence": 3.943457394838333,
+   "trait": {
+    "robotic": 3.2680277824401855,
+    "bureaucratic": 2.351586624979973
+   },
+   "trait_gain": {
+    "robotic": 0.9442354291677475,
+    "bureaucratic": 0.9352429956197739
+   },
+   "broken": false
+  },
+  "L16N5640+": {
+   "coherence": 2.439884603023529,
+   "trait": {
+    "childlike": 3.85429111123085
+   },
+   "trait_gain": {
+    "childlike": 2.3129688501358032
+   },
+   "broken": true
+  },
+  "L15N5924-": {
+   "coherence": 3.5528417825698853,
+   "trait": {
+    "childlike": 2.3924586474895477
+   },
+   "trait_gain": {
+    "childlike": 0.8511363863945007
+   },
+   "broken": false
+  },
+  "L15N7113-": {
+   "coherence": 3.6206263303756714,
+   "trait": {
+    "childlike": 2.153015285730362
+   },
+   "trait_gain": {
+    "childlike": 0.6116930246353149
+   },
+   "broken": false
+  },
+  "L11N5550+": {
+   "coherence": 1.4103753864765167,
+   "trait": {
+    "terse": 3.5419448912143707
+   },
+   "trait_gain": {
+    "terse": 2.2054995596408844
+   },
+   "broken": true
+  },
+  "L5N9127+": {
+   "coherence": 3.854422867298126,
+   "trait": {
+    "terse": 2.6248843669891357
+   },
+   "trait_gain": {
+    "terse": 1.2884390354156494
+   },
+   "broken": false
+  },
+  "L16N989+": {
+   "coherence": 2.7922409921884537,
+   "trait": {
+    "terse": 1.8760480135679245
+   },
+   "trait_gain": {
+    "terse": 0.5396026819944382
+   },
+   "broken": false
+  },
+  "L16N5515+": {
+   "coherence": 1.8291716426610947,
+   "trait": {
+    "sarcastic": 2.9749743938446045,
+    "philosophical": 2.8842244148254395
+   },
+   "trait_gain": {
+    "sarcastic": 1.2051036357879639,
+    "philosophical": 1.3242797255516052
+   },
+   "broken": true
+  },
+  "L23N81+": {
+   "coherence": 2.2192074954509735,
+   "trait": {
+    "sarcastic": 2.707758128643036,
+    "angry": 2.6631521433591843,
+    "shy": 2.8621381521224976
+   },
+   "trait_gain": {
+    "sarcastic": 0.9378873705863953,
+    "angry": 1.4947475641965866,
+    "shy": 1.2873217314481735
+   },
+   "broken": true
+  },
+  "L11N8147-": {
+   "coherence": 3.2154182493686676,
+   "trait": {
+    "sarcastic": 2.6762534379959106
+   },
+   "trait_gain": {
+    "sarcastic": 0.90638267993927
+   },
+   "broken": false
+  },
+  "L5N6449-": {
+   "coherence": 3.888125002384186,
+   "trait": {
+    "angry": 2.2962765991687775
+   },
+   "trait_gain": {
+    "angry": 1.1278720200061798
+   },
+   "broken": false
+  },
+  "L17N2418-": {
+   "coherence": 1.5101557970046997,
+   "trait": {
+    "angry": 2.9701066315174103,
+    "nostalgic": 1.6565955579280853
+   },
+   "trait_gain": {
+    "angry": 1.8017020523548126,
+    "nostalgic": 0.2467789500951767
+   },
+   "broken": true
+  },
+  "L8N4350+": {
+   "coherence": 4.043970465660095,
+   "trait": {
+    "shy": 2.6774728149175644
+   },
+   "trait_gain": {
+    "shy": 1.1026563942432404
+   },
+   "broken": false
+  },
+  "L15N6343-": {
+   "coherence": 3.2690888047218323,
+   "trait": {
+    "philosophical": 3.8287629783153534
+   },
+   "trait_gain": {
+    "philosophical": 2.268818289041519
+   },
+   "broken": false
+  },
+  "L5N7656+": {
+   "coherence": 4.512604296207428,
+   "trait": {
+    "philosophical": 2.4200878143310547
+   },
+   "trait_gain": {
+    "philosophical": 0.8601431250572205
+   },
+   "broken": false
+  },
+  "L5N8940-": {
+   "coherence": 4.563003718852997,
+   "trait": {
+    "nostalgic": 2.75281123816967
+   },
+   "trait_gain": {
+    "nostalgic": 1.3429946303367615
+   },
+   "broken": false
+  },
+  "L16N6003+": {
+   "coherence": 4.129361718893051,
+   "trait": {
+    "nostalgic": 2.0780643075704575
+   },
+   "trait_gain": {
+    "nostalgic": 0.6682476997375488
+   },
+   "broken": false
+  }
+ }
+}

@@ -1,0 +1,34 @@
+W1106 21:44:52.847000 5762 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[21:44:53] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search rate --run-dir runs/search/new-traits
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   5%|▍         | 20/426 [00:00<00:03, 119.89it/s]Loading weights:  13%|█▎        | 55/426 [00:00<00:01, 200.42it/s]Loading weights:  19%|█▉        | 83/426 [00:00<00:02, 153.20it/s]Loading weights:  23%|██▎       | 100/426 [00:00<00:02, 122.44it/s]Loading weights:  29%|██▉       | 124/426 [00:00<00:02, 143.24it/s]Loading weights:  34%|███▍      | 144/426 [00:00<00:01, 144.01it/s]Loading weights:  41%|████▏     | 176/426 [00:01<00:01, 150.42it/s]Loading weights:  47%|████▋     | 200/426 [00:01<00:01, 147.92it/s]Loading weights:  56%|█████▌    | 238/426 [00:01<00:00, 191.23it/s]Loading weights:  61%|██████    | 259/426 [00:01<00:00, 195.08it/s]Loading weights:  66%|██████▌   | 280/426 [00:01<00:00, 174.61it/s]Loading weights:  70%|███████   | 299/426 [00:01<00:00, 144.74it/s]Loading weights:  75%|███████▍  | 319/426 [00:02<00:00, 141.79it/s]Loading weights:  79%|███████▊  | 335/426 [00:02<00:00, 126.07it/s]Loading weights:  89%|████████▉ | 379/426 [00:02<00:00, 175.36it/s]Loading weights:  93%|█████████▎| 398/426 [00:02<00:00, 153.81it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 165.47it/s]
+Loaded Qwen/Qwen3.5-4B on mps:0 (torch.bfloat16, unquantized, 7.83 GiB)
+[21:44:57] loaded Qwen/Qwen3.5-4B on mps:0 in 4s
+[21:44:57] rate: 26 conditions
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[21:48:50] rate: L14N8949+    coherence 3.08  
+[21:48:50] rate: L13N7956-    coherence 3.96  
+[21:48:50] rate: L17N7426+    coherence 4.07  
+[21:48:50] rate: L17N4445-    coherence 3.19  pirate +0.17
+[21:48:50] rate: L17N5907-    coherence 3.76  pirate +0.48
+[21:48:50] rate: L16N1885-    coherence 1.32 BROKEN  pirate +0.77 shy +1.90
+[21:48:50] rate: L5N6959+     coherence 1.88 BROKEN  robotic +1.40 bureaucratic +1.14
+[21:48:50] rate: L5N6794-     coherence 1.80 BROKEN  robotic +1.33 bureaucratic +0.92
+[21:48:50] rate: L15N854-     coherence 3.94  robotic +0.94 bureaucratic +0.94
+[21:48:50] rate: L16N5640+    coherence 2.44 BROKEN  childlike +2.31
+[21:48:50] rate: L15N5924-    coherence 3.55  childlike +0.85
+[21:48:50] rate: L15N7113-    coherence 3.62  childlike +0.61
+[21:48:50] rate: L11N5550+    coherence 1.41 BROKEN  terse +2.21
+[21:48:50] rate: L5N9127+     coherence 3.85  terse +1.29
+[21:48:50] rate: L16N989+     coherence 2.79  terse +0.54
+[21:48:50] rate: L16N5515+    coherence 1.83 BROKEN  sarcastic +1.21 philosophical +1.32
+[21:48:50] rate: L23N81+      coherence 2.22 BROKEN  sarcastic +0.94 angry +1.49 shy +1.29
+[21:48:50] rate: L11N8147-    coherence 3.22  sarcastic +0.91
+[21:48:50] rate: L5N6449-     coherence 3.89  angry +1.13
+[21:48:50] rate: L17N2418-    coherence 1.51 BROKEN  angry +1.80 nostalgic +0.25
+[21:48:50] rate: L8N4350+     coherence 4.04  shy +1.10
+[21:48:50] rate: L15N6343-    coherence 3.27  philosophical +2.27
+[21:48:50] rate: L5N7656+     coherence 4.51  philosophical +0.86
+[21:48:50] rate: L5N8940-     coherence 4.56  nostalgic +1.34
+[21:48:50] rate: L16N6003+    coherence 4.13  nostalgic +0.67
+[21:48:52] done

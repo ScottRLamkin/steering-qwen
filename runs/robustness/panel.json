@@ -1,0 +1,1942 @@
+[
+ {
+  "study": "hedwig",
+  "layer": 17,
+  "neuron": 8623,
+  "dose": 1.0,
+  "key": "L17N8623+",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.4371670186519623,
+  "value": 26.254941835752955,
+  "trait": "evil",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 0.8910268098115921,
+  "sources": [
+   "evil:vs_others#7"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 11,
+  "neuron": 2930,
+  "dose": 1.0,
+  "key": "L11N2930+",
+  "median_norm": 8.89991569519043,
+  "col_norm": 0.4506569504737854,
+  "value": 19.748759418519466,
+  "trait": "evil",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.7402157932519913,
+  "sources": [
+   "evil:vs_plain#5",
+   "evil:vs_others#4"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 6959,
+  "dose": -1.0,
+  "key": "L5N6959-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4521446228027344,
+  "value": -13.60536101478988,
+  "trait": "evil",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.7164132744073868,
+  "sources": [
+   "paranoid:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 11,
+  "neuron": 3430,
+  "dose": -1.0,
+  "key": "L11N3430-",
+  "median_norm": 8.89991569519043,
+  "col_norm": 0.4299471080303192,
+  "value": -20.700024558748332,
+  "trait": "evil",
+  "kind": "weak",
+  "screen_rank": 18,
+  "screen_spec": 0.2689567655324936,
+  "sources": [
+   "evil:vs_plain#6",
+   "arrogant:vs_plain#4"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 3938,
+  "dose": -1.0,
+  "key": "L5N3938-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.44809386134147644,
+  "value": -13.728353264449852,
+  "trait": "evil",
+  "kind": "weak",
+  "screen_rank": 144,
+  "screen_spec": -0.3977784365415573,
+  "sources": [
+   "evil:vs_plain#4",
+   "evil:vs_others#6",
+   "paranoid:vs_plain#4",
+   "paranoid:vs_others#6",
+   "arrogant:vs_plain#11",
+   "anxious:vs_plain#6"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 20,
+  "neuron": 7450,
+  "dose": -1.0,
+  "key": "L20N7450-",
+  "median_norm": 18.316112518310547,
+  "col_norm": 0.44870057702064514,
+  "value": -40.820345362443796,
+  "trait": "sycophantic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.245253011584282,
+  "sources": [
+   "sycophantic:vs_others#1"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 6,
+  "neuron": 316,
+  "dose": 1.0,
+  "key": "L6N316+",
+  "median_norm": 6.976646900177002,
+  "col_norm": 0.3341396152973175,
+  "value": 20.879436561178714,
+  "trait": "sycophantic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.8198734074831009,
+  "sources": [
+   "sycophantic:vs_others#12"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 4,
+  "neuron": 8405,
+  "dose": -1.0,
+  "key": "L4N8405-",
+  "median_norm": 5.300774574279785,
+  "col_norm": 0.4155906140804291,
+  "value": -12.754798579868622,
+  "trait": "sycophantic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.7744217664003372,
+  "sources": [
+   "sycophantic:vs_plain#9",
+   "sycophantic:vs_others#10"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 23,
+  "neuron": 3253,
+  "dose": -1.0,
+  "key": "L23N3253-",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.4159647822380066,
+  "value": -62.63563963133125,
+  "trait": "sycophantic",
+  "kind": "weak",
+  "screen_rank": 25,
+  "screen_spec": 0.1677093654870987,
+  "sources": [
+   "sycophantic:vs_others#6"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 7779,
+  "dose": 1.0,
+  "key": "L5N7779+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.44102078676223755,
+  "value": 13.94852807118054,
+  "trait": "sycophantic",
+  "kind": "weak",
+  "screen_rank": 144,
+  "screen_spec": -0.6142664104700089,
+  "sources": [
+   "evil:vs_plain#0",
+   "evil:vs_others#1",
+   "sycophantic:vs_plain#5",
+   "humorous:vs_plain#7",
+   "melancholic:vs_plain#1",
+   "paranoid:vs_plain#0",
+   "paranoid:vs_others#4",
+   "arrogant:vs_plain#0",
+   "anxious:vs_plain#1"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 4,
+  "neuron": 8405,
+  "dose": 1.0,
+  "key": "L4N8405+",
+  "median_norm": 5.300774574279785,
+  "col_norm": 0.4155906140804291,
+  "value": 12.754798579868622,
+  "trait": "humorous",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 0.9443068951368332,
+  "sources": [
+   "anxious:vs_others#5"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 15,
+  "neuron": 8137,
+  "dose": 1.0,
+  "key": "L15N8137+",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.48689189553260803,
+  "value": 20.95740755510323,
+  "trait": "humorous",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.8248003572225571,
+  "sources": [
+   "humorous:vs_others#12"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 7656,
+  "dose": -1.0,
+  "key": "L5N7656-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4311511814594269,
+  "value": -14.267827826203202,
+  "trait": "humorous",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.7787168771028519,
+  "sources": [
+   "humorous:vs_others#3",
+   "anxious:vs_others#0"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 8,
+  "neuron": 8420,
+  "dose": 1.0,
+  "key": "L8N8420+",
+  "median_norm": 7.747457981109619,
+  "col_norm": 0.42813190817832947,
+  "value": 18.095960224208696,
+  "trait": "humorous",
+  "kind": "weak",
+  "screen_rank": 24,
+  "screen_spec": 0.36801381409168243,
+  "sources": [
+   "humorous:vs_plain#13"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 12,
+  "neuron": 6167,
+  "dose": 1.0,
+  "key": "L12N6167+",
+  "median_norm": 8.999115943908691,
+  "col_norm": 0.458408921957016,
+  "value": 19.63119719723195,
+  "trait": "humorous",
+  "kind": "weak",
+  "screen_rank": 76,
+  "screen_spec": 0.09731097519397736,
+  "sources": [
+   "humorous:vs_others#9"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 4530,
+  "dose": -1.0,
+  "key": "L5N4530-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4114605784416199,
+  "value": -14.950620172231194,
+  "trait": "melancholic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.3774236887693405,
+  "sources": [
+   "evil:vs_plain#8",
+   "melancholic:vs_plain#0",
+   "melancholic:vs_others#1",
+   "poetic:vs_plain#5"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 6959,
+  "dose": -1.0,
+  "key": "L5N6959-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4521446228027344,
+  "value": -13.60536101478988,
+  "trait": "melancholic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.2937869280576706,
+  "sources": [
+   "paranoid:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 8940,
+  "dose": -1.0,
+  "key": "L5N8940-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.42996421456336975,
+  "value": -14.307215846728456,
+  "trait": "melancholic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.1570351272821426,
+  "sources": [
+   "melancholic:vs_plain#2",
+   "melancholic:vs_others#0",
+   "poetic:vs_plain#7",
+   "poetic:vs_others#4"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 8,
+  "neuron": 7369,
+  "dose": 1.0,
+  "key": "L8N7369+",
+  "median_norm": 7.747457981109619,
+  "col_norm": 0.4348085820674896,
+  "value": 17.818088926099172,
+  "trait": "melancholic",
+  "kind": "weak",
+  "screen_rank": 16,
+  "screen_spec": 0.6448555141687393,
+  "sources": [
+   "melancholic:vs_others#9"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 18,
+  "neuron": 1507,
+  "dose": -1.0,
+  "key": "L18N1507-",
+  "median_norm": 13.58130931854248,
+  "col_norm": 0.277843713760376,
+  "value": -48.88111066013021,
+  "trait": "melancholic",
+  "kind": "weak",
+  "screen_rank": 57,
+  "screen_spec": 0.22094835340976715,
+  "sources": [
+   "melancholic:vs_plain#8"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 16,
+  "neuron": 5515,
+  "dose": 1.0,
+  "key": "L16N5515+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.38502171635627747,
+  "value": 27.58734270002326,
+  "trait": "paranoid",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 0.7884331494569778,
+  "sources": [
+   "sycophantic:vs_plain#10",
+   "melancholic:vs_plain#10",
+   "poetic:vs_plain#6"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 16,
+  "neuron": 8010,
+  "dose": -1.0,
+  "key": "L16N8010-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4425585865974426,
+  "value": -24.0007229726026,
+  "trait": "paranoid",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.7870547026395798,
+  "sources": [
+   "paranoid:vs_others#10"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 6573,
+  "dose": 1.0,
+  "key": "L5N6573+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4297960698604584,
+  "value": 14.312813111865891,
+  "trait": "paranoid",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.78618024289608,
+  "sources": [
+   "paranoid:vs_others#5"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 16,
+  "neuron": 4232,
+  "dose": 1.0,
+  "key": "L16N4232+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.43533024191856384,
+  "value": 24.399237666697086,
+  "trait": "paranoid",
+  "kind": "weak",
+  "screen_rank": 24,
+  "screen_spec": 0.48703615367412567,
+  "sources": [
+   "paranoid:vs_plain#14"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 16,
+  "neuron": 6059,
+  "dose": 1.0,
+  "key": "L16N6059+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4424391984939575,
+  "value": 24.00719934451477,
+  "trait": "paranoid",
+  "kind": "weak",
+  "screen_rank": 99,
+  "screen_spec": 0.224375918507576,
+  "sources": [
+   "paranoid:vs_plain#8",
+   "anxious:vs_plain#4"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 23,
+  "neuron": 4740,
+  "dose": 1.0,
+  "key": "L23N4740+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.4276752769947052,
+  "value": 60.920566609950484,
+  "trait": "arrogant",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.1148471385240555,
+  "sources": [
+   "anxious:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 9,
+  "neuron": 8732,
+  "dose": -1.0,
+  "key": "L9N8732-",
+  "median_norm": 8.081607818603516,
+  "col_norm": 0.4027070701122284,
+  "value": -20.06820445529127,
+  "trait": "arrogant",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.0159261375665665,
+  "sources": [
+   "humorous:vs_others#10",
+   "anxious:vs_others#4"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 25,
+  "neuron": 596,
+  "dose": -1.0,
+  "key": "L25N596-",
+  "median_norm": 30.91248893737793,
+  "col_norm": 0.45726045966148376,
+  "value": -67.60367813185263,
+  "trait": "arrogant",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.8938408344984055,
+  "sources": [
+   "arrogant:vs_others#0"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 15,
+  "neuron": 1516,
+  "dose": 1.0,
+  "key": "L15N1516+",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.44318604469299316,
+  "value": 23.024172381199843,
+  "trait": "arrogant",
+  "kind": "weak",
+  "screen_rank": 18,
+  "screen_spec": 0.5172239691019058,
+  "sources": [
+   "arrogant:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 27,
+  "neuron": 62,
+  "dose": 1.0,
+  "key": "L27N62+",
+  "median_norm": 36.191349029541016,
+  "col_norm": 0.44045957922935486,
+  "value": 82.16724243541894,
+  "trait": "arrogant",
+  "kind": "weak",
+  "screen_rank": 64,
+  "screen_spec": 0.1816726177930832,
+  "sources": [
+   "arrogant:vs_others#8"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 21,
+  "neuron": 433,
+  "dose": 1.0,
+  "key": "L21N433+",
+  "median_norm": 20.522829055786133,
+  "col_norm": 0.360563188791275,
+  "value": 56.918813938231814,
+  "trait": "anxious",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.1988791972398758,
+  "sources": [
+   "anxious:vs_plain#11",
+   "anxious:vs_others#10"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 7055,
+  "dose": -1.0,
+  "key": "L5N7055-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4418639540672302,
+  "value": -13.921911410748892,
+  "trait": "anxious",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.1515207141637802,
+  "sources": [
+   "anxious:vs_others#9"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 5647,
+  "dose": 1.0,
+  "key": "L5N5647+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4349558353424072,
+  "value": 14.143024013655372,
+  "trait": "anxious",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.0286852270364761,
+  "sources": [
+   "anxious:vs_others#6"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 23,
+  "neuron": 4740,
+  "dose": 1.0,
+  "key": "L23N4740+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.4276752769947052,
+  "value": 60.920566609950484,
+  "trait": "anxious",
+  "kind": "weak",
+  "screen_rank": 31,
+  "screen_spec": 0.41333360970020294,
+  "sources": [
+   "anxious:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 24,
+  "neuron": 209,
+  "dose": -1.0,
+  "key": "L24N209-",
+  "median_norm": 28.97124481201172,
+  "col_norm": 0.3538559675216675,
+  "value": -81.8729863874282,
+  "trait": "anxious",
+  "kind": "weak",
+  "screen_rank": 94,
+  "screen_spec": 0.12570153176784515,
+  "sources": [
+   "anxious:vs_others#2"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 6794,
+  "dose": -1.0,
+  "key": "L5N6794-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4991593360900879,
+  "value": -12.32390216781794,
+  "trait": "cheerful",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.6811087727546692,
+  "sources": [
+   "sycophantic:vs_plain#1",
+   "sycophantic:vs_others#0",
+   "anxious:vs_plain#7",
+   "anxious:vs_others#12"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 6959,
+  "dose": 1.0,
+  "key": "L5N6959+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4521446228027344,
+  "value": 13.60536101478988,
+  "trait": "cheerful",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.3184308409690857,
+  "sources": [
+   "sycophantic:vs_plain#13",
+   "sycophantic:vs_others#2"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 7779,
+  "dose": -1.0,
+  "key": "L5N7779-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.44102078676223755,
+  "value": -13.94852807118054,
+  "trait": "cheerful",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.8121770918369293,
+  "sources": [
+   "cheerful:vs_others#0"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 21,
+  "neuron": 2917,
+  "dose": 1.0,
+  "key": "L21N2917+",
+  "median_norm": 20.522829055786133,
+  "col_norm": 0.44571197032928467,
+  "value": 46.045047972627266,
+  "trait": "cheerful",
+  "kind": "weak",
+  "screen_rank": 18,
+  "screen_spec": 0.10924655199050903,
+  "sources": [
+   "cheerful:vs_others#13"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 13,
+  "neuron": 8210,
+  "dose": -1.0,
+  "key": "L13N8210-",
+  "median_norm": 9.292011260986328,
+  "col_norm": 0.43140044808387756,
+  "value": -21.539178510958973,
+  "trait": "cheerful",
+  "kind": "weak",
+  "screen_rank": 96,
+  "screen_spec": -0.4354723393917084,
+  "sources": [
+   "cheerful:vs_others#10"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 15,
+  "neuron": 9125,
+  "dose": 1.0,
+  "key": "L15N9125+",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.4790751039981842,
+  "value": 21.299357459393857,
+  "trait": "poetic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.379823699593544,
+  "sources": [
+   "poetic:vs_plain#11",
+   "poetic:vs_others#12"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 17,
+  "neuron": 7426,
+  "dose": 1.0,
+  "key": "L17N7426+",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.41234466433525085,
+  "value": 27.835438748117138,
+  "trait": "poetic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.3202062100172043,
+  "sources": [
+   "poetic:vs_plain#8",
+   "poetic:vs_others#11"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 15,
+  "neuron": 8494,
+  "dose": -1.0,
+  "key": "L15N8494-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.44878044724464417,
+  "value": -22.737157896701103,
+  "trait": "poetic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.1297132819890976,
+  "sources": [
+   "melancholic:vs_plain#7",
+   "melancholic:vs_others#7",
+   "poetic:vs_plain#10"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 10,
+  "neuron": 8629,
+  "dose": -1.0,
+  "key": "L10N8629-",
+  "median_norm": 8.877166748046875,
+  "col_norm": 0.43594807386398315,
+  "value": -20.362899345706417,
+  "trait": "poetic",
+  "kind": "weak",
+  "screen_rank": 13,
+  "screen_spec": 0.5578591674566269,
+  "sources": [
+   "poetic:vs_others#3"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 13,
+  "neuron": 5917,
+  "dose": 1.0,
+  "key": "L13N5917+",
+  "median_norm": 9.292011260986328,
+  "col_norm": 0.416719526052475,
+  "value": 22.297998245986296,
+  "trait": "poetic",
+  "kind": "weak",
+  "screen_rank": 72,
+  "screen_spec": -0.2378448098897934,
+  "sources": [
+   "humorous:vs_plain#14",
+   "poetic:vs_plain#9"
+  ]
+ },
+ {
+  "study": "hedwig",
+  "layer": 16,
+  "neuron": 6890,
+  "dose": 1.0,
+  "key": "L16N6890+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4359011650085449,
+  "value": 24.36728067901255,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 8376,
+  "dose": -1.0,
+  "key": "L5N8376-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4264647662639618,
+  "value": -14.424616781400529,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 23,
+  "neuron": 4969,
+  "dose": -1.0,
+  "key": "L23N4969-",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.472842276096344,
+  "value": -55.10129173449009,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 3578,
+  "dose": 1.0,
+  "key": "L5N3578+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.37119606137275696,
+  "value": 16.57234939772095,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 8,
+  "neuron": 2289,
+  "dose": 1.0,
+  "key": "L8N2289+",
+  "median_norm": 7.747457981109619,
+  "col_norm": 0.4346427321434021,
+  "value": 17.824887909441664,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 13,
+  "neuron": 4104,
+  "dose": 1.0,
+  "key": "L13N4104+",
+  "median_norm": 9.292011260986328,
+  "col_norm": 0.4250824451446533,
+  "value": 21.859315450734048,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 18,
+  "neuron": 1618,
+  "dose": 1.0,
+  "key": "L18N1618+",
+  "median_norm": 13.58130931854248,
+  "col_norm": 0.3967895209789276,
+  "value": 34.22799393753079,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 10,
+  "neuron": 5409,
+  "dose": -1.0,
+  "key": "L10N5409-",
+  "median_norm": 8.877166748046875,
+  "col_norm": 0.41611626744270325,
+  "value": -21.333380698146364,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 5,
+  "neuron": 1649,
+  "dose": -1.0,
+  "key": "L5N1649-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4210512340068817,
+  "value": -14.610076701560397,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "hedwig",
+  "layer": 25,
+  "neuron": 5180,
+  "dose": 1.0,
+  "key": "L25N5180+",
+  "median_norm": 30.91248893737793,
+  "col_norm": 0.4643252491950989,
+  "value": 66.57507639518695,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 17,
+  "neuron": 4445,
+  "dose": -1.0,
+  "key": "L17N4445-",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.4585413336753845,
+  "value": -25.0311014608386,
+  "trait": "pirate",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 0.08702217208014584,
+  "sources": [
+   "pirate:vs_others#12"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 17,
+  "neuron": 5907,
+  "dose": -1.0,
+  "key": "L17N5907-",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.3749880790710449,
+  "value": -30.608425408217375,
+  "trait": "pirate",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.06474614143371582,
+  "sources": [
+   "pirate:vs_plain#7",
+   "pirate:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 1885,
+  "dose": -1.0,
+  "key": "L16N1885-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.3915758430957794,
+  "value": -27.125590669988558,
+  "trait": "pirate",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.0527044932047529,
+  "sources": [
+   "childlike:vs_plain#13",
+   "terse:vs_plain#13",
+   "terse:vs_others#13"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 5607,
+  "dose": -1.0,
+  "key": "L5N5607-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.41101282835006714,
+  "value": -14.966907112903481,
+  "trait": "pirate",
+  "kind": "weak",
+  "screen_rank": 33,
+  "screen_spec": -0.3962761296166314,
+  "sources": [
+   "pirate:vs_others#4"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 21,
+  "neuron": 6913,
+  "dose": 1.0,
+  "key": "L21N6913+",
+  "median_norm": 20.522829055786133,
+  "col_norm": 0.3991958796977997,
+  "value": 51.41042305176691,
+  "trait": "pirate",
+  "kind": "weak",
+  "screen_rank": 105,
+  "screen_spec": -0.6798997455173068,
+  "sources": [
+   "pirate:vs_others#14"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 6959,
+  "dose": 1.0,
+  "key": "L5N6959+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4521446228027344,
+  "value": 13.60536101478988,
+  "trait": "robotic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 2.7452659077114525,
+  "sources": [
+   "bureaucratic:vs_others#9"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 6794,
+  "dose": -1.0,
+  "key": "L5N6794-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4991593360900879,
+  "value": -12.32390216781794,
+  "trait": "robotic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 2.1706263754102917,
+  "sources": [
+   "bureaucratic:vs_others#0"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 854,
+  "dose": -1.0,
+  "key": "L15N854-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.4328615963459015,
+  "value": -23.57333608731499,
+  "trait": "robotic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 2.143292612499661,
+  "sources": [
+   "bureaucratic:vs_others#3"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 5908,
+  "dose": -1.0,
+  "key": "L5N5908-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.42218631505966187,
+  "value": -14.570796363349382,
+  "trait": "robotic",
+  "kind": "weak",
+  "screen_rank": 24,
+  "screen_spec": 0.33799001905653214,
+  "sources": [
+   "robotic:vs_others#6"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 26,
+  "neuron": 4681,
+  "dose": -1.0,
+  "key": "L26N4681-",
+  "median_norm": 34.18331527709961,
+  "col_norm": 0.5038895606994629,
+  "value": -67.838903488393,
+  "trait": "robotic",
+  "kind": "weak",
+  "screen_rank": 142,
+  "screen_spec": -0.3690462907155355,
+  "sources": [
+   "robotic:vs_others#8"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 5640,
+  "dose": 1.0,
+  "key": "L16N5640+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.40789881348609924,
+  "value": 26.040100350607553,
+  "trait": "childlike",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.9608706898159451,
+  "sources": [
+   "childlike:vs_others#0"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 5924,
+  "dose": -1.0,
+  "key": "L15N5924-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.5327919125556946,
+  "value": -19.151927139823005,
+  "trait": "childlike",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 1.7662493122948542,
+  "sources": [
+   "childlike:vs_others#5"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 7113,
+  "dose": -1.0,
+  "key": "L15N7113-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.49848538637161255,
+  "value": -20.469992037733896,
+  "trait": "childlike",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.5186858971913655,
+  "sources": [
+   "childlike:vs_others#1"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 21,
+  "neuron": 2917,
+  "dose": 1.0,
+  "key": "L21N2917+",
+  "median_norm": 20.522829055786133,
+  "col_norm": 0.44571197032928467,
+  "value": 46.045047972627266,
+  "trait": "childlike",
+  "kind": "weak",
+  "screen_rank": 21,
+  "screen_spec": 0.5748067696889241,
+  "sources": [
+   "childlike:vs_others#12"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 2277,
+  "dose": -1.0,
+  "key": "L15N2277-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.45405882596969604,
+  "value": -22.47284119664845,
+  "trait": "childlike",
+  "kind": "weak",
+  "screen_rank": 78,
+  "screen_spec": 0.09282464451260036,
+  "sources": [
+   "childlike:vs_plain#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 854,
+  "dose": -1.0,
+  "key": "L15N854-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.4328615963459015,
+  "value": -23.57333608731499,
+  "trait": "bureaucratic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 2.7225975725385876,
+  "sources": [
+   "bureaucratic:vs_others#3"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 6959,
+  "dose": 1.0,
+  "key": "L5N6959+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4521446228027344,
+  "value": 13.60536101478988,
+  "trait": "bureaucratic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 2.1499188211229114,
+  "sources": [
+   "bureaucratic:vs_others#9"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 6794,
+  "dose": -1.0,
+  "key": "L5N6794-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4991593360900879,
+  "value": -12.32390216781794,
+  "trait": "bureaucratic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.858003457387289,
+  "sources": [
+   "bureaucratic:vs_others#0"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 8857,
+  "dose": 1.0,
+  "key": "L5N8857+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4334736466407776,
+  "value": 14.191383655729043,
+  "trait": "bureaucratic",
+  "kind": "weak",
+  "screen_rank": 21,
+  "screen_spec": 0.502166403664483,
+  "sources": [
+   "bureaucratic:vs_others#11"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 2253,
+  "dose": -1.0,
+  "key": "L16N2253-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4197762608528137,
+  "value": -25.30330327516085,
+  "trait": "bureaucratic",
+  "kind": "weak",
+  "screen_rank": 146,
+  "screen_spec": -0.35741228527492946,
+  "sources": [
+   "pirate:vs_plain#14",
+   "robotic:vs_plain#13",
+   "bureaucratic:vs_plain#10",
+   "terse:vs_plain#4",
+   "terse:vs_others#11",
+   "shy:vs_plain#7",
+   "nostalgic:vs_plain#2"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 11,
+  "neuron": 5550,
+  "dose": 1.0,
+  "key": "L11N5550+",
+  "median_norm": 8.89991569519043,
+  "col_norm": 0.43486765027046204,
+  "value": 20.46580307745404,
+  "trait": "terse",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 2.9008643892076282,
+  "sources": [
+   "robotic:vs_plain#14"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 9127,
+  "dose": 1.0,
+  "key": "L5N9127+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4647187888622284,
+  "value": 13.23723286331535,
+  "trait": "terse",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 2.7344702084859214,
+  "sources": [
+   "robotic:vs_others#10",
+   "bureaucratic:vs_plain#5",
+   "bureaucratic:vs_others#5"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 989,
+  "dose": 1.0,
+  "key": "L16N989+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.36353322863578796,
+  "value": 29.218033454414524,
+  "trait": "terse",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 2.4278241528405085,
+  "sources": [
+   "philosophical:vs_plain#10"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 23,
+  "neuron": 53,
+  "dose": 1.0,
+  "key": "L23N53+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.3595520555973053,
+  "value": 72.46299887314628,
+  "trait": "terse",
+  "kind": "weak",
+  "screen_rank": 43,
+  "screen_spec": 1.4833094278971353,
+  "sources": [
+   "terse:vs_plain#8",
+   "terse:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 18,
+  "neuron": 751,
+  "dose": -1.0,
+  "key": "L18N751-",
+  "median_norm": 13.58130931854248,
+  "col_norm": 0.33411118388175964,
+  "value": -40.64907124853636,
+  "trait": "terse",
+  "kind": "weak",
+  "screen_rank": 94,
+  "screen_spec": 0.994668616188897,
+  "sources": [
+   "pirate:vs_plain#6",
+   "bureaucratic:vs_plain#2",
+   "terse:vs_plain#0",
+   "terse:vs_others#2",
+   "philosophical:vs_plain#13",
+   "nostalgic:vs_plain#4"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 5515,
+  "dose": 1.0,
+  "key": "L16N5515+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.38502171635627747,
+  "value": 27.58734270002326,
+  "trait": "sarcastic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 0.8531109491984048,
+  "sources": [
+   "pirate:vs_plain#13",
+   "robotic:vs_plain#6",
+   "terse:vs_plain#14",
+   "philosophical:vs_plain#6",
+   "nostalgic:vs_plain#11"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 23,
+  "neuron": 81,
+  "dose": 1.0,
+  "key": "L23N81+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.30992037057876587,
+  "value": 84.0674659459447,
+  "trait": "sarcastic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.7200222015380859,
+  "sources": [
+   "robotic:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 11,
+  "neuron": 8147,
+  "dose": -1.0,
+  "key": "L11N8147-",
+  "median_norm": 8.89991569519043,
+  "col_norm": 0.4235840439796448,
+  "value": -21.01097957225724,
+  "trait": "sarcastic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.7029797765943739,
+  "sources": [
+   "pirate:vs_plain#10",
+   "robotic:vs_plain#2",
+   "sarcastic:vs_plain#5",
+   "sarcastic:vs_others#10",
+   "angry:vs_plain#3",
+   "shy:vs_plain#4"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 8,
+  "neuron": 5541,
+  "dose": -1.0,
+  "key": "L8N5541-",
+  "median_norm": 7.747457981109619,
+  "col_norm": 0.40699303150177,
+  "value": -19.03584921963443,
+  "trait": "sarcastic",
+  "kind": "weak",
+  "screen_rank": 46,
+  "screen_spec": 0.12217850155300569,
+  "sources": [
+   "sarcastic:vs_plain#14",
+   "sarcastic:vs_others#11"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 4,
+  "neuron": 4827,
+  "dose": -1.0,
+  "key": "L4N4827-",
+  "median_norm": 5.300774574279785,
+  "col_norm": 0.41445472836494446,
+  "value": -12.789755337553382,
+  "trait": "sarcastic",
+  "kind": "weak",
+  "screen_rank": 156,
+  "screen_spec": -0.37209373050265837,
+  "sources": [
+   "sarcastic:vs_others#12"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 6449,
+  "dose": -1.0,
+  "key": "L5N6449-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.43089449405670166,
+  "value": -14.276327288873889,
+  "trait": "angry",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.143769449657864,
+  "sources": [
+   "angry:vs_plain#14"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 17,
+  "neuron": 2418,
+  "dose": -1.0,
+  "key": "L17N2418-",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.38963159918785095,
+  "value": -29.458069291970006,
+  "trait": "angry",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.9256419605678983,
+  "sources": [
+   "robotic:vs_others#3"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 23,
+  "neuron": 81,
+  "dose": 1.0,
+  "key": "L23N81+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.30992037057876587,
+  "value": 84.0674659459447,
+  "trait": "angry",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.8370526101854112,
+  "sources": [
+   "robotic:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 27,
+  "neuron": 4621,
+  "dose": -1.0,
+  "key": "L27N4621-",
+  "median_norm": 36.191349029541016,
+  "col_norm": 0.4687068462371826,
+  "value": -77.2153198104277,
+  "trait": "angry",
+  "kind": "weak",
+  "screen_rank": 12,
+  "screen_spec": 0.5266129175821939,
+  "sources": [
+   "angry:vs_others#13"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 60,
+  "dose": 1.0,
+  "key": "L16N60+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4047051966190338,
+  "value": 26.245588455021643,
+  "trait": "angry",
+  "kind": "weak",
+  "screen_rank": 96,
+  "screen_spec": -0.12856176164415145,
+  "sources": [
+   "pirate:vs_plain#0",
+   "robotic:vs_plain#4",
+   "childlike:vs_plain#1",
+   "terse:vs_plain#10",
+   "angry:vs_plain#8",
+   "philosophical:vs_plain#2",
+   "nostalgic:vs_plain#1"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 1885,
+  "dose": -1.0,
+  "key": "L16N1885-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.3915758430957794,
+  "value": -27.125590669988558,
+  "trait": "shy",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.0321892102559405,
+  "sources": [
+   "childlike:vs_plain#13",
+   "terse:vs_plain#13",
+   "terse:vs_others#13"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 23,
+  "neuron": 81,
+  "dose": 1.0,
+  "key": "L23N81+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.30992037057876587,
+  "value": 84.0674659459447,
+  "trait": "shy",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.7743752797444661,
+  "sources": [
+   "robotic:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 8,
+  "neuron": 4350,
+  "dose": 1.0,
+  "key": "L8N4350+",
+  "median_norm": 7.747457981109619,
+  "col_norm": 0.44807329773902893,
+  "value": 17.290604060101717,
+  "trait": "shy",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.7231321069929335,
+  "sources": [
+   "shy:vs_others#14"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 22,
+  "neuron": 3124,
+  "dose": -1.0,
+  "key": "L22N3124-",
+  "median_norm": 23.954397201538086,
+  "col_norm": 0.4222884178161621,
+  "value": -56.72520531208679,
+  "trait": "shy",
+  "kind": "weak",
+  "screen_rank": 34,
+  "screen_spec": 0.1694174342685275,
+  "sources": [
+   "shy:vs_plain#9",
+   "shy:vs_others#5"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 6107,
+  "dose": 1.0,
+  "key": "L16N6107+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.3808829188346863,
+  "value": 27.88711572723979,
+  "trait": "shy",
+  "kind": "weak",
+  "screen_rank": 148,
+  "screen_spec": -0.41350677278306747,
+  "sources": [
+   "shy:vs_others#9"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 6343,
+  "dose": -1.0,
+  "key": "L15N6343-",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.42739224433898926,
+  "value": -23.87500481141217,
+  "trait": "philosophical",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 2.191721889707777,
+  "sources": [
+   "philosophical:vs_others#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 7656,
+  "dose": 1.0,
+  "key": "L5N7656+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.4311511814594269,
+  "value": 14.267827826203202,
+  "trait": "philosophical",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 2.027147399054633,
+  "sources": [
+   "philosophical:vs_others#9"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 5515,
+  "dose": 1.0,
+  "key": "L16N5515+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.38502171635627747,
+  "value": 27.58734270002326,
+  "trait": "philosophical",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 1.8069240781995983,
+  "sources": [
+   "pirate:vs_plain#13",
+   "robotic:vs_plain#6",
+   "terse:vs_plain#14",
+   "philosophical:vs_plain#6",
+   "nostalgic:vs_plain#11"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 7779,
+  "dose": 1.0,
+  "key": "L5N7779+",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.44102078676223755,
+  "value": 13.94852807118054,
+  "trait": "philosophical",
+  "kind": "weak",
+  "screen_rank": 22,
+  "screen_spec": 1.200138489405314,
+  "sources": [
+   "robotic:vs_plain#3",
+   "bureaucratic:vs_plain#8",
+   "sarcastic:vs_plain#2",
+   "angry:vs_plain#1",
+   "shy:vs_plain#3",
+   "philosophical:vs_plain#3",
+   "nostalgic:vs_plain#0"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 2312,
+  "dose": -1.0,
+  "key": "L16N2312-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4127696454524994,
+  "value": -25.732817694062007,
+  "trait": "philosophical",
+  "kind": "weak",
+  "screen_rank": 67,
+  "screen_spec": 0.5224239296383328,
+  "sources": [
+   "childlike:vs_plain#10",
+   "philosophical:vs_plain#12"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 8940,
+  "dose": -1.0,
+  "key": "L5N8940-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.42996421456336975,
+  "value": -14.307215846728456,
+  "trait": "nostalgic",
+  "kind": "top",
+  "screen_rank": 0,
+  "screen_spec": 1.114764134089152,
+  "sources": [
+   "nostalgic:vs_others#5"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 17,
+  "neuron": 2418,
+  "dose": -1.0,
+  "key": "L17N2418-",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.38963159918785095,
+  "value": -29.458069291970006,
+  "trait": "nostalgic",
+  "kind": "top",
+  "screen_rank": 1,
+  "screen_spec": 0.9649492369757757,
+  "sources": [
+   "robotic:vs_others#3"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 6003,
+  "dose": 1.0,
+  "key": "L16N6003+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.43613606691360474,
+  "value": 24.354156516424634,
+  "trait": "nostalgic",
+  "kind": "top",
+  "screen_rank": 2,
+  "screen_spec": 0.9562737147013347,
+  "sources": [
+   "nostalgic:vs_others#6"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 13,
+  "neuron": 8746,
+  "dose": 1.0,
+  "key": "L13N8746+",
+  "median_norm": 9.292011260986328,
+  "col_norm": 0.4519256353378296,
+  "value": 20.560929795540893,
+  "trait": "nostalgic",
+  "kind": "weak",
+  "screen_rank": 27,
+  "screen_spec": 0.4593023988935683,
+  "sources": [
+   "nostalgic:vs_others#13"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 9064,
+  "dose": -1.0,
+  "key": "L16N9064-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.4425673484802246,
+  "value": -24.00024780984581,
+  "trait": "nostalgic",
+  "kind": "weak",
+  "screen_rank": 104,
+  "screen_spec": 0.03137368626064724,
+  "sources": [
+   "pirate:vs_plain#3",
+   "nostalgic:vs_plain#7"
+  ]
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 7815,
+  "dose": -1.0,
+  "key": "L16N7815-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.44791045784950256,
+  "value": -23.713949629728596,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 27,
+  "neuron": 4267,
+  "dose": 1.0,
+  "key": "L27N4267+",
+  "median_norm": 36.191349029541016,
+  "col_norm": 0.4766242802143097,
+  "value": 75.93265918653559,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 230,
+  "dose": 1.0,
+  "key": "L16N230+",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.3891690969467163,
+  "value": 27.293343997265197,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 17,
+  "neuron": 6534,
+  "dose": 1.0,
+  "key": "L17N6534+",
+  "median_norm": 11.477794647216797,
+  "col_norm": 0.4273669123649597,
+  "value": 26.85700346735096,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 16,
+  "neuron": 8086,
+  "dose": -1.0,
+  "key": "L16N8086-",
+  "median_norm": 10.621726036071777,
+  "col_norm": 0.43571481108665466,
+  "value": -24.377702492099438,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 5328,
+  "dose": 1.0,
+  "key": "L15N5328+",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.44792473316192627,
+  "value": 22.78059489576084,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 15,
+  "neuron": 3632,
+  "dose": 1.0,
+  "key": "L15N3632+",
+  "median_norm": 10.203991889953613,
+  "col_norm": 0.38837364315986633,
+  "value": 26.273646705096674,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 26,
+  "neuron": 8896,
+  "dose": -1.0,
+  "key": "L26N8896-",
+  "median_norm": 34.18331527709961,
+  "col_norm": 0.48674896359443665,
+  "value": -70.22781317225656,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 5,
+  "neuron": 1318,
+  "dose": -1.0,
+  "key": "L5N1318-",
+  "median_norm": 6.151590824127197,
+  "col_norm": 0.44120195508003235,
+  "value": -13.942800464271112,
+  "trait": null,
+  "kind": "random"
+ },
+ {
+  "study": "new",
+  "layer": 23,
+  "neuron": 8016,
+  "dose": 1.0,
+  "key": "L23N8016+",
+  "median_norm": 26.05422019958496,
+  "col_norm": 0.4759202301502228,
+  "value": 54.7449310809104,
+  "trait": null,
+  "kind": "random"
+ }
+]

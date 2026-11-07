@@ -1,0 +1,7 @@
+W1106 21:28:25.040000 4083 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[21:28:26] $ /Users/slamkin/Documents/github/steering-qwen/.venv/bin/neurons search all --run-dir runs/search/new-traits --trait-set new --no-quantize
+[21:28:26] generate: answers.json exists, skipping
+[21:28:26] attribute: attrib.json exists, skipping
+[21:28:26] screen: screen.json exists, skipping
+[21:28:26] verify: verify.json exists, skipping
+[21:28:26] done

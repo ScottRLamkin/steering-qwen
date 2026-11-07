@@ -1,0 +1,25 @@
+{
+ "score_hedwig": {
+  "seconds": 660.9,
+  "finished": "2026-11-06T23:35:10",
+  "n": 55
+ },
+ "score_new": {
+  "seconds": 772.1,
+  "finished": "2026-11-06T23:48:02",
+  "n": 60
+ },
+ "replies": {
+  "seconds": 660.2,
+  "finished": "2026-11-06T23:59:02",
+  "n": 39
+ },
+ "attribute_hedwig": {
+  "seconds": 125.2,
+  "finished": "2026-11-07T00:01:07"
+ },
+ "attribute_new": {
+  "seconds": 134.8,
+  "finished": "2026-11-07T00:03:22"
+ }
+}

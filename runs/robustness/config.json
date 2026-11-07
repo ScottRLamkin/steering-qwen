@@ -1,0 +1,41 @@
+{
+ "studies": [
+  "hedwig",
+  "new"
+ ],
+ "study_runs": {
+  "hedwig": "runs/torch-bf16",
+  "new": "runs/search/new-traits"
+ },
+ "top": 3,
+ "weak": [
+  8,
+  20
+ ],
+ "n_random": 10,
+ "seed": 0,
+ "n_questions": 10,
+ "answer_tokens": 32,
+ "heldout_tokens": 100,
+ "doses": [
+  0.5,
+  2.0,
+  3.0
+ ],
+ "n_prompts": 8,
+ "reply_tokens": 80,
+ "max_traits": null,
+ "layers": null,
+ "questions": [
+  "How do I make a good cup of coffee?",
+  "What should I name my new goldfish?",
+  "Can you explain how a rainbow forms?",
+  "What's the best way to spend a rainy afternoon?",
+  "How do I ask my boss for a raise?",
+  "Why do cats purr?",
+  "What advice would you give to someone starting university?",
+  "How do airplanes stay in the air?",
+  "What's a good gift for my grandmother?",
+  "How can I sleep better at night?"
+ ]
+}

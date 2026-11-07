@@ -1,0 +1,35 @@
+{
+ "score_hedwig": {
+  "seconds": 608.9,
+  "finished": "2026-11-07T00:35:41",
+  "n": 55
+ },
+ "score_new": {
+  "seconds": 707.4,
+  "finished": "2026-11-07T00:47:28",
+  "n": 60
+ },
+ "dose_hedwig": {
+  "seconds": 292.8,
+  "finished": "2026-11-07T00:52:21",
+  "n": 27
+ },
+ "dose_new": {
+  "seconds": 347.9,
+  "finished": "2026-11-07T00:58:09",
+  "n": 30
+ },
+ "replies": {
+  "seconds": 336.8,
+  "finished": "2026-11-07T01:03:46",
+  "n": 39
+ },
+ "attribute_hedwig": {
+  "seconds": 81.2,
+  "finished": "2026-11-07T01:05:07"
+ },
+ "attribute_new": {
+  "seconds": 86.4,
+  "finished": "2026-11-07T01:06:34"
+ }
+}
